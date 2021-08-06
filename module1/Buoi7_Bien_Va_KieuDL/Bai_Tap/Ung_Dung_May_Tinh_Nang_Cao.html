@@ -93,13 +93,23 @@
     function solve() {
         removeZero()
         var equation = document.getElementById("result").innerHTML;
+        console.log(equation);
         var solved = eval(equation);
+        if (solved === Infinity){
+            alert('Cannot Devided by 0');
+        }
         document.getElementById('result').innerHTML = solved;
     }
     function falseDisplay() {
         alert("Tính năng này đang phát triển, vui lòng chọn phép tính khác!")
     }
-
+    // function checkZero() {
+    //     if(equation == 0) {
+    //         alert('Cannot Devided by 0')
+    //     }else {
+    //         forDisplay('/')
+    //     }
+    // }
 </script>
 </body>
 </html>
