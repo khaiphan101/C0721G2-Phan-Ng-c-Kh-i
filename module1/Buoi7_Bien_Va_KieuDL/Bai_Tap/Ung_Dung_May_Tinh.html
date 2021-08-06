@@ -35,11 +35,16 @@
                 result = number1 * number2;
             }
             else if(choice == 4) {
-                result = number1 / number2;
+                if (number2 == 0){
+                    alert('Can not divise by 0');
+                }
+                else{
+                    result = number1 / number2;
+                }
             }
             document.getElementById("result").innerText= result ;
         }
 
     </script>
 </body>
-</html>D
+</html>
