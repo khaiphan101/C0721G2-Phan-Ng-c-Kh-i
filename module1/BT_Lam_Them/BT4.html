@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Xóa thẻ HTML</h3>
+<table id="table" border="1px">
+    <tr id="row1">
+        <td>Tiêu đề thứ nhất</td>
+        <td><input type="button" onclick="deleteRow1()"  value="delete" </td>
+    </tr>
+    <tr id="row2">
+        <td>Tiêu đề thứ hai</td>
+        <td><input type="button" onclick="deleteRow2()"  value="delete"</td>
+    </tr>
+    <tr id="row3">
+        <td>Tiêu đề thứ ba</td>
+        <td><input type="button" onclick="deleteRow3()"  value="delete"</td>
+    </tr>
+    <tr id="row4">
+        <td>Tiêu đề thứ tư</td>
+        <td><input type="button" onclick="deleteRow4()"  value="delete"</td>
+    </tr>
+</table>
+<script>
+    function deleteRow1() {
+        document.getElementById("row1").innerHTML=null;
+    }
+    function deleteRow2() {
+        document.getElementById("row2").innerHTML=null;
+    }
+    function deleteRow3() {
+        document.getElementById("row3").innerHTML=null;
+    }
+    function deleteRow4() {
+        document.getElementById("row4").innerHTML=null;
+    }
+
+    function deleteTable() {
+        document.getElementById("table").innerHTML=null;
+    }
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+​
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,14 +12,14 @@
         }
     </style>
 </head>
-
+​
 <body>
 <div >
     <input type="text" id="number1" style="position: relative; ">
-
+    ​
     <input type="text" id="number2" style="position: relative; margin-left: 0px">
     <input type="text" id="result">
-
+    ​
 </div>
 <br>
 <input type="button" value="Add" onclick="cal('+')">
@@ -32,7 +32,7 @@
         let number2 = document.getElementById("number2").value;
         let result = 0;
         switch (calculator) {
-
+            ​
             case '+' : {
                 result = (parseInt(number1) + parseInt(number2))
                 break;
@@ -46,19 +46,19 @@
                 break;
             }
             case '/': {
-                if (number2 == 0) {
+                if (number2.value = 0) {
                     result = ("Không thể chia cho 0")
                 } else {
                     result = (parseInt(number1) / parseInt(number2))
                 }
                 break;
             }
-
+​
         }
         document.getElementById("result").value = result;
-
+​
     }
 </script>
 </body>
-
+​
 </html>
