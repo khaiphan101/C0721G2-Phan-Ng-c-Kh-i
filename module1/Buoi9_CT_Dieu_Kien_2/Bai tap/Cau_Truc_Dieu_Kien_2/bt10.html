@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 1000*parseFloat(prompt("Nhập số chữ điện (Kwh):")); //ví dụ 0.12
+    console.log(a);
+    let price;
+    if(a<50){
+        price = a *1678;
+    }
+    else if (a<100){
+        price= 50*1678 + (a-50)*1734;
+    }
+    else if (a<200) {
+        price = 50*1678+ 50*1734 + (a-100)*2014;
+    }
+    else if (a <300) {
+        price = 50*1678+ 50*1734 + 100*2014 + (a-200)*2536;
+    }
+    else if (a <400) {
+        price = 50*1678+ 50*1734 + 100*2014 + 100*2536+ (a-300) *2834;
+    }
+    else {
+        price = 50*1678+ 50*1734 + 100*2014 + 100*2536+ 100 *2834 + (a-400)*2927;
+    }
+    let vat = price*10/100;
+    let sum = price + vat;
+    alert("Tổng tiền điện cần phải thanh toán: " + sum);
+
+</script>
+</body>
+</html>
