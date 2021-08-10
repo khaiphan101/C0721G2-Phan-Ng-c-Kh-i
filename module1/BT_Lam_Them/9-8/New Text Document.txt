@@ -1,0 +1,111 @@
+begin
+Do
+Input y,n;
+End Do
+while(1≤n≤365 , 1900≤y≤2050)
+if ((y % 100 == 0 && y%400) || (y%4==0 &&y%100 !=0) )
+    {
+	//Năm nhuận
+	if (n<=31){
+			d = n;
+		}
+		else if (n <= 60){
+			
+		d = n - 31;
+		m = 2;
+		}
+		else if (n <= 91){
+			d = n - 60;
+			m = 3;
+		}
+		else if (n <= 121){
+			d = n - 90;
+			m = 4;
+		}
+		else if (n <= 152){
+			d = n - 121;
+			m = 5;
+		}
+		else if (n <= 182){
+			d = n - 152;
+			m = 6;
+		}
+		else if (n <= 213){
+			d = n - 183;
+			m = 7;
+		}
+		else if (n <= 244){
+			d = n - 213;
+			m = 8;
+		}
+		else if (n <= 274){
+			d = n - 244;
+			m = 9;
+		}
+		else if (n <= 305){
+			d = n - 274;
+			m = 10;
+		}
+		else if (n <= 335){
+			d = n - 305;
+			m = 11;
+		}
+		else if (n <= 366){
+			d = n - 335;
+			m = 12;
+		}
+		}
+	}
+else {
+	//Năm không nhuận
+	if (n<=31){
+		d = n;
+	}
+	else if (n <= 59){
+		
+	d = n - 31;
+	m = 2;
+	}
+	else if (n <= 90){
+		d = n - 59;
+		m = 3;
+	}
+	else if (n <= 120){
+		d = n - 90;
+		m = 4;
+	}
+	else if (n <= 151){
+		d = n - 120;
+		m = 5;
+	}
+	else if (n <= 181){
+		d = n - 151;
+		m = 6;
+	}
+	else if (n <= 212){
+		d = n - 181;
+		m = 7;
+	}
+	else if (n <= 243){
+		d = n - 212;
+		m = 8;
+	}
+	else if (n <= 273){
+		d = n - 243;
+		m = 9;
+	}
+	else if (n <= 304){
+		d = n - 273;
+		m = 10;
+	}
+	else if (n <= 334){
+		d = n - 304;
+		m = 11;
+	}
+	else if (n <= 365){
+		d = n - 334;
+		m = 12;
+	}
+	}
+	display d , m ;
+end
