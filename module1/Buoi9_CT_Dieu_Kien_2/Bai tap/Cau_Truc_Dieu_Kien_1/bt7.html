@@ -23,6 +23,12 @@
         let offNetTime = parseInt(document.getElementById("offNetTime").value);
         let offNetMessage = parseInt(document.getElementById("offNetMessage").value);
         let charge = onNetTime*1000 + onNetMessage*100 + offNetTime+2000 + offNetMessage*200;
+        if (isNaN(onNetTime) || isNaN(onNetMessage) || isNaN(offNetTime) || isNaN(offNetMessage)){
+            alert("Vui lòng nhập số")
+        }
+        if(onNetTime < 0 || onNetMessage < 0 || offNetTime < 0 || offNetMessage < 0){
+            alert("Hãy nhập số dương");
+        }
         document.getElementById("result").innerHTML = "Cước điện thoại trong tháng :" + charge + " VND";
     }
 </script>
