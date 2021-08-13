@@ -38,8 +38,6 @@
         data = data + "</table>";
         document.getElementById("result").innerHTML = data;
     }
-
-
     function changeValue(x, y) {
         if (board[x][y] == "X" || board[x][y] == "O") {
             alert("Ô này đã được chơi. yêu cầu nhập lại ô khác")
@@ -73,18 +71,18 @@
                 }
             }
             // check hoà:
-                let check = false;
-                for (let i = 0; i < 5; i++) {
-                    for (let j = 0; j < 5; j++) {
-                        if (board[i][j] == ".") {
-                            check = true;
-                            break;
-                        }
+            let check = false;
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
+                    if (board[i][j] == ".") {
+                        check = true;
+                        break;
                     }
                 }
-                if(check === false){
-                    alert("Hoà");
-                }
+            }
+            if(check === false){
+                alert("Hoà");
+            }
         }
     }
 </script>

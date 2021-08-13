@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [-1,2,-3,-4,-5,6,7,-8,9,-10];
+    document.write(arr + "<br>");
+
+    //Cach 1:
+    let c1 = [];
+    for (i = 0; i < 10; i++){
+        let max = arr[0];
+        let index = 0;
+        for (j = 1; j < 10; j++) {
+            if (max < arr[j]) {
+                max = arr[j];
+                index = j;
+            }
+        }
+        c1.push(max);
+        arr.splice(index,1);
+        console.log(arr);
+    }
+    document.write(c1+ "<br>");
+
+    // //Cach 2:
+    // arr = [-1,2,-3,-4,-5,6,7,-8,9,-10];
+    // let c2 = arr.sort(function (a,b) {
+    //     if (a < b) return 1;
+    //     if (a > b) return -1;
+    //     return 0;
+    // });
+    // document.write(c2);
+</script>
+</body>
+</html>
