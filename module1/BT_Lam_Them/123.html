@@ -3,13 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        td{
-            width: 50px;
-            text-align: center;
-            height:  50px;
-        }
-    </style>
 </head>
 <body>
 <p id="result"></p>
@@ -20,12 +13,9 @@
         board[i] = [".", ".", ".", ".", "."]
     }
     displayCaro();
-    //nhập tên người chơi:
-    let player1 = prompt("Nhập tên người chơi thứ nhất: ");
-    let player2 = prompt("Nhập tên người chơi thứ hai: ");
-    let turn;
+
     function displayCaro() {
-        let data = "<table border='1'>";
+        let data = "<table border='1' style='width: 500px; height: 500px; text-align: center'>"
         for (let i = 0; i < 5; i++) {
             data = data + "</tr>"
             for (let j = 0; j < 5; j++) {
@@ -35,56 +25,36 @@
             }
             data = data + "</tr>"
         }
-        data = data + "</table>";
+        data = data + "</table>"
         document.getElementById("result").innerHTML = data;
     }
-
 
     function changeValue(x, y) {
         if (board[x][y] == "X" || board[x][y] == "O") {
             alert("Ô này đã được chơi. yêu cầu nhập lại ô khác")
         } else {
-            if (isPlay) {               //thay vì kiểm tra X, O rồi for loop 2 lần, thì gán người chơi cho từng biến và for loop 1 lần với biến đó)
+            if (isPlay) {
                 board[x][y] = "X";
-                isPlay = false;
-                turn = "X";
-                checkWinner(turn,player1)
+                isPlay = false
             } else {
                 board[x][y] = "O";
                 isPlay = true;
-                turn = "O";
-                checkWinner(turn,player2)
             }
             displayCaro();
-            function checkWinner(p,name){
-                for (let i = 0; i < 5; i++) {
-                    for (let j = 0; j < 5; j++) {
-                        if (board[i][j] == p) {
-                            //kiểm tra đường thẳng ngang dọc
-                            if ((board[i][j + 1] == p && board[i][j + 2] == p) || (board[i + 1][j] == p && board[i + 2][j] == p)) {
-                                alert(name + " thắng");
-                            }
-                            //kiểm tra đường chéo
-                            else if((board[i + 1][j + 1] == p && board[i + 2][j + 2] == p)||(board[i + 1][j - 1] == p && board[i + 2][j - 2] == p)) {
-                                alert(name + " thắng");
-                            }
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
+                    if (board[i][j] == "X") {
+                        if (board[i][j + 1] == "X" && board[i][j + 2] == "X") {
+                            alert("X thắng")
+                        }
+                    } else if (board[i][j] == "O") {
+                        if (board[i][j + 1] == "O" && board[i][j + 2] == "O") {
+                            alert("O thắng")
                         }
                     }
                 }
             }
-            // check hoà:
-                let check = false;
-                for (let i = 0; i < 5; i++) {
-                    for (let j = 0; j < 5; j++) {
-                        if (board[i][j] == ".") {
-                            check = true;
-                            break;
-                        }
-                    }
-                }
-                if(check === false){
-                    alert("Hoà");
-                }
+
         }
     }
 </script>

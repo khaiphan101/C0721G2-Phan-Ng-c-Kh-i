@@ -38,6 +38,8 @@
         data = data + "</table>";
         document.getElementById("result").innerHTML = data;
     }
+
+
     function changeValue(x, y) {
         if (board[x][y] == "X" || board[x][y] == "O") {
             alert("Ô này đã được chơi. yêu cầu nhập lại ô khác")
@@ -55,15 +57,20 @@
             }
             displayCaro();
             function checkWinner(p,name){
-                for (let i = 0; i < 5; i++) {
-                    for (let j = 0; j < 5; j++) {
-                        if (board[i][j] == p) {
-                            //kiểm tra đường thẳng ngang dọc
-                            if ((board[i][j + 1] == p && board[i][j + 2] == p) || (board[i + 1][j] == p && board[i + 2][j] == p)) {
-                                alert(name + " thắng");
+                for (let i = 0; i < 3; i++) {
+                    for (let j = 0; j < 3; j++) {
+                        if (board[i][j] == p ) {
+                            if(i<3 && j<3){
+                                //kiểm tra đường thẳng dọc
+                                if ((board[i + 1][j] == p && board[i + 2][j] == p)) {
+                                    alert(name + " thắng");
+                                }
+                                // //kiểm tra đường chéo
+                                else if((board[i + 1][j + 1] == p && board[i + 2][j + 2] == p) || (board[i + 1][j - 1] == p && board[i + 2][j - 2] == p)) {
+                                    alert(name + " thắng");
+                                }
                             }
-                            //kiểm tra đường chéo
-                            else if((board[i + 1][j + 1] == p && board[i + 2][j + 2] == p)||(board[i + 1][j - 1] == p && board[i + 2][j - 2] == p)) {
+                            if(board[i][j + 1] == p && board[i][j + 2] == p) {
                                 alert(name + " thắng");
                             }
                         }
