@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 5, 6];
+    let number = parseInt(prompt("Nhập vào giá trị cần thêm"));
+    if (number >= arr[arr.length - 1]) {
+        arr = arr.push(number);
+    } else if (number <= arr[0]) {
+        arr = arr.unshift(number);
+    } else {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] <= number && arr[i + 1] >= number) {
+                arr.splice(i, 0, number);
+            }
+        }
+    }
+    console.log(arr);
+</script>
+
+</body>
+</html>

@@ -7,56 +7,11 @@
 <body>
 <p id="result"></p>
 <script>
-    let board = [];
-    let isPlay = true;
-    for (let i = 0; i < 5; i++) {
-        board[i] = [".", ".", ".", ".", "."]
-    }
-    displayCaro();
-
-    function displayCaro() {
-        let data = "<table border='1' style='width: 500px; height: 500px; text-align: center'>"
-        for (let i = 0; i < 5; i++) {
-            data = data + "</tr>"
-            for (let j = 0; j < 5; j++) {
-                data += "<td onclick='changeValue(" + i + "," + j + ")'>";
-                data += board[i][j];
-                data += "</td>"
-            }
-            data = data + "</tr>"
-        }
-        data = data + "</table>"
-        document.getElementById("result").innerHTML = data;
-    }
-
-    function changeValue(x, y) {
-        if (board[x][y] == "X" || board[x][y] == "O") {
-            alert("Ô này đã được chơi. yêu cầu nhập lại ô khác")
-        } else {
-            if (isPlay) {
-                board[x][y] = "X";
-                isPlay = false
-            } else {
-                board[x][y] = "O";
-                isPlay = true;
-            }
-            displayCaro();
-            for (let i = 0; i < 5; i++) {
-                for (let j = 0; j < 5; j++) {
-                    if (board[i][j] == "X") {
-                        if (board[i][j + 1] == "X" && board[i][j + 2] == "X") {
-                            alert("X thắng")
-                        }
-                    } else if (board[i][j] == "O") {
-                        if (board[i][j + 1] == "O" && board[i][j + 2] == "O") {
-                            alert("O thắng")
-                        }
-                    }
-                }
-            }
-
-        }
-    }
+    let arr = [1,2,3,5,6];
+    let number =prompt("nhập 1 số:");
+    arr = arr.push(number);
+    arr.sort(function(a,b){return a - b});
+    document.write(arr);
 </script>
 </body>
 </html>
