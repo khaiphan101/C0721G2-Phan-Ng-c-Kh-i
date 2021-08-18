@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let Constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" , "Leo"]
+    let check = false;
+    inputStar();
+    if(check === false) {
+        alert("Bạn đã nhập sai tên ngôi sao, xin mời nhập lại:");
+        inputStar();
+    }
+    function inputStar() {
+        let input = prompt("Nhập tên ngôi sao:");
+        for(let i = 0; i < stars.length; i++){
+            if (findStars(input, stars[i])) {
+                alert(input + ' thuộc chòm sao ' + Constellation[i]);
+                check = true;
+            }
+        }
+    }
+    function findStars(input, star) {
+        console.log(input + ", " + star);
+            if (input === star) {
+                return true;
+            }
+            else return false;
+    }
+</script>
+</body>
+</html>

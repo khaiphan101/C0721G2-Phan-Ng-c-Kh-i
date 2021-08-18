@@ -6,9 +6,8 @@
 </head>
 <body>
 <script>
-    let n = inputANumber("Nhập 1 số");
-    alert(isPrime(n));
-
+    let r = inputANumber("Nhập một số");
+    inherit(r);
     function inputANumber(input) {
         let number = parseFloat(prompt(input));
         while(isNaN(number)){
@@ -17,15 +16,13 @@
         }
         return number;
     }
-    function isPrime(number){
-        for(i = 2; i < number; i++) {
-            if(number % i == 0) {
-                return false;
-            }
+    function inherit(n) {
+        let inherit= 1;
+        for (let i = 1; i <= n; i++){
+            inherit *= i;
         }
-        return true;
+        alert("!" + n + '= ' + inherit)
     }
 </script>
-
 </body>
 </html>

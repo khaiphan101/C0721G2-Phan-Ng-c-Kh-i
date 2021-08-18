@@ -6,9 +6,8 @@
 </head>
 <body>
 <script>
-    let n = inputANumber("Nhập 1 số");
-    alert(isPrime(n));
-
+    let n = inputANumber("Nhập một số");
+    alert(checkPositive(n));
     function inputANumber(input) {
         let number = parseFloat(prompt(input));
         while(isNaN(number)){
@@ -17,15 +16,10 @@
         }
         return number;
     }
-    function isPrime(number){
-        for(i = 2; i < number; i++) {
-            if(number % i == 0) {
-                return false;
-            }
-        }
-        return true;
+    function checkPositive(n){
+        if(n > 0) return true;
+        else return false;
     }
 </script>
-
 </body>
 </html>

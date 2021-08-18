@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>$Title$</title>
 </head>
 <body>
 <script>
-    let n = inputANumber("Nhập 1 số");
-    alert(isPrime(n));
-
+    let r = inputANumber("nhập bán kính");
+    getArea(r);
+    getPerimeter(r);
     function inputANumber(input) {
         let number = parseFloat(prompt(input));
         while(isNaN(number)){
@@ -17,13 +17,13 @@
         }
         return number;
     }
-    function isPrime(number){
-        for(i = 2; i < number; i++) {
-            if(number % i == 0) {
-                return false;
-            }
-        }
-        return true;
+    function getArea(r) {
+        let S = Math.PI * (r**2);
+        alert("S = " + S);
+    }
+    function getPerimeter(r) {
+        let p = Math.PI * (r*2);
+        alert("p = " + p);
     }
 </script>
 
