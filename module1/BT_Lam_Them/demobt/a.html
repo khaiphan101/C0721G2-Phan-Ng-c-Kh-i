@@ -1,26 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Rectangle example</title>
 </head>
 <body>
+<canvas id="DemoCanvas" width="500" height="600"></canvas>
 <script>
-    let arr = [1, 2, 3, 5, 6];
-    let number = parseInt(prompt("Nhập vào giá trị cần thêm"));
-    if (number >= arr[arr.length - 1]) {
-        arr = arr.push(number);
-    } else if (number <= arr[0]) {
-        arr = arr.unshift(number);
-    } else {
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] <= number && arr[i + 1] >= number) {
-                arr.splice(i, 0, number);
-            }
-        }
+    var canvas = document.getElementById("DemoCanvas");
+    if (canvas.getContext)
+    {
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle='#fa4b2a';    // color of fill
+        ctx.fillRect(10, 40, 140, 160); // create rectangle
     }
-    console.log(arr);
 </script>
-
 </body>
 </html>

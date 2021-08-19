@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor(pin, draft, sentMessage, receivedMessage) {
+            this.pin = pin;
+            this.draft = draft;
+            this.sentMessage = sentMessage;
+            this.receivedMessage = receivedMessage;
+        }
+
+        getPin(){
+            return this.pin;
+        }
+        getDraft(){
+            return this.draft;
+        }
+        getSentMessage(){
+            return this.sentMessage;
+        }
+        getReceivedMessage(){
+            return this.receivedMessage;
+        }
+        checkON(){
+            if(this.getPin() > 0) {
+                return true;
+            }
+            else { return false};
+        }
+
+        turnOn(){
+            alert("Điện thoại đang bật")
+        }
+
+        turnOff(){
+            alert("Điện thoại đang tắt")
+        }
+
+        charge(){
+            alert("Sạc pin " + this.pin++);
+        }
+    }
+
+</script>
+</body>
+</html>
