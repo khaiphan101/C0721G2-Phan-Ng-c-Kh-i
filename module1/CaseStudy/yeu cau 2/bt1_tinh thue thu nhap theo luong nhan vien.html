@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt("nhập lương nhân viên:"));
+    let vat;
+    let income;
+    if(salary >= 15000) {
+        vat = salary * 20 /100;
+    }
+    else if(salary >= 7000) {
+        vat = salary * 10 /100;
+    }
+    else {
+        vat = salary * 5 /100;
+    }
+    income = salary - vat;
+    alert("lương nhân viên: " + salary + "\n" + "thuế: " + vat + "\n" + "Lương thực nhận: " + income);
+</script>
+</body>
+</html>

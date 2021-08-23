@@ -6,9 +6,11 @@
 </head>
 <body>
 <script>
-    for (let i = 1; i<=4; i++){
-        for(let j=1; j<=5; j++){
-            if (i == 1 || i == 4 || j == 1 || j == 5){
+    let a = parseInt(prompt("nhập cạnh a"));
+    let b = parseInt(prompt("nhập cạnh b"));
+    for (let i = 1; i<=a; i++){
+        for(let j=1; j<=b; j++){
+            if (i == 1 || i == a || j == 1 || j == b){
                 document.write('*');
             }
             else {
@@ -19,5 +21,6 @@
         document.write("<br>");
     }
 </script>
+
 </body>
 </html>
