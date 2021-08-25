@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            border: none;
+        }
+        .customer {
+
+            color: dodgerblue;
+            font-weight: bold;
+
+        }
+        .system{
+            color: crimson;
+            font-weight: bold;
+
+        }
+        td{
+            text-align: center;
+            width: 50px;
+            height: 10px;
+        }
+    </style>
+</head>
+<body>
+<h2>Xổ số CodeGym</h2>
+<p id="customerTicket"></p>
+<p id="jackpot"></p>
+<button onclick="buyTicket()">Mua vé</button>
+<button onclick="result()">Xem kết quả</button>
+<script>
+    class Jackpot{
+        constructor(num1, num2, num3, num4, num5, num6) {
+            this.num1 = num1;
+            this.num2 = num2;
+            this.num3 = num3;
+            this.num4 = num4;
+            this.num5 = num5;
+            this.num6 = num6;
+        }
+        getNum1(){
+            return this.num1;
+        }
+        getNum2(){
+            return this.num2;
+        }
+        getNum3(){
+            return this.num3;
+        }
+        getNum4(){
+            return this.num4;
+        }
+        getNum5(){
+            return this.num5;
+        }
+        getNum6(){
+            return this.num6;
+        }
+        setNum1(value) {
+            this.num1 = value;
+        }
+        setNum2(value) {
+            this.num2 = value;
+        }
+        setNum3(value) {
+            this.num3 = value;
+        }
+        setNum4(value) {
+            this.num4 = value;
+        }
+        setNum5(value) {
+            this.num5 = value;
+        }
+        setNum6(value) {
+            this.num6 = value;
+        }
+    }
+    let customer = [];
+    let system;
+
+    function buyTicket() {
+        let a = parseInt(prompt("Bạn có 2 lựa chọn:" + "\n" + "1. Bạn muốn tự chọn số" + "\n" + "2. Hệ thống tự random"));
+        if(a == 1) {
+            customer.push(getInforTicket());
+            let isBuyMore = true;
+            while(isBuyMore) {
+                if(confirm("Bạn có muốn mua thêm vé không?")){
+                    customer.push(getInforTicket());
+                    isBuyMore = true;
+                }
+                else(isBuyMore = false)
+            }
+        }
+
+        else if(a == 2) {
+            customer.push(randomTicket());
+            let isBuyMore = true;
+            while(isBuyMore) {
+                if(confirm("Bạn có muốn mua thêm vé không?")){
+                    customer.push(randomTicket());
+                    isBuyMore = true;
+                }
+                else(isBuyMore = false)
+            }
+        }
+        let data = '<h4>Vé của bạn</h4>';
+        for(let i = 0; i < customer.length; i++) {
+            data += displayTicket(customer[i]);
+        }
+        document.getElementById("customerTicket").innerHTML = "<div class='customer'>" + data + "</div>";
+
+    }
+    function getInforTicket() {
+        let newJackpot = new Jackpot();
+        do{newJackpot.setNum1(parseInt(prompt("Nhập số thứ 1 (từ 1-100):")))
+        } while(checkInput(newJackpot.getNum1()) == false);
+
+        do{newJackpot.setNum2(parseInt(prompt("Nhập số thứ 2 (từ 1-100):")))
+        } while(checkInput(newJackpot.getNum2()) == false);
+
+        do{newJackpot.setNum3(parseInt(prompt("Nhập số thứ 3 (từ 1-100):")))
+        } while(checkInput(newJackpot.getNum3()) == false);
+
+        do{newJackpot.setNum4(parseInt(prompt("Nhập số thứ 4 (từ 1-100):")))
+        } while(checkInput(newJackpot.getNum4()) == false);
+
+        do{newJackpot.setNum5(parseInt(prompt("Nhập số thứ 5 (từ 1-100):")))
+        } while(checkInput(newJackpot.getNum5()) == false);
+
+        do{newJackpot.setNum6(parseInt(prompt("Nhập số thứ 6 (từ 1-100):")))
+        } while(checkInput(newJackpot.getNum6()) == false);
+
+        return newJackpot;
+    }
+    function randomTicket() {
+        let newJackpot = new Jackpot();
+        newJackpot.setNum1(Math.round(Math.random()*100));
+        newJackpot.setNum2(Math.round(Math.random()*100));
+        newJackpot.setNum3(Math.round(Math.random()*100));
+        newJackpot.setNum4(Math.round(Math.random()*100));
+        newJackpot.setNum5(Math.round(Math.random()*100));
+        newJackpot.setNum6(Math.round(Math.random()*100));
+        return newJackpot;
+    }
+    function displayTicket(arr) {
+        let data = "<table border='3' cellspacing='5' >";
+        data += "<tr>";
+        data += '<td>' + arr.getNum1() + '</td>';
+        data += '<td>' + arr.getNum2() + '</td>';
+        data += '<td>' + arr.getNum3() + '</td>';
+        data += '<td>' + arr.getNum4() + '</td>';
+        data += '<td>' + arr.getNum5() + '</td>';
+        data += '<td>' + arr.getNum6() + '</td>';
+        data += "<tr>";
+        data += "</table>";
+        return data;
+    }
+
+    function result() {
+        system = randomTicket();
+        // system = new Jackpot(1,2,3,4,5,6);
+        document.getElementById("jackpot").innerHTML = "<div class='system'>" + "<h3>JACKPOT</h3>" + "</div>";
+        document.getElementById("jackpot").innerHTML += "<div class='system'>"+ displayTicket(system) + "</div>";
+
+        let totalPrize = [0,0,0];
+        for (let i = 0; i < customer.length; i++) {
+            switch (checkJackpot(customer[i], system)) {
+                case 6:
+                    totalPrize[0]++;
+                    break;
+                case 5:
+                    totalPrize[1]++;
+                    break;
+                case 4:
+                case 3:
+                    totalPrize[2]++;
+                    break;
+            }
+        }
+        alert(giveAwards(totalPrize));
+
+
+    }
+    function checkJackpot(arr, system) {
+        let count = 0;
+        if(arr.getNum6() == system.getNum6()){
+            count++;
+        }
+        else{return count}
+        if(arr.getNum5() == system.getNum5()){
+            count++;
+        }
+        else{return count}
+        if(arr.getNum4() == system.getNum4()){
+            count++;
+        }
+        else{return count}
+        if(arr.getNum3() == system.getNum3()){
+            count++;
+        }
+        else{return count}
+        if(arr.getNum2() == system.getNum2()){
+            count++;
+        }
+        else{return count}
+        if(arr.getNum1() == system.getNum1()){
+            count++;
+        }
+        else{return count}
+        return count;
+    }
+
+    function giveAwards(totalPrize) {
+        let data = '';
+        let totalAwards = 0;
+        if(totalPrize[0] + totalPrize[1] + totalPrize[2] >0) {
+            data += "Chúc mừng bạn đã trúng: " + "\n";
+            if (totalPrize[0] > 0) {
+                data += totalPrize[0] + " giải nhất" + "\n";
+                totalAwards += totalPrize[0] * 1000000;
+            }
+            if (totalPrize[1] > 0) {
+                data += totalPrize[1] + " giải nhì" + "\n";
+                totalAwards += totalPrize[1] * 300000;
+            }
+            if (totalPrize[2] > 0) {
+                data += totalPrize[2] + " giải ba" + "\n";
+                totalAwards += totalPrize[2] * 100000;
+            }
+            data += "Tổng giải thưởng bạn nhận được là " + totalAwards + " $";
+        }
+        else{data += "Rất tiếc, chúc bạn may mắn lần sau!"}
+        return data;
+    }
+    function checkInput(number) {
+        if(number >= 1 && number < 100) {
+            return true;
+        }
+        else{return false}
+    }
+</script>
+</body>
+</html>
