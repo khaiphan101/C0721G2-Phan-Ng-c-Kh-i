@@ -141,19 +141,19 @@
                 let temp = "";
                 temp += "<table frame='above' width='90%' style='color: white; background-color: #58257B'>";
                 temp += "<tr><th>Name</th><th>Price</th><th>Description</th><th></th><th></th></tr>";
-                temp += "<tr>";
-                temp += "<td >" + products[i].name + "</td>";
-                temp += "<td>" + products[i].price + "</td>";
-                temp += "<td>" + products[i].description + "</td>";
-                temp += "</tr>"
+                    temp += "<tr>";
+                    temp += "<td >" + products[i].name + "</td>";
+                    temp += "<td>" + products[i].price + "</td>";
+                    temp += "<td>" + products[i].description + "</td>";
+                    temp += "</tr>"
                 temp += "</table>"
                 document.getElementById("displaySearch").innerHTML = temp;
-                flag = true;
+                    flag = true;
             }
         }
         if(flag == false){
-            document.getElementById("displaySearch").innerHTML = "Xin lỗi, không tìm thấy sản phẩm này"
-                <!DOCT        }
+            document.getElementById("displaySearch").innerHTML = "Xin lỗi, không tìm thấy sản phẩm này"
+        }
 
 
     }

@@ -39,7 +39,7 @@
     function saveP(index) {
         if(confirm("Are you sure to change the name of " + arr[index] + " ?")) {
             arr[index] = document.getElementById('edit').value;
-            document.getElementById('editProduct').innerHTML = '';
+
             displayProduct();
         }
         else{
