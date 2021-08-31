@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m;
+    do {
+        m = parseInt(prompt("nhập số phần tử của mảng: "));
+    } while(m > 20);
+
+    let arr = new Array(m);
+    for (let i = 0; i < arr.length; i++) {
+            arr[i] = parseInt(prompt("Nhập phần tử thứ " + i));
+    }
+    console.log(arr);
+    let sumEven = 0;
+    let even = [];
+    let sumOdd = 0;
+    let odd = [];
+    sumEvenArr(arr);
+
+    function sumEvenArr(n) {
+        for (let i = 0; i < n.length; i++) {
+            if(n[i] % 2 == 0) {
+                sumEven += n[i];
+                even.push(n[i]);
+            }
+            else if(n[i] % 2 != 0) {
+                sumOdd += n[i];
+                odd.push(n[i]);
+            }
+        }
+        console.log("Các số chẳn trong mảng trên: " + even);
+        console.log("Các số lẻ trong mảng trên: " + odd);
+        console.log("Hiệu của tổng các số chẵn và tổng các số lẻ trong mảng trên: ");
+        let result = sumEven - sumOdd;
+        console.log("(" + even.join(" + ") + ") - (" + odd.join(" + ") + ") = " + result);
+
+    }
+</script>
+</body>
+</html>
