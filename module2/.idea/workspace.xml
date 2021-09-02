@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4eecf07d-a28a-4106-98aa-e206dba2a956" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/C0721G2-Phan-Ng-c-Kh-i.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_01_introduction_to_java/exercise/ConvertMoney.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_01_introduction_to_java/exercise/ConvertNumerToString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_01_introduction_to_java/exercise/ShowHello.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/module2/helloWorld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module2/helloWorld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_01_introduction_to_java/exercise/ConvertNumerToString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_01_introduction_to_java/exercise/ConvertNumerToString.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +37,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.ConvertMoney">
+  <component name="RunManager" selected="Application.ConvertNumerToString">
     <configuration name="CheckLeapYear (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_01_introduction_to_java.practice.CheckLeapYear" />
       <module name="module2" />
@@ -113,8 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ConvertMoney" />
         <item itemvalue="Application.ConvertNumerToString" />
+        <item itemvalue="Application.ConvertMoney" />
         <item itemvalue="Application.ShowHello" />
         <item itemvalue="Application.WeightOfBodyCalculator (1)" />
         <item itemvalue="Application.CheckLeapYear (1)" />
@@ -131,7 +123,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1630472169619</updated>
-      <workItem from="1630472173228" duration="9082000" />
+      <workItem from="1630472173228" duration="9837000" />
+      <workItem from="1630590812566" duration="1148000" />
     </task>
     <servers />
   </component>
@@ -143,22 +136,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1630472178646" />
-    <state width="1877" height="350" key="GridCell.Tab.0.bottom" timestamp="1630487089641">
+    <state width="1877" height="350" key="GridCell.Tab.0.bottom" timestamp="1630592190116">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="350" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630487089641" />
-    <state width="1877" height="350" key="GridCell.Tab.0.center" timestamp="1630487089641">
+    <state width="1877" height="350" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630592190116" />
+    <state width="1877" height="350" key="GridCell.Tab.0.center" timestamp="1630592190116">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="350" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630487089641" />
-    <state width="1877" height="350" key="GridCell.Tab.0.left" timestamp="1630487089641">
+    <state width="1877" height="350" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630592190116" />
+    <state width="1877" height="350" key="GridCell.Tab.0.left" timestamp="1630592190116">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="350" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630487089641" />
-    <state width="1877" height="350" key="GridCell.Tab.0.right" timestamp="1630487089641">
+    <state width="1877" height="350" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630592190116" />
+    <state width="1877" height="350" key="GridCell.Tab.0.right" timestamp="1630592190116">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="350" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630487089641" />
+    <state width="1877" height="350" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630592190116" />
     <state x="540" y="262" key="IDE.errors.dialog" timestamp="1630472240399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
