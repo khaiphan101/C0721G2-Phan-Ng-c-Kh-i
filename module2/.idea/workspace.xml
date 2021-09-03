@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4eecf07d-a28a-4106-98aa-e206dba2a956" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_02_loop_in_java/exercise/Print20FirstPrimeNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_02_loop_in_java/exercise/PrintAllPrimeNumbersLessThan100.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_02_loop_in_java/exercise/PrintMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_02_loop_in_java/practic/CheckPrime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_02_loop_in_java/practic/DrawingMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_02_loop_in_java/practic/FindGreatestCommonDivisor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_02_loop_in_java/practic/InterestCalculate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/practice/ReverseArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_01_introduction_to_java/another_excercise/FixBug.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/AddElementToArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/Concat2Arrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/FindMaxNumberOf2DemensionArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/RemoveElementInArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/practice/FindMaxElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/practice/GetElementInArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/practice/GetMinNumberInArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/practice/TransferTemperature.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/practice/ReverseArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/practice/ReverseArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_03_array_and_method/practice/ReverseArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_array_and_method/practice/ReverseArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +47,13 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.ReverseArray">
-    <configuration name="Print20FirstPrimeNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_loop_in_java.exercise.Print20FirstPrimeNumbers" />
+  <component name="RunManager" selected="Application.FindMaxNumberOf2DemensionArray">
+    <configuration name="AddElementToArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.AddElementToArray" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_02_loop_in_java.exercise.*" />
+          <option name="PATTERN" value="_03_array_and_method.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -58,12 +61,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintAllPrimeNumbersLessThan100" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_loop_in_java.exercise.PrintAllPrimeNumbersLessThan100" />
+    <configuration name="Concat2Arrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.Concat2Arrays" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_02_loop_in_java.exercise.*" />
+          <option name="PATTERN" value="_03_array_and_method.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -71,12 +74,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_loop_in_java.exercise.PrintMenu" />
+    <configuration name="FindMaxNumberOf2DemensionArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.FindMaxNumberOf2DemensionArray" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_02_loop_in_java.exercise.*" />
+          <option name="PATTERN" value="_03_array_and_method.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,12 +87,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReverseArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.practice.ReverseArray" />
+    <configuration name="FixBug" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_java.another_excercise.FixBug" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_03_array_and_method.practice.*" />
+          <option name="PATTERN" value="_01_introduction_to_java.another_excercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,12 +100,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringArrayDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.practice.StringArrayDemo1" />
+    <configuration name="RemoveElementInArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.RemoveElementInArray" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_03_array_and_method.practice.*" />
+          <option name="PATTERN" value="_03_array_and_method.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ReverseArray" />
-        <item itemvalue="Application.StringArrayDemo1" />
-        <item itemvalue="Application.PrintAllPrimeNumbersLessThan100" />
-        <item itemvalue="Application.Print20FirstPrimeNumbers" />
-        <item itemvalue="Application.PrintMenu" />
+        <item itemvalue="Application.FindMaxNumberOf2DemensionArray" />
+        <item itemvalue="Application.FixBug" />
+        <item itemvalue="Application.Concat2Arrays" />
+        <item itemvalue="Application.AddElementToArray" />
+        <item itemvalue="Application.RemoveElementInArray" />
       </list>
     </recent_temporary>
   </component>
@@ -133,7 +136,7 @@
       <workItem from="1630472173228" duration="9837000" />
       <workItem from="1630590812566" duration="1148000" />
       <workItem from="1630594127612" duration="1809000" />
-      <workItem from="1630641608254" duration="9726000" />
+      <workItem from="1630641608254" duration="16162000" />
     </task>
     <servers />
   </component>
@@ -149,22 +152,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1630472178646" />
-    <state width="1141" height="349" key="GridCell.Tab.0.bottom" timestamp="1630670252265">
+    <state width="1075" height="312" key="GridCell.Tab.0.bottom" timestamp="1630676476568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1141" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630670252265" />
-    <state width="1141" height="349" key="GridCell.Tab.0.center" timestamp="1630670252265">
+    <state width="1075" height="312" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630676476568" />
+    <state width="1075" height="312" key="GridCell.Tab.0.center" timestamp="1630676476568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1141" height="349" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630670252265" />
-    <state width="1141" height="349" key="GridCell.Tab.0.left" timestamp="1630670252265">
+    <state width="1075" height="312" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630676476568" />
+    <state width="1075" height="312" key="GridCell.Tab.0.left" timestamp="1630676476568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1141" height="349" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630670252265" />
-    <state width="1141" height="349" key="GridCell.Tab.0.right" timestamp="1630670252265">
+    <state width="1075" height="312" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630676476568" />
+    <state width="1075" height="312" key="GridCell.Tab.0.right" timestamp="1630676476568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1141" height="349" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630670252265" />
+    <state width="1075" height="312" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630676476568" />
+    <state width="1075" height="312" key="GridCell.Tab.1.bottom" timestamp="1630676476568">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1075" height="312" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630676476568" />
+    <state width="1075" height="312" key="GridCell.Tab.1.center" timestamp="1630676476568">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1075" height="312" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630676476568" />
+    <state width="1075" height="312" key="GridCell.Tab.1.left" timestamp="1630676476568">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1075" height="312" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630676476568" />
+    <state width="1075" height="312" key="GridCell.Tab.1.right" timestamp="1630676476568">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1075" height="312" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630676476568" />
     <state x="540" y="262" key="IDE.errors.dialog" timestamp="1630472240399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

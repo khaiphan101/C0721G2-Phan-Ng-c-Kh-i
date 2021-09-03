@@ -19,6 +19,14 @@ public class ReverseArray {
             arr[i] = sc.nextInt();
             i++;
         }
+        System.out.println("initial array:");
+        System.out.println(Arrays.toString(arr));
+        for(int j = 0; j < arr.length/2;j++){
+            int temp = arr[j];
+            arr[j] = arr[size-1-j];
+            arr[size-1-j] = temp;
+        }
+        System.out.println("reversed array:");
         System.out.println(Arrays.toString(arr));
     }
 }
