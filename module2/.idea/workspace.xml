@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4eecf07d-a28a-4106-98aa-e206dba2a956" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/_02_loop_in_java/exercise/Print20FirstPrimeNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_02_loop_in_java/exercise/PrintAllPrimeNumbersLessThan100.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_02_loop_in_java/exercise/PrintMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_02_loop_in_java/practic/CheckPrime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_02_loop_in_java/practic/DrawingMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_02_loop_in_java/practic/FindGreatestCommonDivisor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_02_loop_in_java/practic/InterestCalculate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/practice/ReverseArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_01_introduction_to_java/exercise/ConvertNumerToString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_01_introduction_to_java/exercise/ConvertNumerToString.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +44,13 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.ConvertNumerToString">
-    <configuration name="CheckLeapYear (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_java.practice.CheckLeapYear" />
+  <component name="RunManager" selected="Application.ReverseArray">
+    <configuration name="Print20FirstPrimeNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_02_loop_in_java.exercise.Print20FirstPrimeNumbers" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_introduction_to_java.practice.*" />
+          <option name="PATTERN" value="_02_loop_in_java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -51,12 +58,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConvertMoney" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_java.exercise.ConvertMoney" />
+    <configuration name="PrintAllPrimeNumbersLessThan100" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_02_loop_in_java.exercise.PrintAllPrimeNumbersLessThan100" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_introduction_to_java.exercise.*" />
+          <option name="PATTERN" value="_02_loop_in_java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -64,12 +71,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConvertNumerToString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_java.exercise.ConvertNumerToString" />
+    <configuration name="PrintMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_02_loop_in_java.exercise.PrintMenu" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_introduction_to_java.exercise.*" />
+          <option name="PATTERN" value="_02_loop_in_java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -77,12 +84,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShowHello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_java.exercise.ShowHello" />
+    <configuration name="ReverseArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.practice.ReverseArray" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_introduction_to_java.exercise.*" />
+          <option name="PATTERN" value="_03_array_and_method.practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeightOfBodyCalculator (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_java.practice.WeightOfBodyCalculator" />
+    <configuration name="StringArrayDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.practice.StringArrayDemo1" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_introduction_to_java.practice.*" />
+          <option name="PATTERN" value="_03_array_and_method.practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ConvertNumerToString" />
-        <item itemvalue="Application.ConvertMoney" />
-        <item itemvalue="Application.ShowHello" />
-        <item itemvalue="Application.WeightOfBodyCalculator (1)" />
-        <item itemvalue="Application.CheckLeapYear (1)" />
+        <item itemvalue="Application.ReverseArray" />
+        <item itemvalue="Application.StringArrayDemo1" />
+        <item itemvalue="Application.PrintAllPrimeNumbersLessThan100" />
+        <item itemvalue="Application.Print20FirstPrimeNumbers" />
+        <item itemvalue="Application.PrintMenu" />
       </list>
     </recent_temporary>
   </component>
@@ -125,6 +132,8 @@
       <updated>1630472169619</updated>
       <workItem from="1630472173228" duration="9837000" />
       <workItem from="1630590812566" duration="1148000" />
+      <workItem from="1630594127612" duration="1809000" />
+      <workItem from="1630641608254" duration="9726000" />
     </task>
     <servers />
   </component>
@@ -132,26 +141,30 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="845" y="383" key="#Notifications" timestamp="1630594176252">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="845" y="383" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1630594176252" />
     <state x="440" y="94" key="#Project_Structure" timestamp="1630472178646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1630472178646" />
-    <state width="1877" height="350" key="GridCell.Tab.0.bottom" timestamp="1630592190116">
+    <state width="1141" height="349" key="GridCell.Tab.0.bottom" timestamp="1630670252265">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="350" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630592190116" />
-    <state width="1877" height="350" key="GridCell.Tab.0.center" timestamp="1630592190116">
+    <state width="1141" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630670252265" />
+    <state width="1141" height="349" key="GridCell.Tab.0.center" timestamp="1630670252265">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="350" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630592190116" />
-    <state width="1877" height="350" key="GridCell.Tab.0.left" timestamp="1630592190116">
+    <state width="1141" height="349" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630670252265" />
+    <state width="1141" height="349" key="GridCell.Tab.0.left" timestamp="1630670252265">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="350" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630592190116" />
-    <state width="1877" height="350" key="GridCell.Tab.0.right" timestamp="1630592190116">
+    <state width="1141" height="349" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630670252265" />
+    <state width="1141" height="349" key="GridCell.Tab.0.right" timestamp="1630670252265">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="350" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630592190116" />
+    <state width="1141" height="349" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630670252265" />
     <state x="540" y="262" key="IDE.errors.dialog" timestamp="1630472240399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
