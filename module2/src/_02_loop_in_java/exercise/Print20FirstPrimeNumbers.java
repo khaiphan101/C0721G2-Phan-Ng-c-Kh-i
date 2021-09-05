@@ -8,13 +8,13 @@ public class Print20FirstPrimeNumbers {
         System.out.println("enter amount of first prime number ");
         int amount = sc.nextInt();
         int count = 0;
-        int N = 0;
+        int n = 0;
         while(count < amount){
-            if(isPrime(N)){
-                System.out.print(N + ", ");
+            if(isPrime(n)){
+                System.out.print(n + ", ");
                 count++;
             }
-            N++;
+            n++;
         }
         System.out.println("count = " + count);
     }

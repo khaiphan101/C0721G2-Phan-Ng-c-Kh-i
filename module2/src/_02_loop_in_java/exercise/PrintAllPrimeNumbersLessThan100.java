@@ -5,13 +5,11 @@ public class PrintAllPrimeNumbersLessThan100 {
     public static void main(String[] args) {
         System.out.println("print all prime numbers less than 100: ");
         int count = 0;
-        int N = 0;
-        while (N <= 100){
-            if(isPrime(N)){
-                System.out.print(N + ", ");
+        for(int i = 1; i < 100; i++){
+            if(isPrime(i)){
+                System.out.print(i + ", ");
                 count++;
             }
-            N++;
         }
         System.out.println("count = " + count);
     }

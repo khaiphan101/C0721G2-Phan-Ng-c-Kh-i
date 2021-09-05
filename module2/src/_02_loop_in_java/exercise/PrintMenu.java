@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class PrintMenu {
     public static void main(String[] args) {
         int choice = -1;
+        int h;
         while (choice != 0) {
             Scanner sc = new Scanner(System.in);
             System.out.println("menu");
@@ -17,14 +18,18 @@ public class PrintMenu {
             switch (choice) {
                 case 1:
                     System.out.println("Print the rectangle");
-                    System.out.println("* * * * * *");
-                    System.out.println("* * * * * *");
-                    System.out.println("* * * * * *");
+                    System.out.println("Enter height:");
+                    h = sc.nextInt();
+                    for(int i =0; i < h; i++){
+                        System.out.println("* * * * * *");
+                    }
                     break;
                 case 2:
                     System.out.println("Print the square triangle");
+                    System.out.println("Enter height:");
+                    h = sc.nextInt();
                     System.out.println("Bottom - left");
-                    for (int i = 1; i <= 5; i++) {
+                    for (int i = 1; i <= h; i++) {
                         for (int j = 1; j <= i; j++) {
                             System.out.print("* ");
                         }
@@ -32,16 +37,16 @@ public class PrintMenu {
                     }
 
                     System.out.println("Top - Left");
-                    for (int i = 1; i <= 5; i++) {
-                        for (int j = 5 - i; j >= 0; j--) {
+                    for (int i = 1; i <= h; i++) {
+                        for (int j = h - i; j >= 0; j--) {
                             System.out.print("* ");
                         }
                         System.out.println();
                     }
 
                     System.out.println("Bottom - Right");
-                    for (int i = 1; i <= 5; i++) {
-                        for (int j = 5 - i; j > 0; j--) {
+                    for (int i = 1; i <= h; i++) {
+                        for (int j = h - i; j > 0; j--) {
                             System.out.print("  ");
                         }
                         for (int k = 1; k <= i; k++) {
@@ -51,11 +56,11 @@ public class PrintMenu {
                     }
 
                     System.out.println("Top - Right");
-                    for (int i = 1; i <= 5; i++) {
+                    for (int i = 1; i <= h; i++) {
                         for (int k = 1; k < i; k++) {
                             System.out.print("  ");
                         }
-                        for (int j = 5 - i; j >= 0; j--) {
+                        for (int j = h - i; j >= 0; j--) {
                             System.out.print("* ");
                         }
 
@@ -65,8 +70,10 @@ public class PrintMenu {
 
                 case 3:
                     System.out.println("Print isosceles  triangle");
-                    for (int i = 1; i <= 5; i++) {
-                        for (int j = 5 - i; j > 0; j--) {
+                    System.out.println("Enter height:");
+                    h = sc.nextInt();
+                    for (int i = 1; i <= h; i++) {
+                        for (int j = h - i; j > 0; j--) {
                             System.out.print(" ");
                         }
                         for (int k = 1; k <= i; k++) {
