@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4eecf07d-a28a-4106-98aa-e206dba2a956" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/CountOccurrencesOfACharInTheString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/FindMinNumberInArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/GetSumOfAColumn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/GetSumOfCrossLineInSquareMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/practice/CountStudentPassExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_02_loop_in_java/exercise/Print20FirstPrimeNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_02_loop_in_java/exercise/Print20FirstPrimeNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_02_loop_in_java/exercise/PrintAllPrimeNumbersLessThan100.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_02_loop_in_java/exercise/PrintAllPrimeNumbersLessThan100.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_02_loop_in_java/exercise/PrintMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_02_loop_in_java/exercise/PrintMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/META-INF/module2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/exercise/FindMaxNumberOf2DemensionArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/exercise/FindMaxNumberOf2DemensionArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_03_array_and_method/exercise/FindMaxNumberOf2DemensionArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/FindMaxNumberOf2DemensionArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +44,39 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.PrintAllPrimeNumbersLessThan100">
+  <component name="RunManager" selected="Application.CountOccurrencesOfACharInTheString">
+    <configuration name="CountOccurrencesOfACharInTheString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.CountOccurrencesOfACharInTheString" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_03_array_and_method.exercise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountStudentPassExam" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.practice.CountStudentPassExam" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_03_array_and_method.practice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FindMaxNumberOf2DemensionArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.FindMaxNumberOf2DemensionArray" />
       <module name="module2" />
@@ -53,12 +90,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FixBug" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_java.another_excercise.FixBug" />
+    <configuration name="GetSumOfAColumn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.GetSumOfAColumn" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_introduction_to_java.another_excercise.*" />
+          <option name="PATTERN" value="_03_array_and_method.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -66,38 +103,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Print20FirstPrimeNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_loop_in_java.exercise.Print20FirstPrimeNumbers" />
+    <configuration name="GetSumOfCrossLineInSquareMatrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.GetSumOfCrossLineInSquareMatrix" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_02_loop_in_java.exercise.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PrintAllPrimeNumbersLessThan100" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_loop_in_java.exercise.PrintAllPrimeNumbersLessThan100" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_02_loop_in_java.exercise.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PrintMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_loop_in_java.exercise.PrintMenu" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_02_loop_in_java.exercise.*" />
+          <option name="PATTERN" value="_03_array_and_method.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,14 +118,15 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PrintAllPrimeNumbersLessThan100" />
-        <item itemvalue="Application.Print20FirstPrimeNumbers" />
-        <item itemvalue="Application.PrintMenu" />
+        <item itemvalue="Application.CountOccurrencesOfACharInTheString" />
+        <item itemvalue="Application.GetSumOfAColumn" />
+        <item itemvalue="Application.GetSumOfCrossLineInSquareMatrix" />
         <item itemvalue="Application.FindMaxNumberOf2DemensionArray" />
-        <item itemvalue="Application.FixBug" />
+        <item itemvalue="Application.CountStudentPassExam" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -130,60 +142,24 @@
       <workItem from="1630594127612" duration="1809000" />
       <workItem from="1630641608254" duration="16162000" />
       <workItem from="1630813876156" duration="617000" />
+      <workItem from="1630902689164" duration="1724000" />
+      <workItem from="1630911220480" duration="11599000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="845" y="383" key="#Notifications" timestamp="1630594176252">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="845" y="383" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1630594176252" />
-    <state x="440" y="94" key="#Project_Structure" timestamp="1630472178646">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1630472178646" />
-    <state width="1877" height="388" key="GridCell.Tab.0.bottom" timestamp="1630814496567">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="388" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630814496567" />
-    <state width="1877" height="388" key="GridCell.Tab.0.center" timestamp="1630814496567">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="388" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630814496567" />
-    <state width="1877" height="388" key="GridCell.Tab.0.left" timestamp="1630814496567">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="388" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630814496567" />
-    <state width="1877" height="388" key="GridCell.Tab.0.right" timestamp="1630814496567">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="388" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630814496567" />
-    <state width="1075" height="312" key="GridCell.Tab.1.bottom" timestamp="1630676476568">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1075" height="312" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630676476568" />
-    <state width="1075" height="312" key="GridCell.Tab.1.center" timestamp="1630676476568">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1075" height="312" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630676476568" />
-    <state width="1075" height="312" key="GridCell.Tab.1.left" timestamp="1630676476568">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1075" height="312" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630676476568" />
-    <state width="1075" height="312" key="GridCell.Tab.1.right" timestamp="1630676476568">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1075" height="312" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630676476568" />
-    <state x="540" y="262" key="IDE.errors.dialog" timestamp="1630472240399">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="540" y="262" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630472240399" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1630481359850">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1630481359850" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
