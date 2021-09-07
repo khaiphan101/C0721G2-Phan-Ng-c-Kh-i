@@ -4,26 +4,14 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class FindMaxNumberOf2DemensionArray {
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
 
         int[][] arr = new int[2][];
-        Scanner sc = new Scanner(System.in);
-        System.out.println("2 Demension array");
-        System.out.println("enter length of the first array");
-        int length1 = sc.nextInt();
-        arr[0] = new int [length1];
-        for (int i = 0; i < arr[0].length; i++) {
-            System.out.println("Array0. Enter value of index " + i);
-            arr[0][i] = sc.nextInt();
-        }
-        System.out.println("enter length of the second array");
-        int length2 = sc.nextInt();
-        arr[1] = new int [length2];
-        for (int i = 0; i < arr[1].length; i++) {
-            System.out.println("Array1. Enter value of index " + i);
-            arr[1][i] = sc.nextInt();
-        }
 
+        System.out.println("2 Demension array");
+        arr[0] = inputArray("first");
+        arr[1] = inputArray("second");
         System.out.println(Arrays.toString(arr[0]) + Arrays.toString(arr[1]));
 
         int max = arr[0][0];
@@ -39,5 +27,16 @@ public class FindMaxNumberOf2DemensionArray {
             }
         }
         System.out.println("max: " + "arr[" + iMax + "]" + "[" + jMax + "] = " + max);
+    }
+
+    static int[] inputArray(String input){
+        System.out.println("enter length of the " + input + " array");
+        int length = sc.nextInt();
+        int[] array = new int [length];
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("Array0. Enter value of index " + i);
+            array[i] = sc.nextInt();
+        }
+        return array;
     }
 }

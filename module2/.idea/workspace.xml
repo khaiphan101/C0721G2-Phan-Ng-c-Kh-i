@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4eecf07d-a28a-4106-98aa-e206dba2a956" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/Fan/Fan.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/Fan/main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/QuadraticEquation/QuadraticEquation.java" afterDir="false" />
@@ -30,6 +31,22 @@
       <change afterPath="$PROJECT_DIR$/src/_04_class_and_object/practice/rectangle/Rectangle.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/_04_class_and_object/practice/rectangle/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/../.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/CountOccurrencesOfACharInTheString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/FindMinNumberInArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/GetSumOfAColumn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/GetSumOfCrossLineInSquareMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/practice/CountStudentPassExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/META-INF/module2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/exercise/FindMaxNumberOf2DemensionArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/exercise/FindMaxNumberOf2DemensionArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_03_array_and_method/exercise/FindMaxNumberOf2DemensionArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/FindMaxNumberOf2DemensionArray.java" afterDir="false" />
+>>>>>>> c66b4bbc7bcb4f6a788df56d8263a40f78aebc2b
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,14 +75,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Application.main (2)">
     <configuration name="Print20FirstPrimeNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_02_loop_in_java.exercise.Print20FirstPrimeNumbers" />
+=======
+  <component name="RunManager" selected="Application.CountOccurrencesOfACharInTheString">
+    <configuration name="CountOccurrencesOfACharInTheString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.CountOccurrencesOfACharInTheString" />
+>>>>>>> c66b4bbc7bcb4f6a788df56d8263a40f78aebc2b
       <module name="module2" />
       <extension name="coverage">
         <pattern>
@@ -77,12 +101,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="PrintAllPrimeNumbersLessThan100" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_02_loop_in_java.exercise.PrintAllPrimeNumbersLessThan100" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="_02_loop_in_java.exercise.*" />
+=======
+    <configuration name="CountStudentPassExam" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.practice.CountStudentPassExam" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_03_array_and_method.practice.*" />
+>>>>>>> c66b4bbc7bcb4f6a788df56d8263a40f78aebc2b
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,12 +123,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_04_class_and_object.exercise.QuadraticEquation.main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="_04_class_and_object.exercise.QuadraticEquation.*" />
+=======
+    <configuration name="FindMaxNumberOf2DemensionArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.FindMaxNumberOf2DemensionArray" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_03_array_and_method.exercise.*" />
+>>>>>>> c66b4bbc7bcb4f6a788df56d8263a40f78aebc2b
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,12 +145,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_04_class_and_object.exercise.StopWatch.main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="_04_class_and_object.exercise.StopWatch.*" />
+=======
+    <configuration name="GetSumOfAColumn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.GetSumOfAColumn" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_03_array_and_method.exercise.*" />
+>>>>>>> c66b4bbc7bcb4f6a788df56d8263a40f78aebc2b
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,12 +167,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_04_class_and_object.practice.rectangle.main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="_04_class_and_object.practice.rectangle.*" />
+=======
+    <configuration name="GetSumOfCrossLineInSquareMatrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.GetSumOfCrossLineInSquareMatrix" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_03_array_and_method.exercise.*" />
+>>>>>>> c66b4bbc7bcb4f6a788df56d8263a40f78aebc2b
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,14 +191,23 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Application.main (2)" />
         <item itemvalue="Application.main" />
         <item itemvalue="Application.main (1)" />
         <item itemvalue="Application.PrintAllPrimeNumbersLessThan100" />
         <item itemvalue="Application.Print20FirstPrimeNumbers" />
+=======
+        <item itemvalue="Application.CountOccurrencesOfACharInTheString" />
+        <item itemvalue="Application.GetSumOfAColumn" />
+        <item itemvalue="Application.GetSumOfCrossLineInSquareMatrix" />
+        <item itemvalue="Application.FindMaxNumberOf2DemensionArray" />
+        <item itemvalue="Application.CountStudentPassExam" />
+>>>>>>> c66b4bbc7bcb4f6a788df56d8263a40f78aebc2b
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -153,13 +222,19 @@
       <workItem from="1630590812566" duration="1148000" />
       <workItem from="1630594127612" duration="1809000" />
       <workItem from="1630641608254" duration="16162000" />
+<<<<<<< HEAD
       <workItem from="1630813876156" duration="1215000" />
       <workItem from="1630996834332" duration="9106000" />
+=======
+      <workItem from="1630813876156" duration="617000" />
+      <workItem from="1630902689164" duration="1724000" />
+      <workItem from="1630911220480" duration="11599000" />
+>>>>>>> c66b4bbc7bcb4f6a788df56d8263a40f78aebc2b
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -171,6 +246,7 @@
         </entry>
       </map>
     </option>
+<<<<<<< HEAD
   </component>
   <component name="WindowStateProjectService">
     <state x="845" y="383" key="#Notifications" timestamp="1630594176252">
@@ -225,5 +301,8 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1630481359850" />
+=======
+    <option name="oldMeFiltersMigrated" value="true" />
+>>>>>>> c66b4bbc7bcb4f6a788df56d8263a40f78aebc2b
   </component>
 </project>
