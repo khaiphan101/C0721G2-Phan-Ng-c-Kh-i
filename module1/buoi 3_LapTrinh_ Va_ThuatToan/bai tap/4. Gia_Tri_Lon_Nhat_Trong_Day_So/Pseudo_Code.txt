@@ -1,0 +1,17 @@
+Begin
+	Input N  
+	n = 1
+	While (n<=N) /// nhap gia tri day so N
+		Do Input a[n]
+			n= n+1
+		End Do
+	Max = a[1]
+	i =1
+	While (i<N) /// tim GTLN trong day so N
+		Do  i = i+1
+			If(max < a[i])
+				max = a[i]
+			End If
+		End Do
+	Display max
+End

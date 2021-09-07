@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let result = "";
+    let count = 20;
+    for(let i = 0 ; i<count; i++){
+        if(fib(i) % 5 == 0){
+            result = fib(i);
+        }
+    }
+    function  fib(num) {
+        if (num<=1){
+            return num;
+        }
+        else{
+            return fib(num - 1) + fib(num - 2);
+        }
+    }
+    alert("Số fibonacci đầu tiên chia hết cho 5: " + "\n" + result);
+</script>
+</body>
+</html>

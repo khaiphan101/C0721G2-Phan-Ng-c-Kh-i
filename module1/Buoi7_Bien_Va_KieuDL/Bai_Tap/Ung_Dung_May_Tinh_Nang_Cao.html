@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td:nth-child(-n+3){
+            background-color: #D2D2D2;
+        }
+        td:nth-child(7){
+            background-color: #D2D2D2;
+        }
+        button{
+            width: 70px;
+            height: 33px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<table border="1" cellspacing="10px" >
+    <tr>
+        <td colspan="7" id="result" style="height: 50px">
+
+        </td>
+    </tr>
+    <tr style="background-color: #D2D2D2">
+        <td><button id="Rad" onclick="falseDisplay()">Rad</button></td>
+        <td></td>
+        <td><button id="x!" onclick="falseDisplay()">x!</button></td>
+        <td><button id="(" onclick="falseDisplay()">(</button></td>
+        <td><button id=")" onclick="falseDisplay()">)</button></td>
+        <td><button id="%" onclick="falseDisplay()">%</button></td>
+        <td><button id="2-5" onclick="forClear()">AC</button></td>
+    </tr>
+    <tr>
+        <td><button id="Inv" onclick="falseDisplay()">Inv</button></td>
+        <td><button id="Sin" onclick="falseDisplay()">Sin</button></td>
+        <td><button id="ln" onclick="falseDisplay()">ln</button></td>
+        <td><button id="7" onclick="forDisplay('7')">7</button></td>
+        <td><button id="8" onclick="forDisplay('8')">8</button></td>
+        <td><button id="9" onclick="forDisplay('9')">9</button></td>
+        <td><button id="chia" onclick="forDisplay('/')">&#247;</button></td>
+    </tr>
+    <tr>
+        <td><button id="&Pi" onclick="falseDisplay()">&Pi</button></td>
+        <td><button id="Cos" onclick="falseDisplay()">Cos</button></td>
+        <td><button id="log" onclick="falseDisplay()">log</button></td>
+        <td><button id="4" onclick="forDisplay('4')">4</button></td>
+        <td><button id="5" onclick="forDisplay('5')">5</button></td>
+        <td><button id="6" onclick="forDisplay('6')">6</button></td>
+        <td><button id="&times;" onclick="forDisplay('*')">&times;</button></td>
+    </tr>
+    <tr>
+        <td><button id="e" onclick="falseDisplay()">e</button></td>
+        <td><button id="Sin" onclick="falseDisplay()">Sin</button></td>
+        <td><button id="&radic;" onclick="falseDisplay()">&radic;</button></td>
+        <td><button id="1" onclick="forDisplay('1')">1</button></td>
+        <td><button id="2" onclick="forDisplay('2')">2</button></td>
+        <td><button id="3" onclick="forDisplay('3')">3</button></td>
+        <td><button id="-" onclick="forDisplay('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button id="Ans" onclick="falseDisplay()">Ans</button></td>
+        <td><button id="EXP" onclick="falseDisplay()">EXP</button></td>
+        <td><button id="xsuby" onclick="falseDisplay()">x<sup>y</sup></button></td>
+        <td><button id="0" onclick="forDisplay('0')">0</button></td>
+        <td><button id="." onclick="forDisplay('.')">.</button></td>
+        <td><button id="=" onclick="solve()">=</button></td>
+        <td><button id="+" onclick="forDisplay('+')">+</button></td>
+    </tr>
+</table>
+<script>
+
+    function forClear() {
+        document.getElementById("result").innerHTML = "0";
+    }
+
+    function forDisplay(value) {
+        removeZero();
+        document.getElementById("result").innerHTML += value;
+    }
+    function removeZero() {
+        var value = document.getElementById("result").innerHTML;
+        if (value == "0") {
+            value = " "
+            document.getElementById("result").innerHTML = value;
+        }
+    }
+
+    function solve() {
+        removeZero()
+        var equation = document.getElementById("result").innerHTML;
+        console.log(equation);
+        var solved = eval(equation);
+        if (solved === Infinity){
+            alert('Cannot Devided by 0');
+        }
+        document.getElementById('result').innerHTML = solved;
+    }
+    function falseDisplay() {
+        alert("Tính năng này đang phát triển, vui lòng chọn phép tính khác!")
+    }
+    // function checkZero() {
+    //     if(equation == 0) {
+    //         alert('Cannot Devided by 0')
+    //     }else {
+    //         forDisplay('/')
+    //     }
+    // }
+</script>
+</body>
+</html>

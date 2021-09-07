@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class PhanSo {
+        constructor(tuso, mauso) {
+            this.tuso = tuso;
+            this.mauso = mauso;
+        }
+
+        setTuSo(ts) {
+            this.tuso = ts;
+        }
+
+        setMauSo(ms) {
+            this.mauso = ms;
+        }
+
+        getTuSo() {
+            return this.tuso;
+        }
+
+        getMauSo() {
+            return this.mauso;
+        }
+        getPhanso(){
+            return this.getTuSo() + "/"+ this.getMauSo();
+        }
+        timUCLN(a, b) {
+            if (b == 0) return a;
+            return this.timUCLN(b, a % b);
+        }
+
+        rutGon() {
+            let i = this.timUCLN(Math.abs(this.getTuSo()),Math.abs(this.getMauSo()) );
+            this.tuso = this.tuso / i;
+            this.mauso = this.mauso / i;
+        }
+
+        congPhanSo(ps) {
+            let ts,ms;
+            ts = this.getTuSo() * ps.getMauSo() + ps.getTuSo() * this.getMauSo();
+            ms = this.getMauSo() * ps.getMauSo();
+            let k = new PhanSo(ts, ms);
+            k.rutGon();
+            document.write("Cộng hai phân số:" + k.getTuSo() + "/" + k.getMauSo());
+            document.write("<br>");
+        }
+
+        truPhanSo(ps) {
+            let ts, ms;
+            ts = this.getTuSo() * ps.getMauSo() - ps.getTuSo() * this.getMauSo();
+            ms = this.getMauSo() * ps.getMauSo();
+            let k = new PhanSo(ts, ms);
+            k.rutGon();
+            document.write("Trừ hai phân số:" + k.getTuSo() + "/" + k.getMauSo());
+            document.write("<br>");
+        }
+
+        nhanPhanSo(ps) {
+            let ts, ms;
+            ts = this.getTuSo() * ps.getTuSo();
+            ms = this.getMauSo() * ps.getMauSo();
+            let k = new PhanSo(ts, ms);
+            k.rutGon();
+            document.write("Nhân hai phân số:" + k.getTuSo() + "/" + k.getMauSo());
+            document.write("<br>");
+        }
+
+        chiaPhanSo(ps) {
+            let ts, ms;
+
+            ts = this.getTuSo() * ps.getMauSo();
+            ms = this.getMauSo() * ps.getTuSo();
+            let k = new PhanSo(ts, ms);
+            k.rutGon();
+            document.write("Chia hai phân số:" + k.getTuSo() + "/" + k.getMauSo());
+            document.write("<br>");
+        }
+    }
+
+    let tuso1,tuso2,mauso1,mauso2;
+    do {
+        tuso1 = parseInt(prompt("Phân số thứ nhất. Nhập tử số 1"));
+    <!DOCT         mauso1 = parseInt(prompt("Phân số thứ nhất. Nhập mẫu số 1"));
+        YPE ht         tuso2 = parseInt(prompt("Phân số thứ hai. Nhập tử số 2"));
+        ml>
+        <         mauso2 = parseInt(prompt("Phân số thứ hai. Nhập mẫu số 2"));
+        html     } while (mauso1 == 0 && mauso2 == 0);
+    let ps1 = new PhanSo(tuso1, mauso1);
+    let ps2 = new PhanSo(tuso2, mauso2);
+    ps1.rutGon();
+    console.log(ps1.getPhanso());
+    ps2.rutGon();
+    console.log(ps2.getPhanso());
+    ps1.congPhanSo(ps2);
+    ps1.truPhanSo(ps2);
+    ps1.nhanPhanSo(ps2);
+    ps1.chiaPhanSo(ps2);
+</script>
+</body>
+</html>

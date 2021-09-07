@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <button id="muaVe" onclick="xuLyMuaVe()">Mua vé</button>
+    <button id="ranDom" onclick="xuLyRandom()">Random Vé</button>
+    <button id="ketQua" onclick="xuLyKetQua()">Xem kết quả</button>
+</form>
+<script>
+    class VeSo {
+        constructor(so1, so2, so3, so4, so5, so6) {
+            this.so1 = so1;
+            this.so2 = so2;
+            this.so3 = so3;
+            this.so4 = so4;
+            this.so5 = so5;
+            this.so6 = so6;
+        }
+
+        getSo1() {
+            return this.so1;
+        }
+
+        getSo2() {
+            return this.so2;
+        }
+
+        getSo3() {
+            return this.so3;
+        }
+
+        getSo4() {
+            return this.so4;
+        }
+
+        getSo5() {
+            return this.so5;
+        }
+
+        getSo6() {
+            return this.so6;
+        }
+
+        setso1(value) {
+            this.so1 = value;
+        }
+
+        setso2(value) {
+            this.so2 = value;
+        }
+
+        setso3(value) {
+            this.so3 = value;
+        }
+
+        setso4(value) {
+            this.so4 = value;
+        }
+
+        setso5(value) {
+            this.so5 = value;
+        }
+
+        setso6(value) {
+            this.so6 = value;
+        }
+    }
+
+    let mangVeso = [];
+    let ketQua = [];
+
+    function xuLyMuaVe() {
+        let soLan = parseInt(prompt("Nhập số lần bạn muốn mua vé: "));
+        for (let i = 0; i < soLan; i++) {
+            mangVeso.push(ganVeso());
+            console.log(mangVeso);
+        }
+    }
+
+    function ganVeso() {
+        let veso = new VeSo();
+        veso.setso1(parseInt(prompt("Nhập cặp1 số 0 - 99: ")));
+        veso.setso2(parseInt(prompt("Nhập cặp2 số 1 - 100: ")));
+        veso.setso3(parseInt(prompt("Nhập cặp3 số 1 - 100: ")));
+        veso.setso4(parseInt(prompt("Nhập cặp4 số 1 - 100: ")));
+        veso.setso5(parseInt(prompt("Nhập cặp5 số 1 - 100: ")));
+        veso.setso6(parseInt(prompt("Nhập cặp số6 1 - 100: ")));
+        return veso;
+    }
+
+    // function xuLyRandom() {
+    //     let veRandom = new VeSo();
+    //     veRandom.setso1(Math.round(Math.random() * 100));
+    //     veRandom.setso2(Math.round(Math.random() * 100));
+    //     veRandom.setso3(Math.round(Math.random() * 100));
+    //     veRandom.setso4(Math.round(Math.random() * 100));
+    //     veRandom.setso5(Math.round(Math.random() * 100));
+    //     veRandom.setso6(Math.round(Math.random() * 100));
+    //     return veRandom;
+    // }
+
+    // function xuLyKetQua() {
+    //     ketQua = [1, 2, 3, 4, 5, 6];
+    //     let mangLuuketqua = [0, 0, 0];
+    //     for (let i = 0; i < mangLuuketqua; i++) {
+    //         switch (soSanh(mangVeso === ketQua)) {
+    //             case 6:
+    //                 mangLuuketqua[0]++;
+    //                 alert("Bạn trúng giải 1");
+    //                 break;
+    //             case 5:
+    //                 mangLuuketqua[1]++;
+    //                 alert("Bạn trúng giải 2");
+    //                 break;
+    //             case 4:
+    //                 mangLuuketqua[2]++;
+    //                 alert("Bạn trúng giải 3");
+    //                 break;
+    //             default:
+    //                 alert("Bạn tạch");
+    //         }
+    //     }
+    //
+    // }
+
+    // function soSanh(arr1, arr2) {
+    //     let dem = 0;
+    //     if (arr1.getSo1 == arr2.getSo1) {
+    //         dem++;
+    //     }
+    //     if (arr1.getSo2 == arr2.getSo2) {
+    //         dem++;
+    //     }
+    //     if (arr1.getSo2 == arr2.getSo2) {
+    //         dem++;
+    //     }
+    //     if (arr1.getSo3 == arr2.getSo3) {
+    //         dem++;
+    //     }
+    //     if (arr1.getSo4 == arr2.getSo4) {
+    //         dem++;
+    //     }
+    //     if (arr1.getSo5 == arr2.getSo5) {
+    //         dem++;
+    //     }
+    //     if (arr1.getSo6 == arr2.getSo6) {
+    //         dem++;
+    //     } else return dem;
+    //     return dem;
+    // }
+</script>
+</body>
+</html>

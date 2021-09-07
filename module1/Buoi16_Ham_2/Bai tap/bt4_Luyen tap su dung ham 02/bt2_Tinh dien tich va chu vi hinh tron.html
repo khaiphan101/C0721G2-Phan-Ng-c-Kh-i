@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body>
+<script>
+    let r = inputANumber("nhập bán kính");
+    getArea(r);
+    getPerimeter(r);
+    function inputANumber(input) {
+        let number = parseFloat(prompt(input));
+        while(isNaN(number)){
+            alert("Đây không phải là số, vui lòng nhập lại");
+            number = parseFloat(prompt(input));
+        }
+        return number;
+    }
+    function getArea(r) {
+        let S = Math.PI * (r**2);
+        alert("S = " + S);
+    }
+    function getPerimeter(r) {
+        let p = Math.PI * (r*2);
+        alert("p = " + p);
+    }
+</script>
+
+</body>
+</html>

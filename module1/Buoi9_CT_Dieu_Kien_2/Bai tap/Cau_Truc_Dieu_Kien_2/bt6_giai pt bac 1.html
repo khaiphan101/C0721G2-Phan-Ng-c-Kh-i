@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4> Giải phương trình: ax +b = 0</h4>
+<p>nhập a =</p>
+<input type="text" id="a">
+<p>nhập b =</p>
+<input type="text" id="b"><br> <br>
+<button onclick="solve()">Giải</button>
+<script>
+    function solve() {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        if(a === 0){
+            if(b === 0){
+                alert("Phương trình vô số nghiệm");
+            }
+            else {
+                alert("Phương trình vô nghiệm");
+            }
+
+        }
+
+        let x = -b / a;
+        alert("phương trình có 1 nghiệm x = " + x);
+    }
+
+</script>
+</body>
+</html>

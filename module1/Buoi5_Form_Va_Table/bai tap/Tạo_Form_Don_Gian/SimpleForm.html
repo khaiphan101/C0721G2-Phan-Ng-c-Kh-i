@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sở thích của bạn</title>
+    <style>
+        span1{  color: blue;
+            width:100px;
+            margin:0px;
+        }
+        span2{
+            color: blue;
+            width:100px;
+            margin-left:24px;
+        }
+        span3{
+            color: blue;
+            width:100px;
+            margin-left:4px;
+            vertical-align: top;
+        }
+        div1{
+            color: red;
+        }
+        h1{
+            background: orangered;
+            color: white;
+            width: 340px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+    <h1 >SỞ THÍCH CỦA BẠN</h1>
+    <span1><label for="name"> Họ và tên</label></span1>
+    <input type="text" name="name" id="name" size="28"/>
+    <br>
+    <span2><label for="Email">Email</label></span2>
+    <input type="text" name="Email" id="Email" size="18"/>
+    <br>
+
+    <table >
+        <tr>
+            <td><span3>Sở thích</span3></td>
+
+    <div1>
+            <td><input type="checkbox" name="hobby" value="Thể thao"/>Thể thao</td>
+            <td><input type="checkbox" name="hobby" value="Âm nhạc"/>Âm nhạc</td>
+            <td><input type="checkbox" name="hobby" value="Đọc sách"/>Đọc sách</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="checkbox" name="hobby" value="Lướt web"/>Lướt web</td>
+            <td><input type="checkbox" name="hobby" value="Chơi game"/>Chơi game</td>
+            <td><input type="checkbox" name="hobby" value="Điện ảnh"/>Điện ảnh</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="checkbox" name="hobby" value="Du lịch"/>Du lịch</td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="3"><input type="submit" name="submit" value="Gửi thông tin"/>
+            <input type="reset" name="reset" value="Nhập lại"/> </td>
+        </tr>
+    </div1>
+
+    </table>
+</body>
+</html>

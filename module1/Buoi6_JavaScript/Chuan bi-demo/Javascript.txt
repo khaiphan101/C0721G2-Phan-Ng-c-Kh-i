@@ -1,0 +1,13 @@
+Lập trình là gi: là việc lập ra chương trình để máy tính thực thi nhiệm vụ xử lý thông tin nào đó
+javascript: Là một ngôn ngữ lập trình
+ƯU ĐIỂM
+không cần một compiler vì web browser có thể biên dịch nó bằng HTML;
+Nó dễ học hơn các ngôn ngữ lập trình khác;
+Lỗi dễ phát hiện hơn và vì vậy dễ sửa hơn;
+Nó có thể được gắn trên một số element của trang web hoặc event của trang web như là thông qua click chuột hoặc di chuột tới;
+JS hoạt động trên nhiều trình duyệt, nền tảng, vâng vâng;
+Bạn có thể sử dụng JavaScript để kiểm tra input và giảm thiểu việc kiểm tra thủ công khi truy xuất qua database;
+Nó giúp website tương tác tốt hơn với khách truy cập;
+Nó nhanh hơn và nhẹ hơn các ngôn ngữ lập trình khác.\
+CÁCH NHÚNG JAVASCRIPT VÀO HTML
+đặt tất cả mã code vào trong cặp thẻ <script></script> 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .weather{
+            height: 30px; background-color: #162BFF; color: white;
+            margin-top: auto;
+            margin-bottom: 20px;
+
+        }
+    </style>
+</head>
+<body>
+<h2> Thay đổi nội dung của thẻ HTML</h2>
+<input id="weather" value="Thời tiết hôm nay thế nào" class="weather"> <br>
+
+<input type="button" value="trời nắng" onclick="showSunny()">
+<input type="button" value="trời mưa" onclick="showRainy()">
+
+<script>
+    function showSunny() {
+        document.getElementById("weather").value="Hôm nay trời nắng đẹp";
+    }
+    function showRainy() {
+        document.getElementById("weather").value="Hôm nay trời mưa ngâu";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = "025468";
+    // const str = num.toString();
+    const result = [num[0]];
+    for (let i = 1; i< num.length; i++){
+        if(num[i] % 2 === 0 && num[i-1] % 2 === 0){
+            result.push("-",num[i]);
+        }
+        else{
+            result.push(num[i]);
+        }
+        console.log(result);
+    }
+    console.log(result.join(''));
+</script>
+</body>
+</html>

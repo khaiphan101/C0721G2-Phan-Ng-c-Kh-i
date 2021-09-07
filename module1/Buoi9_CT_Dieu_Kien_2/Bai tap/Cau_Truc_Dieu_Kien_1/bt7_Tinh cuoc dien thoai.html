@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Tính cước sử dụng của hộ gia đình trong 1 tháng</h4>
+<p>Số phút gọi nội mạng:</p>
+<input type="text" id="onNetTime">
+<p>Số tin nhắn nội mạng:</p>
+<input type="text" id="onNetMessage">
+<p>Số phút gọi ngoại mạng:</p>
+<input type="text" id="offNetTime">
+<p>Số tin nhắn ngoại mạng:</p>
+<input type="text" id="offNetMessage">
+<button onclick="charge()">Tính cước</button>
+<p id="result"></p>
+<script>
+    function charge(){
+        let onNetTime = parseInt(document.getElementById("onNetTime").value);
+        let onNetMessage = parseInt(document.getElementById("onNetMessage").value);
+        let offNetTime = parseInt(document.getElementById("offNetTime").value);
+        let offNetMessage = parseInt(document.getElementById("offNetMessage").value);
+        let charge = onNetTime*1000 + onNetMessage*100 + offNetTime+2000 + offNetMessage*200;
+        if (isNaN(onNetTime) || isNaN(onNetMessage) || isNaN(offNetTime) || isNaN(offNetMessage)){
+            alert("Vui lòng nhập số")
+        }
+        if(onNetTime < 0 || onNetMessage < 0 || offNetTime < 0 || offNetMessage < 0){
+            alert("Hãy nhập số dương");
+        }
+        document.getElementById("result").innerHTML = "Cước điện thoại trong tháng :" + charge + " VND";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let result = "";
+    let count = 20;
+    for(let i = 1 ; i<=count; i++){
+        if (i==count){
+            result += fib(i); //xoá dấu chấm phẩy ";" ở fib cuối cùng
+        }
+        else{
+            result += fib(i) + ", ";
+        }
+    }
+    function  fib(num) {
+        if (num<=1){
+            return num;
+        }
+        else{
+            return fib(num - 1) + fib(num - 2);
+        }
+    }
+    alert("20 số fibonacci đầu tiên: " + "\n" + result);
+</script>
+</body>
+</html>

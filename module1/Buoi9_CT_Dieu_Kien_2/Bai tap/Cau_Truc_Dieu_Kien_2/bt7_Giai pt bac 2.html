@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3> Giải phương trình bậc 2: ax^2 + bX + c =0</h3>
+<p>nhập a =</p>
+<input type="text" id="a" value="1">
+<p>nhập b =</p>
+<input type="text" id="b" value="-4">
+<p>nhập c =</p>
+<input type="text" id="c" value="3">
+<br> <br>
+<button onclick="solve()">Giải</button>
+<script>
+    function solve() {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        let c = parseFloat(document.getElementById("c").value);
+        if (a === 0) {
+            if (b === 0) {
+                if(c === 0){
+                    alert("Phương trình vô số nghiệm");
+                }
+                else {
+                    alert("Phương trình vô nghiệm");
+                }
+            }
+
+            else{
+                let x = -c / b;
+                alert("phương trình có 1 nghiệm x = " + x);
+            }
+        }
+        else {
+            let D = b**2 -4*a*c;
+            if(D<0){
+                alert("Phương trình vô nghiệm")
+            }
+            else if(D === 0){
+                alert("Phương trình có nghiệm kép: x = "+ -b / (2*a));
+            }
+            else {
+                alert("Phương trình có 2 nghiệm phân biệt " + '\r'+
+                    `x1 = ` + (-b + Math.sqrt(D)) / (2*a) + '\r'+
+                    `x2 = ` + (-b - Math.sqrt(D)) / (2*a));
+            }
+        }
+    }
+</script>
+</body>
+</html>

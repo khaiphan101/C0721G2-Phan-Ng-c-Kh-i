@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span>Input value:</span>
+<input type="text" id="input" oninput="inputValue(this.value)">
+<select onchange="convert(this.value,)">
+    <option value="1">Convert meters to feet</option>
+    <option value="2">Convert feet to meters</option>
+</select>
+<p id="result"></p>
+<script>
+    let inputNum;
+    function inputValue(number){
+        inputNum = parseInt(number);
+        console.log(inputNum);
+    }
+    function convert(a) {
+        if(a == 2) {
+            feetToMeter(inputNum);
+        }
+        else{
+            meterToFeet(inputNum);
+        }
+    }
+    function feetToMeter(feet){
+        console.log(feet);
+
+        meter = 0.305 * feet;
+        document.getElementById("result").innerHTML= meter + " meter";
+    }
+    function meterToFeet(meter){
+        feet = 3.279 * meter;
+        document.getElementById("result").innerHTML= feet + " feet"
+    }
+
+</script>
+</body>
+</html>

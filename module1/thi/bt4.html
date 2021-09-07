@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            text-align: center;
+
+        }
+        div{
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+
+        }
+        tr{
+            border-top: black;
+            border-bottom: black;
+
+        }
+        td{width: 700px;}
+        th{width: 700px;}
+    </style>
+</head>
+<label>Id: </label>
+<input id="id">
+<label>Name: </label>
+<input id="name">
+<label>Brand: </label>
+<input id="brand">
+<label>Price: </label>
+<input id="price">
+<button onclick="createPhone()" style="background-color: #58257B; color: white">Add Phone</button>
+
+<button onclick="searchPhone()" style="background-color: #58257B; color: white">Search Phone</button>
+<br>
+<p id="displaySearch" ></p>
+
+<div id="display" ></div>
+
+<body style="background-color: #F7F7F7">
+
+<script>
+    class Phone{
+        constructor(id, name, brand, price) {
+            this.id = id;
+            this.name = name;
+            this.brand = brand;
+            this.price = price;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        setId(value) {
+            this.id = value;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(value) {
+            this.name = value;
+        }
+
+        getBrand() {
+            return this.brand;
+        }
+
+        setBrand(value) {
+            this.brand = value;
+        }
+
+        getPrice() {
+            return this.price;
+        }
+
+        setPrice(value) {
+            this.price = value;
+        }
+        toString(){
+
+        }
+
+    }
+
+    function createPhone() {
+        let id = document.getElementById("id").value;
+        document.getElementById("id").value = "";
+        let name = document.getElementById("name").value;
+        document.getElementById("name").value = "";
+        let brand = document.getElementById("brand").value;
+        document.getElementById("brand").value = "";
+        let price = document.getElementById("price").value;
+        document.getElementById("price").value = "";
+
+        phone.push(new Phone(id, name, brand, parseInt(price)));
+        displayPhone();
+    }
+
+    function displayPhone() {
+        phone.sort(function (a,b) {
+            if (a.getName() > b.getName()) return 1;
+            if (a.getName() < b.getName()) return -1;
+            return 0;
+        });
+        let temp = "";
+        temp += "<table frame='above' width='90%'>";
+        temp += "<tr><th>Id</th><th>Name</th><th>Brand</th><th>Price</th><th>Edit</th><th>Delete</th></tr>";
+        for (let i = 0; i < phone.length; i++) {
+            temp += "<tr>";
+            temp += "<td >" + phone[i].id + "</td>";
+            temp += "<td >" + phone[i].name + "</td>";
+            temp += "<td>" + phone[i].brand + "</td>";
+            temp += "<td>" + phone[i].price + "</td>";
+            temp += "<td><button onclick='editPhone(" + i + ")'>Edit</button></td>";
+            temp += "<td><button onclick='deletePhone(" + i + ")'>Delete</button></td>";
+            temp += "</tr>"
+        }
+
+        temp += "</table>"
+        document.getElementById("display").innerHTML = temp;
+    }
+
+    function deletePhone(index) {
+        if (confirm("Bạn thật sự muốn xóa sản phẩm có tên là " + phone[index].name + " ?")) {
+            phone.splice(index, 1);
+            displayPhone();
+        }
+    }
+
+    function editPhone(index) {
+        let temp = "";
+        temp += "<table frame='above' width='90%'>";
+        temp += "<tr><th>Id</th><th>Name</th><th>Brand</th><th>Price</th><th>Edit</th><th>Delete</th></tr>";
+        for (let i = 0; i < phone.length; i++) {
+            if (i == index) {
+                temp += "<tr>";
+                temp += "<td><input type='text' id='editId' value='" + phone[i].id + "'></td>";
+                temp += "<td><input type='text' id='editName' value='" + phone[i].name + "'></td>";
+                temp += "<td><input type='text' id='editBrand' value='" + phone[i].brand + "'></td>";
+                temp += "<td><input type='text' id='editPrice' value='" + phone[i].price + "'></td>";
+                temp += "<td><button onclick='savePhone(" + i + ")'>Save</button></td>";
+                temp += "<td><button onclick='deletePhone(" + i + ")'>Delete</button></td>";
+                temp += "</tr>"
+            }
+            else {
+                temp += "<tr>";
+                temp += "<td>" + phone[i].id + "</td>";
+                temp += "<td>" + phone[i].name + "</td>";
+                temp += "<td>" + phone[i].brand + "</td>";
+                temp += "<td>" + phone[i].price + "</td>";
+                temp += "<td><button onclick='editPhone(" + i + ")'>Edit</button></td>";
+                temp += "<td><button onclick='deletePhone(" + i + ")'>Delete</button></td>";
+                temp += "</tr>"
+            }
+        }
+        temp += "</table>";
+        document.getElementById("display").innerHTML = temp;
+    }
+    function savePhone(index){
+        console.log(phone[index].name)
+        if(confirm("Are you sure to save the changes?")) {
+            phone[index].id = document.getElementById('editId').value;
+            phone[index].name = document.getElementById('editName').value;
+            phone[index].brand = document.getElementById('editBrand').value;
+            phone[index].price = document.getElementById('editPrice').value;
+            displayPhone();
+        }
+        else{
+            displayPhone();
+        }
+    }
+    function searchPhone(){
+        let flag = false;
+        let idSearch = document.getElementById('id').value;
+        document.getElementById("id").value = "";
+        let nameSearch = document.getElementById('name').value;
+        document.getElementById("name").value = "";
+        let brandSearch = document.getElementById('brand').value;
+        document.getElementById("brand").value = "";
+        let priceSearch = document.getElementById('price').value;
+        document.getElementById("price").value = "";
+
+        for(let i = 0; i < phone.length; i++) {
+            if(idSearch == phone[i].id || nameSearch == phone[i].name || brandSearch == phone[i].brand || priceSearch == phone[i].price){
+                let temp = "";
+                temp += "<table frame='above' width='90%' style='color: white; background-color: #58257B'>";
+                temp += "<tr><th>Id</th><th>Name</th><th>Brand</th><th>Price</th><th></th><th></th></tr>";
+                temp += "<tr>";
+                temp += "<td >" + phone[i].id + "</td>";
+                temp += "<td >" + phone[i].name + "</td>";
+                temp += "<td>" + phone[i].brand + "</td>";
+                temp += "<td>" + phone[i].price + "</td>";
+                temp += "</tr>"
+                temp += "</table>"
+                document.getElementById("displaySearch").innerHTML = temp;
+                flag = true;
+            }
+        }
+        if(flag == false){
+            document.getElementById("displaySearch").innerHTML = "Xin lỗi, không tìm thấy sản phẩm này"
+        }
+    }
+    let phone = [];
+    phone.push(new Phone("S125", "Samsung A31", "Samsung", 20000));
+    phone.push(new Phone("I123", "Iphone 10 plus", "Iphone", 30000));
+    phone.push(new Phone("N124", "Nokia N72", "Nokia", 10000));
+    displayPhone();
+</script>
+</body>
+</html>
