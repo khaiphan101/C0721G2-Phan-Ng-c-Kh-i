@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập n = "));
+    let S = 0;
+    document.write("n = " + n + "<br>");
+    document.write("S = " + S + " ");
+    let a = 1;
+    let inherit;
+    for (let i = 1; i <= n; i++) {
+        a = (2*i - 1);
+        inherit = doInherit(a);
+        document.write(" + " + " 1/" + inherit );
+        S += 1/inherit;
+    }
+    document.write("<br>");
+    document.write("S = " + S);
+    function doInherit(a) {
+        let b=1;
+        for (i = a; i > 0; i--){
+            b *= i;
+        }
+        return b;
+    }
+</script>
+</body>
+</html>

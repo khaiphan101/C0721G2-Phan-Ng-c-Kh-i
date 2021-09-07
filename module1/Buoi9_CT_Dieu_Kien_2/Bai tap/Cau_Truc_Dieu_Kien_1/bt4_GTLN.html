@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập số nguyên thứ nhất</p>
+<input type="text" id="num1">
+<p>Nhập số nguyên thứ hai</p>
+<input type="text" id="num2">
+<p>Nhập số nguyên thứ ba</p>
+<input type="text" id="num3">
+<br>
+<button onclick="findMaxNumber()">Tìm GTLN</button>
+<p id="result"></p>
+<script>
+    function findMaxNumber() {
+        let num1 = parseInt(document.getElementById("num1").value);
+        console.log(num1);
+        let num2 = parseInt(document.getElementById("num2").value);
+        console.log(num2);
+        let num3 = parseInt(document.getElementById("num3").value);
+        console.log(num3);
+        let maxNum = num1;
+        console.log(maxNum);
+        if(maxNum < num2){
+            maxNum = num2;
+        }
+        console.log(maxNum);
+        if (maxNum < num3){
+            maxNum = num3;
+        }
+        console.log(maxNum);
+        document.getElementById("result").innerHTML = "GTLN: " + maxNum;
+
+    }
+</script>
+</body>
+</html>

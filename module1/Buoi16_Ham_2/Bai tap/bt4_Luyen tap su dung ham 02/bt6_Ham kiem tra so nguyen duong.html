@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = inputANumber("Nhập một số");
+    alert(checkPositive(n));
+    function inputANumber(input) {
+        let number = parseFloat(prompt(input));
+        while(isNaN(number)){
+            alert("Đây không phải là số, vui lòng nhập lại");
+            number = parseFloat(prompt(input));
+        }
+        return number;
+    }
+    function checkPositive(n){
+        if(n > 0) return true;
+        else return false;
+    }
+</script>
+</body>
+</html>

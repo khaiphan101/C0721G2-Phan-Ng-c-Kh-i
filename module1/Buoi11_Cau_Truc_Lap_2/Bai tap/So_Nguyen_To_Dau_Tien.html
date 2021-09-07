@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let checkinput = true;
+    while (checkinput) {             ///tạo vòng lặp nhập lại nếu nhập lỗi vd: nhập a => quay lại bước nhập
+        var number = parseInt(prompt("Nhập số lượng số nguyên tố đầu tiên:"));
+        if (isNaN(number)) {         //// check có nhập lỗi không
+            alert("Bạn đã nhập sai, vui lòng nhập một số");
+            checkinput = true;
+        } else {
+            let count = 0;
+            let N = 2;
+            let value = "";
+            for (N; count < number; N++) {
+                let check = true;
+                for (let i = 2; i < N; i++) {
+                    if (N % i == 0) {
+                        check = false;
+                        break;
+                    }
+                }
+                if (check) {
+                    count++;
+                    if (count == number) { //// xoá dấu ";" ở số cuối cùng
+                        value += N;
+                    } else {
+                        value += N + ", ";
+                    }
+                }
+            }
+            alert(number + " số nguyên tố đầu tiên là: " + "\n" + value);
+        }
+    }
+
+</script>
+</body>
+</html>

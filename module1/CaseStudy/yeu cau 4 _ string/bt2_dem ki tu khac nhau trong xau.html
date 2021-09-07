@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s = "cabca";
+    let newStr = [];
+    console.log(differentSymbolsNaive(s, newStr));
+    function differentSymbolsNaive(str, newStr) {
+        for (let i = 0; i < str.length; i++) {
+            if(checkInclude(str[i], newStr)) {
+                newStr.push(str[i])
+            }
+        }
+        return newStr.join("")
+    }
+    function checkInclude(element, arr) {
+        for (let j = 0; j < arr.length; j++) {
+            if (element == arr[j]) {
+                return false;
+            }
+        }
+        return true;
+    }
+</script>
+</body>
+</html>

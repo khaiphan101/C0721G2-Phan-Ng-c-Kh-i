@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Cadres {
+        constructor(id, name, gender, address, birthday, specialized, rank, coefficientsSalary, allowance) {
+            this.id = id;
+            this.name = name;
+            this.address = address;
+            this.birthday = birthday;
+            this.specialized = specialized;
+            this.rank = rank;
+            this.coefficientsSalary = coefficientsSalary;
+            this.allowance = allowance;
+        }
+        getId(){
+            return this.id;
+        }
+        setid(value){
+            this.id = value;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(value){
+            this.name = value;
+        }
+        getGender(){
+            return this.gender;
+        }
+        setGender(value){
+            this.gender = value;
+        }
+        getAddress(){
+            return this.address;
+        }
+        setAddress(value){
+            this.address = value;
+        }
+        getBirthday(){
+            return this.birthday;
+        }
+        setBirthday(value){
+            this.birthday = value;
+        }
+        getSpecialized(){
+            return this.specialized;
+        }
+        setSpecialized(value){
+            this.specialized = value;
+        }
+        getRank(){
+            return this.rank;
+        }
+        setRank(value){
+            this.rank = value;
+        }
+        getCoefficientsSalary(){
+            return this.coefficientsSalary;
+        }
+        setCoefficientsSalary(value){
+            this.coefficientsSalary = value;
+        }
+        getAllowance(){
+            return this.allowance;
+        }
+        setAllowance(value){
+            this.allowance = value;
+        }
+
+        getIncome(){
+            return (this.getCoefficientsSalary() + this.getAllowance()) *450000;
+        }
+    }
+    class CadresList{
+        constructor(arr) {
+            this.arr = arr;
+        }
+        getList(){
+            return this.arr;
+        }
+        showList(){
+            let data = "Danh sách cán bộ:";
+            console.log(this.getList().length);
+            for (let i = 0; i < this.getList().length; i++) {
+                data += i + 1 + ". " + this.getList()[i].getName();
+
+            }
+            console.log(data)
+        }
+    }
+    let c1 = new Cadres(1, "Quốc Anh", true, "Đà nẵng", "26-04-1996", "criminal investigations", "sublieutenant", 20, 5);
+    let c2 = new Cadres(2, "Phước Hải", true, "Quảng Nam", "26-04-1996", "marrin", "second lieutenant", 15, 5);
+    let c3 = new Cadres(3, "Văn cầu", true, "Đà nẵng", "26-04-1996", "firefighter", "Lieutenant", 24, 5);
+    let c4 = new Cadres(4, "Kiểu Trang", false, "Đà nẵng", "26-04-1996", "traffic officer", "captain", 30, 10);
+    let arr = {c1, c2, c3, c4};
+    let cadresList = new CadresList(arr);
+    cadresList.showList();
+
+
+</script>
+</body>
+</html>

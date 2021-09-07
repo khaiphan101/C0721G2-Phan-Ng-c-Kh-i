@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            /*border-collapse: collapse;*/
+            text-align: center;
+
+        }
+        div{
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+
+        }
+        tr{
+            border-top: black;
+            border-bottom: black;
+
+        }
+        td{width: 100px;}
+        th{width: 100px;}
+    </style>
+</head>
+<label>Name: </label>
+<input id="name">
+<label>Price: </label>
+<input id="price">
+<label>Description: </label>
+<input id="description">
+<button onclick="createProduct()">Create Product</button>
+
+<button onclick="searchProduct()" style="background-color: #58257B; color: white">Search Product</button>
+<br>
+<p id="displaySearch" ></p>
+
+<div id="display" ></div>
+
+<body style="background-color: #F7F7F7">
+
+<script>
+    class Product {
+        constructor(name, price, description) {
+            this.name = name;
+            this.price = price;
+            this.description = description;
+        }
+    }
+
+    function createProduct() {
+        let name = document.getElementById("name").value;
+        document.getElementById("name").value = "";
+        let price = document.getElementById("price").value;
+        document.getElementById("price").value = "";
+        let description = document.getElementById("description").value;
+        document.getElementById("description").value = "";
+
+        products.push(new Product(name, parseInt(price), description));
+        displayProduct();
+    }
+
+
+    function displayProduct() {
+        let temp = "";
+        temp += "<table frame='above' width='90%'>";
+        temp += "<tr><th>Name</th><th>Price</th><th>Description</th><th>Edit</th><th>Delete</th></tr>";
+        for (let i = 0; i < products.length; i++) {
+            temp += "<tr>";
+            temp += "<td >" + products[i].name + "</td>";
+            temp += "<td>" + products[i].price + "</td>";
+            temp += "<td>" + products[i].description + "</td>";
+            temp += "<td><button onclick='editProduct(" + i + ")'>Edit</button></td>";
+            temp += "<td><button onclick='deleteProduct(" + i + ")'>Delete</button></td>";
+            temp += "</tr>"
+        }
+        temp += "</table>"
+        document.getElementById("display").innerHTML = temp;
+    }
+
+    function deleteProduct(index) {
+        if (confirm("Bạn thật sự muốn xóa sản phẩm có tên là " + products[index].name + " ?")) {
+            products.splice(index, 1);
+            displayProduct();
+        }
+    }
+
+    function editProduct(index) {
+        let temp = "";
+        temp += "<table  >";
+        temp += "<tr><th>Name</th><th>Price</th><th>Description</th><th>Edit</th><th>Delete</th></tr>";
+        for (let i = 0; i < products.length; i++) {
+            if (i == index) {
+                temp += "<tr>";
+                temp += "<td><input type='text' id='editName' value='" + products[i].name + "'></td>";
+                temp += "<td><input type='text' id='editPrice' value='" + products[i].price + "'></td>";
+                temp += "<td><input type='text' id='editDescription' value='" + products[i].description + "'></td>";
+                temp += "<td><button onclick='saveProduct(" + i + ")'>Save</button></td>";
+                temp += "<td><button onclick='deleteProduct(" + i + ")'>Delete</button></td>";
+                temp += "</tr>"
+            }
+            else {
+                temp += "<tr>";
+                temp += "<td>" + products[i].name + "</td>";
+                temp += "<td>" + products[i].price + "</td>";
+                temp += "<td>" + products[i].description + "</td>";
+                temp += "<td><button onclick='editProduct(" + i + ")'>Edit</button></td>";
+                temp += "<td><button onclick='deleteProduct(" + i + ")'>Delete</button></td>";
+                temp += "</tr>"
+            }
+        }
+        temp += "</table>";
+        document.getElementById("display").innerHTML = temp;
+    }
+    function saveProduct(index){
+        console.log(products[index].name)
+        if(confirm("Are you sure to save the changes?")) {
+            products[index].name = document.getElementById('editName').value;
+            products[index].price = document.getElementById('editPrice').value;
+            products[index].description = document.getElementById('editDescription').value;
+            displayProduct();
+        }
+        else{
+            displayProduct();
+        }
+    }
+    function searchProduct(){
+        let flag = false;
+        let nameSearch = document.getElementById('name').value;
+        document.getElementById("name").value = "";
+        let priceSearch = document.getElementById('price').value;
+        document.getElementById("price").value = "";
+        let descriptionSearch = document.getElementById('description').value;
+        document.getElementById("description").value = "";
+
+        for(let i = 0; i < products.length; i++) {
+            if(nameSearch == products[i].name || priceSearch == products[i].price || descriptionSearch == products[i].description){
+                let temp = "";
+                temp += "<table frame='above' width='90%' style='color: white; background-color: #58257B'>";
+                temp += "<tr><th>Name</th><th>Price</th><th>Description</th><th></th><th></th></tr>";
+                    temp += "<tr>";
+                    temp += "<td >" + products[i].name + "</td>";
+                    temp += "<td>" + products[i].price + "</td>";
+                    temp += "<td>" + products[i].description + "</td>";
+                    temp += "</tr>"
+                temp += "</table>"
+                document.getElementById("displaySearch").innerHTML = temp;
+                    flag = true;
+            }
+        }
+        if(flag == false){
+            document.getElementById("displaySearch").innerHTML = "Xin lỗi, không tìm thấy sản phẩm này"
+        }
+
+
+    }
+
+    let products = [];
+    products.push(new Product("Iphone", 12345, "Iphone 10 plus"));
+    products.push(new Product("Noikia", 12346, "Nokia N72"));
+    displayProduct();
+
+
+</script>
+</body>
+</html>

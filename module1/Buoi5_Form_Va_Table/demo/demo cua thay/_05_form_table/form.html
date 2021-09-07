@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form name="formDangKy" action="http://google.com" method="get">
+        <label for="txtName" style="color: green">Name:</label>
+        <input type="text" name="userName" id="txtName" value="Hung" required>
+        <br/>
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required>
+        </br/>
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" id="pass">
+        <br/>
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> FeMale
+        <input type="radio" name="gender" value="lgbt"> LGBT
+        <br/>
+        <select name="address">
+            <option value="">---</option>
+            <option value="hanoi">Ha Noi</option>
+            <option value="hue">Hue</option>
+            <option value="hcm">HCM</option>
+        </select>
+        <br/>
+        <input type="checkbox"> C#
+        <input type="checkbox"> Java
+        <input type="checkbox"> PHP
+        <br/>
+        <textarea></textarea>
+        <br/>
+        <button type="submit">Create</button>
+        <button type="reset">Clear</button>
+
+        <input type="hidden" name="class" value="C0721G2">
+    </form>
+</body>
+</html>

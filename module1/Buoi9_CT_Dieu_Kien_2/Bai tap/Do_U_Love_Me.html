@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<h2> Do you love me?</h2>
+<input type="button" value="YES" onclick="alert('<3')">
+<input type="button" value="NO" onmouseover="move()" id="NO" style="position: relative; left:0; top:0">
+<script>
+    function move() {
+        document.getElementById("NO").style.left = Math.random()* window.innerWidth + 'px';
+        document.getElementById("NO").style.top = Math.random()*window.innerHeight + 'px';
+    }
+</script>
+</body>
+</html>

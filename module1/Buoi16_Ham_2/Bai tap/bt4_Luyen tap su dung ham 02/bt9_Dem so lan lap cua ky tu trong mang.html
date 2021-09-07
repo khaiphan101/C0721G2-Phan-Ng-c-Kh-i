@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = prompt("Nhập một mảng ký tự");
+    let char = prompt("Nhập 1 ký tự");
+    alert("Số lần xuất hiện của ký tự " + char + " trong mảng là: " + countDup(arr, char));
+    function countDup(array, c) {
+        let count = 0;
+        for (let i = 0; i< array.length; i++){
+            if(c == array[i]){
+                count++;
+            }
+        }
+        if(count != 0){
+            return count ;
+        }
+        else return -1;
+    }
+
+</script>
+</body>
+</html>

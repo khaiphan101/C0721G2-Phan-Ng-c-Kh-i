@@ -1,0 +1,15 @@
+Begin
+	Input Score
+	If (Score >= 75)
+		Display "Loại A"
+	Else If (Score >= 60)
+			Display "Loại B"
+		 Else If (Score >= 45)
+				Display "Loại C"
+			  Elsse If (Score >= 35)
+						Display "Loại D"
+					
+					Else 
+						Display "Loại E"
+	End If
+End

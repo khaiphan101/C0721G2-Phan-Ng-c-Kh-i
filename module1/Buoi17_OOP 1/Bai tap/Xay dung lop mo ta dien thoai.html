@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        font{
+            text-align: left; color: #4CAF50;
+        }
+        button{
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+<font>
+    <p style="text-align: left">NOKIA</p>
+<table border="1">
+    <th><button type="button" onclick="phone1.showPin()">Xem tình trạng Pin</button></th>
+
+    <th><button type="button" onclick="phone1.turnOn()">Bật điện thoại</button></th>
+
+    <th><button type="button" onclick="phone1.turnOff()">Tắt điện thoại</button></th>
+
+    <th><button type="button" onclick="phone1.charge()">Sạc Pin</button></th>
+
+    <th><button type="button" onclick="phone1.writeMess(phone2)">Soạn tin nhắn</button></th>
+
+    <th><button type="button" onclick="phone1.showInboxMessage()">Hộp thư đến</button></th>
+
+    <th><button type="button" onclick="phone1.showSentMessage()">Hộp thư đi</button></th>
+
+    <th><button type="button" onclick="phone1.draft(phone2)">Thư nháp</button></th>
+
+</table>
+<br>
+<br>
+<br>
+<br>
+<p style="text-align: left">SAMSUNG</p>
+<table border="1">
+    <th><button type="button" onclick="phone2.showPin()">Xem tình trạng Pin</button></th>
+    <th><button type="button" onclick="phone2.turnOn()">Bật điện thoại</button></th>
+
+    <th><button type="button" onclick="phone2.turnOff()">tắt điện thoại</button></th>
+
+    <th><button type="button" onclick="phone2.charge()">Sạc Pin</button></th>
+
+    <th><button type="button" onclick="phone2.writeMess(phone1)">Soạn tin nhắn</button></th>
+
+    <th><button type="button" onclick="phone2.showInboxMessage()">Hộp thư đến</button></th>
+
+    <th><button type="button" onclick="phone2.showSentMessage()">Hộp thư đi</button></th>
+
+    <th><button type="button" onclick="phone2.draft(phone1)">Thư nháp</button></th>
+
+</table>
+</font>
+
+<script>
+    class Phone {
+        constructor(namePhone, pin, status) {
+            this.namePhone = namePhone;
+            this.pin = pin;
+            this.status = status;
+            this.thuDen = [];
+            this.daGui = [];
+            this.soanThao = [];
+        }
+        showPin(){
+            if(this.status){
+                alert(parseInt(this.pin));
+            }
+            else{alert("Điện thoại đang tắt")}
+        }
+
+        turnOn() {
+            this.status = true;
+            this.pin--;
+        }
+
+        turnOff() {
+            this.pin--;
+            this.status = false;
+
+        }
+
+        charge() {
+            while (this.pin <= 100) {
+                this.pin = this.pin + 0.001;
+            }
+        }
+
+        writeMess(phone2,) {
+            if(this.status) {
+                let mess = prompt("Mời bạn nhập tin nhắn: ")
+                if(confirm("Bạn có muốn gửi tin nhắn hiện tại hay không?")) {
+                    this.sendMess(phone2, mess);
+                }
+                else {
+                    this.soanThao.push(mess);
+                }
+                this.pin--;
+            }
+            else{alert("Điện thoại đang tắt")}
+
+        }
+
+        inboxMess(phoneName, mess) {
+            if(this.status) {
+                this.thuDen.push("Tên điện thoại: " + phoneName + " đã gửi tin nhắn với nội dung: " + mess);
+                this.pin--;
+            }
+        }
+        sendMess(phone, message){
+            if(this.status) {
+                this.daGui.push("Đã gửi tin đến tên điện thoại: " + phone.namePhone + " với lời nhắn: " + message);
+                phone.inboxMess(this.namePhone, message);
+                alert("Đã gửi tin đến tên điện thoại: " + phone.namePhone + " với lời nhắn: " + message);
+                this.pin--;
+            }
+            else{alert("Điện thoại đang tắt")}
+
+        }
+        draft(phone) {
+            if(this.status) {
+                let data = "";
+                for (let i = 0; i < this.soanThao.length; i++) {
+                    data += i + ": " + this.soanThao[i];
+                }
+                let index = parseInt(prompt(data + "\n" + "Chọn tin nhắn cần gửi"));
+                if(isNaN(index) ==false){
+                    this.sendMess(phone, this.soanThao[index]);
+                    this.soanThao.splice(index, 1);
+                }
+                this.pin--;
+            }
+            else{alert("Điện thoại đang tắt")}
+        }
+        showSentMessage(){
+            if(this.status) {
+                let data = "Hộp thư đi của " + this.namePhone + "\n";
+                for (let i = 0; i < this.daGui.length; i++) {
+                    data += this.daGui[i] + "\n"
+                }
+                alert(data);
+                this.pin--;
+            }
+            else{alert("Điện thoại đang tắt")}
+        }
+        showInboxMessage(){
+            if(this.status) {
+                let data = "Hộp thư đến của " + this.namePhone + "\n";
+                for (let i = 0; i < this.thuDen.length; i++) {
+                    data += this.thuDen[i] + "\n"
+                }
+                alert(data);
+                this.pin--;
+            }
+            else{alert("Điện thoại đang tắt")}
+        }
+    }
+    let phone1 = new Phone("Nokia",10 ,true);
+    let phone2 = new Phone("Samsung", 50, true);
+
+</script>
+</body>
+</html>

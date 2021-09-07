@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Remote{
+        constructor(id) {
+            this.id = id;
+        }
+        getId(){
+            return this.id;
+        }
+        setId(value){
+            this.id = value;
+        }
+        changeChannel(tv, channel){
+            tv.setChannel(channel);
+        }
+        increaseVolume(tv){
+            tv.increaseVolume()
+        }
+        decreseVolume(tv){
+            tv.decreaseVolume()
+        }
+        turnOn(tv){
+            tv.on();
+        }
+        turnOff(tv){
+            tv.off();
+        }
+
+    }
+    class TV{
+        constructor(channel, volume, status) {
+            this.channel = channel;
+            this.volume = volume;
+            this.status = status;
+        }
+        getChannel() {
+            if(this.getStatus()){
+                return this.channel;
+            }
+            else {console.log("Tv đang tắt")}
+
+        }
+
+        setChannel(value) {
+            if (this.getStatus()) {
+                this.channel = value;
+                console.log("đã chuyển sang kênh " + value);
+            } else {
+                console.log("Tv đang tắt")
+            }
+        }
+
+        getVolume() {
+            if (this.getStatus()) {
+
+                return this.volume;
+            } else {
+                console.log("Tv đang tắt")
+            }
+        }
+
+        increaseVolume() {
+            if(this.getStatus()) {
+
+                this.volume ++;
+                console.log("volum tăng lên " + this.getVolume())
+            }
+            else {console.log("Tv đang tắt")}
+        }
+
+        decreaseVolume() {
+            if(this.getStatus()) {
+                this.volume --;
+                console.log("volum giảm xuống " + this.getVolume())
+            }
+            else {console.log("Tv đang tắt")}
+        }
+
+        getStatus() {
+            return this.status;
+        }
+        on(){
+            this.status = true;
+            console.log("Đã bật tv")
+        }
+        off(){
+            this.status = false;
+            console.log("Đã tắt tv")
+        }
+
+
+
+
+    }
+    let tv = new TV(1, 40, false);
+    let remote = new Remote();
+    remote.turnOn(tv);
+    console.log("Đang bật kênh " + tv.getChannel());
+    remote.changeChannel(tv,7);
+    console.log("volume hiện tại " + tv.getVolume());
+    remote.increaseVolume(tv);
+    remote.turnOff(tv);
+
+
+</script>
+</body>
+</html>
