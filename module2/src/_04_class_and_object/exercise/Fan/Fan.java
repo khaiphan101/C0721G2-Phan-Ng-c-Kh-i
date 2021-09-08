@@ -1,7 +1,7 @@
 package _04_class_and_object.exercise.Fan;
 
 public class Fan {
-    private final int SLOW = 1, MEDIUM = 2, FAST = 3;
+    public static final int SLOW = 1, MEDIUM = 2, FAST = 3;
     private int speed = SLOW;
     private boolean status = false;
     private double radius = 5;

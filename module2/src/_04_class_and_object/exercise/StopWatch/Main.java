@@ -1,6 +1,6 @@
 package _04_class_and_object.exercise.StopWatch;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         StopWatch stopwatch = new StopWatch();
         stopwatch.start();

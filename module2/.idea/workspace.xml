@@ -20,29 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c21edb32-d074-4323-8b60-ef13d4b3f97c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/exercise/CountOccurrencesOfACharInTheString.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/exercise/FindMinNumberInArray.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/exercise/GetSumOfAColumn.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/exercise/GetSumOfCrossLineInSquareMatrix.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/practice/CountStudentPassExam.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/CountOccurrencesOfACharInTheString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/FindMinNumberInArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/GetSumOfAColumn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/GetSumOfCrossLineInSquareMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_03_array_and_method/practice/CountStudentPassExam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/exercise/AddElementToArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/exercise/AddElementToArray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/exercise/Concat2Arrays.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/exercise/Concat2Arrays.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/exercise/RemoveElementInArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_03_array_and_method/exercise/RemoveElementInArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/META-INF/module2.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/Fan/Fan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/Fan/Fan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/Fan/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/Fan/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_03_array_and_method/exercise/AddElementToArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/AddElementToArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_03_array_and_method/exercise/Concat2Arrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/Concat2Arrays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_03_array_and_method/exercise/RemoveElementInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_array_and_method/exercise/RemoveElementInArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_04_class_and_object/exercise/Fan/Fan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/Fan/Fan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_04_class_and_object/exercise/Fan/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/Fan/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_class_and_object/exercise/Fan/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/Fan/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_class_and_object/exercise/QuadraticEquation/QuadraticEquation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/QuadraticEquation/QuadraticEquation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_class_and_object/exercise/QuadraticEquation/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/QuadraticEquation/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_class_and_object/exercise/StopWatch/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/StopWatch/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_class_and_object/practice/rectangle/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_and_object/practice/rectangle/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,9 +63,9 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.main">
-    <configuration name="AddElementToArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.AddElementToArray" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="CountOccurrencesOfACharInTheString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.CountOccurrencesOfACharInTheString" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
@@ -91,12 +77,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CountOccurrencesOfACharInTheString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_03_array_and_method.exercise.CountOccurrencesOfACharInTheString" />
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_04_class_and_object.exercise.QuadraticEquation.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_03_array_and_method.exercise.*" />
+          <option name="PATTERN" value="_04_class_and_object.exercise.QuadraticEquation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_04_class_and_object.exercise.Fan.Main" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_04_class_and_object.exercise.Fan.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,29 +129,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_04_class_and_object.exercise.Fan.main" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_04_class_and_object.exercise.Fan.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.CountOccurrencesOfACharInTheString" />
         <item itemvalue="Application.RemoveElementInArray" />
         <item itemvalue="Application.RemoveElementInArray2" />
-        <item itemvalue="Application.AddElementToArray" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -170,11 +157,13 @@
       <workItem from="1630813876156" duration="1215000" />
       <workItem from="1630996834332" duration="9106000" />
       <workItem from="1631023396130" duration="20000" />
+      <workItem from="1631063475188" duration="82000" />
+      <workItem from="1631083318204" duration="232000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -187,59 +176,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="845" y="383" key="#Notifications" timestamp="1630594176252">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="845" y="383" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1630594176252" />
-    <state x="440" y="94" key="#Project_Structure" timestamp="1630472178646">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1630472178646" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1631002658917">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631002658917" />
-    <state width="1877" height="388" key="GridCell.Tab.0.bottom" timestamp="1631023416181">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="388" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631023416181" />
-    <state width="1877" height="388" key="GridCell.Tab.0.center" timestamp="1631023416180">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="388" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631023416180" />
-    <state width="1877" height="388" key="GridCell.Tab.0.left" timestamp="1631023416180">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="388" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631023416180" />
-    <state width="1877" height="388" key="GridCell.Tab.0.right" timestamp="1631023416181">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="388" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631023416181" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1631022480361">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631022480361" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1631022480361">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631022480361" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1631022480361">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631022480361" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1631022480361">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631022480361" />
-    <state x="540" y="262" key="IDE.errors.dialog" timestamp="1630472240399">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="540" y="262" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630472240399" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1630481359850">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1630481359850" />
   </component>
 </project>

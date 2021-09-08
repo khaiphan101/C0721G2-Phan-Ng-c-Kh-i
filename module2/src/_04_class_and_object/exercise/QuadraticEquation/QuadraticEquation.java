@@ -2,9 +2,9 @@ package _04_class_and_object.exercise.QuadraticEquation;
 
 public class QuadraticEquation {
     //ax2 + bx + c = 0;
-    private Double a, b, c;
+    private double a, b, c;
 
-    public QuadraticEquation(Double a, Double b, Double c) {
+    public QuadraticEquation(double a, double b, double c) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -13,30 +13,30 @@ public class QuadraticEquation {
 
     }
 
-    public Double getA() {
+    public double getA() {
         return a;
     }
 
-    public void setA(Double a) {
+    public void setA(double a) {
         this.a = a;
     }
 
-    public Double getB() {
+    public double getB() {
         return b;
     }
 
-    public void setB(Double b) {
+    public void setB(double b) {
         this.b = b;
     }
 
-    public Double getC() {
+    public double getC() {
         return c;
     }
 
-    public void setC(Double c) {
+    public void setC(double c) {
         this.c = c;
     }
-    public Double getDiscriminant(){
+    public double getDiscriminant(){
         double delta = b*b - 4*a*c;
         return delta;
     }
