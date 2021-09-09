@@ -1,4 +1,4 @@
-package _05_access_modifier_and_static.exercise.AccessModifier;
+package _05_access_modifier_and_static.exercise.access_modifier;
 
 public class Main {
     public static void main(String[] args) {

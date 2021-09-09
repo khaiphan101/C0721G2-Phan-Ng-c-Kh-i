@@ -1,4 +1,4 @@
-package _05_access_modifier_and_static.practic.StaticProperty;
+package _05_access_modifier_and_static.practic.static_property;
 
 public class Car {
     private String name;

@@ -1,4 +1,4 @@
-package _05_access_modifier_and_static.practic.StaticMethod;
+package _05_access_modifier_and_static.practic.static_method;
 
 public class Student {
     private int rollno;

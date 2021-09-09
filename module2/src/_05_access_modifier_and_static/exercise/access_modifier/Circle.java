@@ -1,4 +1,4 @@
-package _05_access_modifier_and_static.exercise.AccessModifier;
+package _05_access_modifier_and_static.exercise.access_modifier;
 
 public class Circle {
     private double radius = 1.0d;
