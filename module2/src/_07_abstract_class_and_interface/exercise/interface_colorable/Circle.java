@@ -1,4 +1,5 @@
-package _06_inherit.practic.shapes;
+package _07_abstract_class_and_interface.exercise.interface_colorable;
+
 
 public class Circle extends Shape{
     private double radius = 1.0d;
@@ -6,7 +7,7 @@ public class Circle extends Shape{
     public Circle() {
     }
 
-     public Circle(double radius) {
+    public Circle(double radius) {
         this.radius = radius;
     }
 
@@ -38,4 +39,7 @@ public class Circle extends Shape{
                 + ", which is a subclass of "
                 + super.toString();
     }
+
+
 }
+

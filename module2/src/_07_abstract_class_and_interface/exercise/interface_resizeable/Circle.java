@@ -1,12 +1,12 @@
-package _06_inherit.practic.shapes;
+package _07_abstract_class_and_interface.exercise.interface_resizeable;
 
-public class Circle extends Shape{
+public class Circle extends Shape implements Resizeable {
     private double radius = 1.0d;
     private double area =  radius * radius * Math.PI;
     public Circle() {
     }
 
-     public Circle(double radius) {
+    public Circle(double radius) {
         this.radius = radius;
     }
 
@@ -38,4 +38,11 @@ public class Circle extends Shape{
                 + ", which is a subclass of "
                 + super.toString();
     }
+
+    @Override
+    public void resize(double percent) {
+        setRadius(percent * getRadius());
+        System.out.println(this);
+    }
 }
+

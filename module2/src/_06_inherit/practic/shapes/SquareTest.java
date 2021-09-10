@@ -11,5 +11,8 @@ public class SquareTest {
         square = new Square(5.8, "yellow", true);
         System.out.println(square);
         System.out.println("area of square: " + square.getArea());
+        square.setSide(10.0);
+        System.out.println(square);
+        System.out.println("area of square: " + square.getArea());
     }
 }

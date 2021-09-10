@@ -20,46 +20,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c21edb32-d074-4323-8b60-ef13d4b3f97c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/class_circle_and_class_cylinder/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/class_circle_and_class_cylinder/CircleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/class_circle_and_class_cylinder/Cylinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/class_circle_and_class_cylinder/CylinderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/class_point2D_and_class_point3D/Point2D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/class_point2D_and_class_point3D/Point2DTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/class_point2D_and_class_point3D/Point3D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/class_point2D_and_class_point3D/Point3DTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/class_point_and_moveable_point/MoveablePoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/class_point_and_moveable_point/MoveablePointTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/class_point_and_moveable_point/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/class_point_and_moveable_point/PointTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/triangle/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/triangle/ShapeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/triangle/Triangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/triangle/TriangleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/CircleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/RectangleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/ShapeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/SquareTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Colorable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Resizeable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/animal/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/animal/Chicken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/animal/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/animal/Tiger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/edible/Edible.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/edible/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/fruit/Apple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/fruit/Fruit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/fruit/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/fruit/Orange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/interface_comparable/ComparableCircle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/interface_comparable/ComparableCircleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/interface_comparator/CircleComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/interface_comparator/CircleComparatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_05_access_modifier_and_static/exercise/AccessModifier/Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_05_access_modifier_and_static/exercise/AccessModifier/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_05_access_modifier_and_static/exercise/AccessModifier2/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_05_access_modifier_and_static/exercise/AccessModifier2/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_05_access_modifier_and_static/practic/StaticMethod/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_05_access_modifier_and_static/practic/StaticMethod/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_05_access_modifier_and_static/practic/StaticProperty/Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_05_access_modifier_and_static/practic/StaticProperty/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_04_class_and_object/exercise/Fan/Fan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/fan/Fan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_04_class_and_object/exercise/Fan/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/fan/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_04_class_and_object/exercise/QuadraticEquation/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/quadratic_equation/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_04_class_and_object/exercise/QuadraticEquation/QuadraticEquation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/quadratic_equation/QuadraticEquation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_04_class_and_object/exercise/StopWatch/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/stop_watch/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_04_class_and_object/exercise/StopWatch/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/stop_watch/SelectionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_04_class_and_object/exercise/StopWatch/StopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_and_object/exercise/stop_watch/StopWatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/Fan/Fan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/Fan/Fan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/Fan/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/Fan/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/QuadraticEquation/QuadraticEquation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/QuadraticEquation/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/StopWatch/SelectionSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/StopWatch/StopWatch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/StopWatch/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_06_inherit/exercise/class_circle_and_class_cylinder/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_06_inherit/exercise/class_circle_and_class_cylinder/Circle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_06_inherit/practic/shapes/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_06_inherit/practic/shapes/Circle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_06_inherit/practic/shapes/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_06_inherit/practic/shapes/Square.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_06_inherit/practic/shapes/SquareTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_06_inherit/practic/shapes/SquareTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_06_inherit/exercise/class_circle_and_class_cylinder/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/class_circle_and_class_cylinder/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/SquareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/SquareTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +72,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -96,16 +100,58 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="_07_abstract_class_and_interface.exercise.interface_colorable" />
+      <recent name="_07_abstract_class_and_interface.exercise.interface_resizeable" />
+      <recent name="_07_abstract_class_and_interface.practic.interface_comparable" />
       <recent name="_06_inherit.exercise.triangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TriangleTest">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="CircleComparatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_07_abstract_class_and_interface.practic.interface_comparator.CircleComparatorTest" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_07_abstract_class_and_interface.practic.interface_comparator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComparableCircleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_07_abstract_class_and_interface.practic.interface_comparable.ComparableCircleTest" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_07_abstract_class_and_interface.practic.interface_comparable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_07_abstract_class_and_interface.exercise.interface_colorable.Main" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_07_abstract_class_and_interface.exercise.interface_colorable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_05_access_modifier_and_static.practic.static_method.Main" />
+      <option name="MAIN_CLASS_NAME" value="_07_abstract_class_and_interface.practic.class_animal_and_interface_edible.edible.fruit.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_05_access_modifier_and_static.practic.static_method.*" />
+          <option name="PATTERN" value="_07_abstract_class_and_interface.practic.class_animal_and_interface_edible.edible.fruit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,12 +159,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MoveablePointTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_06_inherit.exercise.class_point_and_moveable_point.MoveablePointTest" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_07_abstract_class_and_interface.practic.class_animal_and_interface_edible.edible.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_06_inherit.exercise.class_point_and_moveable_point.*" />
+          <option name="PATTERN" value="_07_abstract_class_and_interface.practic.class_animal_and_interface_edible.edible.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,12 +172,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Point3DTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_06_inherit.exercise.class_point2D_and_class_point3D.Point3DTest" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_07_abstract_class_and_interface.exercise.interface_resizeable.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_06_inherit.exercise.class_point2D_and_class_point3D.*" />
+          <option name="PATTERN" value="_07_abstract_class_and_interface.exercise.interface_resizeable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,38 +185,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PointTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_06_inherit.exercise.class_point_and_moveable_point.PointTest" />
+    <configuration name="SquareTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_06_inherit.practic.shapes.SquareTest" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_06_inherit.exercise.class_point_and_moveable_point.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShapeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_06_inherit.exercise.triangle.ShapeTest" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_06_inherit.exercise.triangle.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TriangleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_06_inherit.exercise.triangle.TriangleTest" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_06_inherit.exercise.triangle.*" />
+          <option name="PATTERN" value="_06_inherit.practic.shapes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -180,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TriangleTest" />
-        <item itemvalue="Application.ShapeTest" />
-        <item itemvalue="Application.MoveablePointTest" />
-        <item itemvalue="Application.PointTest" />
-        <item itemvalue="Application.Point3DTest" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.SquareTest" />
+        <item itemvalue="Application.CircleComparatorTest" />
+        <item itemvalue="Application.ComparableCircleTest" />
       </list>
     </recent_temporary>
   </component>
@@ -210,6 +230,8 @@
       <workItem from="1631083318204" duration="232000" />
       <workItem from="1631083658577" duration="2736000" />
       <workItem from="1631170464915" duration="11383000" />
+      <workItem from="1631236459852" duration="5674000" />
+      <workItem from="1631255742508" duration="18449000" />
     </task>
     <servers />
   </component>
@@ -229,26 +251,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1631185546308">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1631273969983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631185546308" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1631186445832">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631273969983" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1631268174153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631186445832" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1631186445832">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631268174153" />
+    <state width="1877" height="187" key="GridCell.Tab.0.bottom" timestamp="1631273447887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631186445832" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1631186445832">
+    <state width="1877" height="187" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631273447887" />
+    <state width="1877" height="187" key="GridCell.Tab.0.center" timestamp="1631273447887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631186445832" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1631186445832">
+    <state width="1877" height="187" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631273447887" />
+    <state width="1877" height="187" key="GridCell.Tab.0.left" timestamp="1631273447887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631186445832" />
+    <state width="1877" height="187" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631273447887" />
+    <state width="1877" height="187" key="GridCell.Tab.0.right" timestamp="1631273447887">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="187" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631273447887" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1631186445833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

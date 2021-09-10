@@ -1,6 +1,6 @@
-package _06_inherit.practic.shapes;
+package _07_abstract_class_and_interface.exercise.interface_resizeable;
 
-public class Shape {
+public abstract class Shape implements Resizeable{
     private String color = "green";
     private Boolean filled = true;
 
@@ -27,9 +27,16 @@ public class Shape {
     public void setFilled(Boolean filled) {
         this.filled = filled;
     }
+
+    @Override
     public String toString() {
         return "A Shape with " +
                 "color of " + color + " and " + this.isFilled();
     }
+
+    @Override
+    public void resize(double percent) {
+    }
+
 
 }

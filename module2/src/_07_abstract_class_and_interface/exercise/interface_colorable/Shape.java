@@ -1,9 +1,8 @@
-package _06_inherit.practic.shapes;
+package _07_abstract_class_and_interface.exercise.interface_colorable;
 
-public class Shape {
+public class Shape{
     private String color = "green";
     private Boolean filled = true;
-
     public Shape() {
     }
 
@@ -27,9 +26,13 @@ public class Shape {
     public void setFilled(Boolean filled) {
         this.filled = filled;
     }
+
+    @Override
     public String toString() {
         return "A Shape with " +
                 "color of " + color + " and " + this.isFilled();
     }
 
+    public void getArea() {
+    }
 }

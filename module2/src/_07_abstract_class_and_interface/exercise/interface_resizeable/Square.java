@@ -1,6 +1,8 @@
-package _06_inherit.practic.shapes;
+package _07_abstract_class_and_interface.exercise.interface_resizeable;
 
-public class Square extends Rectangle {
+
+
+public class Square extends Rectangle implements Resizeable{
     public Square() {
     }
 
@@ -27,6 +29,11 @@ public class Square extends Rectangle {
                 + getSide()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+    @Override
+    public void resize(double percent) {
+        setSide(percent*getSide());
+        System.out.println(this);
     }
 }
 

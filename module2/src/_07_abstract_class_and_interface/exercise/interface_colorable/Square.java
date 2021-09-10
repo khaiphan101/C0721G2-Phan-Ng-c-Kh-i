@@ -1,6 +1,8 @@
-package _06_inherit.practic.shapes;
+package _07_abstract_class_and_interface.exercise.interface_colorable;
 
-public class Square extends Rectangle {
+public class Square extends Rectangle implements Colorable {
+    private double area =  getSide() * getSide();
+
     public Square() {
     }
 
@@ -19,6 +21,7 @@ public class Square extends Rectangle {
     public void setSide(double side) {
         super.setWidth(side);
         super.setLength(side);
+        area =  getSide() * getSide();
     }
 
     @Override
@@ -27,6 +30,11 @@ public class Square extends Rectangle {
                 + getSide()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public double getArea() {
+        return area;
     }
 }
 
