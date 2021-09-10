@@ -9,7 +9,7 @@ public class Main {
         shapes[3] = new Circle();
         for (Shape shape : shapes) {
             System.out.println(shape);
-            System.out.println("Area = " + shape.getArea());
+            shape.getArea();
             if (shape instanceof Colorable){
                 ((Colorable) shape).howToColor();
             }

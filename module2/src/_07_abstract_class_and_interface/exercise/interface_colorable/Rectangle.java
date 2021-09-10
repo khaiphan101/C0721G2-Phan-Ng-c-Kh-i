@@ -5,7 +5,7 @@ package _07_abstract_class_and_interface.exercise.interface_colorable;
 public class Rectangle extends Shape {
     private double width = 1.0d;
     private double length = 1.0d;
-
+    private double area =  width * length;
     public Rectangle() {
     }
 
@@ -26,6 +26,7 @@ public class Rectangle extends Shape {
 
     public void setWidth(double width) {
         this.width = width;
+        area =  width * length;
     }
 
     public double getLength() {
@@ -34,10 +35,11 @@ public class Rectangle extends Shape {
 
     public void setLength(double length) {
         this.length = length;
+        area =  width * length;
     }
 
-    public double getArea() {
-        return width * this.length;
+    public void getArea() {
+        System.out.println("Area = " + area);
     }
 
     public double getPerimeter() {

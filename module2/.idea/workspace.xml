@@ -20,49 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c21edb32-d074-4323-8b60-ef13d4b3f97c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Colorable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Resizeable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/animal/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/animal/Chicken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/animal/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/animal/Tiger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/edible/Edible.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/edible/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/fruit/Apple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/fruit/Fruit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/fruit/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/class_animal_and_interface_edible/fruit/Orange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/interface_comparable/ComparableCircle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/interface_comparable/ComparableCircleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/interface_comparator/CircleComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/practic/interface_comparator/CircleComparatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/Fan/Fan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/Fan/Fan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/Fan/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/Fan/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/QuadraticEquation/QuadraticEquation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/QuadraticEquation/main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/StopWatch/SelectionSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/StopWatch/StopWatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_04_class_and_object/exercise/StopWatch/main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_06_inherit/exercise/class_circle_and_class_cylinder/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_06_inherit/exercise/class_circle_and_class_cylinder/Circle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_06_inherit/practic/shapes/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_06_inherit/practic/shapes/Circle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_06_inherit/practic/shapes/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_06_inherit/practic/shapes/Square.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_06_inherit/practic/shapes/SquareTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_06_inherit/practic/shapes/SquareTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_06_inherit/exercise/class_circle_and_class_cylinder/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_inherit/exercise/class_circle_and_class_cylinder/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/SquareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_inherit/practic/shapes/SquareTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_07_abstract_class_and_interface/exercise/interface_resizeable/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_07_abstract_class_and_interface/exercise/interface_resizeable/Circle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Circle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +71,7 @@
       <recent name="_06_inherit.exercise.triangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="CircleComparatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_07_abstract_class_and_interface.practic.interface_comparator.CircleComparatorTest" />
       <module name="module2" />
@@ -200,8 +165,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.SquareTest" />
         <item itemvalue="Application.CircleComparatorTest" />
         <item itemvalue="Application.ComparableCircleTest" />
@@ -231,7 +196,7 @@
       <workItem from="1631083658577" duration="2736000" />
       <workItem from="1631170464915" duration="11383000" />
       <workItem from="1631236459852" duration="5674000" />
-      <workItem from="1631255742508" duration="18449000" />
+      <workItem from="1631255742508" duration="19642000" />
     </task>
     <servers />
   </component>
@@ -251,30 +216,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1631273969983">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1631275406943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631273969983" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631275406943" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1631268174153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631268174153" />
-    <state width="1877" height="187" key="GridCell.Tab.0.bottom" timestamp="1631273447887">
+    <state width="1877" height="187" key="GridCell.Tab.0.bottom" timestamp="1631275561775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631273447887" />
-    <state width="1877" height="187" key="GridCell.Tab.0.center" timestamp="1631273447887">
+    <state width="1877" height="187" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631275561775" />
+    <state width="1877" height="187" key="GridCell.Tab.0.center" timestamp="1631275561775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631273447887" />
-    <state width="1877" height="187" key="GridCell.Tab.0.left" timestamp="1631273447887">
+    <state width="1877" height="187" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631275561775" />
+    <state width="1877" height="187" key="GridCell.Tab.0.left" timestamp="1631275561775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631273447887" />
-    <state width="1877" height="187" key="GridCell.Tab.0.right" timestamp="1631273447887">
+    <state width="1877" height="187" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631275561775" />
+    <state width="1877" height="187" key="GridCell.Tab.0.right" timestamp="1631275561775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631273447887" />
+    <state width="1877" height="187" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631275561775" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1631186445833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

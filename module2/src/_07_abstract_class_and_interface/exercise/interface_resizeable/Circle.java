@@ -2,7 +2,6 @@ package _07_abstract_class_and_interface.exercise.interface_resizeable;
 
 public class Circle extends Shape implements Resizeable {
     private double radius = 1.0d;
-    private double area =  radius * radius * Math.PI;
     public Circle() {
     }
 
@@ -21,7 +20,6 @@ public class Circle extends Shape implements Resizeable {
 
     public void setRadius(double radius) {
         this.radius = radius;
-        area =  radius * radius * Math.PI;
     }
     public double getArea() {
         return radius * radius * Math.PI;

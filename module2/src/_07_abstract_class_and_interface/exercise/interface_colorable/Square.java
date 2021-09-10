@@ -33,8 +33,13 @@ public class Square extends Rectangle implements Colorable {
     }
 
     @Override
-    public double getArea() {
-        return area;
+    public void getArea() {
+        System.out.println("Area = " + area);
+    }
+
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four sides..");
     }
 }
 

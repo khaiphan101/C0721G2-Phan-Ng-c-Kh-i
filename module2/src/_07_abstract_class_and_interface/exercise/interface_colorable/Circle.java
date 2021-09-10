@@ -24,8 +24,8 @@ public class Circle extends Shape{
         this.radius = radius;
         area =  radius * radius * Math.PI;
     }
-    public double getArea() {
-        return radius * radius * Math.PI;
+    public void getArea() {
+        System.out.println("Area = " + area);
     }
 
     public double getPerimeter() {
