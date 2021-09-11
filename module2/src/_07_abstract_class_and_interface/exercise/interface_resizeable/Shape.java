@@ -34,9 +34,5 @@ public abstract class Shape implements Resizeable{
                 "color of " + color + " and " + this.isFilled();
     }
 
-    @Override
-    public void resize(double percent) {
-    }
-
-
+    public abstract void resize(double percent);
 }

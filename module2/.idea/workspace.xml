@@ -20,14 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c21edb32-d074-4323-8b60-ef13d4b3f97c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/_bt_lop_student_tutor_chanh/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_bt_lop_student_tutor_chanh/ManagerStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_bt_lop_student_tutor_chanh/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_07_abstract_class_and_interface/exercise/interface_resizeable/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_07_abstract_class_and_interface/exercise/interface_resizeable/Circle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_colorable/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_07_abstract_class_and_interface/exercise/interface_colorable/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_07_abstract_class_and_interface/exercise/interface_colorable/Shape.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_class_and_interface/exercise/interface_resizeable/Shape.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,39 +70,39 @@
       <recent name="_06_inherit.exercise.triangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="CircleComparatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_07_abstract_class_and_interface.practic.interface_comparator.CircleComparatorTest" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_07_abstract_class_and_interface.practic.interface_comparator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ComparableCircleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_07_abstract_class_and_interface.practic.interface_comparable.ComparableCircleTest" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_07_abstract_class_and_interface.practic.interface_comparable.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_07_abstract_class_and_interface.exercise.interface_colorable.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="_07_abstract_class_and_interface.exercise.interface_colorable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_bt_lop_student_tutor_chanh.Main" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_bt_lop_student_tutor_chanh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_07_abstract_class_and_interface.exercise.interface_resizeable.Main" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_07_abstract_class_and_interface.exercise.interface_resizeable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,15 +164,15 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.SquareTest" />
-        <item itemvalue="Application.CircleComparatorTest" />
-        <item itemvalue="Application.ComparableCircleTest" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -197,11 +196,12 @@
       <workItem from="1631170464915" duration="11383000" />
       <workItem from="1631236459852" duration="5674000" />
       <workItem from="1631255742508" duration="19642000" />
+      <workItem from="1631334008425" duration="19128000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -214,51 +214,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1631275406943">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631275406943" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1631268174153">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631268174153" />
-    <state width="1877" height="187" key="GridCell.Tab.0.bottom" timestamp="1631275561775">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631275561775" />
-    <state width="1877" height="187" key="GridCell.Tab.0.center" timestamp="1631275561775">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631275561775" />
-    <state width="1877" height="187" key="GridCell.Tab.0.left" timestamp="1631275561775">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631275561775" />
-    <state width="1877" height="187" key="GridCell.Tab.0.right" timestamp="1631275561775">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631275561775" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1631186445833">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631186445833" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1631186445833">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631186445833" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1631186445833">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631186445833" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1631186445833">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631186445833" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1631183677564">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1631183677564" />
   </component>
 </project>

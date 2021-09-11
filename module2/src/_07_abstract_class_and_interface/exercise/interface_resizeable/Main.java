@@ -1,6 +1,5 @@
 package _07_abstract_class_and_interface.exercise.interface_resizeable;
 
-import _07_abstract_class_and_interface.exercise.interface_resizeable.Shape;
 
 public class Main {
     public static void main(String[] args) {
