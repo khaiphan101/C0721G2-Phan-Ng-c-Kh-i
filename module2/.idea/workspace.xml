@@ -20,16 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c21edb32-d074-4323-8b60-ef13d4b3f97c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_08_clean_code_and_refactor/exercise/refactoring/TennisGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_08_clean_code_and_refactor/exercise/refactoring/TennisGameTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_08_clean_code_and_refactor/practic/rename_variable_and_split_const/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_08_clean_code_and_refactor/practic/rename_variable_and_split_const/CalculatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_08_clean_code_and_refactor/practic/split_method/Cylinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_08_clean_code_and_refactor/practic/split_method/CylinderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_08_clean_code_and_refactor/practic/split_variable/FizzBuzz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_08_clean_code_and_refactor/practic/split_variable/FizzBuzzTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_09_dsa_list/exercise/implement_method_of_array_list/MyList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_09_dsa_list/exercise/implement_method_of_array_list/MyListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_09_dsa_list/exercise/implement_method_of_linked_list/MyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_09_dsa_list/exercise/implement_method_of_linked_list/MyLinkedListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_09_dsa_list/practic/simple_linkedList/MyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_09_dsa_list/practic/simple_linkedList/TestMyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_09_dsa_list/practic/simple_list/MyList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_09_dsa_list/practic/simple_list/MyListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/module2.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +62,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../nam tran/C0721G2-Nguy-n-Nam-Tr-n/Module2/src/_10_dsa_list/exercise/implement_the_methods_of_arraylist/MyListTest.java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -77,23 +76,11 @@
       <recent name="_06_inherit.exercise.triangle" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="_09_dsa.exercise.implement_method_of_ArrayList" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TennisGameTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_07_abstract_class_and_interface.practic.class_animal_and_interface_edible.edible.Main" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_07_abstract_class_and_interface.practic.class_animal_and_interface_edible.edible.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.MyListTest (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_07_abstract_class_and_interface.exercise.interface_resizeable.Main" />
       <module name="module2" />
@@ -107,39 +94,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="a" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="a" />
+    <configuration name="MyLinkedListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_09_dsa_list.exercise.implement_method_of_linked_list.MyLinkedListTest" />
       <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_09_dsa_list.exercise.implement_method_of_linked_list.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CylinderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyListTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_09_dsa_list.exercise.implement_method_of_array_list.MyListTest" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_08_clean_code_and_refactor.practic.split_method.*" />
+          <option name="PATTERN" value="_09_dsa_list.exercise.implement_method_of_array_list.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="_08_clean_code_and_refactor.practic.split_method" />
-      <option name="MAIN_CLASS_NAME" value="_08_clean_code_and_refactor.practic.split_method.CylinderTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FizzBuzzTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_09_dsa_list.practic.simple_list.MyListTest" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_08_clean_code_and_refactor.practic.split_variable.*" />
+          <option name="PATTERN" value="_09_dsa_list.practic.simple_list.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="_08_clean_code_and_refactor.practic.split_variable" />
-      <option name="MAIN_CLASS_NAME" value="_08_clean_code_and_refactor.practic.split_variable.FizzBuzzTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_09_dsa_list.practic.simple_linkedList.TestMyLinkedList" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_09_dsa_list.practic.simple_linkedList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,29 +161,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TennisGameTest.checkAllScores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_08_clean_code_and_refactor.exercise.refactoring.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="_08_clean_code_and_refactor.exercise.refactoring" />
-      <option name="MAIN_CLASS_NAME" value="_08_clean_code_and_refactor.exercise.refactoring.TennisGameTest" />
-      <option name="METHOD_NAME" value="checkAllScores" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyListTest (1)" />
+        <item itemvalue="Application.MyLinkedListTest" />
+        <item itemvalue="Application.TestMyLinkedList" />
+        <item itemvalue="Application.MyListTest" />
         <item itemvalue="JUnit.TennisGameTest" />
-        <item itemvalue="Application.a" />
-        <item itemvalue="JUnit.TennisGameTest.checkAllScores" />
-        <item itemvalue="JUnit.CylinderTest" />
-        <item itemvalue="JUnit.FizzBuzzTest" />
       </list>
     </recent_temporary>
   </component>
@@ -211,6 +197,7 @@
       <workItem from="1631255742508" duration="19642000" />
       <workItem from="1631334008425" duration="19128000" />
       <workItem from="1631505145290" duration="7553000" />
+      <workItem from="1631592039027" duration="15189000" />
     </task>
     <servers />
   </component>
@@ -230,22 +217,34 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="349" key="GridCell.Tab.0.bottom" timestamp="1631525910847">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1631610858464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631525910847" />
-    <state width="1877" height="349" key="GridCell.Tab.0.center" timestamp="1631525910846">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631610858464" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1631593339289">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="349" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631525910846" />
-    <state width="1877" height="349" key="GridCell.Tab.0.left" timestamp="1631525910846">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631593339289" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1631624673217">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="349" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631525910846" />
-    <state width="1877" height="349" key="GridCell.Tab.0.right" timestamp="1631525910846">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1631624673217" />
+    <state width="1877" height="324" key="GridCell.Tab.0.bottom" timestamp="1631624895235">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="349" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631525910846" />
+    <state width="1877" height="324" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631624895235" />
+    <state width="1877" height="324" key="GridCell.Tab.0.center" timestamp="1631624895235">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="324" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631624895235" />
+    <state width="1877" height="324" key="GridCell.Tab.0.left" timestamp="1631624895234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="324" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631624895234" />
+    <state width="1877" height="324" key="GridCell.Tab.0.right" timestamp="1631624895235">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="324" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631624895235" />
     <state x="664" y="412" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1631507692036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
