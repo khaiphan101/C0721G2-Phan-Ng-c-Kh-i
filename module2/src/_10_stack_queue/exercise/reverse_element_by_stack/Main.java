@@ -5,28 +5,16 @@ import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
+        int[] array = {1,2,3,4,5,6};
+        System.out.println("innitial array: " + Arrays.toString(array));
         Stack<Integer> stack = new Stack<>();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
-        stack.push(5);
-        stack.push(6);
-        System.out.println("Initial stack: " + stack.toString());
-        int size = stack.size();
-        String string = "";
-        for (int i = 0; i < size; i++) {
-            string += stack.pop();
+        for(int element : array) {
+            stack.push(element);
         }
-        System.out.println("stack pop to String: "+string);
-        String[] array =   (string.split(""));
-        System.out.println("String convert to array String: " + Arrays.toString(array));
-        for (int i = 0; i <size; i++) {
-            stack.push(Integer.parseInt(array[i]));
+        for (int i = 0; i < array.length; i++) {
+            array[i] = stack.pop();
         }
-        System.out.println("push array String to stack:");
-        System.out.println("reverse stack: " + stack.toString());
-
+        System.out.println("reveresed array: " + Arrays.toString(array));
     }
 
 
