@@ -16,6 +16,4 @@ public class Main {
         }
         System.out.println("reveresed array: " + Arrays.toString(array));
     }
-
-
 }
