@@ -5,9 +5,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a string:");
-        String string = sc.nextLine();
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter a string:");
+//        String string = sc.nextLine();
+        String string = "abcabcdgabxy";
+        System.out.println("string1: " + string);
+        System.out.println(getMaxAscendingString(string));
+        string = "abcabcdgabmnsxy";
+        System.out.println("string2: " + string);
         System.out.println(getMaxAscendingString(string));
     }
     public static String getMaxAscendingString(String string) {
