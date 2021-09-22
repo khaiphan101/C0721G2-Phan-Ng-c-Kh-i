@@ -1,8 +1,5 @@
 package _09_dsa_list.exercise.implement_method_of_array_list;
 
-import _09_dsa_list.exercise.implement_method_of_linked_list.MyLinkedList;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class MyList<E> {
