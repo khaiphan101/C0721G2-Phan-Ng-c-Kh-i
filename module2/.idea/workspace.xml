@@ -20,8 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c21edb32-d074-4323-8b60-ef13d4b3f97c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/_14_exception_and_debug/exercise/use_class_IllegalTriangleException/IllegalTriangleException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_14_exception_and_debug/exercise/use_class_IllegalTriangleException/IllegalTriangleException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_14_exception_and_debug/exercise/use_class_IllegalTriangleException/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_14_exception_and_debug/exercise/use_class_IllegalTriangleException/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/exercise/copy_file_text/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/exercise/copy_file_text/ReadAndWriteFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/exercise/copy_file_text/source_file" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/exercise/copy_file_text/target_file" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/exercise/read_file_csv/Country.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/exercise/read_file_csv/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/exercise/read_file_csv/ReadFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/exercise/read_file_csv/list_of_countries" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/practic/get_max_number_in_file_text/FindMaxValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/practic/get_max_number_in_file_text/ReadAndWriteFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/practic/get_max_number_in_file_text/number" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/practic/get_max_number_in_file_text/result" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/practic/sum_of_numbers_in_file_text/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/practic/sum_of_numbers_in_file_text/ReadFileExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_15_IO_text_file/practic/sum_of_numbers_in_file_text/file" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_14_exception_and_debug/exercise/use_class_IllegalTriangleException/IllegalTriangleException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_14_exception_and_debug/exercise/use_class_IllegalTriangleException/IllegalTriangleException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/_14_exception_and_debug/exercise/use_class_IllegalTriangleException/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_14_exception_and_debug/exercise/use_class_IllegalTriangleException/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,13 +95,13 @@
       <recent name="C:\Users\PC\Desktop\hoc\C0721G2_Khai\C0721G2-Phan-Ng-c-Kh-i\module2\src\_11_java_collection_framework\exercise" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProductManagementAPP">
-    <configuration name="CalculationExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_14_exception_and_debug.practice._use_class_NumberFormatException.CalculationExample" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="FindMaxValue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_15_IO_text_file.practic.get_max_number_in_file_text.FindMaxValue" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_14_exception_and_debug.practice._use_class_NumberFormatException.*" />
+          <option name="PATTERN" value="_15_IO_text_file.practic.get_max_number_in_file_text.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,11 +110,11 @@
       </method>
     </configuration>
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_14_exception_and_debug.practice._use_class_ArrayIndexOutOfBoundsExceptionAssignment.Main" />
+      <option name="MAIN_CLASS_NAME" value="_15_IO_text_file.exercise.copy_file_text.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_14_exception_and_debug.practice._use_class_ArrayIndexOutOfBoundsExceptionAssignment.*" />
+          <option name="PATTERN" value="_15_IO_text_file.exercise.copy_file_text.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,12 +122,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="caseStudy_furamaResort.services.Main" />
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_15_IO_text_file.practic.sum_of_numbers_in_file_text.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="caseStudy_furamaResort.services.*" />
+          <option name="PATTERN" value="_15_IO_text_file.practic.sum_of_numbers_in_file_text.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,11 +136,11 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_14_exception_and_debug.exercise.use_class_IllegalTriangleException.Main" />
+      <option name="MAIN_CLASS_NAME" value="_15_IO_text_file.exercise.read_file_csv.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_14_exception_and_debug.exercise.use_class_IllegalTriangleException.*" />
+          <option name="PATTERN" value="_15_IO_text_file.exercise.read_file_csv.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,12 +148,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductManagementAPP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exercise_03.ProductManagementAPP" />
+    <configuration name="ReadFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_15_IO_text_file.exercise.read_file_csv.ReadFile" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exercise_03.*" />
+          <option name="PATTERN" value="_15_IO_text_file.exercise.read_file_csv.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProductManagementAPP" />
-        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.CalculationExample" />
+        <item itemvalue="Application.ReadFile" />
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main (3)" />
+        <item itemvalue="Application.FindMaxValue" />
       </list>
     </recent_temporary>
   </component>
@@ -193,6 +209,8 @@
       <workItem from="1632189074946" duration="13046000" />
       <workItem from="1632291599568" duration="12390000" />
       <workItem from="1632359992283" duration="62000" />
+      <workItem from="1632369722696" duration="1782000" />
+      <workItem from="1632378802717" duration="9018000" />
     </task>
     <servers />
   </component>
@@ -211,48 +229,6 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1632301171909">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1632301171909" />
-    <state width="1877" height="352" key="GridCell.Tab.0.bottom" timestamp="1632304610592">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632304610592" />
-    <state width="1877" height="352" key="GridCell.Tab.0.center" timestamp="1632304610592">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632304610592" />
-    <state width="1877" height="352" key="GridCell.Tab.0.left" timestamp="1632304610592">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632304610592" />
-    <state width="1877" height="352" key="GridCell.Tab.0.right" timestamp="1632304610592">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632304610592" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1632225186635">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632225186635" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1632225186635">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632225186635" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1632225186635">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632225186635" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1632225186635">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632225186635" />
-    <state x="342" y="140" key="new project wizard" timestamp="1632208263809">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1632208263809" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -264,7 +240,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/_12_algorithm_searching/exercise/get_max_conscutive_string/Main.java</url>
           <line>17</line>
-          <properties class="_12_algorithm_searching.exercise.get_max_conscutive_string.Main" method="getMaxAscendingString">
+          <properties class="_12_algorithm_searching.exercise.get_max_conscutive_string.Main" method="getMaxConscutiveString">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="5" />
