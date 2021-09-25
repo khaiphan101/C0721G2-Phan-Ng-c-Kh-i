@@ -20,17 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c21edb32-d074-4323-8b60-ef13d4b3f97c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_16_binary_file_and_serialization/exercise/manage_product_save_at_binary_file/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_16_binary_file_and_serialization/exercise/manage_product_save_at_binary_file/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_16_binary_file_and_serialization/exercise/manage_product_save_at_binary_file/ProductManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_16_binary_file_and_serialization/exercise/manage_product_save_at_binary_file/product_list_file" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_16_binary_file_and_serialization/practice/copy_large_file/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_16_binary_file_and_serialization/practice/copy_large_file/dest_file" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_16_binary_file_and_serialization/practice/copy_large_file/source_file" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_16_binary_file_and_serialization/practice/read_and_write_student_list_to_binary_file/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_16_binary_file_and_serialization/practice/read_and_write_student_list_to_binary_file/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_16_binary_file_and_serialization/practice/read_and_write_student_list_to_binary_file/student_file" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_16_binary_file_and_serialization/exercise/manage_product_save_at_binary_file/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_16_binary_file_and_serialization/exercise/manage_product_save_at_binary_file/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_16_binary_file_and_serialization/exercise/manage_product_save_at_binary_file/product_list_file" beforeDir="false" afterPath="$PROJECT_DIR$/src/_16_binary_file_and_serialization/exercise/manage_product_save_at_binary_file/product_list_file" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +156,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -205,11 +197,12 @@
       <workItem from="1632369722696" duration="1782000" />
       <workItem from="1632378802717" duration="9018000" />
       <workItem from="1632452998693" duration="11472000" />
+      <workItem from="1632534859471" duration="598000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -222,48 +215,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="717" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1632458119322">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="717" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1632458119322" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1632456607743">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1632456607743" />
-    <state width="1877" height="429" key="GridCell.Tab.0.bottom" timestamp="1632471887374">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="429" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632471887374" />
-    <state width="1877" height="429" key="GridCell.Tab.0.center" timestamp="1632471887374">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="429" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632471887374" />
-    <state width="1877" height="429" key="GridCell.Tab.0.left" timestamp="1632471887374">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="429" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632471887374" />
-    <state width="1877" height="429" key="GridCell.Tab.0.right" timestamp="1632471887374">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="429" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632471887374" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1632460643843">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632460643843" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1632460643843">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632460643843" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1632460643843">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632460643843" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1632460643843">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632460643843" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

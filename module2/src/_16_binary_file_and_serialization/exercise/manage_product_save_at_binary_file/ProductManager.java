@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ProductManager implements Serializable{
+public class ProductManager{
     private final String PATH_FILE = "src\\_16_binary_file_and_serialization\\exercise\\manage_product_save_at_binary_file\\product_list_file";
     List<Product> productsList = readDataFromFile(PATH_FILE);
     Scanner sc = new Scanner(System.in);
