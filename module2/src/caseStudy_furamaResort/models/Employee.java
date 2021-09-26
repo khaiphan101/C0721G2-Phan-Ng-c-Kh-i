@@ -1,21 +1,21 @@
 package caseStudy_furamaResort.models;
 
-public class Employee extends Person{
+public class Employee extends Person {
     private int employeeCode;
     private String name;
     private String birthday;
     private String gender;
-    private int idNumber;
-    private int phoneNumber;
+    private String idNumber;
+    private String phoneNumber;
     private String email;
     private String level;
     private String position;
-    private int salary;
+    private long salary;
 
     public Employee() {
     }
 
-    public Employee(int employeeCode, String name, String birthday, String gender, int idNumber, int phoneNumber, String email, String level, String position, int salary) {
+    public Employee(int employeeCode, String name, String birthday, String gender, String idNumber, String phoneNumber, String email, String level, String position, long salary) {
         this.employeeCode = employeeCode;
         this.name = name;
         this.birthday = birthday;
@@ -60,19 +60,19 @@ public class Employee extends Person{
         this.gender = gender;
     }
 
-    public int getIdNumber() {
+    public String getIdNumber() {
         return idNumber;
     }
 
-    public void setIdNumber(int idNumber) {
+    public void setIdNumber(String idNumber) {
         this.idNumber = idNumber;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -100,18 +100,17 @@ public class Employee extends Person{
         this.position = position;
     }
 
-    public int getSalary() {
+    public long getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(long salary) {
         this.salary = salary;
     }
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "employeeCode=" + employeeCode +
+        return "employeeCode=" + employeeCode +
                 ", name='" + name + '\'' +
                 ", birthday='" + birthday + '\'' +
                 ", gender='" + gender + '\'' +
@@ -120,7 +119,19 @@ public class Employee extends Person{
                 ", email='" + email + '\'' +
                 ", level='" + level + '\'' +
                 ", position='" + position + '\'' +
-                ", salary='" + salary + '\'' +
-                '}';
+                ", salary='" + salary + '\'';
+    }
+
+    public String writeToFile() {
+        return employeeCode +
+                "," + name +
+                "," + birthday +
+                "," + gender +
+                "," + idNumber +
+                "," + phoneNumber +
+                "," + email +
+                "," + level +
+                "," + position +
+                "," + salary;
     }
 }

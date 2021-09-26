@@ -2,11 +2,15 @@ package caseStudy_furamaResort.services;
 
 import caseStudy_furamaResort.models.Employee;
 
+import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
-    ArrayList<Employee> employeesList = new ArrayList<>();
+    private String EMPLOYEES_FILE = "src/caseStudy_furamaResort/data/list_of_employee";
+    ArrayList<Employee> employeesList = this.readFile(EMPLOYEES_FILE);
+
     Scanner sc = new Scanner(System.in);
 
     public void add() {
@@ -14,8 +18,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 //        private String name;
 //        private String birthday;
 //        private String gender;
-//        private int idNumber;
-//        private int phoneNumber;
+//        private String idNumber;
+//        private String phoneNumber;
 //        private String email;
 //        private String level;
 //        private String position;
@@ -36,10 +40,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         employee.setGender(sc.nextLine());
 
         System.out.println("Enter id number:");
-        employee.setIdNumber(Integer.parseInt(sc.nextLine()));
+        employee.setIdNumber(sc.nextLine());
 
         System.out.println("Enter phone number:");
-        employee.setPhoneNumber(Integer.parseInt(sc.nextLine()));
+        employee.setPhoneNumber(sc.nextLine());
 
         System.out.println("Enter email:");
         employee.setEmail(sc.nextLine());
@@ -52,18 +56,20 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         System.out.println("Enter salary:");
         employee.setSalary(Integer.parseInt(sc.nextLine()));
+        this.writeFile(employee, EMPLOYEES_FILE);
         employeesList.add(employee);
     }
 
     //st,st,st,null,null
     public void showList() {
         System.out.println("employees's list:");
-        for (int i = 0; i < employeesList.size(); i++) {
-            System.out.println(employeesList.get(i).toString());
+//        employeesList = this.readFile(EMPLOYEES_FILE);
+        for (Employee employee : employeesList) {
+            System.out.println(employee);
         }
     }
 
-//    public void deleteID(int idStudent) {
+    //    public void deleteID(int idStudent) {
 //        for (int i = 0; i < employeesList.size(); i++) {
 //            if (idStudent == employeesList.get(i).getEmployeeCode()) {
 //                for (int j = i; j < employeesList.size(); j++) {
@@ -80,47 +86,79 @@ public class EmployeeServiceImpl implements EmployeeService {
 //        showList();
 //    }
 //
-//    public void editID(int idStudent) {
-//        for (int i = 0; i < employeesList.size(); i++) {
-//            if (idStudent == employeesList[i].id) {
-//                boolean checkEdit = true;
-//                while (checkEdit) {
-//                    System.out.println(employeesList[i].toString());
-//                    System.out.print("1.ID\n" +
-//                            "2.Name\n" +
-//                            "3.Age\n" +
-//                            "4.Address\n" +
-//                            "0.Exit\n" +
-//                            "Choose section you want to edit:");
-//                    switch (Integer.parseInt(sc.nextLine())) {
-//                        case 1:
-//                            System.out.print("Enter new ID:");
-//                            employeesList[i].setId(Integer.parseInt(sc.nextLine()));
-//                            break;
-//                        case 2:
-//                            System.out.print("Enter new Name:");
-//                            employeesList[i].setName(sc.nextLine());
-//                            break;
-//                        case 3:
-//                            System.out.print("Enter new age");
-//                            employeesList[i].setAge(Integer.parseInt(sc.nextLine()));
-//                            break;
-//                        case 4:
-//                            System.out.print("Enter new address");
-//                            employeesList[i].setAddress(sc.nextLine());
-//                            break;
-//                        case 0:
-//                            checkEdit = false;
-//                            break;
-//                        default:
-//                            System.out.println("invalid value, please enter ordinal number(1,2,3,4)");
-//                    }
-//                }
-//                break;
-//            }
-//        }
-//        showList();
-//    }
+    public void editEmployee(int employeeCode) {
+        for (int i = 0; i < employeesList.size(); i++) {
+            if (employeeCode == employeesList.get(i).getEmployeeCode()) {
+                boolean checkEdit = true;
+                while (checkEdit) {
+                    System.out.println(employeesList.get(i));
+                    System.out.print("1.Employee code\n" +
+                            "2.Name\n" +
+                            "3.Birthday\n" +
+                            "4.Gender\n" +
+                            "5.ID number\n" +
+                            "6.Phone number\n" +
+                            "7.Email\n" +
+                            "8.Level\n" +
+                            "9.Position\n" +
+                            "10.Salary\n" +
+                            "0.Exit\n" +
+                            "Choose section you want to edit:");
+                    switch (Integer.parseInt(sc.nextLine())) {
+                        case 1:
+                            System.out.print("Enter new code:");
+                            employeesList.get(i).setEmployeeCode(Integer.parseInt(sc.nextLine()));
+                            break;
+                        case 2:
+                            System.out.print("Enter new Name:");
+                            employeesList.get(i).setName(sc.nextLine());
+                            break;
+                        case 3:
+                            System.out.print("Enter new Birthday");
+                            employeesList.get(i).setBirthday(sc.nextLine());
+                            break;
+                        case 4:
+                            System.out.print("Enter new Gender");
+                            employeesList.get(i).setGender(sc.nextLine());
+                            break;
+                        case 5:
+                            System.out.print("Enter new ID");
+                            employeesList.get(i).setIdNumber(sc.nextLine());
+                            break;
+                        case 6:
+                            System.out.print("Enter new phone number");
+                            employeesList.get(i).setPhoneNumber(sc.nextLine());
+                            break;
+                        case 7:
+                            System.out.print("Enter new email");
+                            employeesList.get(i).setEmail(sc.nextLine());
+                            break;
+                        case 8:
+                            System.out.print("Enter new level");
+                            employeesList.get(i).setLevel(sc.nextLine());
+                            break;
+                        case 9:
+                            System.out.print("Enter new position");
+                            employeesList.get(i).setPosition(sc.nextLine());
+                            break;
+                        case 10:
+                            System.out.print("Enter new salary");
+                            employeesList.get(i).setSalary(Long.parseLong(sc.nextLine()));
+                            break;
+
+                        case 0:
+                            checkEdit = false;
+                            break;
+                        default:
+                            System.out.println("invalid value, please enter ordinal number(1,2,3,4)");
+                    }
+                }
+                System.out.println("employee edited:");
+                System.out.println(employeesList.get(i));
+                break;
+            }
+        }
+    }
 //
 //    public Boolean search(String infor) {
 //        for (int i = 0; i < employeesList.size(); i++) {
@@ -136,11 +174,35 @@ public class EmployeeServiceImpl implements EmployeeService {
 //        System.out.println("this infor isn't exist");
 //        return false;
 //    }
-}
-class Main{
-    public static void main(String[] args) {
-        EmployeeServiceImpl employeeServiceImpl = new EmployeeServiceImpl();
-        employeeServiceImpl.add();
-        employeeServiceImpl.showList();
+    public ArrayList<Employee> readFile(String filePath) {
+        ArrayList<Employee> list = new ArrayList<>();
+        try {
+            File file = new File(filePath);
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReaderFile = new BufferedReader(fileReader);
+            String line = "";
+            String[] employees;
+            while ((line = bufferedReaderFile.readLine()) != null) {
+                employees = line.split(",");
+                list.add(new Employee(Integer.parseInt(employees[0]), employees[1], employees[2], employees[3], employees[4], employees[5], employees[6], employees[7], employees[8], Long.parseLong(employees[9])));
+            }
+            bufferedReaderFile.close();
+        } catch (Exception e) {
+            System.err.println("File not found or failure document!");
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    public void writeFile(Employee employee, String filePath) {
+        try {
+            FileWriter fileWriter = new FileWriter(filePath, true);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.newLine();
+            bufferedWriter.write(employee.writeToFile());
+            bufferedWriter.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
