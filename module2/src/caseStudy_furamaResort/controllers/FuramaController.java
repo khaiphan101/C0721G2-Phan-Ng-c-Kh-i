@@ -48,7 +48,7 @@ public class FuramaController {
                                         try {
                                             System.out.print("Enter employee code you want to edit:");
                                             int code = Integer.parseInt(sc.nextLine());
-                                            employeeServiceImpl.editEmployee(code);
+                                            employeeServiceImpl.edit(code);
                                         } catch (Exception e) {
                                             System.err.println("Invalid input, please enter ordinal number(1,2,3,4)");
                                             System.out.println();

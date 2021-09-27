@@ -4,7 +4,6 @@ import caseStudy_furamaResort.models.Employee;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
@@ -14,21 +13,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     Scanner sc = new Scanner(System.in);
 
     public void add() {
-//        private int employeeCode;
-//        private String name;
-//        private String birthday;
-//        private String gender;
-//        private String idNumber;
-//        private String phoneNumber;
-//        private String email;
-//        private String level;
-//        private String position;
-//        private int salary;
         //code them moi
         Employee employee = new Employee();
 
         System.out.println("Enter employee code:");
-        employee.setEmployeeCode(Integer.parseInt(sc.nextLine()));
+        employee.setCode(Integer.parseInt(sc.nextLine()));
 
         System.out.println("Enter name:");
         employee.setName(sc.nextLine());
@@ -60,7 +49,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeesList.add(employee);
     }
 
-    //st,st,st,null,null
+
     public void showList() {
         System.out.println("employees's list:");
 //        employeesList = this.readFile(EMPLOYEES_FILE);
@@ -69,26 +58,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
     }
 
-    //    public void deleteID(int idStudent) {
-//        for (int i = 0; i < employeesList.size(); i++) {
-//            if (idStudent == employeesList.get(i).getEmployeeCode()) {
-//                for (int j = i; j < employeesList.size(); j++) {
-//                    if (employeesList.get(j + 1) != null) {
-//                        employeesList.get(j) = employeesList.get(j + 1);
-//                    } else {
-//                        employeesList.get(j) = null;
-//                        break;
-//                    }
-//                }
-//                break;
-//            }
-//        }
-//        showList();
-//    }
-//
-    public void editEmployee(int employeeCode) {
+    public void edit(int employeeCode) {
         for (int i = 0; i < employeesList.size(); i++) {
-            if (employeeCode == employeesList.get(i).getEmployeeCode()) {
+            if (employeeCode == employeesList.get(i).getCode()) {
                 boolean checkEdit = true;
                 while (checkEdit) {
                     System.out.println(employeesList.get(i));
@@ -107,7 +79,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                     switch (Integer.parseInt(sc.nextLine())) {
                         case 1:
                             System.out.print("Enter new code:");
-                            employeesList.get(i).setEmployeeCode(Integer.parseInt(sc.nextLine()));
+                            employeesList.get(i).setCode(Integer.parseInt(sc.nextLine()));
                             break;
                         case 2:
                             System.out.print("Enter new Name:");
@@ -159,21 +131,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             }
         }
     }
-//
-//    public Boolean search(String infor) {
-//        for (int i = 0; i < employeesList.size(); i++) {
-//            if (infor.equals(String.valueOf(employeesList[i].getId()))
-//                    ||infor.equals(String.valueOf(employeesList[i].getAge()))
-//                    ||infor.equals(employeesList[i].getName())
-//                    ||infor.equals(employeesList[i].getAddress())
-//            ) {
-//                System.out.println(employeesList[i]);
-//                return true;
-//            }
-//        }
-//        System.out.println("this infor isn't exist");
-//        return false;
-//    }
+
     public ArrayList<Employee> readFile(String filePath) {
         ArrayList<Employee> list = new ArrayList<>();
         try {
@@ -205,4 +163,34 @@ public class EmployeeServiceImpl implements EmployeeService {
             e.printStackTrace();
         }
     }
+//    public Boolean search(String infor) {
+//        for (int i = 0; i < employeesList.size(); i++) {
+//            if (infor.equals(String.valueOf(employeesList[i].getId()))
+//                    ||infor.equals(String.valueOf(employeesList[i].getAge()))
+//                    ||infor.equals(employeesList[i].getName())
+//                    ||infor.equals(employeesList[i].getAddress())
+//            ) {
+//                System.out.println(employeesList[i]);
+//                return true;
+//            }
+//        }
+//        System.out.println("this infor isn't exist");
+//        return false;
+//    }
+//public void deleteID(int idStudent) {
+//        for (int i = 0; i < employeesList.size(); i++) {
+//            if (idStudent == employeesList.get(i).getEmployeeCode()) {
+//                for (int j = i; j < employeesList.size(); j++) {
+//                    if (employeesList.get(j + 1) != null) {
+//                        employeesList.get(j) = employeesList.get(j + 1);
+//                    } else {
+//                        employeesList.get(j) = null;
+//                        break;
+//                    }
+//                }
+//                break;
+//            }
+//        }
+//        showList();
+//    }
 }
