@@ -12,7 +12,6 @@ public class Main {
             System.out.println("number: " + number + " is valid: " + isValidatePhoneNumber(number));
 
         }
-
     }
 
     public static boolean isValidatePhoneNumber(String number) {

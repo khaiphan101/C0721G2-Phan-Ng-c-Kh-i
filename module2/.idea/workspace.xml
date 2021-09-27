@@ -20,20 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c21edb32-d074-4323-8b60-ef13d4b3f97c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_17_string_and_regex/exercise/validate_phone_number/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_17_string_and_regex/practice/CrawlSongList/CrawlSongExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_17_string_and_regex/practice/validate_account/AccountExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_17_string_and_regex/practice/validate_account/AccountExampleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_17_string_and_regex/practice/validate_email/EmailExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_17_string_and_regex/practice/validate_email/EmailExampleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_17_string_and_regex/exercise/validate_class/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/controllers/FuramaController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/data/list_of_employee" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/data/list_of_employee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/EmployeeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/controllers/FuramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/controllers/FuramaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_17_string_and_regex/exercise/validate_phone_number/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_17_string_and_regex/exercise/validate_phone_number/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_17_string_and_regex/practice/CrawlSongList/CrawlSongExample.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +58,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last.edited.regexp" value="84-783264255" />
+    <property name="last.edited.regexp" value="C7211G" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -92,7 +82,7 @@
       <recent name="C:\Users\PC\Desktop\hoc\C0721G2_Khai\C0721G2-Phan-Ng-c-Kh-i\module2\src\_11_java_collection_framework\exercise" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="AccountExampleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_17_string_and_regex.practice.validate_account.AccountExampleTest" />
       <module name="module2" />
@@ -132,12 +122,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FuramaController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="caseStudy_furamaResort.controllers.FuramaController" />
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_17_string_and_regex.exercise.validate_class.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="caseStudy_furamaResort.controllers.*" />
+          <option name="PATTERN" value="_17_string_and_regex.exercise.validate_class.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -160,15 +150,15 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.CrawlSongExample" />
         <item itemvalue="Application.AccountExampleTest" />
         <item itemvalue="Application.EmailExampleTest" />
-        <item itemvalue="Application.FuramaController" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -212,11 +202,12 @@
       <workItem from="1632534859471" duration="17999000" />
       <workItem from="1632698806009" duration="2851000" />
       <workItem from="1632727233811" duration="3371000" />
+      <workItem from="1632756830363" duration="508000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -229,24 +220,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="979" height="253" key="GridCell.Tab.0.bottom" timestamp="1632730634783">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="979" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632730634783" />
-    <state width="979" height="253" key="GridCell.Tab.0.center" timestamp="1632730634783">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="979" height="253" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632730634783" />
-    <state width="979" height="253" key="GridCell.Tab.0.left" timestamp="1632730634782">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="979" height="253" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632730634782" />
-    <state width="979" height="253" key="GridCell.Tab.0.right" timestamp="1632730634783">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="979" height="253" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632730634783" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
