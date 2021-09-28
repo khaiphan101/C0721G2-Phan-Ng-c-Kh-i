@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c21edb32-d074-4323-8b60-ef13d4b3f97c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_17_string_and_regex/exercise/validate_class/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_17_string_and_regex/exercise/validate_phone_number/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_17_string_and_regex/exercise/validate_phone_number/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_17_string_and_regex/practice/CrawlSongList/CrawlSongExample.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +79,7 @@
       <recent name="C:\Users\PC\Desktop\hoc\C0721G2_Khai\C0721G2-Phan-Ng-c-Kh-i\module2\src\_11_java_collection_framework\exercise" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="AccountExampleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_17_string_and_regex.practice.validate_account.AccountExampleTest" />
       <module name="module2" />
@@ -150,8 +147,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.CrawlSongExample" />
         <item itemvalue="Application.AccountExampleTest" />
         <item itemvalue="Application.EmailExampleTest" />
@@ -203,6 +200,7 @@
       <workItem from="1632698806009" duration="2851000" />
       <workItem from="1632727233811" duration="3371000" />
       <workItem from="1632756830363" duration="508000" />
+      <workItem from="1632792532229" duration="628000" />
     </task>
     <servers />
   </component>
