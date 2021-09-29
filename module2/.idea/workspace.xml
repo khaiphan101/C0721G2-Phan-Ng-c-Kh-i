@@ -20,7 +20,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c21edb32-d074-4323-8b60-ef13d4b3f97c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/_17_string_and_regex/exercise/validate_phone_number/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_17_string_and_regex/exercise/validate_phone_number/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/exercise/factory_method/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/exercise/factory_method/FactorryPatternDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/exercise/factory_method/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/exercise/factory_method/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/exercise/factory_method/ShapeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/exercise/factory_method/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/factory_method/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/factory_method/AnimalFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/factory_method/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/factory_method/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/factory_method/FactoryDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/object_pool/ObjectPoolDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/object_pool/Taxi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/object_pool/TaxiNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/object_pool/TaxiPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/object_pool/TaxiThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/singleton/BookBorrower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/singleton/BookSingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/singleton/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/data/list_of_customer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/data/list_of_facility" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/data/list_of_employee" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/data/list_of_employee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Facility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Facility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/House.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Villa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/BookingServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/ContactServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/EmployeeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/FacilityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/FacilityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/FacilityServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/controllers/FuramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/controllers/FuramaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/data/list_of_employee" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/data/list_of_employee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Facility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/ContactServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/ContactServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/FacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/FacilityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/FacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/FacilityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +80,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -40,7 +90,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1xWYAffA7eH1UJLoCNr3G0gjTTW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,6 +113,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -68,24 +121,24 @@
       <recent name="_09_dsa.exercise.implement_method_of_ArrayList" />
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Desktop\hoc\C0721G2_Khai\C0721G2-Phan-Ng-c-Kh-i\module2\src\_11_java_collection_framework\exercise\manage_product_with_linked_list" />
+      <recent name="C:\Users\PC\Desktop\hoc\C0721G2_Khai\C0721G2-Phan-Ng-c-Kh-i\module2\src\_11_java_collection_framework\exercise" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="_07_abstract_class_and_interface.exercise.interface_colorable" />
       <recent name="_07_abstract_class_and_interface.exercise.interface_resizeable" />
       <recent name="_07_abstract_class_and_interface.practic.interface_comparable" />
       <recent name="_06_inherit.exercise.triangle" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\PC\Desktop\hoc\C0721G2_Khai\C0721G2-Phan-Ng-c-Kh-i\module2\src\_11_java_collection_framework\exercise\manage_product_with_linked_list" />
-      <recent name="C:\Users\PC\Desktop\hoc\C0721G2_Khai\C0721G2-Phan-Ng-c-Kh-i\module2\src\_11_java_collection_framework\exercise" />
-    </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="AccountExampleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_17_string_and_regex.practice.validate_account.AccountExampleTest" />
+  <component name="RunManager" selected="Application.FactoryDemo">
+    <configuration name="FactoryDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_18_design_pattern.practice.factory_method.FactoryDemo" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_17_string_and_regex.practice.validate_account.*" />
+          <option name="PATTERN" value="_18_design_pattern.practice.factory_method.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,12 +146,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CrawlSongExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_17_string_and_regex.practice.CrawlSongList.CrawlSongExample" />
+    <configuration name="FuramaController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="caseStudy_furamaResort.controllers.FuramaController" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_17_string_and_regex.practice.CrawlSongList.*" />
+          <option name="PATTERN" value="caseStudy_furamaResort.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,12 +159,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmailExampleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_17_string_and_regex.practice.validate_email.EmailExampleTest" />
+    <configuration name="ObjectPoolDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_18_design_pattern.practice.object_pool.ObjectPoolDemo" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_17_string_and_regex.practice.validate_email.*" />
+          <option name="PATTERN" value="_18_design_pattern.practice.object_pool.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,12 +172,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_17_string_and_regex.exercise.validate_class.Main" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_18_design_pattern.practice.singleton.Test" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_17_string_and_regex.exercise.validate_class.*" />
+          <option name="PATTERN" value="_18_design_pattern.practice.singleton.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,26 +185,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_17_string_and_regex.exercise.validate_phone_number.Main" />
+    <configuration name="demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo" />
       <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_17_string_and_regex.exercise.validate_phone_number.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.CrawlSongExample" />
-        <item itemvalue="Application.AccountExampleTest" />
-        <item itemvalue="Application.EmailExampleTest" />
+        <item itemvalue="Application.FactoryDemo" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.ObjectPoolDemo" />
+        <item itemvalue="Application.demo" />
+        <item itemvalue="Application.FuramaController" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +247,8 @@
       <workItem from="1632698806009" duration="2851000" />
       <workItem from="1632727233811" duration="3371000" />
       <workItem from="1632756830363" duration="508000" />
-      <workItem from="1632792532229" duration="628000" />
+      <workItem from="1632792532229" duration="15151000" />
+      <workItem from="1632878962561" duration="12920000" />
     </task>
     <servers />
   </component>

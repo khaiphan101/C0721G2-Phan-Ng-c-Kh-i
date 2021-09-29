@@ -4,15 +4,23 @@
 //
 //public class demo {
 //
+//    public static void main(String[] args) {
 //
-//    static int commonCharacterCountCG(String a, String b) {
-//        Map<Character> m = new HashMap();
-//        for(Character c : a.toCharArray()) {
-//            if(b.indexOf(c) >= 0) {
-//                m.put(c);
-//                System.out.println(m);
+//        System.out.println(check("Class", "cLass"));
+//
+//    }
+//    static boolean check(String a, String b) {
+//        if(Character.isUpperCase(a.charAt(0))){
+//            if(a.contains("_")){
+//                return false;
+//            }else{
+//                return "class".equalsIgnoreCase(b) ? true : false;
 //            }
 //        }
-//        return m.size();
+//        else{
+//
+//        }
+//       return false;
+//
 //    }
 //}
