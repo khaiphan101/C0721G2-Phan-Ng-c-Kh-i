@@ -20,57 +20,101 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c21edb32-d074-4323-8b60-ef13d4b3f97c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/exercise/factory_method/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/exercise/factory_method/FactorryPatternDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/exercise/factory_method/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/exercise/factory_method/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/exercise/factory_method/ShapeFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/exercise/factory_method/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/factory_method/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/factory_method/AnimalFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/factory_method/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/factory_method/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/factory_method/FactoryDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/object_pool/ObjectPoolDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/object_pool/Taxi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/object_pool/TaxiNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/object_pool/TaxiPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/object_pool/TaxiThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/singleton/BookBorrower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/singleton/BookSingleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_18_design_pattern/practice/singleton/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/data/list_of_customer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/data/list_of_facility" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/codegym_file_utils.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/FileWorker/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/FileWorker/FileCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/FileWorker/FileCalculatorAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/FileWorker/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Facade/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Facade/Facebook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Facade/LinkedIn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Facade/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Facade/SocialMediaFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Facade/SocialShare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Facade/Twitter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Proxy/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Proxy/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Proxy/MathCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Proxy/MathCalculatorProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/case_study.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/out/production/case_study/_01_a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/out/production/case_study/caseStudy_furamaResort/data/list_of_customer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/out/production/case_study/caseStudy_furamaResort/data/list_of_employee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/out/production/case_study/caseStudy_furamaResort/data/list_of_facility" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/_01_a.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/controllers/FuramaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/data/list_of_customer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/data/list_of_employee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/data/list_of_facility" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/models/Booking.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/models/Contract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/models/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/models/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/models/Facility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/models/House.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/models/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/models/Room.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/models/Villa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/services/BookingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/services/BookingServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/services/ContactService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/services/ContactServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/services/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/services/CustomerServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/services/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/services/EmployeeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/services/FacilityService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/services/FacilityServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/src/caseStudy_furamaResort/services/Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/data/list_of_employee" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/data/list_of_employee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Facility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Facility.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/House.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Villa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/BookingServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/ContactServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/FacilityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/FacilityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/FacilityServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/controllers/FuramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/controllers/FuramaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/data/list_of_employee" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/data/list_of_employee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Facility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/House.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Villa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/ContactServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/ContactServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/FacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/FacilityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/FacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/FacilityServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/module2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/data/list_of_customer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/data/list_of_employee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/data/list_of_facility" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Booking.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Contract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Facility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/House.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Room.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/models/Villa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/BookingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/ContactService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/EmployeeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/FacilityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/controllers/FuramaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/data/list_of_customer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/data/list_of_employee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/data/list_of_facility" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/FileWorker/codegym-file-utils.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Booking.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Contract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Facility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/House.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Room.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/models/Villa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/BookingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/BookingServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/ContactService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/ContactServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/CustomerServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/EmployeeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/FacilityService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/FacilityServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy_furamaResort/services/Service.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,11 +152,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last.edited.regexp" value="C7211G" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/FileWorker/codegym-file-utils.jar!/" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -132,7 +176,7 @@
       <recent name="_06_inherit.exercise.triangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FactoryDemo">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="FactoryDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_18_design_pattern.practice.factory_method.FactoryDemo" />
       <module name="module2" />
@@ -146,12 +190,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FuramaController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="caseStudy_furamaResort.controllers.FuramaController" />
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_19_structural_design_pattern.practice.Facade.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="caseStudy_furamaResort.controllers.*" />
+          <option name="PATTERN" value="_19_structural_design_pattern.practice.Facade.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_19_structural_design_pattern.practice.Proxy.Main" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_19_structural_design_pattern.practice.Proxy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -185,24 +242,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo" />
-      <module name="module2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.FactoryDemo" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.ObjectPoolDemo" />
-        <item itemvalue="Application.demo" />
-        <item itemvalue="Application.FuramaController" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -249,11 +299,14 @@
       <workItem from="1632756830363" duration="508000" />
       <workItem from="1632792532229" duration="15151000" />
       <workItem from="1632878962561" duration="12920000" />
+      <workItem from="1632973331108" duration="231000" />
+      <workItem from="1632987556717" duration="1320000" />
+      <workItem from="1632989128630" duration="1688000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -266,6 +319,40 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1113" y="432" key="DetectedRootsChooserDialog" timestamp="1632990595301">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1113" y="432" key="DetectedRootsChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632990595301" />
+    <state x="1034" y="336" key="FileChooserDialogImpl" timestamp="1632990813383">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1034" y="336" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1632990813383" />
+    <state width="1877" height="283" key="GridCell.Tab.0.bottom" timestamp="1632988877373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632988877373" />
+    <state width="1877" height="283" key="GridCell.Tab.0.center" timestamp="1632988877373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632988877373" />
+    <state width="1877" height="283" key="GridCell.Tab.0.left" timestamp="1632988877373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632988877373" />
+    <state width="1877" height="283" key="GridCell.Tab.0.right" timestamp="1632988877373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632988877373" />
+    <state x="796" y="121" key="SettingsEditor" timestamp="1632990662295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="796" y="121" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1632990662295" />
+    <state x="331" y="200" key="new project wizard" timestamp="1632973563928">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="331" y="200" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1632973563928" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

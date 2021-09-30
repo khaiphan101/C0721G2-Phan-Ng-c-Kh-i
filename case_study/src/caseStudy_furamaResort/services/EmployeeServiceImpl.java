@@ -52,7 +52,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void showList() {
         System.out.println("employees's list:");
-//        employeesList = this.readFile(EMPLOYEES_FILE);
         for (Employee employee : employeesList) {
             System.out.println(employee);
         }
