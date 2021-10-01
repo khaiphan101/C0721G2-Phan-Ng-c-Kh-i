@@ -51,7 +51,7 @@ public class Employee extends Person {
                 ", email='" + super.getEmail() + '\'' +
                 ", level='" + level + '\'' +
                 ", position='" + position + '\'' +
-                ", salary='" + salary + '\'';
+                ", salary='" + salary;
     }
 
     public String writeToFile() {

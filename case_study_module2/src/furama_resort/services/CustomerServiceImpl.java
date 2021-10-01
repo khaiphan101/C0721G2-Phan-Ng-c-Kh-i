@@ -1,13 +1,14 @@
 package furama_resort.services;
 
 import furama_resort.models.Customer;
+import furama_resort.models.Employee;
 
 import java.io.*;
 import java.util.LinkedList;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerService{
-    private String CUSTOMER_FILE = "src/caseStudy_furamaResort/data/list_of_customer";
+    private String CUSTOMER_FILE = "src/furama_resort/data/list_of_customer";
     LinkedList<Customer> customerList = this.readFile(CUSTOMER_FILE);
 
     Scanner sc = new Scanner(System.in);
@@ -117,9 +118,10 @@ public class CustomerServiceImpl implements CustomerService{
                         default:
                             System.out.println("invalid value, please enter ordinal number(1,2,3,4)");
                     }
+                    System.out.println("customer edited:");
+                    System.out.println(customerList.get(i));
+                    writeCustomerListToFile();
                 }
-                System.out.println("customer edited:");
-                System.out.println(customerList.get(i));
                 break;
             }
         }
@@ -151,6 +153,21 @@ public class CustomerServiceImpl implements CustomerService{
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.newLine();
             bufferedWriter.write(customer.writeToFile());
+            bufferedWriter.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void writeCustomerListToFile() {
+        try {
+            File file = new File(CUSTOMER_FILE);
+            file.delete();
+            FileWriter fileWriter = new FileWriter(file);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            for (Customer customer : customerList) {
+                bufferedWriter.write(customer.writeToFile());
+                bufferedWriter.newLine();
+            }
             bufferedWriter.close();
         } catch (Exception e) {
             e.printStackTrace();

@@ -61,11 +61,11 @@ public abstract class Facility {
 
     @Override
     public String toString() {
-        return "serviceName='" + serviceName + '\'' +
+        return "service name='" + serviceName + '\'' +
                 ", area=" + area +
-                ", rentalCosts=" + rentalCosts +
-                ", maxPeople=" + maxPeople +
-                ", rentalType='" + rentalType;
+                ", rental costs=" + rentalCosts +
+                ", max people=" + maxPeople +
+                ", rental type='" + rentalType;
     }
     public String writeToFile(){
         return serviceName +

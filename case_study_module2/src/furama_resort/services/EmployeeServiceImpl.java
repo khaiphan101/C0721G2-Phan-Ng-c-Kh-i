@@ -7,11 +7,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
-    private String EMPLOYEES_FILE = "src/caseStudy_furamaResort/data/list_of_employee";
+    private String EMPLOYEES_FILE = "src/furama_resort/data/list_of_employee";
     ArrayList<Employee> employeesList = this.readFile(EMPLOYEES_FILE);
 
     Scanner sc = new Scanner(System.in);
-    @Override
+
+//    @Override
     public void add() {
         //code them moi
         Employee employee = new Employee();
@@ -49,13 +50,14 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeesList.add(employee);
     }
 
-    @Override
+//    @Override
     public void showList() {
         System.out.println("employees's list:");
         for (Employee employee : employeesList) {
             System.out.println(employee);
         }
     }
+
     @Override
     public void edit(int employeeCode) {
         for (int i = 0; i < employeesList.size(); i++) {
@@ -123,13 +125,15 @@ public class EmployeeServiceImpl implements EmployeeService {
                         default:
                             System.out.println("invalid value, please enter ordinal number(1,2,3,4)");
                     }
+                    System.out.println("employee edited:");
+                    System.out.println(employeesList.get(i));
+                    writeListEmployeeFile();
                 }
-                System.out.println("employee edited:");
-                System.out.println(employeesList.get(i));
                 break;
             }
         }
     }
+
     @Override
     public ArrayList<Employee> readFile(String filePath) {
         ArrayList<Employee> list = new ArrayList<>();
@@ -150,6 +154,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         return list;
     }
+
     @Override
     public void writeFile(Employee employee, String filePath) {
         try {
@@ -157,6 +162,22 @@ public class EmployeeServiceImpl implements EmployeeService {
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.newLine();
             bufferedWriter.write(employee.writeToFile());
+            bufferedWriter.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void writeListEmployeeFile() {
+        try {
+            File file = new File(EMPLOYEES_FILE);
+            file.delete();
+            FileWriter fileWriter = new FileWriter(file);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            for (Employee employee : employeesList) {
+                bufferedWriter.write(employee.writeToFile());
+                bufferedWriter.newLine();
+            }
             bufferedWriter.close();
         } catch (Exception e) {
             e.printStackTrace();

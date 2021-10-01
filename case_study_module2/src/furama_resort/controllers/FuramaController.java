@@ -9,7 +9,7 @@ public class FuramaController {
     static EmployeeService employeeService = new EmployeeServiceImpl();
     static CustomerService customerService = new CustomerServiceImpl();
     static FacilityService facilityService = new FacilityServiceImpl();
-
+    static BookingService bookingService = new BookingServiceImpl();
     public static void main(String[] args) {
 
         displayMainMenu();
@@ -38,14 +38,7 @@ public class FuramaController {
                         manageFacility();
                         break;
                     case 4:
-                        System.out.println("1.\tAdd new booking\n" +
-                                "2.\tDisplay list booking\n" +
-                                "3.\tCreate new constracts\n" +
-                                "4.\tDisplay list contracts\n" +
-                                "5.\tEdit contracts\n" +
-                                "6.\tReturn main menu\n");
-                        System.out.print("Your choice: ");
-                        int choice4 = Integer.parseInt(sc.nextLine());
+                        manageBooking();
                         break;
                     case 5:
                         System.out.println("1.\tDisplay list customers use service\n" +
@@ -161,6 +154,40 @@ public class FuramaController {
                             System.err.println("Invalid input, please enter ordinal number(1,2,3,4)");
                             System.out.println();
                         }
+                }
+            } catch (Exception e) {
+                System.err.println("Invalid input, please enter ordinal number(1,2,3,4)");
+                System.out.println();
+            }
+        }
+    }
+    public static void manageBooking() {
+        int choice = 0;
+        while (choice != 6) {
+            try {
+                System.out.println("1.\tAdd new booking\n" +
+                        "2.\tDisplay list booking\n" +
+                        "3.\tCreate new constracts\n" +
+                        "4.\tDisplay list contracts\n" +
+                        "5.\tEdit contracts\n" +
+                        "6.\tReturn main menu\n");
+                System.out.print("Your choice: ");
+                choice = Integer.parseInt(sc.nextLine());
+                switch (choice) {
+                    case 1:
+                        break;
+                    case 2:
+                        bookingService.showList();
+                        break;
+                    case 3:
+//                        try {
+//                            System.out.print("Enter customer code you want to edit:");
+//                            int code = Integer.parseInt(sc.nextLine());
+//                            bookingService.edit(code);
+//                        } catch (Exception e) {
+//                            System.err.println("Invalid input, please enter ordinal number(1,2,3,4)");
+//                            System.out.println();
+//                        }
                 }
             } catch (Exception e) {
                 System.err.println("Invalid input, please enter ordinal number(1,2,3,4)");
