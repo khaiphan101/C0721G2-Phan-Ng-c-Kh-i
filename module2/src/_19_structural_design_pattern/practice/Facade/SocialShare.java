@@ -1,6 +1,0 @@
-package _19_structural_design_pattern.practice.Facade;
-
-public interface SocialShare {
-    void setMessage(String message);
-    void share();
-}
