@@ -20,52 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c21edb32-d074-4323-8b60-ef13d4b3f97c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/observer/BinObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/observer/HexObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/observer/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/observer/OctObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/observer/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/strategy/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/strategy/MergeSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/strategy/QuickSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/strategy/SelectionSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/strategy/SortStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/strategy/SortedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/template_method/HamburgerMeal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/template_method/Meal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/template_method/TacoMeal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/template_method/TemplateMethodDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/observer/ObserverDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/META-INF/module2.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Facade/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Facade/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Facade/Facebook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Facade/Facebook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Facade/LinkedIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Facade/LinkedIn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Facade/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Facade/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Facade/SocialMediaFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Facade/SocialMediaFacade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Facade/SocialShare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Facade/SocialShare.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Facade/Twitter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Facade/Twitter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Proxy/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Proxy/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Proxy/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Proxy/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Proxy/MathCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Proxy/MathCalculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Proxy/MathCalculatorProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/_19_structural_design_pattern/practice/Proxy/MathCalculatorProxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/CustomerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy_furamaResort/services/EmployeeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/FileWorker/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/file_worker/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/FileWorker/FileCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/file_worker/FileCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/FileWorker/FileCalculatorAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/file_worker/FileCalculatorAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/FileWorker/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/file_worker/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/FileWorker/codegym-file-utils.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Adapter/file_worker/codegym-file-utils.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Facade/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/facade/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Facade/Facebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/facade/Facebook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Facade/LinkedIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/facade/LinkedIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Facade/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/facade/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Facade/SocialMediaFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/facade/SocialMediaFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Facade/SocialShare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/facade/SocialShare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Facade/Twitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/facade/Twitter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Proxy/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/proxy/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Proxy/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/proxy/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Proxy/MathCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/proxy/MathCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/Proxy/MathCalculatorProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_19_structural_design_pattern/practice/proxy/MathCalculatorProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/observer/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_20_behavioral_design_pattern/practice/observer/Observer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,20 +84,7 @@
       <recent name="_06_inherit.exercise.triangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TemplateMethodDemo">
-    <configuration name="FactoryDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_18_design_pattern.practice.factory_method.FactoryDemo" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_18_design_pattern.practice.factory_method.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_19_structural_design_pattern.practice.Facade.Main" />
       <module name="module2" />
@@ -193,6 +137,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ObserverDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_20_behavioral_design_pattern.practice.observer.ObserverDemo" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_20_behavioral_design_pattern.practice.observer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TemplateMethodDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_20_behavioral_design_pattern.practice.template_method.TemplateMethodDemo" />
       <module name="module2" />
@@ -208,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TemplateMethodDemo" />
         <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.ObserverDemo" />
+        <item itemvalue="Application.TemplateMethodDemo" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.FactoryDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +224,7 @@
       <workItem from="1632987556717" duration="1320000" />
       <workItem from="1632989128630" duration="1688000" />
       <workItem from="1633049852049" duration="180000" />
-      <workItem from="1633050094491" duration="3643000" />
+      <workItem from="1633050094491" duration="4248000" />
     </task>
     <servers />
   </component>
