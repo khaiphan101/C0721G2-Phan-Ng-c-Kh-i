@@ -1,14 +1,35 @@
 package furama_resort.models;
 
+import java.util.Arrays;
 import java.util.Comparator;
+import java.util.stream.Stream;
 
-public class BookingComparator implements Comparator {
+public class BookingComparator implements Comparator<Booking> {
+
     @Override
-    public int compareTo(Booking booking) {
-        if(this.getStartDay() == booking.getStartDay()){
-            return (this.getEndDay() < booking.getEndDay()) ? 1 : -1;
+    public int compare(Booking b1, Booking b2) {
+        int[] startDay1 = Stream.of(b1.getStartDay().split("/")).mapToInt(Integer::parseInt).toArray();
+        
+
+        int[] startDay2 = Stream.of(b2.getStartDay().split("/")).mapToInt(Integer::parseInt).toArray();
+        
+        if(compareDays(startDay1, startDay2)!=0) {
+            return compareDays(startDay1, startDay2);
         }
-        return (this.getStartDay() < booking.getStartDay()) ? 1 : -1;
-//        return this.getStartDay().compareTo(booking.getStartDay());
+        else{
+            int[] endDay1 = Stream.of(b1.getEndDay().split("/")).mapToInt(Integer::parseInt).toArray();
+            int[] endDay2 = Stream.of(b2.getEndDay().split("/")).mapToInt(Integer::parseInt).toArray();
+            return compareDays(endDay1, endDay2);
+        }
     }
+
+    public int compareDays(int[] day1, int[] day2) {
+        if (day1[2] == day2[2]) {
+            if (day1[1] == day2[1]) {
+                return day1[0] - day2[0];
+            } else return day1[1] - day2[1];
+        }
+        else return day1[2] - day2[2];
+    }
+
 }

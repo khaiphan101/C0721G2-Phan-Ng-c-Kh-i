@@ -54,4 +54,5 @@ public class Customer extends Person {
                 "," + rank +
                 "," + address;
     }
+
 }

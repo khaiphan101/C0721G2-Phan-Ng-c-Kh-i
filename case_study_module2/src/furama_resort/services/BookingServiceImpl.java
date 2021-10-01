@@ -51,7 +51,7 @@ public class BookingServiceImpl implements BookingService {
 //            }
     }
     public TreeSet<Booking> readFile(String filePath) {
-        TreeSet<Booking> list = new TreeSet<>();
+        TreeSet<Booking> list = new TreeSet<>(new BookingComparator());
         try {
             File file = new File(filePath);
             FileReader fileReader = new FileReader(file);
@@ -60,7 +60,7 @@ public class BookingServiceImpl implements BookingService {
             String[] booking;
             while ((line = bufferedReaderFile.readLine()) != null) {
                 booking = line.split(",");
-                list.add(new Booking(Integer.parseInt(booking[0]), Integer.parseInt(booking[1]), Integer.parseInt(booking[2]), booking[3], booking[4], booking[5]));
+                list.add(new Booking(Integer.parseInt(booking[0]), booking[1], booking[2], booking[3], booking[4], booking[5]));
             }
             bufferedReaderFile.close();
         } catch (Exception e) {

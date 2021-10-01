@@ -37,8 +37,10 @@ public class MainTestSort1 {
             } else if (choose == 2) {
                 Collections.sort(studentList, new StudentSortGrade());
             }
-
-            System.out.println(studentList);
+            for(Student student : studentList) {
+                System.out.println(student);
+            }
         } while (choose != 0);
+
     }
 }

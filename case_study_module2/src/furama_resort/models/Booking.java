@@ -1,9 +1,11 @@
 package furama_resort.models;
 
+import java.util.Objects;
+
 public class Booking {
     private int code;
-    private int startDay;
-    private int endDay;
+    private String startDay;
+    private String endDay;
     private String customerCode;
     private String serviceName;
     private String serviceType;
@@ -11,7 +13,7 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(int code, int startDay, int endDay, String customerCode, String serviceName, String serviceType) {
+    public Booking(int code, String startDay, String endDay, String customerCode, String serviceName, String serviceType) {
         this.code = code;
         this.startDay = startDay;
         this.endDay = endDay;
@@ -28,19 +30,19 @@ public class Booking {
         this.code = code;
     }
 
-    public int getStartDay() {
+    public String getStartDay() {
         return startDay;
     }
 
-    public void setStartDay(int startDay) {
+    public void setStartDay(String startDay) {
         this.startDay = startDay;
     }
 
-    public int getEndDay() {
+    public String getEndDay() {
         return endDay;
     }
 
-    public void setEndDay(int endDay) {
+    public void setEndDay(String endDay) {
         this.endDay = endDay;
     }
 
@@ -85,5 +87,19 @@ public class Booking {
         return code + ',' + startDay + ',' + endDay + ',' + customerCode + ',' + serviceName + ',' + serviceType;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == this)
+            return true;
+        if (!(obj instanceof Booking))
+            return false;
+        Booking booking = (Booking) obj;
+        System.out.println(booking.getCode());
+        return booking.getCode() == this.getCode();
+    }
 
+    @Override
+    public int hashCode() {
+            return code.;
+    }
 }
