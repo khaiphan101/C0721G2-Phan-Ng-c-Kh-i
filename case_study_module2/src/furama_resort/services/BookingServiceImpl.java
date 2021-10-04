@@ -1,6 +1,7 @@
 package furama_resort.services;
 
 import furama_resort.models.*;
+import furama_resort.utils.BookingComparator;
 
 import java.io.*;
 import java.util.*;

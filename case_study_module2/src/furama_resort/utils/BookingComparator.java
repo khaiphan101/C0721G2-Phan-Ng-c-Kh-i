@@ -1,4 +1,6 @@
-package furama_resort.models;
+package furama_resort.utils;
+
+import furama_resort.models.Booking;
 
 import java.util.Comparator;
 import java.util.stream.Stream;
