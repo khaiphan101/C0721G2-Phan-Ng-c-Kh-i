@@ -7,7 +7,7 @@ import java.util.*;
 
 public class BookingServiceImpl implements BookingService {
     Scanner sc = new Scanner(System.in);
-    private String BOOKING_FILE = "src/furama_resort/data/list_of_booking";
+    private String BOOKING_FILE = "src/furama_resort/data/list_of_booking.csv";
     TreeSet<Booking> bookingsList = this.readFile(BOOKING_FILE);
 
     @Override

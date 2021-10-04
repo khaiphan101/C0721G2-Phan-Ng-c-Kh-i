@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerService{
-    private String CUSTOMER_FILE = "src/furama_resort/data/list_of_customer";
+    private String CUSTOMER_FILE = "src/furama_resort/data/list_of_customer.csv";
     LinkedList<Customer> customerList = this.readFile(CUSTOMER_FILE);
 
     Scanner sc = new Scanner(System.in);

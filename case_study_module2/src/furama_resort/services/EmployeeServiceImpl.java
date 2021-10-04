@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
-    private String EMPLOYEES_FILE = "src/furama_resort/data/list_of_employee";
+    private String EMPLOYEES_FILE = "src/furama_resort/data/list_of_employee.csv";
     ArrayList<Employee> employeesList = this.readFile(EMPLOYEES_FILE);
 
     Scanner sc = new Scanner(System.in);

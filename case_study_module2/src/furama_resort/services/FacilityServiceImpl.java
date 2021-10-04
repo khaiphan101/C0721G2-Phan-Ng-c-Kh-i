@@ -11,7 +11,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class FacilityServiceImpl implements FacilityService {
-    private final String FACILITYS_FILE = "src/furama_resort/data/list_of_facility";
+    private final String FACILITYS_FILE = "src/furama_resort/data/list_of_facility.csv";
     LinkedHashMap<Facility, Integer> facilityList = readFile(FACILITYS_FILE);
     Scanner sc = new Scanner(System.in);
 
