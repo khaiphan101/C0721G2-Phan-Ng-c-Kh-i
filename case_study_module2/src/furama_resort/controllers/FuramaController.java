@@ -10,10 +10,10 @@ public class FuramaController {
     static CustomerService customerService = new CustomerServiceImpl();
     static FacilityService facilityService = new FacilityServiceImpl();
     static BookingService bookingService = new BookingServiceImpl();
+    static ContractService contractService = new ContractServiceImpl();
+
     public static void main(String[] args) {
-
         displayMainMenu();
-
     }
 
     public static void displayMainMenu() {
@@ -161,6 +161,7 @@ public class FuramaController {
             }
         }
     }
+
     public static void manageBooking() {
         int choice = 0;
         while (choice != 6) {
@@ -181,14 +182,21 @@ public class FuramaController {
                         bookingService.showList();
                         break;
                     case 3:
-//                        try {
-//                            System.out.print("Enter customer code you want to edit:");
-//                            int code = Integer.parseInt(sc.nextLine());
-//                            bookingService.edit(code);
-//                        } catch (Exception e) {
-//                            System.err.println("Invalid input, please enter ordinal number(1,2,3,4)");
-//                            System.out.println();
-//                        }
+                        contractService.add();
+                        break;
+                    case 4:
+                        contractService.showList();
+                        break;
+                    case 5:
+                        contractService.showList();
+                        try {
+                            System.out.print("Enter id contract you want to edit:");
+                            int idContract = Integer.parseInt(sc.nextLine());
+                            contractService.edit(idContract);
+                        } catch (Exception e) {
+                            System.err.println("Invalid input, please enter ordinal number(1,2,3,4)");
+                            System.out.println();
+                        }
                 }
             } catch (Exception e) {
                 System.err.println("Invalid input, please enter ordinal number(1,2,3,4)");

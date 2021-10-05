@@ -73,14 +73,12 @@ public class Booking {
 
     @Override
     public String toString() {
-        return "Booking{" +
-                "code=" + code +
+        return "code=" + code +
                 ", startDay='" + startDay + '\'' +
                 ", endDay='" + endDay + '\'' +
                 ", customerCode='" + customerCode + '\'' +
                 ", serviceName='" + serviceName + '\'' +
-                ", serviceType='" + serviceType + '\'' +
-                '}';
+                ", serviceType='" + serviceType;
     }
 
     public String writeToFile() {
@@ -89,7 +87,7 @@ public class Booking {
 
     @Override
     public boolean equals(Object obj) {
-        if(obj == this)
+        if (obj == this)
             return true;
         if (!(obj instanceof Booking))
             return false;
@@ -99,6 +97,6 @@ public class Booking {
 
     @Override
     public int hashCode() {
-            return super.hashCode();
+        return super.hashCode();
     }
 }

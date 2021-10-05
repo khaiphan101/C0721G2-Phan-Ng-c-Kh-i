@@ -46,7 +46,7 @@ public class BookingServiceImpl implements BookingService {
         System.out.println("Enter end day:");
         booking.setEndDay(sc.nextLine());
 
-        booking.setCustomerCode(inputCustomercode());
+        booking.setCustomerCode(inputCustomerCode());
 
         booking.setServiceName(inputServiceName());
 
@@ -89,7 +89,7 @@ public class BookingServiceImpl implements BookingService {
         }
     }
 
-    public int inputCustomercode() {
+    public int inputCustomerCode() {
         CustomerServiceImpl customerService = new CustomerServiceImpl();
         System.out.println("choose customer (by code): ");
         customerService.showList();
