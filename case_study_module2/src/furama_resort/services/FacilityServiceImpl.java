@@ -145,7 +145,7 @@ public class FacilityServiceImpl implements FacilityService {
     }
 
     @Override
-    public void edit() {
+    public void edit(int id) {
 
     }
 

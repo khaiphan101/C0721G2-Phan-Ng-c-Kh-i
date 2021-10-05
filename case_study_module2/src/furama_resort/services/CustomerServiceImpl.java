@@ -14,11 +14,6 @@ public class CustomerServiceImpl implements CustomerService{
     Scanner sc = new Scanner(System.in);
 
     @Override
-    public void edit() {
-
-    }
-
-    @Override
     public void delete() {
 
     }

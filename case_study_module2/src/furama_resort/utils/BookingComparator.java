@@ -32,5 +32,4 @@ public class BookingComparator implements Comparator<Booking> {
         }
         else return day1[2] - day2[2];
     }
-
 }
