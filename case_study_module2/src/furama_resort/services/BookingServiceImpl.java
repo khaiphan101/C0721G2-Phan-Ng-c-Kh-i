@@ -19,38 +19,44 @@ public class BookingServiceImpl implements BookingService {
         }
     }
 
-    public void add() {
-////        //code them moi
-//        int choice = -1;
-//        while (choice !=0){
-//            System.out.println("menu service:");
-//            System.out.println("1.\tVilla\n" +
-//                    "2.\tHouse\n" +
-//                    "3.\tRoom\n" +
-//                    "0.\tExit\n");
-//            System.out.print("Your choice: ");
-//            choice= Integer.parseInt(sc.nextLine());
-//
-//            switch (choice) {
-//                case 1:
-//                    Villa newVilla = new Villa("villa", inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), intputRoomStandar(), inputFloors(), inputPoolArea());
-//                    facilityList.put(newVilla, 1);
-//                    this.writeFile(newVilla, FACILITYS_FILE);
-//                    break;
-//                case 2:
-//                    House newHouse = new House("House", inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), intputRoomStandar(), inputFloors());
-//                    facilityList.put(newHouse, 1);
-//                    this.writeFile(newHouse, FACILITYS_FILE);
-//                    break;
-//                case 3:
-//                    Room newRoom = new Room("Room", inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), inputFreeService());
-//                    facilityList.put(newRoom, 1);
-//                    this.writeFile(newRoom, FACILITYS_FILE);
-//                    break;
-//                case 0:
-//                    break;
-//            }
+    @Override
+    public void edit() {
+
     }
+
+    @Override
+    public void delete() {
+
+    }
+
+    //      private int code;
+//    private String startDay;
+//    private String endDay;
+//    private int customerCode;
+//    private String serviceName;
+//    private String serviceType;
+    public void add() {
+        Booking booking = new Booking();
+        System.out.println("Enter booking code:");
+        booking.setCode(Integer.parseInt(sc.nextLine()));
+
+        System.out.println("Enter start day:");
+        booking.setStartDay(sc.nextLine());
+
+        System.out.println("Enter end day:");
+        booking.setEndDay(sc.nextLine());
+
+        booking.setCustomerCode(inputCustomercode());
+
+        booking.setServiceName(inputServiceName());
+
+
+        System.out.println("Enter service type:");
+        booking.setServiceType(sc.nextLine());
+        bookingsList.add(booking);
+        writeFile(booking, BOOKING_FILE);
+    }
+
     public TreeSet<Booking> readFile(String filePath) {
         TreeSet<Booking> list = new TreeSet<>(new BookingComparator());
         try {
@@ -61,7 +67,7 @@ public class BookingServiceImpl implements BookingService {
             String[] booking;
             while ((line = bufferedReaderFile.readLine()) != null) {
                 booking = line.split(",");
-                list.add(new Booking(Integer.parseInt(booking[0]), booking[1], booking[2], booking[3], booking[4], booking[5]));
+                list.add(new Booking(Integer.parseInt(booking[0]), booking[1], booking[2], Integer.parseInt(booking[3]), booking[4], booking[5]));
             }
             bufferedReaderFile.close();
         } catch (Exception e) {
@@ -81,6 +87,34 @@ public class BookingServiceImpl implements BookingService {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public int inputCustomercode() {
+        CustomerServiceImpl customerService = new CustomerServiceImpl();
+        System.out.println("choose customer (by code): ");
+        customerService.showList();
+        System.out.println("your choice:");
+        int customerCode = Integer.parseInt(sc.nextLine());
+        for (Customer customer : customerService.customerList) {
+            if (customerCode == customer.getCode()) {
+                return customerCode;
+            }
+        }
+        return 0;
+    }
+
+    public String inputServiceName() {
+        FacilityServiceImpl facilityService = new FacilityServiceImpl();
+        System.out.println("choose service name: ");
+        facilityService.showList();
+        System.out.println("your choice:");
+        String name = sc.nextLine();
+        for (Facility facility : facilityService.facilityList.keySet()) {
+            if (name.equals(facility.getServiceName())) {
+                return name;
+            }
+        }
+        return "";
     }
 
 }

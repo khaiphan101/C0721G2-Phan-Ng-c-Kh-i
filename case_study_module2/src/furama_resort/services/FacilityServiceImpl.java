@@ -143,4 +143,14 @@ public class FacilityServiceImpl implements FacilityService {
         System.out.println("Enter free service: ");
         return sc.nextLine();
     }
+
+    @Override
+    public void edit() {
+
+    }
+
+    @Override
+    public void delete() {
+
+    }
 }

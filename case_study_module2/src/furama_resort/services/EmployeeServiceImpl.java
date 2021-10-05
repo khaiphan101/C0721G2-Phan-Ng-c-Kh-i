@@ -183,7 +183,17 @@ public class EmployeeServiceImpl implements EmployeeService {
             e.printStackTrace();
         }
     }
-//    public Boolean search(String infor) {
+
+    @Override
+    public void edit() {
+
+    }
+
+    @Override
+    public void delete() {
+
+    }
+    //    public Boolean search(String infor) {
 //        for (int i = 0; i < employeesList.size(); i++) {
 //            if (infor.equals(String.valueOf(employeesList[i].getId()))
 //                    ||infor.equals(String.valueOf(employeesList[i].getAge()))

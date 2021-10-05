@@ -6,14 +6,14 @@ public class Booking {
     private int code;
     private String startDay;
     private String endDay;
-    private String customerCode;
+    private int customerCode;
     private String serviceName;
     private String serviceType;
 
     public Booking() {
     }
 
-    public Booking(int code, String startDay, String endDay, String customerCode, String serviceName, String serviceType) {
+    public Booking(int code, String startDay, String endDay, int customerCode, String serviceName, String serviceType) {
         this.code = code;
         this.startDay = startDay;
         this.endDay = endDay;
@@ -46,11 +46,11 @@ public class Booking {
         this.endDay = endDay;
     }
 
-    public String getCustomerCode() {
+    public int getCustomerCode() {
         return customerCode;
     }
 
-    public void setCustomerCode(String customerCode) {
+    public void setCustomerCode(int customerCode) {
         this.customerCode = customerCode;
     }
 
@@ -94,12 +94,11 @@ public class Booking {
         if (!(obj instanceof Booking))
             return false;
         Booking booking = (Booking) obj;
-        System.out.println(booking.getCode());
         return booking.getCode() == this.getCode();
     }
 
     @Override
     public int hashCode() {
-            return code.;
+            return super.hashCode();
     }
 }

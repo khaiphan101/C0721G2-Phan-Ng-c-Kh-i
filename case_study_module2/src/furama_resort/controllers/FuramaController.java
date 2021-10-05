@@ -175,6 +175,7 @@ public class FuramaController {
                 choice = Integer.parseInt(sc.nextLine());
                 switch (choice) {
                     case 1:
+                        bookingService.add();
                         break;
                     case 2:
                         bookingService.showList();
