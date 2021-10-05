@@ -68,6 +68,6 @@ public class Contract {
     }
 
     public String writeToFile() {
-        return idContract + ',' + bookingCode + ',' + deposit + ',' + totalPay + ',' + customerCode;
+        return idContract + "," + bookingCode + "," + deposit + "," + totalPay + ',' + customerCode;
     }
 }

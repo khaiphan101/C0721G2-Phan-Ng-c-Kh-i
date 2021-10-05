@@ -80,6 +80,7 @@ public class FuramaController {
                         break;
                     case 3:
                         try {
+                            employeeService.showList();
                             System.out.print("Enter customer code you want to edit:");
                             int code = Integer.parseInt(sc.nextLine());
                             employeeService.edit(code);

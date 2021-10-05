@@ -9,7 +9,7 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class ContractServiceImpl implements ContractService{
+public class ContractServiceImpl implements ContractService {
     Scanner sc = new Scanner(System.in);
     private String CONTRACT_FILE = "src\\furama_resort\\data\\list_of_contract.csv";
     Queue<Contract> contractsList = this.readFile(CONTRACT_FILE);
@@ -21,10 +21,11 @@ public class ContractServiceImpl implements ContractService{
             System.out.println(contract);
         }
     }
+
     public void add() {
         Contract contract = new Contract();
         System.out.println("Enter id contract:");
-        contract.setCustomerCode(Integer.parseInt(sc.nextLine()));
+        contract.setIdContract(Integer.parseInt(sc.nextLine()));
 
         contract.setBookingCode(inputBookingCode());
 
@@ -32,13 +33,15 @@ public class ContractServiceImpl implements ContractService{
         contract.setDeposit(sc.nextLine());
 
         System.out.println("Enter totalpay:");
-        contract.setDeposit(sc.nextLine());
+        contract.setTotalPay(Integer.parseInt(sc.nextLine()));
 
         contract.setCustomerCode(inputCustomerCode());
 
         contractsList.add(contract);
-        writeFile(contract, CONTRACT_FILE);
-    };
+        writeListContractToFile();
+    }
+
+
 
     @Override
     public void edit(int idContract) {
@@ -49,12 +52,11 @@ public class ContractServiceImpl implements ContractService{
         //    private String totalpay;
         //    private String customerCode;
         for (int i = 0; i < contractsList.size(); i++) {
-            list.add(contractsList.peek());
             if (idContract == contractsList.peek().getIdContract()) {
-                Contract contract = new Contract();
-                boolean checkEdit = true;
-                while (checkEdit) {
-                    System.out.println(contractsList.peek());
+                Contract contract = contractsList.remove();
+                int checkEdit = -1;
+                while (checkEdit!=0) {
+                    System.out.println(contract);
                     System.out.print("1.Id contract\n" +
                             "2.bookingCode\n" +
                             "3.deposit\n" +
@@ -62,7 +64,8 @@ public class ContractServiceImpl implements ContractService{
                             "5.customerCode\n" +
                             "0.Exit\n" +
                             "Choose section you want to edit:");
-                    switch (Integer.parseInt(sc.nextLine())) {
+                    checkEdit = Integer.parseInt(sc.nextLine());
+                    switch (checkEdit) {
                         case 1:
                             System.out.print("Enter new id contract:");
                             contract.setIdContract(Integer.parseInt(sc.nextLine()));
@@ -84,25 +87,29 @@ public class ContractServiceImpl implements ContractService{
                             contract.setCustomerCode(Integer.parseInt(sc.nextLine()));
                             break;
                         case 0:
-                            checkEdit = false;
                             break;
                         default:
                             System.out.println("invalid value, please enter ordinal number(1,2,3,4)");
                     }
-                    System.out.println("contract edited:");
-
                 }
+                System.out.println("contract edited");
                 System.out.println(list.add(contract));
             }
+            else list.add(contractsList.remove());
         }
-        contractsList.clear();
-        contractsList = list;
-        writeListContractFile();
+        System.out.println("before edit");
+        showList();
+        for (int i = 0; i < list.size(); i++) {
+            contractsList.add(list.remove());
+        }
+        System.out.println("after edit");
+        showList();
+        writeListContractToFile();
     }
 
-    public void delete(){
+    public void delete() {
 
-    };
+    }
 
     public Queue<Contract> readFile(String filePath) {
         //    private int idContract;
@@ -141,7 +148,7 @@ public class ContractServiceImpl implements ContractService{
         }
     }
 
-    public int inputBookingCode(){
+    public int inputBookingCode() {
         BookingService bookingService = new BookingServiceImpl();
         System.out.println("choose booking (by code): ");
         bookingService.showList();
@@ -157,9 +164,8 @@ public class ContractServiceImpl implements ContractService{
 
     public int inputCustomerCode() {
         CustomerServiceImpl customerService = new CustomerServiceImpl();
-        System.out.println("choose customer (by code): ");
         customerService.showList();
-        System.out.println("your choice:");
+        System.out.print("choose customer (by code): ");
         int customerCode = Integer.parseInt(sc.nextLine());
         for (Customer customer : customerService.customerList) {
             if (customerCode == customer.getCode()) {
@@ -168,7 +174,8 @@ public class ContractServiceImpl implements ContractService{
         }
         return 0;
     }
-    public void writeListContractFile() {
+
+    public void writeListContractToFile() {
         try {
             File file = new File(CONTRACT_FILE);
             file.delete();

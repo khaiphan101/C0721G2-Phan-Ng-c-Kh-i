@@ -126,7 +126,6 @@ public class EmployeeServiceImpl implements EmployeeService {
                             System.out.println("invalid value, please enter ordinal number(1,2,3,4)");
                     }
                     System.out.println("employee edited:");
-                    System.out.println(employeesList.get(i));
                     writeListEmployeeFile();
                 }
                 break;
@@ -187,7 +186,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void delete() {
-
     }
     //    public Boolean search(String infor) {
 //        for (int i = 0; i < employeesList.size(); i++) {
