@@ -10,7 +10,7 @@ public class BookingServiceImpl implements BookingService {
     Scanner sc = new Scanner(System.in);
     private String BOOKING_FILE = "src/furama_resort/data/list_of_booking.csv";
     TreeSet<Booking> bookingsList = this.readFile(BOOKING_FILE);
-
+    FacilityService facilityService = new FacilityServiceImpl();
     @Override
     public void showList() {
         System.out.println("bookings's list:");
@@ -48,13 +48,16 @@ public class BookingServiceImpl implements BookingService {
 
         booking.setCustomerCode(inputCustomerCode());
 
-        booking.setServiceName(inputServiceName());
-
+        String serviceName = inputServiceName();
+        booking.setServiceName(serviceName);
 
         System.out.println("Enter service type:");
         booking.setServiceType(sc.nextLine());
+
         bookingsList.add(booking);
+
         writeFile(booking, BOOKING_FILE);
+        facilityService.useFacility(serviceName);
     }
 
     public TreeSet<Booking> readFile(String filePath) {
@@ -109,7 +112,17 @@ public class BookingServiceImpl implements BookingService {
         facilityService.showList();
         System.out.println("your choice:");
         String name = sc.nextLine();
-        for (Facility facility : facilityService.facilityList.keySet()) {
+        for (Facility facility : facilityService.villaList.keySet()) {
+            if (name.equals(facility.getServiceName())) {
+                return name;
+            }
+        }
+        for (Facility facility : facilityService.houseList.keySet()) {
+            if (name.equals(facility.getServiceName())) {
+                return name;
+            }
+        }
+        for (Facility facility : facilityService.roomList.keySet()) {
             if (name.equals(facility.getServiceName())) {
                 return name;
             }

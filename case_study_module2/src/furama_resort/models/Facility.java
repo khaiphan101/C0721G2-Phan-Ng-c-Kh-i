@@ -7,16 +7,18 @@ public abstract class Facility {
     private float rentalCosts;
     private int maxPeople;
     private String rentalType;
+    private int value = 0;
 
     public Facility() {
     }
 
-    public Facility(String serviceName, float area, float rentalCosts, int maxPeople, String rentalType) {
+    public Facility(String serviceName, float area, float rentalCosts, int maxPeople, String rentalType, int value) {
         this.serviceName = serviceName;
         this.area = area;
         this.rentalCosts = rentalCosts;
         this.maxPeople = maxPeople;
         this.rentalType = rentalType;
+        this.value = value;
     }
 
     public String getServiceName() {
@@ -59,6 +61,14 @@ public abstract class Facility {
         this.rentalType = rentalType;
     }
 
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
     @Override
     public String toString() {
         return "service name='" + serviceName + '\'' +
@@ -72,6 +82,7 @@ public abstract class Facility {
                 ',' + area +
                 ',' + rentalCosts +
                 ',' + maxPeople +
-                ',' + rentalType;
+                ',' + rentalType +
+                ',' + value;
     }
 }

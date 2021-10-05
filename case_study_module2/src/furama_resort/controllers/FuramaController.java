@@ -148,13 +148,10 @@ public class FuramaController {
                         facilityService.add();
                         break;
                     case 3:
-                        try {
-                            System.out.print("Enter customer code you want to edit:");
-                            int code = Integer.parseInt(sc.nextLine());
-                        } catch (Exception e) {
-                            System.err.println("Invalid input, please enter ordinal number(1,2,3,4)");
-                            System.out.println();
-                        }
+                        facilityService.showMaintenanceList();
+                        break;
+                    case 4:
+                        break;
                 }
             } catch (Exception e) {
                 System.err.println("Invalid input, please enter ordinal number(1,2,3,4)");

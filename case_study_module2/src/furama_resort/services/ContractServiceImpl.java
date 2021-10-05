@@ -42,7 +42,6 @@ public class ContractServiceImpl implements ContractService {
     }
 
 
-
     @Override
     public void edit(int idContract) {
         Queue<Contract> list = new ArrayDeque<>();
@@ -51,11 +50,13 @@ public class ContractServiceImpl implements ContractService {
         //    private String deposit;
         //    private String totalpay;
         //    private String customerCode;
-        for (int i = 0; i < contractsList.size(); i++) {
+        int size = contractsList.size();
+        for (int i = 0; i < size; i++) {
+
             if (idContract == contractsList.peek().getIdContract()) {
                 Contract contract = contractsList.remove();
                 int checkEdit = -1;
-                while (checkEdit!=0) {
+                while (checkEdit != 0) {
                     System.out.println(contract);
                     System.out.print("1.Id contract\n" +
                             "2.bookingCode\n" +
@@ -94,12 +95,11 @@ public class ContractServiceImpl implements ContractService {
                 }
                 System.out.println("contract edited");
                 System.out.println(list.add(contract));
-            }
-            else list.add(contractsList.remove());
+            } else list.add(contractsList.remove());
         }
         System.out.println("before edit");
         showList();
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < size; i++) {
             contractsList.add(list.remove());
         }
         System.out.println("after edit");
