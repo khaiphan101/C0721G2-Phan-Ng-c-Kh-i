@@ -4,11 +4,14 @@ import furama_resort.models.Facility;
 import furama_resort.models.House;
 import furama_resort.models.Room;
 import furama_resort.models.Villa;
+import furama_resort.utils.WrongFormatException;
 
 import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
 import java.util.Set;
+
+import static furama_resort.utils.RegexFacility.*;
 
 public class FacilityServiceImpl implements FacilityService {
     private final String VILLA_FILE = "src\\furama_resort\\data\\list_of_villa.csv";
@@ -93,11 +96,11 @@ public class FacilityServiceImpl implements FacilityService {
             while ((line = bufferedReaderFile.readLine()) != null) {
                 facility = line.split(",");
                 if (facility[0].equals("Villa")) {
-                    list.put(new Villa(facility[0], Float.parseFloat(facility[1]), Float.parseFloat(facility[2]), Integer.parseInt(facility[3]), facility[4],facility[5],, facility[6], Integer.parseInt(facility[7]), Float.parseFloat(facility[8])));
+                    list.put(new Villa(facility[0], Float.parseFloat(facility[1]), Float.parseFloat(facility[2]), Integer.parseInt(facility[3]), facility[4],Integer.parseInt(facility[5]), facility[6], Integer.parseInt(facility[7]), Float.parseFloat(facility[8])), Integer.parseInt(facility[5]));
                 } else if (facility[0].equals("House")) {
-                    list.put(new House(facility[0], Float.parseFloat(facility[1]), Float.parseFloat(facility[2]), Integer.parseInt(facility[3]), facility[4], facility[5], Integer.parseInt(facility[6])), 1);
+                    list.put(new House(facility[0], Float.parseFloat(facility[1]), Float.parseFloat(facility[2]), Integer.parseInt(facility[3]), facility[4], Integer.parseInt(facility[5]), facility[6], Integer.parseInt(facility[7])), Integer.parseInt(facility[5]));
                 } else {
-                    list.put(new Room(facility[0], Float.parseFloat(facility[1]), Float.parseFloat(facility[2]), Integer.parseInt(facility[3]), facility[4], facility[5]), 1);
+                    list.put(new Room(facility[0], Float.parseFloat(facility[1]), Float.parseFloat(facility[2]), Integer.parseInt(facility[3]), facility[4], Integer.parseInt(facility[5]), facility[6]), Integer.parseInt(facility[5]));
                 }
             }
             bufferedReaderFile.close();
@@ -121,23 +124,71 @@ public class FacilityServiceImpl implements FacilityService {
     }
 
     public float inputArea() {
-        System.out.println("Enter area: ");
-        return Float.parseFloat(sc.nextLine());
+        boolean flag;
+        float area = 0;
+        do {
+            try {
+                flag = true;
+                System.out.println("Enter area: ");
+                area = Float.parseFloat(sc.nextLine());
+                checkArea(area);
+            } catch (NumberFormatException | WrongFormatException e) {
+                e.printStackTrace();
+                flag = false;
+            }
+        } while (!flag);
+        return area;
     }
 
     public int inputMaxPeople() {
-        System.out.println("Enter max people: ");
-        return Integer.parseInt(sc.nextLine());
+        int people = 0;
+        boolean flag;
+        do {
+            try {
+                flag = true;
+                System.out.println("Enter max people: ");
+                people = Integer.parseInt(sc.nextLine());
+                checkNumberOfPeople(people);
+            } catch (NumberFormatException | WrongFormatException e) {
+                e.printStackTrace();
+                flag = false;
+            }
+        } while (!flag);
+        return people;
     }
 
     public float inputRentalCost() {
-        System.out.println("Enter rental cost: ");
-        return Float.parseFloat(sc.nextLine());
+        boolean flag;
+        float rentalCost = 0;
+        do {
+            try {
+                flag = true;
+                System.out.println("Enter rental cost: ");
+                rentalCost = Float.parseFloat(sc.nextLine());
+                checkRentalCost(rentalCost);
+            } catch (NumberFormatException | WrongFormatException e) {
+                e.printStackTrace();
+                flag = false;
+            }
+        } while (!flag);
+        return rentalCost;
     }
 
     public String inputRentalType() {
-        System.out.println("Enter rental type: ");
-        return sc.nextLine();
+        boolean flag;
+        String rentaltype = "";
+        do {
+            try {
+                flag = true;
+                System.out.println("Enter rental type: ");
+                rentaltype = sc.nextLine();
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+                flag = false;
+            }
+        } while (!flag);
+
+        return rentaltype;
     }
 
     public String intputRoomStandar() {
