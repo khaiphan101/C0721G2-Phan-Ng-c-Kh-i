@@ -45,12 +45,6 @@ public class FacilityServiceImpl implements FacilityService {
         }
     }
 
-//    public void showFacilityList(LinkedHashMap<Facility, Integer> facility) {
-////        Set<Facility> keySet = facility.keySet();
-////        for (Facility key : keySet) {
-////            System.out.println(key + " " + facility.get(key));
-//    }
-
     @Override
     public void add() {
         int choice = -1;
@@ -62,20 +56,19 @@ public class FacilityServiceImpl implements FacilityService {
                     "0.\tExit\n");
             System.out.print("Your choice: ");
             choice = Integer.parseInt(sc.nextLine());
-
             switch (choice) {
                 case 1:
-                    Villa newVilla = new Villa("Villa", inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), 0, intputRoomStandar(), inputFloors(), inputPoolArea());
+                    Villa newVilla = new Villa(inputIdFacility(),inputServiceName(), inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), 0, intputRoomStandar(), inputFloors(), inputPoolArea());
                     villaList.put(newVilla, newVilla.getValue());
                     this.writeFile(newVilla, VILLA_FILE);
                     break;
                 case 2:
-                    House newHouse = new House("House", inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), 0, intputRoomStandar(), inputFloors());
+                    House newHouse = new House(inputIdFacility(),inputServiceName(), inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), 0, intputRoomStandar(), inputFloors());
                     houseList.put(newHouse, newHouse.getValue());
                     this.writeFile(newHouse, HOUSE_FILE);
                     break;
                 case 3:
-                    Room newRoom = new Room("Room", inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), 0, inputFreeService());
+                    Room newRoom = new Room(inputIdFacility(),inputServiceName(), inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), 0, inputFreeService());
                     roomList.put(newRoom, newRoom.getValue());
                     this.writeFile(newRoom, ROOM_FILE);
                     break;
@@ -96,11 +89,11 @@ public class FacilityServiceImpl implements FacilityService {
             while ((line = bufferedReaderFile.readLine()) != null) {
                 facility = line.split(",");
                 if (facility[0].equals("Villa")) {
-                    list.put(new Villa(facility[0], Float.parseFloat(facility[1]), Float.parseFloat(facility[2]), Integer.parseInt(facility[3]), facility[4],Integer.parseInt(facility[5]), facility[6], Integer.parseInt(facility[7]), Float.parseFloat(facility[8])), Integer.parseInt(facility[5]));
+                    list.put(new Villa(facility[0],facility[1], Float.parseFloat(facility[2]), Float.parseFloat(facility[3]), Integer.parseInt(facility[4]), facility[5],Integer.parseInt(facility[6]), facility[7], Integer.parseInt(facility[8]), Float.parseFloat(facility[9])), Integer.parseInt(facility[6]));
                 } else if (facility[0].equals("House")) {
-                    list.put(new House(facility[0], Float.parseFloat(facility[1]), Float.parseFloat(facility[2]), Integer.parseInt(facility[3]), facility[4], Integer.parseInt(facility[5]), facility[6], Integer.parseInt(facility[7])), Integer.parseInt(facility[5]));
+                    list.put(new House(facility[0], facility[1], Float.parseFloat(facility[2]), Float.parseFloat(facility[3]), Integer.parseInt(facility[4]), facility[5], Integer.parseInt(facility[6]), facility[7], Integer.parseInt(facility[8])), Integer.parseInt(facility[6]));
                 } else {
-                    list.put(new Room(facility[0], Float.parseFloat(facility[1]), Float.parseFloat(facility[2]), Integer.parseInt(facility[3]), facility[4], Integer.parseInt(facility[5]), facility[6]), Integer.parseInt(facility[5]));
+                    list.put(new Room(facility[0], facility[1], Float.parseFloat(facility[2]), Float.parseFloat(facility[3]), Integer.parseInt(facility[4]), facility[5], Integer.parseInt(facility[6]), facility[7]), Integer.parseInt(facility[6]));
                 }
             }
             bufferedReaderFile.close();
@@ -123,6 +116,22 @@ public class FacilityServiceImpl implements FacilityService {
         }
     }
 
+    public String inputServiceName() {
+        boolean flag;
+        String serviceName = "";
+        do {
+            try {
+                flag = true;
+                System.out.println("Enter service name: ");
+                serviceName = sc.nextLine();
+                checkName(serviceName);
+            } catch (NumberFormatException | WrongFormatException e) {
+                e.printStackTrace();
+                flag = false;
+            }
+        } while (!flag);
+        return serviceName;
+    }
     public float inputArea() {
         boolean flag;
         float area = 0;
@@ -282,5 +291,21 @@ public class FacilityServiceImpl implements FacilityService {
                 System.out.println(key + " " + roomList.get(key));
             }
         }
+    }
+    public String inputIdFacility(){
+        boolean flag;
+        String idFacility = "";
+        do {
+            try {
+                flag = true;
+                System.out.println("Enter id facility (format: SVXX-YYYY): ");
+                idFacility = sc.nextLine();
+                checkFacility(idFacility);
+            } catch (NumberFormatException | WrongFormatException e) {
+                e.printStackTrace();
+                flag = false;
+            }
+        } while (!flag);
+        return idFacility;
     }
 }

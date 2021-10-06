@@ -1,8 +1,8 @@
 package furama_resort.utils;
 
 public class RegexFacility {
-        protected static final String FACILITI_FORMAT = "^SV(VL|RO|HO)-\\\\d{4}$";
-        private static final String NAME_FORMAT = "^[A-Z][a-z]+\\s?([a-z]+\\s)*\\w+$";
+        protected static final String FACILITI_FORMAT = "^SV(VL|RO|HO)-\\d{4}$";
+        private static final String NAME_FORMAT = "^[A-Z](\\w+\\s?)*$"; //Villa123 dfsd123 ky tu dau viet hoa con lai viet thuong hoac dau cach
 
         public static boolean checkFacility(String string) throws WrongFormatException{
             boolean checks = string.matches(FACILITI_FORMAT);
@@ -15,7 +15,7 @@ public class RegexFacility {
         public static boolean checkName(String name) throws WrongFormatException{
             boolean b = name.matches(NAME_FORMAT);
             if (!b){
-                throw new WrongFormatException("fail name facility");
+                throw new WrongFormatException("fail service name");
             }
             return b;
         }
