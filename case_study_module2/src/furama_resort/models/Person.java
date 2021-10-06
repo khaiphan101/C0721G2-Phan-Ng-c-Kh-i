@@ -82,12 +82,12 @@ public abstract class Person {
     public String toString() {
         return "Person{" +
                 "code=" + code +
-                ", name='" + name + '\'' +
-                ", birthday='" + birthday + '\'' +
-                ", gender='" + gender + '\'' +
-                ", idNumber='" + idNumber + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
+                ", name=" + name + '\'' +
+                ", birthday=" + birthday + '\'' +
+                ", gender=" + gender + '\'' +
+                ", idNumber=" + idNumber + '\'' +
+                ", phoneNumber=" + phoneNumber + '\'' +
+                ", email=" + email + '\'' +
                 '}';
     }
 }

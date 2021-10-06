@@ -1,5 +1,8 @@
 package furama_resort.models;
 
+import furama_resort.services.CustomerService;
+
+import java.util.List;
 import java.util.Objects;
 
 public class Booking {
@@ -70,15 +73,14 @@ public class Booking {
         this.serviceType = serviceType;
     }
 
-
     @Override
     public String toString() {
         return "code=" + code +
-                ", startDay='" + startDay + '\'' +
-                ", endDay='" + endDay + '\'' +
-                ", customerCode='" + customerCode + '\'' +
-                ", serviceName='" + serviceName + '\'' +
-                ", serviceType='" + serviceType;
+                ", startDay=" + startDay + '\'' +
+                ", endDay=" + endDay + '\'' +
+                ", customerCode=" + customerCode + '\'' +
+                ", serviceName=" + serviceName + '\'' +
+                ", serviceType=" + serviceType;
     }
 
     public String writeToFile() {

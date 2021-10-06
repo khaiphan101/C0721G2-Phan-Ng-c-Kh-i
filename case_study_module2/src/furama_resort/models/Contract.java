@@ -62,9 +62,9 @@ public class Contract {
     public String toString() {
         return "idContract=" + idContract + '\'' +
                 ", bookingCode=" + bookingCode + '\'' +
-                ", deposit='" + deposit + '\'' +
-                ", totalpay='" + totalPay + '\'' +
-                ", code='" + customerCode;
+                ", deposit=" + deposit + '\'' +
+                ", totalpay=" + totalPay + '\'' +
+                ", code=" + customerCode;
     }
 
     public String writeToFile() {

@@ -43,15 +43,15 @@ public class Employee extends Person {
     @Override
     public String toString() {
         return "employeeCode=" + super.getCode() +
-                ", name='" + super.getName() + '\'' +
-                ", birthday='" + super.getBirthday() + '\'' +
-                ", gender='" + super.getGender() + '\'' +
+                ", name=" + super.getName() + '\'' +
+                ", birthday=" + super.getBirthday() + '\'' +
+                ", gender=" + super.getGender() + '\'' +
                 ", idNumber=" + super.getIdNumber() +
                 ", phoneNumber=" + super.getPhoneNumber() +
-                ", email='" + super.getEmail() + '\'' +
-                ", level='" + level + '\'' +
-                ", position='" + position + '\'' +
-                ", salary='" + salary;
+                ", email=" + super.getEmail() + '\'' +
+                ", level=" + level + '\'' +
+                ", position=" + position + '\'' +
+                ", salary=" + salary;
     }
 
     public String writeToFile() {

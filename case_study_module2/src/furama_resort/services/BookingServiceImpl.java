@@ -11,6 +11,7 @@ public class BookingServiceImpl implements BookingService {
     private String BOOKING_FILE = "src/furama_resort/data/list_of_booking.csv";
     TreeSet<Booking> bookingsList = this.readFile(BOOKING_FILE);
     FacilityService facilityService = new FacilityServiceImpl();
+
     @Override
     public void showList() {
         System.out.println("bookings's list:");
@@ -59,7 +60,6 @@ public class BookingServiceImpl implements BookingService {
         writeFile(booking, BOOKING_FILE);
         facilityService.useFacility(serviceName);
     }
-
     public TreeSet<Booking> readFile(String filePath) {
         TreeSet<Booking> list = new TreeSet<>(new BookingComparator());
         try {

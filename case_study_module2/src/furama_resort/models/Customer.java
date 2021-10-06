@@ -32,14 +32,14 @@ public class Customer extends Person {
     @Override
     public String toString() {
         return "customer code=" + super.getCode() +
-                ", name='" + super.getName() + '\'' +
-                ", birthday='" + super.getBirthday() + '\'' +
-                ", gender='" + super.getGender() + '\'' +
+                ", name=" + super.getName() + '\'' +
+                ", birthday=" + super.getBirthday() + '\'' +
+                ", gender=" + super.getGender() + '\'' +
                 ", id number=" + super.getIdNumber() +
                 ", phone number=" + super.getPhoneNumber() +
-                ", email='" + super.getEmail() + '\'' +
-                "rank='" + rank + '\'' +
-                ", address='" + address + '\'' +
+                ", email=" + super.getEmail() + '\'' +
+                "rank=" + rank + '\'' +
+                ", address=" + address + '\'' +
                 '}';
     }
 

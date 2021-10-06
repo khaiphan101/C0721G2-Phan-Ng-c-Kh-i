@@ -26,19 +26,16 @@ public class FacilityServiceImpl implements FacilityService {
     @Override
     public void showList() {
         System.out.println("Villa's list:");
-//        showFacilityList(villaList);
         Set<Facility> keySet = villaList.keySet();
         for (Facility key : keySet) {
             System.out.println(key + " " + villaList.get(key));
         }
         System.out.println("House's list:");
-//        showFacilityList(houseList);
         Set<Facility> keySet1 = houseList.keySet();
         for (Facility key : keySet1) {
             System.out.println(key + " " + houseList.get(key));
         }
         System.out.println("Room's list:");
-//        showFacilityList(roomList);
         Set<Facility> keySet2 = roomList.keySet();
         for (Facility key : keySet2) {
             System.out.println(key + " " + roomList.get(key));
@@ -88,9 +85,9 @@ public class FacilityServiceImpl implements FacilityService {
             String[] facility;
             while ((line = bufferedReaderFile.readLine()) != null) {
                 facility = line.split(",");
-                if (facility[0].equals("Villa")) {
+                if (filePath.equals(VILLA_FILE)) {
                     list.put(new Villa(facility[0],facility[1], Float.parseFloat(facility[2]), Float.parseFloat(facility[3]), Integer.parseInt(facility[4]), facility[5],Integer.parseInt(facility[6]), facility[7], Integer.parseInt(facility[8]), Float.parseFloat(facility[9])), Integer.parseInt(facility[6]));
-                } else if (facility[0].equals("House")) {
+                } else if (filePath.equals(HOUSE_FILE)) {
                     list.put(new House(facility[0], facility[1], Float.parseFloat(facility[2]), Float.parseFloat(facility[3]), Integer.parseInt(facility[4]), facility[5], Integer.parseInt(facility[6]), facility[7], Integer.parseInt(facility[8])), Integer.parseInt(facility[6]));
                 } else {
                     list.put(new Room(facility[0], facility[1], Float.parseFloat(facility[2]), Float.parseFloat(facility[3]), Integer.parseInt(facility[4]), facility[5], Integer.parseInt(facility[6]), facility[7]), Integer.parseInt(facility[6]));
@@ -122,11 +119,11 @@ public class FacilityServiceImpl implements FacilityService {
         do {
             try {
                 flag = true;
-                System.out.println("Enter service name: ");
+                System.out.println("Enter service name (EX: Villa 1,Room 2...): ");
                 serviceName = sc.nextLine();
                 checkName(serviceName);
             } catch (NumberFormatException | WrongFormatException e) {
-                e.printStackTrace();
+                System.err.println(e.getMessage());
                 flag = false;
             }
         } while (!flag);
@@ -138,11 +135,10 @@ public class FacilityServiceImpl implements FacilityService {
         do {
             try {
                 flag = true;
-                System.out.println("Enter area: ");
+                System.out.println("Enter area(should be more than 30 m2): ");
                 area = Float.parseFloat(sc.nextLine());
                 checkArea(area);
             } catch (NumberFormatException | WrongFormatException e) {
-                e.printStackTrace();
                 flag = false;
             }
         } while (!flag);
@@ -155,11 +151,10 @@ public class FacilityServiceImpl implements FacilityService {
         do {
             try {
                 flag = true;
-                System.out.println("Enter max people: ");
+                System.out.println("Enter max people(should be between 0 and 20 people): ");
                 people = Integer.parseInt(sc.nextLine());
                 checkNumberOfPeople(people);
             } catch (NumberFormatException | WrongFormatException e) {
-                e.printStackTrace();
                 flag = false;
             }
         } while (!flag);
@@ -172,11 +167,10 @@ public class FacilityServiceImpl implements FacilityService {
         do {
             try {
                 flag = true;
-                System.out.println("Enter rental cost: ");
+                System.out.println("Enter rental cost(should be a positive number): ");
                 rentalCost = Float.parseFloat(sc.nextLine());
                 checkRentalCost(rentalCost);
             } catch (NumberFormatException | WrongFormatException e) {
-                e.printStackTrace();
                 flag = false;
             }
         } while (!flag);
@@ -189,10 +183,11 @@ public class FacilityServiceImpl implements FacilityService {
         do {
             try {
                 flag = true;
-                System.out.println("Enter rental type: ");
+                System.out.println("Enter rental type(should be upper case at head's char): ");
                 rentaltype = sc.nextLine();
-            } catch (NumberFormatException e) {
-                e.printStackTrace();
+                checkName(rentaltype);
+            } catch (NumberFormatException | WrongFormatException e) {
+                System.err.println(e.getMessage());
                 flag = false;
             }
         } while (!flag);
@@ -201,7 +196,7 @@ public class FacilityServiceImpl implements FacilityService {
     }
 
     public String intputRoomStandar() {
-        System.out.println("Enter room standar: ");
+        System.out.println("Enter room standar(should be upper case at head's char): ");
         return sc.nextLine();
     }
 
@@ -215,7 +210,6 @@ public class FacilityServiceImpl implements FacilityService {
                 floor = Integer.parseInt(sc.nextLine());
                 checkFloor(floor);
             } catch (NumberFormatException | WrongFormatException e) {
-                e.printStackTrace();
                 flag = false;
             }
         } while (!flag);
@@ -298,11 +292,11 @@ public class FacilityServiceImpl implements FacilityService {
         do {
             try {
                 flag = true;
-                System.out.println("Enter id facility (format: SVXX-YYYY): ");
+                System.out.println("Enter id facility (Forat: SVXX-YYYY, ex: SVVL-1000): ");
                 idFacility = sc.nextLine();
                 checkFacility(idFacility);
             } catch (NumberFormatException | WrongFormatException e) {
-                e.printStackTrace();
+                System.err.println(e.getMessage());
                 flag = false;
             }
         } while (!flag);

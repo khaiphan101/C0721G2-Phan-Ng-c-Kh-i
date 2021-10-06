@@ -2,12 +2,12 @@ package furama_resort.services;
 
 import furama_resort.models.Booking;
 import furama_resort.models.Contract;
-import furama_resort.models.Customer;
 
 import java.io.*;
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.Scanner;
+import java.util.Set;
 
 public class ContractServiceImpl implements ContractService {
     Scanner sc = new Scanner(System.in);
@@ -23,36 +23,38 @@ public class ContractServiceImpl implements ContractService {
     }
 
     public void add() {
-        Contract contract = new Contract();
-        System.out.println("Enter id contract:");
-        contract.setIdContract(Integer.parseInt(sc.nextLine()));
-
-        contract.setBookingCode(inputBookingCode());
-
-        System.out.println("Enter deposit:");
-        contract.setDeposit(sc.nextLine());
-
-        System.out.println("Enter totalpay:");
-        contract.setTotalPay(Integer.parseInt(sc.nextLine()));
-
-        contract.setCustomerCode(inputCustomerCode());
-
-        contractsList.add(contract);
-        writeListContractToFile();
+        Set<Booking> bookingList = new BookingServiceImpl().bookingsList;
+        Queue<Booking> newListBooking = new ArrayDeque<>();
+        newListBooking.addAll(bookingList);
+        while (newListBooking.size() > 0) {
+            if (newListBooking.peek().getServiceType().equals("Room")) {
+                newListBooking.poll();
+            } else {
+                Booking booking = newListBooking.peek();
+                int customerCode = booking.getCustomerCode();
+                System.out.println("Doing contract with Booking: " + booking);
+                Contract contract = new Contract();
+                System.out.println("Enter id contract:");
+                contract.setIdContract(Integer.parseInt(sc.nextLine()));
+                contract.setBookingCode(booking.getCode());
+                System.out.println("Enter deposit:");
+                contract.setDeposit(sc.nextLine());
+                System.out.println("Enter totalpay:");
+                contract.setTotalPay(Integer.parseInt(sc.nextLine()));
+                contract.setCustomerCode(customerCode);
+                contractsList.add(contract);
+                writeListContractToFile();
+                newListBooking.poll();
+            }
+        }
     }
 
 
     @Override
     public void edit(int idContract) {
         Queue<Contract> list = new ArrayDeque<>();
-        //    private int idContract;
-        //    private int bookingCode;
-        //    private String deposit;
-        //    private String totalpay;
-        //    private String customerCode;
         int size = contractsList.size();
         for (int i = 0; i < size; i++) {
-
             if (idContract == contractsList.peek().getIdContract()) {
                 Contract contract = contractsList.remove();
                 int checkEdit = -1;
@@ -112,11 +114,6 @@ public class ContractServiceImpl implements ContractService {
     }
 
     public Queue<Contract> readFile(String filePath) {
-        //    private int idContract;
-        //    private int bookingCode;
-        //    private String deposit;
-        //    private String totalpay;
-        //    private String customerCode;
         Queue<Contract> list = new ArrayDeque<>();
         try {
             File file = new File(filePath);
@@ -146,33 +143,6 @@ public class ContractServiceImpl implements ContractService {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public int inputBookingCode() {
-        BookingService bookingService = new BookingServiceImpl();
-        System.out.println("choose booking (by code): ");
-        bookingService.showList();
-        System.out.println("your choice:");
-        int bookingCode = Integer.parseInt(sc.nextLine());
-        for (Booking booking : ((BookingServiceImpl) bookingService).bookingsList) {
-            if (bookingCode == booking.getCode()) {
-                return bookingCode;
-            }
-        }
-        return 0;
-    }
-
-    public int inputCustomerCode() {
-        CustomerServiceImpl customerService = new CustomerServiceImpl();
-        customerService.showList();
-        System.out.print("choose customer (by code): ");
-        int customerCode = Integer.parseInt(sc.nextLine());
-        for (Customer customer : customerService.customerList) {
-            if (customerCode == customer.getCode()) {
-                return customerCode;
-            }
-        }
-        return 0;
     }
 
     public void writeListContractToFile() {
