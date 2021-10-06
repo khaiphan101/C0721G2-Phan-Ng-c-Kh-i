@@ -12,7 +12,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     Scanner sc = new Scanner(System.in);
 
-//    @Override
+    @Override
     public void add() {
         //code them moi
         Employee employee = new Employee();
@@ -50,7 +50,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeesList.add(employee);
     }
 
-//    @Override
+    @Override
     public void showList() {
         System.out.println("employees's list:");
         for (Employee employee : employeesList) {

@@ -8,7 +8,7 @@ public abstract class Facility {
     private float rentalCosts;
     private int maxPeople;
     private String rentalType;
-    private int value = 0;
+    private int value = 0;///so lan su dung
 
     public Facility() {
     }

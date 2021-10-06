@@ -4,10 +4,12 @@ import furama_resort.models.Facility;
 import furama_resort.models.House;
 import furama_resort.models.Room;
 import furama_resort.models.Villa;
+import furama_resort.utils.RegexFacility;
 import furama_resort.utils.WrongFormatException;
 
 import java.io.*;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -17,7 +19,17 @@ public class FacilityServiceImpl implements FacilityService {
     private final String VILLA_FILE = "src\\furama_resort\\data\\list_of_villa.csv";
     private final String HOUSE_FILE = "src\\furama_resort\\data\\list_of_house.csv";
     private final String ROOM_FILE = "src\\furama_resort\\data\\list_of_room.csv";
+    private static final String ID_FACILITI_FORMAT = "^SV(VL|RO|HO)-\\d{4}$";
+    private static final String NAME_FORMAT = "^[A-Z](\\w+\\s?)*$"; //Villa123 dfsd123 ky tu dau viet hoa con lai viet thuong hoac dau cach
+    private static final String PEOPLE_FORMAT = "^[1-9]|([1][0-9])|(20)$";
+    private static final String FLOOR_FORMAT = "^[1-9]|([1][0-9])$";
+    private static final String AREA_FORMAT = "^([3-9]\\d|[1-9]\\d{2,})$";
+    private static final String POSITIVE_NUMBER_FORMAT = "^(\\d)+$";
 
+    static Map<Facility, Integer> facilityMap = new LinkedHashMap<>();
+    //        static {
+//            facilityMap.put(new Villa)
+//        }
     LinkedHashMap<Facility, Integer> villaList = readFile(VILLA_FILE);
     LinkedHashMap<Facility, Integer> houseList = readFile(HOUSE_FILE);
     LinkedHashMap<Facility, Integer> roomList = readFile(ROOM_FILE);
@@ -55,17 +67,17 @@ public class FacilityServiceImpl implements FacilityService {
             choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
                 case 1:
-                    Villa newVilla = new Villa(inputIdFacility(),inputServiceName(), inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), 0, intputRoomStandar(), inputFloors(), inputPoolArea());
+                    Villa newVilla = new Villa(inputIdFacility(), inputServiceName(), inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), 0, intputRoomStandar(), inputFloors(), inputPoolArea());
                     villaList.put(newVilla, newVilla.getValue());
                     this.writeFile(newVilla, VILLA_FILE);
                     break;
                 case 2:
-                    House newHouse = new House(inputIdFacility(),inputServiceName(), inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), 0, intputRoomStandar(), inputFloors());
+                    House newHouse = new House(inputIdFacility(), inputServiceName(), inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), 0, intputRoomStandar(), inputFloors());
                     houseList.put(newHouse, newHouse.getValue());
                     this.writeFile(newHouse, HOUSE_FILE);
                     break;
                 case 3:
-                    Room newRoom = new Room(inputIdFacility(),inputServiceName(), inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), 0, inputFreeService());
+                    Room newRoom = new Room(inputIdFacility(), inputServiceName(), inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), 0, inputFreeService());
                     roomList.put(newRoom, newRoom.getValue());
                     this.writeFile(newRoom, ROOM_FILE);
                     break;
@@ -86,7 +98,7 @@ public class FacilityServiceImpl implements FacilityService {
             while ((line = bufferedReaderFile.readLine()) != null) {
                 facility = line.split(",");
                 if (filePath.equals(VILLA_FILE)) {
-                    list.put(new Villa(facility[0],facility[1], Float.parseFloat(facility[2]), Float.parseFloat(facility[3]), Integer.parseInt(facility[4]), facility[5],Integer.parseInt(facility[6]), facility[7], Integer.parseInt(facility[8]), Float.parseFloat(facility[9])), Integer.parseInt(facility[6]));
+                    list.put(new Villa(facility[0], facility[1], Float.parseFloat(facility[2]), Float.parseFloat(facility[3]), Integer.parseInt(facility[4]), facility[5], Integer.parseInt(facility[6]), facility[7], Integer.parseInt(facility[8]), Float.parseFloat(facility[9])), Integer.parseInt(facility[6]));
                 } else if (filePath.equals(HOUSE_FILE)) {
                     list.put(new House(facility[0], facility[1], Float.parseFloat(facility[2]), Float.parseFloat(facility[3]), Integer.parseInt(facility[4]), facility[5], Integer.parseInt(facility[6]), facility[7], Integer.parseInt(facility[8])), Integer.parseInt(facility[6]));
                 } else {
@@ -114,116 +126,136 @@ public class FacilityServiceImpl implements FacilityService {
     }
 
     public String inputServiceName() {
-        boolean flag;
-        String serviceName = "";
-        do {
-            try {
-                flag = true;
-                System.out.println("Enter service name (EX: Villa 1,Room 2...): ");
-                serviceName = sc.nextLine();
-                checkName(serviceName);
-            } catch (NumberFormatException | WrongFormatException e) {
-                System.err.println(e.getMessage());
-                flag = false;
-            }
-        } while (!flag);
-        return serviceName;
+        System.out.println("Enter service name (EX: Villa 1,Room 2...): ");
+        return RegexFacility.regexFaci(sc.nextLine(), NAME_FORMAT);
+//        boolean flag;
+//        String serviceName = "";
+//        do {
+//            try {
+//                flag = true;
+//                System.out.println("Enter service name (EX: Villa 1,Room 2...): ");
+//                serviceName = sc.nextLine();
+//                checkName(serviceName);
+//            } catch (NumberFormatException | WrongFormatException e) {
+//                System.err.println(e.getMessage());
+//                flag = false;
+//            }
+//        } while (!flag);
+//        return serviceName;
     }
+
     public float inputArea() {
-        boolean flag;
-        float area = 0;
-        do {
-            try {
-                flag = true;
-                System.out.println("Enter area(should be more than 30 m2): ");
-                area = Float.parseFloat(sc.nextLine());
-                checkArea(area);
-            } catch (NumberFormatException | WrongFormatException e) {
-                flag = false;
-            }
-        } while (!flag);
-        return area;
+        System.out.println("Enter area(should be more than 30 m2): ");
+        return Float.parseFloat(RegexFacility.regexFaci(sc.nextLine(), AREA_FORMAT));
+//        boolean flag;
+//        float area = 0;
+//        do {
+//            try {
+//                flag = true;
+//                System.out.println("Enter area(should be more than 30 m2): ");
+//                area = Float.parseFloat(sc.nextLine());
+//                checkArea(area);
+//            } catch (NumberFormatException | WrongFormatException e) {
+//                flag = false;
+//            }
+//        } while (!flag);
+//        return area;
     }
 
     public int inputMaxPeople() {
-        int people = 0;
-        boolean flag;
-        do {
-            try {
-                flag = true;
-                System.out.println("Enter max people(should be between 0 and 20 people): ");
-                people = Integer.parseInt(sc.nextLine());
-                checkNumberOfPeople(people);
-            } catch (NumberFormatException | WrongFormatException e) {
-                flag = false;
-            }
-        } while (!flag);
-        return people;
+        System.out.println("Enter max people(should be between 0 and 20 people): ");
+        return Integer.parseInt(RegexFacility.regexFaci(sc.nextLine(), PEOPLE_FORMAT));
+//        int people = 0;
+//        boolean flag;
+//        do {
+//            try {
+//                flag = true;
+//                System.out.println("Enter max people(should be between 0 and 20 people): ");
+//                people = Integer.parseInt(sc.nextLine());
+//                checkNumberOfPeople(people);
+//            } catch (NumberFormatException | WrongFormatException e) {
+//                flag = false;
+//            }
+//        } while (!flag);
+//        return people;
     }
 
-    public float inputRentalCost() {
-        boolean flag;
-        float rentalCost = 0;
-        do {
-            try {
-                flag = true;
-                System.out.println("Enter rental cost(should be a positive number): ");
-                rentalCost = Float.parseFloat(sc.nextLine());
-                checkRentalCost(rentalCost);
-            } catch (NumberFormatException | WrongFormatException e) {
-                flag = false;
-            }
-        } while (!flag);
-        return rentalCost;
+    public int inputRentalCost() {
+        System.out.println("Enter rental cost(should be a positive number): ");
+        return Integer.parseInt(RegexFacility.regexFaci(sc.nextLine(), POSITIVE_NUMBER_FORMAT));
+//        boolean flag;
+//        float rentalCost = 0;
+//        do {
+//            try {
+//                flag = true;
+//                System.out.println("Enter rental cost(should be a positive number): ");
+//                rentalCost = Float.parseFloat(sc.nextLine());
+//                checkRentalCost(rentalCost);
+//            } catch (NumberFormatException | WrongFormatException e) {
+//                flag = false;
+//            }
+//        } while (!flag);
+//        return rentalCost;
     }
 
     public String inputRentalType() {
-        boolean flag;
-        String rentaltype = "";
-        do {
-            try {
-                flag = true;
-                System.out.println("Enter rental type(should be upper case at head's char): ");
-                rentaltype = sc.nextLine();
-                checkName(rentaltype);
-            } catch (NumberFormatException | WrongFormatException e) {
-                System.err.println(e.getMessage());
-                flag = false;
-            }
-        } while (!flag);
+        System.out.println("Enter rental type(should be upper case at head's char): ");
+        return RegexFacility.regexFaci(sc.nextLine(), NAME_FORMAT);
 
-        return rentaltype;
+//        boolean flag;
+//        String rentaltype = "";
+//        do {
+//            try {
+//                flag = true;
+//                System.out.println("Enter rental type(should be upper case at head's char): ");
+//                rentaltype = sc.nextLine();
+//                checkName(rentaltype);
+//            } catch (NumberFormatException | WrongFormatException e) {
+//                System.err.println(e.getMessage());
+//                flag = false;
+//            }
+//        } while (!flag);
+//
+//        return rentaltype;
     }
 
     public String intputRoomStandar() {
-        System.out.println("Enter room standar(should be upper case at head's char): ");
-        return sc.nextLine();
+        System.out.println("Enter room standar(should be upper case at first char): ");
+        return RegexFacility.regexFaci(sc.nextLine(), NAME_FORMAT);
+//        System.out.println("Enter room standar(should be upper case at head's char): ");
+//        return sc.nextLine();
     }
 
     public int inputFloors() {
-        int floor = 0;
-        boolean flag;
-        do {
-            try {
-                flag = true;
-                System.out.println("Enter floors: ");
-                floor = Integer.parseInt(sc.nextLine());
-                checkFloor(floor);
-            } catch (NumberFormatException | WrongFormatException e) {
-                flag = false;
-            }
-        } while (!flag);
-        return floor;
+        System.out.println("Enter floors(must be a positive number): ");
+        return Integer.parseInt(RegexFacility.regexFaci(sc.nextLine(), FLOOR_FORMAT));
+//        int floor = 0;
+//        boolean flag;
+//        do {
+//            try {
+//                flag = true;
+//                System.out.println("Enter floors: ");
+//                floor = Integer.parseInt(sc.nextLine());
+//                checkFloor(floor);
+//            } catch (NumberFormatException | WrongFormatException e) {
+//                flag = false;
+//            }
+//        } while (!flag);
+//        return floor;
     }
 
     public float inputPoolArea() {
-        System.out.println("Enter pool erea: ");
-        return Float.parseFloat(sc.nextLine());
+        System.out.println("Enter pool area(should be more than 30 m2): ");
+        return Float.parseFloat(RegexFacility.regexFaci(sc.nextLine(), AREA_FORMAT));
+//        System.out.println("Enter pool erea: ");
+//        return Float.parseFloat(sc.nextLine());
     }
 
     public String inputFreeService() {
         System.out.println("Enter free service: ");
-        return sc.nextLine();
+        return RegexFacility.regexFaci(sc.nextLine(), NAME_FORMAT);
+//        System.out.println("Enter free service: ");
+//        return sc.nextLine();
     }
 
     @Override
@@ -235,6 +267,7 @@ public class FacilityServiceImpl implements FacilityService {
     public void delete() {
 
     }
+
     public void useFacility(String serviceName) {
         if (serviceName.contains("Villa")) {
             Set<Facility> keyVilla = villaList.keySet();
@@ -262,6 +295,7 @@ public class FacilityServiceImpl implements FacilityService {
             }
         }
     }
+
     public void showMaintenanceList() {
         System.out.println("facility maintenance's list: ");
         System.out.println("Villa's list:");
@@ -286,20 +320,23 @@ public class FacilityServiceImpl implements FacilityService {
             }
         }
     }
-    public String inputIdFacility(){
-        boolean flag;
-        String idFacility = "";
-        do {
-            try {
-                flag = true;
-                System.out.println("Enter id facility (Forat: SVXX-YYYY, ex: SVVL-1000): ");
-                idFacility = sc.nextLine();
-                checkFacility(idFacility);
-            } catch (NumberFormatException | WrongFormatException e) {
-                System.err.println(e.getMessage());
-                flag = false;
-            }
-        } while (!flag);
-        return idFacility;
+
+    public String inputIdFacility() {
+        System.out.println("Enter id facility (Forat: SVXX-YYYY, ex: SVVL-1000): ");
+        return RegexFacility.regexFaci(sc.nextLine(), ID_FACILITI_FORMAT);
+//        boolean flag;
+//        String idFacility = "";
+//        do {
+//            try {
+//                flag = true;
+//                System.out.println("Enter id facility (Forat: SVXX-YYYY, ex: SVVL-1000): ");
+//                idFacility = sc.nextLine();
+//                checkFacility(idFacility);
+//            } catch (NumberFormatException | WrongFormatException e) {
+//                System.err.println(e.getMessage());
+//                flag = false;
+//            }
+//        } while (!flag);
+//        return idFacility;
     }
 }

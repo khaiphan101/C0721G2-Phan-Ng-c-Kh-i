@@ -49,8 +49,8 @@ public class BookingServiceImpl implements BookingService {
 
         booking.setCustomerCode(inputCustomerCode());
 
-        String serviceName = inputServiceName();
-        booking.setServiceName(serviceName);
+        Facility facility = chooseService();
+        booking.setServiceName(facility.getServiceName());
 
         System.out.println("Enter service type:");
         booking.setServiceType(sc.nextLine());
@@ -58,8 +58,9 @@ public class BookingServiceImpl implements BookingService {
         bookingsList.add(booking);
 
         writeFile(booking, BOOKING_FILE);
-        facilityService.useFacility(serviceName);
+        facilityService.useFacility(facility.getServiceName());
     }
+
     public TreeSet<Booking> readFile(String filePath) {
         TreeSet<Booking> list = new TreeSet<>(new BookingComparator());
         try {
@@ -106,28 +107,27 @@ public class BookingServiceImpl implements BookingService {
         return 0;
     }
 
-    public String inputServiceName() {
+    public Facility chooseService() {
         FacilityServiceImpl facilityService = new FacilityServiceImpl();
-        System.out.println("choose service name: ");
         facilityService.showList();
-        System.out.println("your choice:");
-        String name = sc.nextLine();
+        System.out.println("choose facility(by id): ");
+        String idFacility = sc.nextLine();
         for (Facility facility : facilityService.villaList.keySet()) {
-            if (name.equals(facility.getServiceName())) {
-                return name;
+            if (idFacility.equals(facility.getIdFacility())) {
+                return facility;
             }
         }
         for (Facility facility : facilityService.houseList.keySet()) {
-            if (name.equals(facility.getServiceName())) {
-                return name;
+            if (idFacility.equals(facility.getIdFacility())) {
+                return facility;
             }
         }
         for (Facility facility : facilityService.roomList.keySet()) {
-            if (name.equals(facility.getServiceName())) {
-                return name;
+            if (idFacility.equals(facility.getIdFacility())) {
+                return facility;
             }
         }
-        return "";
+        return null;
     }
 
 }
