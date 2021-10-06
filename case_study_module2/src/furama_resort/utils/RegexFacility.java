@@ -19,7 +19,7 @@ public class RegexFacility {
             }
             return b;
         }
-        public static boolean checkArea(double area)throws WrongFormatException{
+        public static boolean checkArea(Float area)throws WrongFormatException{
             if (area > 30)
                 return true;
             else throw new WrongFormatException("fail area facility format");
@@ -36,7 +36,7 @@ public class RegexFacility {
                 throw new WrongFormatException("Fail input floor");
             }
         }
-        public static boolean checkRentalCost(double rentalCost) throws WrongFormatException {
+        public static boolean checkRentalCost(Float rentalCost) throws WrongFormatException {
             if (rentalCost > 0) {
                 return true;
             } else {

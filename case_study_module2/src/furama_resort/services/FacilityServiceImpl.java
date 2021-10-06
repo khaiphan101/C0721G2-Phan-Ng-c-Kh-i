@@ -45,11 +45,11 @@ public class FacilityServiceImpl implements FacilityService {
         }
     }
 
-    public void showFacilityList(LinkedHashMap<Facility, Integer> facility) {
-//        Set<Facility> keySet = facility.keySet();
-//        for (Facility key : keySet) {
-//            System.out.println(key + " " + facility.get(key));
-    }
+//    public void showFacilityList(LinkedHashMap<Facility, Integer> facility) {
+////        Set<Facility> keySet = facility.keySet();
+////        for (Facility key : keySet) {
+////            System.out.println(key + " " + facility.get(key));
+//    }
 
     @Override
     public void add() {
@@ -65,7 +65,7 @@ public class FacilityServiceImpl implements FacilityService {
 
             switch (choice) {
                 case 1:
-                    Villa newVilla = new Villa("villa", inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), 0, intputRoomStandar(), inputFloors(), inputPoolArea());
+                    Villa newVilla = new Villa("Villa", inputArea(), inputRentalCost(), inputMaxPeople(), inputRentalType(), 0, intputRoomStandar(), inputFloors(), inputPoolArea());
                     villaList.put(newVilla, newVilla.getValue());
                     this.writeFile(newVilla, VILLA_FILE);
                     break;
@@ -197,8 +197,20 @@ public class FacilityServiceImpl implements FacilityService {
     }
 
     public int inputFloors() {
-        System.out.println("Enter floors: ");
-        return Integer.parseInt(sc.nextLine());
+        int floor = 0;
+        boolean flag;
+        do {
+            try {
+                flag = true;
+                System.out.println("Enter floors: ");
+                floor = Integer.parseInt(sc.nextLine());
+                checkNumberOfPeople(floor);
+            } catch (NumberFormatException | WrongFormatException e) {
+                e.printStackTrace();
+                flag = false;
+            }
+        } while (!flag);
+        return floor;
     }
 
     public float inputPoolArea() {
@@ -226,7 +238,6 @@ public class FacilityServiceImpl implements FacilityService {
             for (Facility key : keyVilla) {
                 if (key.getServiceName().contains(serviceName)) {
                     villaList.computeIfPresent(key, (k, v) -> v + 1);
-//                    this.writeFile(newVilla, VILLA_FILE);
                     break;
                 }
             }
@@ -235,7 +246,6 @@ public class FacilityServiceImpl implements FacilityService {
             for (Facility key : keyHouse) {
                 if (key.getServiceName().contains(serviceName)) {
                     houseList.computeIfPresent(key, (k, v) -> v + 1);
-//                    ReadAndWriteFacility.writeFile(FILE_HOUSE_PATH, house, false);
                     break;
                 }
             }
@@ -244,7 +254,6 @@ public class FacilityServiceImpl implements FacilityService {
             for (Facility key : keyRoom) {
                 if (key.getServiceName().contains(serviceName)) {
                     roomList.computeIfPresent(key, (k, v) -> v + 1);
-//                    ReadAndWriteFacility.writeFile(FILE_ROOM_PATH, room, false);
                     break;
                 }
             }
