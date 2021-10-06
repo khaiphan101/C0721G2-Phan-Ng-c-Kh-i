@@ -204,7 +204,7 @@ public class FacilityServiceImpl implements FacilityService {
                 flag = true;
                 System.out.println("Enter floors: ");
                 floor = Integer.parseInt(sc.nextLine());
-                checkNumberOfPeople(floor);
+                checkFloor(floor);
             } catch (NumberFormatException | WrongFormatException e) {
                 e.printStackTrace();
                 flag = false;

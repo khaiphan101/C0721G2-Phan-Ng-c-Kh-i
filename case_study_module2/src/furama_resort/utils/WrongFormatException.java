@@ -1,12 +1,10 @@
 package furama_resort.utils;
 
-import org.omg.CORBA.UserException;
-
-public class WrongFormatException extends UserException {
+public class WrongFormatException extends Exception {
     public WrongFormatException() {
     }
 
-    public WrongFormatException(String reason) {
-        super(reason);
+    public WrongFormatException(String message) {
+        super(message);
     }
 }
