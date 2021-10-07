@@ -19,11 +19,6 @@ public class ShowManagement {
     }
 
     public void add() {
-        //code them moi
-//        private String codeShow;
-//        private String movieName;
-//        private String showDate;
-//        private int totalTicket;
         String showCode = Input.inputShowCode();
         String movieName = Input.chooseMovieName();
         String showDate = Input.inputShowDate();

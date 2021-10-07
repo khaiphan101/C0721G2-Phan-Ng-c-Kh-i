@@ -1,5 +1,6 @@
 package utils;
 
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import models.Movie;
 import models.Show;
 
@@ -68,7 +69,7 @@ public class Input {
     public static String inputShowDate() {
         while (true) {
             System.out.println("Enter show date(DD/MM/YYYY):");
-            String date = RegexData.regexStr(sc.nextLine(), DAY_REGEX);
+            String date = sc.nextLine();
             if (checkValidateDate(date)) {
                 return date;
             } else {
@@ -84,7 +85,7 @@ public class Input {
             Date currentDate = new Date();
             return currentDate.before(inputDate);
         }catch (ParseException e){
-            e.printStackTrace();
+            System.err.println(dateInput + " is invalid");
         }
         return false;
     }
