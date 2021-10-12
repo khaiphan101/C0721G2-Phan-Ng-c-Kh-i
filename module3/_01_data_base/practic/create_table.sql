@@ -7,4 +7,4 @@ create table `student`(
 `age` INT NULL,
 `country` VARCHAR(45) NULL,
 PRIMARY KEY(`id`)
-);studentstudentstudentstudent
+);
