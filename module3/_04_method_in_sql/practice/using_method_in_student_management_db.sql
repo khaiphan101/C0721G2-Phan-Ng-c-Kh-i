@@ -54,4 +54,44 @@ VALUES (1, 'CF', 5, 1),
 INSERT INTO Mark (SubId, StudentId, Mark, ExamTimes)
 VALUES (1, 1, 8, 1),
        (1, 2, 10, 2),
-       (2, 1, 12, 1);
+       (2, 1, 12, 1),
+       (2, 3, 10, 2);
+
+SELECT *
+FROM Student
+WHERE StudentName like 'h%';
+
+select *
+from class
+where month(StartDate) = 12;
+
+select *
+from Subject
+where credit between 4 and 5;
+
+SET SQL_SAFE_UPDATES = 0;
+update Student 
+set ClassId = 2
+where StudentName = 'Hung';
+SET SQL_SAFE_UPDATES = 1;
+
+select  StudentName, SubName, Mark
+from Mark
+join Student on mark.StudentID = student.StudentID
+join subject on mark.subid = subject.SubID
+order by Mark desc, studentname desc;
+
+SELECT Address, COUNT(StudentId) AS 'Số lượng học viên'
+FROM Student
+GROUP BY Address;
+
+SELECT S.StudentId,S.StudentName, AVG(Mark)
+FROM Student S join Mark M on S.StudentId = M.StudentId
+GROUP BY S.StudentId, S.StudentName
+HAVING AVG(Mark) > 15;
+
+SELECT S.StudentId, S.StudentName, AVG(Mark)
+FROM Student S join Mark M on S.StudentId = M.StudentId
+GROUP BY S.StudentId, S.StudentName
+HAVING AVG(Mark) >= ALL (SELECT AVG(Mark) FROM Mark GROUP BY Mark.StudentId);
+
