@@ -176,7 +176,7 @@ insert into dich_vu() value
 
 insert hop_dong values 
 	(1,101,103,101,'2018-10-10','2020-10-11',1000,2000),
-	(2,103,104,102,'2019-10-15','2021-10-18',400,800),
+	(2,103,104,102,'2019-05-15','2021-10-18',400,800),
 	(3,103,104,102,'2018-08-15','2021-09-18',400,800),
     (4,103,106,105,'2019-02-24','2021-03-18',400,800),
     (5,103,106,105,'2019-05-24','2021-03-18',400,800),
@@ -265,4 +265,13 @@ from khach_hang;
 select distinct ho_ten
 from khach_hang;
 
--- task 9:  
+-- task 9.	Thực hiện thống kê doanh thu theo tháng, 
+-- nghĩa là tương ứng với mỗi tháng trong năm 2019 thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
+select month(hd.ngay_lam_hop_dong) as 'thang(nam 2019)', count(month(hd.ngay_lam_hop_dong)) as 'so luong hop dong' 
+from hop_dong hd
+where year(hd.ngay_lam_hop_dong) = '2019'
+group by month(hd.ngay_lam_hop_dong);
+
+-- task 10.	Hiển thị thông tin tương ứng với từng Hợp đồng thì đã sử dụng bao nhiêu Dịch vụ đi kèm. 
+-- Kết quả hiển thị bao gồm IDHopDong, NgayLamHopDong, NgayKetthuc, TienDatCoc, SoLuongDichVuDiKem 
+-- (được tính dựa trên việc count các IDHopDongChiTiet). 
