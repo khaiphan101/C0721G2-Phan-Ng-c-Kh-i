@@ -142,7 +142,7 @@ insert loai_khach value
 insert khach_hang(id_khach_hang,id_loai_khach,ho_ten,ngay_sinh,dia_chi) values
 (101,2,'Nguyen An', '1980-10-20', 'Da Nang'),
 (102,3,'Nguyen Binh', '1989-10-20', 'Quang Tri'),
-(103,4,'Nguyen Anh', '1965-10-20', 'Quang Nam'),
+(103,4,'Nguyen An', '1965-10-20', 'Quang Nam'),
 (104,4,'Nguyen Trung', '1988-11-20', 'Quang Nam'),
 (105,1,'Nguyen Thinh', '1989-10-20', 'Ha Noi'),
 (106,1,'Nguyen Tung', '1965-10-20', 'Da Nang');
@@ -245,3 +245,24 @@ where year(hd.ngay_lam_hop_dong) = '2018'
 	where year(hd.ngay_lam_hop_dong) = '2019')
 group by id_dich_vu;
 
+-- task 8.	Hiển thị thông tin HoTenKhachHang có trong hệ thống, 
+-- với yêu cầu HoThenKhachHang không trùng nhau.
+-- Học viên sử dụng theo 3 cách khác nhau để thực hiện yêu cầu trên
+
+-- C1: dung group by
+select ho_ten
+from khach_hang
+group by ho_ten;
+
+-- C2: su dung UNION
+select ho_ten
+from khach_hang
+union
+select ho_ten
+from khach_hang;
+ 
+ -- C3: su dung distinct 
+select distinct ho_ten
+from khach_hang;
+
+-- task 9:  
