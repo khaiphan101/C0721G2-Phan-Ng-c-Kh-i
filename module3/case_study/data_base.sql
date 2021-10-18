@@ -142,8 +142,8 @@ insert loai_khach value
 insert khach_hang(id_khach_hang,id_loai_khach,ho_ten,ngay_sinh,dia_chi) values
 (101,2,'Nguyen An', '1980-10-20', 'Da Nang'),
 (102,3,'Nguyen Binh', '1989-10-20', 'Quang Tri'),
-(103,4,'Nguyen An', '1965-10-20', 'Quang Nam'),
-(104,4,'Nguyen Trung', '1988-11-20', 'Quang Nam'),
+(103,1,'Nguyen An', '1965-10-20', 'Vinh'),
+(104,1,'Nguyen Trung', '1988-11-20', 'Quang Ngai'),
 (105,1,'Nguyen Thinh', '1989-10-20', 'Ha Noi'),
 (106,1,'Nguyen Tung', '1965-10-20', 'Da Nang');
 
@@ -180,10 +180,13 @@ insert hop_dong values
 	(3,103,104,102,'2018-08-15','2021-09-18',400,800),
     (4,103,106,105,'2019-02-24','2021-03-18',400,800),
     (5,103,106,105,'2019-05-24','2021-03-18',400,800),
-    (6,101,106,105,'2018-03-02','2021-03-18',400,800);
+    (6,101,106,105,'2018-03-02','2021-03-18',400,800),
+	(7,103,101,105,'2019-05-24','2021-03-18',400,800),
+    (8,101,101,105,'2019-12-02','2021-03-18',400,800),
+    (9,101,101,105,'2019-12-02','2021-03-18',400,800);
 
 insert hop_dong_chi_tiet values
-(1,1,1,1),(2,3,2,1),(3,2,3,2),(4,3,2,1),(5,2,1,3),(6,4,3,2),(7,5,4,3),(8,6,5,4);
+(1,1,1,1),(2,3,2,1),(3,2,3,2),(4,3,2,1),(5,2,1,3),(6,4,3,2),(7,5,4,3),(8,6,5,4),(9,8,4,3),(10,9,4,4);
 
 -- task 2.	Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên bắt đầu là một trong các ký tự “H”, “T” hoặc “K” và có tối đa 15 ký tự.: 
 select *
@@ -280,6 +283,67 @@ select hd.id_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc
 from hop_dong hd
 join hop_dong_chi_tiet hdct on hdct.id_hop_dong = hd.id_hop_dong
 join dich_vu_di_kem dvdk on dvdk.id_dich_vu_di_kem = hdct.id_dich_vu_di_kem
-group by hdct.id_hop_dong
+group by hdct.id_hop_dong;
+
+-- task 11.	Hiển thị thông tin các Dịch vụ đi kèm đã được sử dụng bởi những Khách hàng có 
+-- TenLoaiKhachHang là “Diamond” và có địa chỉ là “Vinh” hoặc “Quảng Ngãi”.
+select kh.ho_ten, lk.ten_loai_khach, dia_chi, ten_dich_vu_di_kem, gia
+from hop_dong hd
+left join khach_hang kh on hd.id_khach_hang = kh.id_khach_hang
+left join loai_khach lk on lk.id_loai_khach = kh.id_loai_khach
+left join hop_dong_chi_tiet hdct on hdct.id_hop_dong = hd.id_hop_dong
+left join dich_vu_di_kem dvdk on dvdk.id_dich_vu_di_kem = hdct.id_dich_vu_di_kem
+where dia_chi in ('Quang Ngai', 'Vinh') and ten_loai_khach = 'Diamond';
+
+
+-- task 12.	Hiển thị thông tin IDHopDong, TenNhanVien, TenKhachHang, SoDienThoaiKhachHang, 
+-- TenDichVu, SoLuongDichVuDikem (được tính dựa trên tổng Hợp đồng chi tiết),
+--  TienDatCoc của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 tháng cuối năm 2019 
+--  nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2019.
+
+select hd.id_hop_dong, nv.ho_ten 'ten nhan vien', kh.ho_ten 'ten khach hang', kh.SDT, ten_dich_vu_di_kem
+, count(hd.id_hop_dong) so_luong_dich_vu_di_kem
+,tien_dat_coc, ngay_lam_hop_dong
+from hop_dong hd
+join nhan_vien nv on nv.id_nhan_vien = hd.id_nhan_vien
+join khach_hang kh on kh.id_khach_hang = hd.id_khach_hang
+join hop_dong_chi_tiet hdct on hdct.id_hop_dong = hd.id_hop_dong
+join dich_vu_di_kem dvdk on dvdk.id_dich_vu_di_kem = hdct.id_dich_vu_di_kem
+group by hd.id_hop_dong
+having (ngay_lam_hop_dong between '2019-10-1' and '2019-12-31')
+and hd.id_hop_dong not in (
+	select hd.id_hop_dong
+		from hop_dong 
+        where ngay_lam_hop_dong between '2019-1-1' and '2019-6-31'
+	);
+    
+-- task  13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. 
+-- (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
+select ten_dich_vu_di_kem
+, count(ten_dich_vu_di_kem) so_lan_su_dung_nhieu_nhat
+from hop_dong_chi_tiet hdct
+join dich_vu_di_kem dvdk on dvdk.id_dich_vu_di_kem = hdct.id_dich_vu_di_kem
+group by ten_dich_vu_di_kem
+having so_lan_su_dung_nhieu_nhat = 
+	(select max(t.so_lan_su_dung)
+    from (select count(ten_dich_vu_di_kem) so_lan_su_dung
+			from hop_dong_chi_tiet hdct
+			join dich_vu_di_kem dvdk on dvdk.id_dich_vu_di_kem = hdct.id_dich_vu_di_kem
+			group by ten_dich_vu_di_kem
+            ) t
+	);
+    
+-- task 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. 
+-- Thông tin hiển thị bao gồm IDHopDong, TenLoaiDichVu, TenDichVuDiKem, SoLanSuDung. 
+select hd.id_hop_dong,ten_loai_dich_vu, ten_dich_vu_di_kem
+, count(ten_dich_vu_di_kem) so_lan_su_dung
+from hop_dong hd
+join hop_dong_chi_tiet hdct on hdct.id_hop_dong = hd.id_hop_dong
+join dich_vu_di_kem dvdk on dvdk.id_dich_vu_di_kem = hdct.id_dich_vu_di_kem
+join dich_vu dv on dv.id_dich_vu = hd.id_dich_vu
+join loai_dich_vu ldv on ldv.id_loai_dich_vu = dv.id_loai_dich_vu
+group by ten_dich_vu_di_kem
+having so_lan_su_dung = 1
+;
 
 -- task  
