@@ -143,7 +143,7 @@ insert khach_hang(id_khach_hang,id_loai_khach,ho_ten,ngay_sinh,dia_chi) values
 (101,2,'Nguyen An', '1980-10-20', 'Da Nang'),
 (102,3,'Nguyen Binh', '1989-10-20', 'Quang Tri'),
 (103,1,'Nguyen An', '1965-10-20', 'Vinh'),
-(104,1,'Nguyen Trung', '1988-11-20', 'Quang Ngai'),
+(104,2,'Nguyen Trung', '1988-11-20', 'Quang Ngai'),
 (105,1,'Nguyen Thinh', '1989-10-20', 'Ha Noi'),
 (106,1,'Nguyen Tung', '1965-10-20', 'Da Nang');
 
@@ -175,18 +175,19 @@ insert into dich_vu() value
 	(105,'Room_A',20, 1,2, 800,1,1,null);
 
 insert hop_dong values 
-	(1,101,103,101,'2018-10-10','2020-10-11',1000,2000),
-	(2,103,104,102,'2019-05-15','2021-10-18',400,800),
-	(3,103,104,102,'2018-08-15','2021-09-18',400,800),
-    (4,103,106,105,'2019-02-24','2021-03-18',400,800),
-    (5,103,106,105,'2019-05-24','2021-03-18',400,800),
-    (6,101,106,105,'2018-03-02','2021-03-18',400,800),
-	(7,103,101,105,'2019-05-24','2021-03-18',400,800),
-    (8,101,101,105,'2019-12-02','2021-03-18',400,800),
-    (9,101,101,105,'2019-12-02','2021-03-18',400,800);
+	(1,101,103,101,'2018-10-10','2020-10-11',1000,'4000000'),
+	(2,103,104,102,'2019-05-15','2021-10-18',400,10000000),
+	(3,103,104,102,'2018-08-15','2021-09-18',400,4000000),
+    (4,103,106,105,'2019-02-24','2021-03-18',400,4000000),
+    (5,103,106,105,'2019-05-24','2021-03-18',400,4000000),
+    (6,101,106,105,'2018-03-02','2021-03-18',400,4000000),
+	(7,103,101,105,'2019-05-24','2021-03-18',400,4000000),
+    (8,101,101,105,'2019-12-02','2021-03-18',400,4000000),
+    (9,101,101,105,'2019-12-02','2021-03-18',400,4000000),
+    (10,105,102,105,'2015-12-02','2021-03-18',400,4000000);
 
 insert hop_dong_chi_tiet values
-(1,1,1,1),(2,3,2,1),(3,2,3,2),(4,3,2,1),(5,2,1,3),(6,4,3,2),(7,5,4,3),(8,6,5,4),(9,8,4,3),(10,9,4,4);
+(1,1,1,1),(2,3,2,1),(3,2,3,2),(4,3,2,1),(5,2,1,3),(6,4,3,2),(7,5,4,3),(8,6,5,4),(9,8,4,3),(10,9,4,4),(11,10,4,4);
 
 -- task 2.	Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên bắt đầu là một trong các ký tự “H”, “T” hoặc “K” và có tối đa 15 ký tự.: 
 select *
@@ -346,4 +347,74 @@ group by ten_dich_vu_di_kem
 having so_lan_su_dung = 1
 ;
 
--- task  
+-- task 15.	Hiển thi thông tin của tất cả nhân viên bao gồm IDNhanVien, HoTen, TrinhDo, 
+-- TenBoPhan, SoDienThoai, DiaChi mới chỉ lập được tối đa 3 hợp đồng từ năm 2018 đến 2019.
+select nv.id_nhan_vien, nv.ho_ten, trinh_do, ten_bo_phan, nv.sdt, dia_chi
+from nhan_vien nv
+left join hop_dong hd on hd.id_nhan_vien = nv.id_nhan_vien
+left join trinh_do td on td.id_trinh_do = nv.id_trinh_do
+left join bo_phan bp on bp.id_bo_phan = nv.id_bo_phan
+where year(ngay_lam_hop_dong) between '2018' and '2019' 
+or ngay_lam_hop_dong is null
+group by nv.ho_ten
+having count(ho_ten) <=3;
+
+-- task 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2017 đến năm 2019.
+
+-- delete from nhan_vien
+-- where id_nhan_vien not in (
+-- select id_nhan_vien
+-- from hop_dong
+-- where year(ngay_lam_hop_dong) between '2019' and '2020' 
+-- );
+
+ -- task 17. Cập nhật thông tin những khách hàng có TenLoaiKhachHang 
+--  từ  Platinium lên Diamond, chỉ cập nhật những khách hàng đã từng đặt phòng 
+--  với tổng Tiền thanh toán trong năm 2019 là lớn hơn 10.000.000 VNĐ.                
+	 	update khach_hang kh
+		set kh.id_loai_khach = 1
+		where id_khach_hang in 
+			(select id_khach_hang
+				from hop_dong hd
+				where year(ngay_lam_hop_dong) = '2019'
+				group by id_khach_hang
+				having sum(tong_tien) >= 10000000
+			);
+
+-- dùng lệnh dưới để check trước và sau khi update khashc hàng từ platinum -> diamond 
+
+-- select kh.ho_ten, kh.id_loai_khach, ten_loai_khach
+-- from khach_hang kh
+-- join loai_khach lk on lk.id_loai_khach = kh.id_loai_khach;
+ 
+-- task 18.	Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràng buộc giữa các bảng).
+
+-- SET FOREIGN_KEY_CHECKS=0;
+-- delete from khach_hang 
+-- where id_khach_hang in 
+-- 	(select id_khach_hang
+-- 	from hop_dong
+-- 	where year(ngay_lam_hop_dong) < 2016
+-- 	);
+-- SET FOREIGN_KEY_CHECKS=1; 
+
+-- task 19.	Cập nhật giá cho các Dịch vụ đi kèm được sử dụng trên 4 lần trong năm 2019 lên gấp đôi. 
+-- 	SET SQL_SAFE_UPDATES = 0;
+-- 	update dich_vu_di_kem
+-- 	set gia = gia*2
+-- 	where id_dich_vu_di_kem in (select* from(
+-- 	select dvdk.id_dich_vu_di_kem
+-- 	from hop_dong_chi_tiet hdct
+-- 	join dich_vu_di_kem dvdk on dvdk.id_dich_vu_di_kem = hdct.id_dich_vu_di_kem
+-- 	group by ten_dich_vu_di_kem
+-- 	having count(ten_dich_vu_di_kem) >= 2)tblTmc);
+-- 	SET SQL_SAFE_UPDATES = 1;	
+
+-- task 20.	Hiển thị thông tin của tất cả các Nhân viên và Khách hàng có trong hệ thống, 
+-- thông tin hiển thị bao gồm ID (IDNhanVien, IDKhachHang), HoTen, Email, SoDienThoai, NgaySinh, DiaChi. 
+
+select id_nhan_vien as id,ho_ten,email,SDT,ngay_sinh,Dia_chi, 'nhan_vien'
+from nhan_vien
+union all
+select id_khach_hang,ho_ten,email,SDT,ngay_sinh,Dia_chi, 'khach hang'
+from khach_hang
