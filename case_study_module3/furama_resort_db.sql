@@ -125,10 +125,10 @@ insert bo_phan values
 
  insert nhan_vien values
 	(101,'Khải',1,2,1,'1998-09-09','123456789','6000','123456789','khai@gmail.com','Quảng Ngãi'),
-	(102,'Nam',2,1,1,'1988-02-09','123456789','4000','123456789','namh@gmail.com','Quảng Nam'),
-	(103,'Hiền',3,3,1,'1978-01-09','123456789','8000','123456789','hien@gmail.com','Quảng Ninh'),
+	(102,'Nam',2,1,1,'1988-02-09','123456789','4000','123456789','namh@gmail.com','Hải châu'),
+	(103,'Hiền',3,3,1,'1978-01-09','123456789','8000','123456789','hien@gmail.com','Hải châu'),
 	(104,'Thông',4,2,1,'1996-08-09','123456789','9000','123456789','thong@gmail.com','Quảng Trị'),
-	(105,'Hợp',2,3,1,'1997-10-09','123456789','10000','123456789','hop@gmail.com','Quảng Nam'),
+	(105,'Hợp',2,3,1,'1997-10-09','123456789','10000','123456789','hop@gmail.com','Hải châu'),
 	(106,'Nguyên',1,3,1,'1978-12-09','123456789','5000','123456789','nguyen@gmail.com','Đà Nẵng');
       
 
@@ -175,15 +175,15 @@ insert into dich_vu() value
 	(105,'Room_A',20, 1,2, 800,1,1,null);
 
 insert hop_dong values 
-	(1,101,103,101,'2018-10-10','2020-10-11',1000,'4000000'),
+	(1,102,103,101,'2018-12-12','2020-10-11',1000,'4000000'),
 	(2,103,104,102,'2019-05-15','2021-10-18',400,10000000),
 	(3,103,104,102,'2018-08-15','2021-09-18',400,4000000),
     (4,103,106,105,'2019-02-24','2021-03-18',400,4000000),
     (5,103,106,105,'2019-05-24','2021-03-18',400,4000000),
     (6,101,106,105,'2018-03-02','2021-03-18',400,4000000),
 	(7,103,101,105,'2019-05-24','2021-03-18',400,4000000),
-    (8,101,101,105,'2019-12-02','2021-03-18',400,4000000),
-    (9,101,101,105,'2019-12-02','2021-03-18',400,4000000),
+    (8,102,101,105,'2019-12-12','2021-03-18',400,4000000),
+    (9,103,101,105,'2019-12-12','2021-03-18',400,4000000),
     (10,105,102,105,'2015-12-02','2021-03-18',400,4000000);
 
 insert hop_dong_chi_tiet values
@@ -354,10 +354,10 @@ from nhan_vien nv
 left join hop_dong hd on hd.id_nhan_vien = nv.id_nhan_vien
 left join trinh_do td on td.id_trinh_do = nv.id_trinh_do
 left join bo_phan bp on bp.id_bo_phan = nv.id_bo_phan
-where year(ngay_lam_hop_dong) between '2018' and '2019' 
+where year(ngay_lam_hop_dong) between 2018 and 2019 
 or ngay_lam_hop_dong is null
-group by nv.ho_ten
-having count(ho_ten) <=3;
+group by nv.id_nhan_vien
+having count(nv.id_nhan_vien) <=3;
 
 -- task 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2017 đến năm 2019.
 
@@ -370,16 +370,18 @@ having count(ho_ten) <=3;
 
  -- task 17. Cập nhật thông tin những khách hàng có TenLoaiKhachHang 
 --  từ  Platinium lên Diamond, chỉ cập nhật những khách hàng đã từng đặt phòng 
---  với tổng Tiền thanh toán trong năm 2019 là lớn hơn 10.000.000 VNĐ.                
-	 	update khach_hang kh
-		set kh.id_loai_khach = 1
-		where id_khach_hang in 
-			(select id_khach_hang
-				from hop_dong hd
-				where year(ngay_lam_hop_dong) = '2019'
-				group by id_khach_hang
-				having sum(tong_tien) >= 10000000
-			);
+--  với tổng Tiền thanh toán trong năm 2019 là lớn hơn 10.000.000 VNĐ.         
+-- 		SET SQL_SAFE_UPDATES = 0;       
+-- 	 	update khach_hang kh
+-- 		set kh.id_loai_khach = 1
+-- 		where id_khach_hang in 
+-- 			(select id_khach_hang
+-- 				from hop_dong hd
+-- 				where year(ngay_lam_hop_dong) = '2019'
+-- 				group by id_khach_hang
+-- 				having sum(tong_tien) >= 10000000
+-- 			);
+--             SET SQL_SAFE_UPDATES = 0;
 
 -- dùng lệnh dưới để check trước và sau khi update khashc hàng từ platinum -> diamond 
 
@@ -417,4 +419,91 @@ select id_nhan_vien as id,ho_ten,email,SDT,ngay_sinh,Dia_chi, 'nhan_vien'
 from nhan_vien
 union all
 select id_khach_hang,ho_ten,email,SDT,ngay_sinh,Dia_chi, 'khach hang'
-from khach_hang
+from khach_hang;
+
+-- task 21.	Tạo khung nhìn có tên là V_NHANVIEN để lấy được thông tin của tất cả các nhân viên có địa chỉ 
+-- là “Hải Châu” và đã từng lập hợp đồng cho 1 hoặc nhiều Khách hàng bất kỳ  với ngày lập hợp đồng là “12/12/2019”
+
+create view v_nhan_vien as
+select nv.id_nhan_vien, nv.ho_ten, dia_chi, ngay_lam_hop_dong
+from nhan_vien nv
+join hop_dong hd on nv.id_nhan_vien = hd.id_nhan_vien
+where ngay_lam_hop_dong = '2019/12/12' and dia_chi = 'Hai chau'
+group by ho_ten
+;
+-- drop view v_nhan_vien;
+
+ -- task 2.	Thông qua khung nhìn V_NHANVIEN thực hiện cập nhật địa chỉ thành “Liên Chiểu” đối với tất cả 
+ -- các Nhân viên được nhìn thấy bởi khung nhìn này. 
+ 
+ 
+ 
+--  select * from v_nhan_vien;
+--  
+--   SET SQL_SAFE_UPDATES = 0;    
+--   
+--  update v_nhan_vien
+-- 	set dia_chi = 'Liên Chiểu' 
+--     where id_nhan_vien in (
+-- 		select id_nhan_vien
+--         from v_nhan_vien);
+
+ 
+-- task 23.	Tạo Store procedure Sp_1 Dùng để xóa thông tin của một Khách hàng nào đó với 
+-- Id Khách hàng được truyền vào như là 1 tham số của Sp_1
+-- DELIMITER //
+-- create procedure sp_1(p_id int)
+-- begin 
+-- 	set foreign_key_checks = 0;
+-- 	delete from khach_hang
+--     where id_khach_hang = p_id;
+--     set foreign_key_checks = 1;
+-- end //
+-- DELIMITER ;
+-- call sp_1(103);
+
+--  24.	Tạp Store procedure Sp_2 Dùng để thêm mới vào bảng HopDong với yêu cầu Sp_2 
+-- phải thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung, với nguyên tắc không được 
+-- trùng khóa chính và đảm bảo toàn vẹn tham chiếu đến các bảng liên quan.
+
+DELIMITER //
+create procedure sp_2(p_id_hd int,p_id_nv int, p_id_kh int, p_id_dv int, p_ngay_lam_hop_dong date,p_ngay_ket_thuc date,p_tien_dat_coc int, p_tong_tien int)
+begin
+	SET FOREIGN_KEY_CHECKS=0 ;
+	if p_id_hd in (select hd.id_hop_dong from hop_dong hd) then
+		select concat('p_id_hd', ' is duplicate') as 'error id_hop_dong';
+	elseif p_id_nv not in (select nv.id_nhan_vien from nhan_vien nv) then
+		select concat('p_id_nv', ' is not exist') as 'error id_nhan_vien';
+	elseif p_id_kh not in (select kh.id_khach_hang from khach_hang kh) then
+		select concat('p_id_kh', ' is not exist') as 'error id_khach_hang';
+	elseif p_id_dv not in (select dv.id_dich_vu from dich_vu dv) then
+		select concat('p_id_dv', ' is not exist') as 'error id_dich_vu'; 
+	else
+		insert into hop_dong 
+		value(p_id_hd, p_id_nv, p_id_kh, p_id_dv, p_ngay_lam_hop_dong, p_ngay_ket_thuc, p_tien_dat_coc, p_tong_tien);
+		SET FOREIGN_KEY_CHECKS=1;
+        select 'completed add new dich_vu';
+	end if;
+end //
+DELIMITER ;
+call sp_2(11,105,104,4,'2018-12-1','2019-12-10',7,8); -- hien thong bao them loi~ 
+call sp_2(12,105,104,103,'2018-12-1','2019-12-10',7,8);--  
+drop procedure sp_2;
+
+-- task 25.	Tạo triggers có tên Tr_1 Xóa bản ghi trong bảng HopDong thì hiển thị 
+-- tổng số lượng bản ghi còn lại có trong bảng HopDong ra giao diện console của database 
+
+DELIMITER //
+create trigger tr_1
+before delete
+on hop_dong for each row
+begin
+	INSERT INTO hop_dong(id_hop_dong)
+    VALUES(OLD.id_hop_dong);
+end //
+DELIMITER ;
+	set foreign_key_checks = 0;
+	delete from hop_dong
+		where id_hop_dong = 8;
+    set foreign_key_checks = 1;
+    drop trigger tr_1;
