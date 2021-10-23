@@ -114,8 +114,8 @@
                 width: 25px;
                 margin-right: 10px;
             }
-            .fixed{
-                position: fixed;
+            #sidebar{
+                clear: both;
             }
 
         </style>
@@ -148,6 +148,7 @@
     </header>
 
 
+    <div id="sidebar">
         <div class="col-3 ">
             <div class="row">
             <ul>
@@ -220,6 +221,7 @@
                 </div>
 
             </div>
+        </div>
 
 
 <!--    <footer>-->
