@@ -12,7 +12,6 @@
             width: 100%;
             height: 50px;
             clear: both;
-            margin-bottom: 10px;
             background-color: #222222;
             vertical-align: center;
         }
@@ -26,6 +25,10 @@
             position: relative;
             text-align: center;
             padding-top: 15px;
+        }
+        .body{
+            width: 100%;
+            height: 80%;
         }
         .header ul ul {
             visibility: hidden;
@@ -111,11 +114,35 @@
         .link{
             text-decoration: underline;
             color: #0674E8;
-
         }
         .sidebar{
+            padding-top: 0;
+            margin-top: 0;
             text-align: center;
             background-color: #aaaaaa;
+        }
+        .content{
+            padding-top: 0;
+            margin-top: 0;
+            text-align: center;
+        }
+        .ads{
+            background-color: #F0F2F5;
+            width: 80%;
+            height: 100px;
+            text-align: center;
+            padding-top: 40px;
+            margin-top: 10px ;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .fooder {
+            margin-bottom: 0;
+            padding-top: 15px;
+            width: 100%;
+            height: 50px;
+            clear: both;
+            background-color: #222222;
         }
     </style>
 </head>
@@ -136,17 +163,50 @@
             <li>Contact</li>
             <li style="float: right">Login</li>
         </ul>
-
     </div>
+        <div class="row" style="height: 200px">
+            <div class="col-3 sidebar">
+                <div class="col-12">
+                    <ul>
+                        <li class="link">Link 1</li>
+                        <li class="link">Link 2</li>
+                        <li class="link">Link 3</li>
+                    </ul>
+                </div>
+            </div>
 
-    <div class="col-3 right sidebar">
-        <div class="col-12">
-            <ul>
-                <li class="link">Link 1</li>
-                <li class="link">Link 2</li>
-                <li class="link">Link 3</li>
-            </ul>
+            <div class="col-6 ">
+                <div class="col-12" >
+                    <div  content="row">
+                        <h1>Welcome</h1>
+                        <p>What is Lorem Ipsum?
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                            industry's
+                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                            make
+                            a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                            typesetting,
+                            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                            containing
+                            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions
+                            of Lorem Ipsum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 sidebar">
+                <div class="ads">
+                    ADS
+                </div>
+                <div class="ads">
+                    ADS
+                </div>
+            </div>
         </div>
+    <div class="fooder">
+        <p style="text-align: center; color: white">footer text</p>
+
     </div>
 </body>
 </html>
