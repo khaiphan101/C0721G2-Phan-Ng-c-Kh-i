@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../../css/bootstrap.css">;
+    <style>
+
+        .center{
+            text-align: center;
+        }
+
+        .image{
+            border: solid 1px gray;
+            width: 100%;
+        }
+        .image:hover{
+            border: solid 1px black;
+        }
+        .frames{
+
+            width: 25%;
+            float: left;
+            padding: 0 6px;
+        }
+        img{
+            width: 100%;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .clearfix:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+        @media screen and (max-width: 700px) {
+            .frames{
+                width: 49%;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .frames{
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<h2>Responsive Image Gallery</h2>
+<h4>Resize the browser window to see the effect.</h4>
+<div class="frames">
+    <div class="image">
+        <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+            <img src="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg" class="img-fluid" alt="...">
+        </a>
+        <p class="center">Add a description of the image here</p>
+    </div>
+</div>
+<div class="frames">
+    <div class="image">
+        <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_forest.jpg">
+            <img src="https://demo.codegym.vn/web/15/gallery/img_forest.jpg" class="img-fluid" alt="...">
+        </a>
+        <p class="center">Add a description of the image here</p>
+    </div>
+</div>
+
+<div class="frames">
+    <div class="image">
+        <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_lights.jpg">
+            <img src="https://demo.codegym.vn/web/15/gallery/img_lights.jpg" class="img-fluid" alt="...">
+        </a>
+        <p class="center">Add a description of the image here</p>
+    </div>
+</div>
+<div class="frames">
+    <div class="image">
+        <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_mountains.jpg">
+            <img src="https://demo.codegym.vn/web/15/gallery/img_mountains.jpg" class="img-fluid" alt="...">
+        </a>
+        <p class="center">Add a description of the image here</p>
+    </div>
+</div>
+<div class="clearfix"></div>
+<p>
+    This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide,
+    it will show four images side by side, for screens smaller than 700px, it will show two images side by side.
+    For screens smaller than 500px, the images will stack vertically (100%).</p>
+
+
+</body>
+</html>
