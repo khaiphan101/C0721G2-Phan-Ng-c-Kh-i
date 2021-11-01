@@ -1,7 +1,9 @@
 package controller;
 
 import bean.User;
-import service.UserDAO;
+import repository.impl.UserDAO;
+import service.UserService;
+import service.impl.UserserviceImpl;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -17,11 +19,12 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "UserServlet", urlPatterns = "/users")
 public class UserServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private UserDAO userDAO;
+    private UserService userService;
 
     public void init() {
-        userDAO = new UserDAO();
+        userService = new UserserviceImpl();
     }
+
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -74,7 +77,7 @@ public class UserServlet extends HttpServlet {
 
     private void listUser(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
-        List<User> listUser = userDAO.selectAllUsers();
+        List<User> listUser = userService.selectAllUsers();
         request.setAttribute("listUser", listUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
         dispatcher.forward(request, response);
@@ -89,7 +92,7 @@ public class UserServlet extends HttpServlet {
     private void showEditForm(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        User existingUser = userDAO.selectUser(id);
+        User existingUser = userService.selectUser(id);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/edit.jsp");
         request.setAttribute("user", existingUser);
         dispatcher.forward(request, response);
@@ -101,7 +104,7 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         User newUser = new User(name, email, country);
-        userDAO.insertUser(newUser);
+        userService.insertUser(newUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/create.jsp");
         dispatcher.forward(request, response);
     }
@@ -114,7 +117,7 @@ public class UserServlet extends HttpServlet {
         String country = request.getParameter("country");
 
         User book = new User(id, name, email, country);
-        userDAO.updateUser(book);
+        userService.updateUser(book);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/edit.jsp");
         dispatcher.forward(request, response);
     }
@@ -122,20 +125,24 @@ public class UserServlet extends HttpServlet {
     private void deleteUser(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
         int id = Integer.parseInt(request.getParameter("id"));
-        userDAO.deleteUser(id);
+        userService.deleteUser(id);
 
-        List<User> listUser = userDAO.selectAllUsers();
+        List<User> listUser = userService.selectAllUsers();
         request.setAttribute("listUser", listUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
         dispatcher.forward(request, response);
     }
 
     private void showSearchForm(HttpServletRequest request, HttpServletResponse response)
-            throws SQLException, ServletException, IOException {
+            throws SQLException, IOException, ServletException {
         String country = request.getParameter("country");
-        User existingUser = userDAO.searchUser(country);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("user/Search.jsp");
-        request.setAttribute("user", existingUser);
+        String messenger = country + " is not found";
+        List<User> listSearchUser = userService.searchUser(country);
+        if(listSearchUser.isEmpty()){
+            request.setAttribute("messenger", messenger);
+        }
+        request.setAttribute("listSearchUser", listSearchUser);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/search.jsp");
         dispatcher.forward(request, response);
     }
 }

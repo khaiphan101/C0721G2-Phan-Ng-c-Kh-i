@@ -12,7 +12,7 @@
         <a href="/users?actionUser=create">Add New User</a>
     </h2>
 </center>
-<form action="/users?actionUser=search &id=" method="post">
+<form action="/users?actionUser=search" method="post">
     <input type="text" name="country" id="country" size="15"/>
     <input type="submit" value="search"/>
 </form>
