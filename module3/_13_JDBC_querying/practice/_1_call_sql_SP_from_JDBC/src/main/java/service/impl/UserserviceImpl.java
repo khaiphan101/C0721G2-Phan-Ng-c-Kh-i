@@ -14,7 +14,7 @@ public class UserserviceImpl implements UserService{
 
     @Override
     public void insertUserStore(User user) throws SQLException {
-
+        iUserDAO.insertUserStore(user);
     }
 
     @Override
@@ -44,7 +44,7 @@ public class UserserviceImpl implements UserService{
 
     @Override
     public void insertUser(User user) throws SQLException {
-
+        iUserDAO.insertUser(user);
     }
 
     @Override

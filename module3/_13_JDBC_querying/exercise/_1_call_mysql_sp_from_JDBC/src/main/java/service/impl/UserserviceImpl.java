@@ -12,7 +12,7 @@ public class UserserviceImpl implements UserService{
     private IUserDAO iUserDAO = new UserDAO();
     @Override
     public void insertUser(User user) throws SQLException {
-
+        iUserDAO.insertUser(user);
     }
 
     @Override
@@ -38,5 +38,20 @@ public class UserserviceImpl implements UserService{
     @Override
     public List<User> searchUser(String country) throws SQLException {
         return iUserDAO.searchUser(country);
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        return iUserDAO.getAllUsers();
+    }
+
+    @Override
+    public void editUser(User user) {
+        iUserDAO.editUser(user);
+    }
+
+    @Override
+    public void deleteUserById(int id) {
+        iUserDAO.deleteUserById(id);
     }
 }

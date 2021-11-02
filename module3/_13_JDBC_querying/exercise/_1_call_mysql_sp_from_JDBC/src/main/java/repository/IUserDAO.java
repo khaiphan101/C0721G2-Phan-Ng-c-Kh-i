@@ -18,4 +18,7 @@ public interface IUserDAO {
 
     public List<User> searchUser(String country) throws SQLException;
 
+    public List<User> getAllUsers();
+    public void editUser(User user);
+    public void deleteUserById(int id);
 }

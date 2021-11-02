@@ -172,4 +172,59 @@ public class UserDAO implements IUserDAO {
         return listSearchByCountry;
     }
 
+    @Override
+    public List<User> getAllUsers() {
+        // using try-with-resources to avoid closing resources (boiler plate code)
+        List<User> users = new ArrayList<>();
+        String query = "{CALL get_all_users()}";
+        // Step 1: Establishing a Connection
+        try (Connection connection = getConnection();
+
+             // Step 2:Create a statement using connection object
+             CallableStatement callableStatement = connection.prepareCall(query);)
+        {
+            System.out.println(callableStatement);
+            // Step 3: Execute the query or update query
+            ResultSet rs = callableStatement.executeQuery();
+
+            // Step 4: Process the ResultSet object.
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String email = rs.getString("email");
+                String country = rs.getString("country");
+                users.add(new User(id, name, email, country));
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return users;
+    }
+
+    @Override
+    public void editUser(User user) {
+        try (Connection connection = getConnection();
+             CallableStatement callableStatement = connection.prepareCall("CALL edit_user(?,?,?,?);");)
+        {
+            callableStatement.setString(1, user.getName());
+            callableStatement.setString(2, user.getEmail());
+            callableStatement.setString(3, user.getCountry());
+            callableStatement.setInt(4, user.getId());
+            callableStatement.executeUpdate();
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+    }
+
+    @Override
+    public void deleteUserById(int id) {
+        try (Connection connection = getConnection();
+             CallableStatement callableStatement = connection.prepareCall("CALL delete_user(?);");) {
+            callableStatement.setString(1, String.valueOf(id));
+            callableStatement.executeUpdate();
+        }
+        catch (SQLException e) {
+            printSQLException(e);
+        }
+    }
 }
