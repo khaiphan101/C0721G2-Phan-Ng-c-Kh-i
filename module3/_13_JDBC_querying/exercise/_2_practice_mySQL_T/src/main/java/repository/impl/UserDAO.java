@@ -165,7 +165,7 @@ public class UserDAO implements IUserDAO {
         List<User> users = selectAllUsers();
         List<User> listSearchByCountry = new ArrayList<>();
         for (User user: users) {
-            if (user.getName().toLowerCase().contains(country)){
+            if (user.getCountry().toLowerCase().contains(country)){
                 listSearchByCountry.add(user);
             }
         }
