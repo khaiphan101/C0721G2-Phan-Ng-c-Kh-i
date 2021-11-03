@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../../css/bootstrap.css">
+    <script type="text/javascript" src="../../../js/bootstrap.js"></script>
+    <style>
+        li {
+            vertical-align: center;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 5px;
+        }
+
+        .row:after {
+            clear: both;
+            display: block;
+            content: "";
+        }
+
+        .frames {
+            width: 25%;
+            float: left;
+            padding: 10px 6px;
+        }
+
+        .f-child {
+            background-color: #F3F3F3;
+
+        }
+        .blank-text{
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="icon_microsoft.bmp" alt="microsoft">
+            <span class="fw-bolder" style="color: gray">Microsoft</span>
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Surface</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="computer" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Computers
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="computer">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Computers for Business
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Accessories
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        More
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            All Microsoft
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                             class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </li>
+                    <li class="nav-item dropdown p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                             class="bi bi-cart" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                    </li>
+                    <li class="p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                             class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd"
+                                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                        </svg>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="text-center p-5 " style="margin: auto; width: 65%">
+    <div class="fs-2  text-center">New laptops from Surface, now with Windows 11</div>
+    <div class="fs-4  text-center">Inspiration meets originality on new Surface laptops,
+        designed to light up the best of Windows 11 and adapt to you.
+    </div>
+    <div class="text-primary fw-bold">ExploreTop > Surface deals ></div>
+</div>
+<div style="margin: auto; width: 90% " class="p-10">
+    <img src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F21_Hero_FamilyDevices_V2
+    _En-us.jpg.jpg?version=2cb8b057-09c9-de3e-0424-d699b4951996" alt="imgmcr" class="w-100">
+    <div class="col-4">
+        <div class="fs-1 fw-normal">
+            More choices than ever
+        </div>
+        <div class="fs-6 fw-light">
+            Check out the most diverse selection of Surface devices yet,
+            built for all the ways you create, work, play, and connect.
+        </div>
+    </div>
+    <div class="col-8 p-5">
+        <img src="compare.bmp" alt="imgmcr" class="w-100">
+    </div>
+
+
+    <div class="row">
+        <div class="frames">
+            <div class="blank-text">2-in-1 PCs</div>
+            <div class="f-child">
+                <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+                    <img src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F21_DeviceFamily_DO2_V2.jpg?version=99b0b663-7969-2082-ebac-86326a2ad7d1"
+                         class="figure-img img-fluid rounded" alt="...">
+                </a>
+                <div class="card-body">
+                    <p class="card-text bg-warning">new</p>
+                    <p class="card-text text-primary fw-bold">Surface Pro 8 ></p>
+                </div>
+            </div>
+        </div>
+        <div class="frames">
+            <div class="blank-text"></div>
+            <div class="f-child">
+                <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+                    <img src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F21_DeviceFamily_DO3_V1.jpg?version=14d5aca6-0d92-3e85-3bea-512a72a15c74"
+                         class="figure-img img-fluid rounded" alt="...">
+                </a>
+                <div class="card-body">
+                    <p class="card-text bg-warning">New Options</p>
+                    <p class="card-text text-primary fw-bold">Surface Pro X ></p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="frames">
+            <div class="blank-text"></div>
+            <div class="f-child">
+                <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+                    <img src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F21_DeviceFamily_DO4_V1.jpg?version=3937f206-8d6a-3e6a-e914-32daa17c6da4"
+                         class="figure-img img-fluid rounded" alt="...">
+                </a>
+                <div class="card-body">
+                    <p class="card-text bg-warning">New</p>
+                    <p class="card-text text-primary fw-bold">Surface Go 3 ></p>
+                </div>
+            </div>
+        </div>
+        <div class="frames">
+            <div class="blank-text">Dual Screen</div>
+            <div class="f-child">
+                <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+                    <img src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F21_DeviceFamily_DOStore2_V1.jpg?version=84185a51-4d21-b314-7442-06ce036415d8"
+                         class="figure-img img-fluid rounded" alt="...">
+                </a>
+                <div class="card-body">
+                    <p class="card-text bg-warning">New</p>
+                    <p class="card-text text-primary fw-bold">Surface Go 3 ></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="frames">
+            <div class="blank-text">Laptops</div>
+            <div class="f-child">
+                <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+                    <img src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F21_DeviceFamily_DO1_V1.jpg?version=17e7e056-f9bf-e953-cc65-1fe55c72618a"
+                         class="figure-img img-fluid rounded" alt="...">
+                </a>
+                <div class="card-body">
+                    <p class="card-text bg-warning " >new</p>
+                    <p class="card-text text-primary fw-bold">Surface Laptop Studio ></p>
+                </div>
+            </div>
+        </div>
+        <div class="frames">
+            <div class="blank-text"></div>
+            <div class="f-child">
+                <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+                    <img src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F21_DeviceFamily_Book3_V1.jpg?version=c8b426e5-cd97-fbbf-83fe-79a877bb2c60"
+                         class="figure-img img-fluid rounded" alt="...">
+                </a>
+                <div class="card-body">
+                    <p class="card-text bg-warning " style="height: 25px"></p>
+                    <p class="card-text text-primary fw-bold">Surface Book 3 ></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="frames">
+            <div class="blank-text"></div>
+            <div class="f-child">
+                <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+                    <img src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F21_DeviceFamily_LaptopGo_V1.jpg?version=6dafc6d8-5726-5590-f6db-1b423ba3ae85"
+                         class="figure-img img-fluid rounded" alt="...">
+                </a>
+                <div class="card-body">
+                    <p class="card-text bg-warning " style="height: 25px"></p>
+                    <p class="card-text text-primary fw-bold">Surface Laptop Go></p>
+                </div>
+            </div>
+        </div>
+        <div class="frames">
+            <div class="blank-text"></div>
+            <div class="f-child">
+                <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+                    <img src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F21_DeviceFamily_Laptop4_V1.jpg?version=6215bc7d-d86a-59aa-7c33-5f63057dd996"
+                         class="figure-img img-fluid rounded" alt="...">
+                </a>
+                <div class="card-body">
+                    <p class="card-text bg-warning " style="height: 25px"></p>
+                    <p class="card-text text-primary fw-bold">Surface Laptop 4 ></p>
+                </div>
+            </div>
+        </div>
+        <div class="frames">
+            <div class="blank-text">All In One</div>
+            <div class="f-child">
+                <a target="_blank" href="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+                    <img src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F21_DeviceFamily_Studio2_V1.jpg?version=8b9960f5-7655-4256-dda7-f9892fc88c06"
+                         class="figure-img img-fluid rounded" alt="...">
+                </a>
+                <div class="card-body">
+                    <p class="card-text bg-warning " style="height: 25px"></p>
+                    <p class="card-text text-primary fw-bold">Surface Studio 2 ></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
