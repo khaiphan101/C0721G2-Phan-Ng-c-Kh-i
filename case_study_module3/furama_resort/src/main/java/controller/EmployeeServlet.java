@@ -1,5 +1,9 @@
 package controller;
 
+import model.employee.Employee;
+import service.EmployeeService;
+import service.impl.EmployeeServiceImpl;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
@@ -13,7 +17,11 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "EmployeeServlet", urlPatterns = {"/employee"})
 public class EmployeeServlet extends HttpServlet {
+    private EmployeeService employeeService;
 
+    public void init() {
+        employeeService = new EmployeeServiceImpl();
+    }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -40,53 +48,53 @@ public class EmployeeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.getRequestDispatcher("employee.jsp").forward(request,response);
-//        String action = request.getParameter("actionUser");
-//        if (action == null) {
-//            action = "";
-//        }
-//
-//        try {
-//            switch (action) {
-//                case "create":
-//                    showNewForm(request, response);
-//                    break;
-//                case "edit":
-//                    showEditForm(request, response);
-//                    break;
-//                case "delete":
-//                    deleteUser(request, response);
-//                    break;
-//                default:
-//                    listUser(request, response);
-//                    break;
-//            }
-//        } catch (SQLException ex) {
-//            throw new ServletException(ex);
-//        }
+        String action = request.getParameter("actionUser");
+        if (action == null) {
+            action = "";
+        }
+
+        try {
+            switch (action) {
+                case "create":
+                    showNewForm(request, response);
+                    break;
+                case "edit":
+                    showEditForm(request, response);
+                    break;
+                case "delete":
+                    deleteUser(request, response);
+                    break;
+                default:
+                    showList(request, response);
+                    break;
+            }
+        } catch (SQLException ex) {
+            throw new ServletException(ex);
+        }
     }
 
-//    private void listUser(HttpServletRequest request, HttpServletResponse response)
-//            throws SQLException, IOException, ServletException {
-//        List<User> listUser = userService.selectAllUsers();
-//        request.setAttribute("listUser", listUser);
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
-//        dispatcher.forward(request, response);
-//    }
+    private void showList(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException, ServletException {
+        List<Employee> listEmployee = employeeService.selectAllEmployees();
+        request.setAttribute("listEmployee", listEmployee);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/list.jsp");
+        dispatcher.forward(request, response);
+    }
+
+    private void showNewForm(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/create.jsp");
+        dispatcher.forward(request, response);
+    }
 //
-//    private void showNewForm(HttpServletRequest request, HttpServletResponse response)
-//            throws ServletException, IOException {
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("user/create.jsp");
-//        dispatcher.forward(request, response);
-//    }
-//
-//    private void showEditForm(HttpServletRequest request, HttpServletResponse response)
-//            throws SQLException, ServletException, IOException {
-//        int id = Integer.parseInt(request.getParameter("id"));
-//        User existingUser = userService.selectUser(id);
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("user/edit.jsp");
-//        request.setAttribute("user", existingUser);
-//        dispatcher.forward(request, response);
-//    }
+    private void showEditForm(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Employee existingEmployee = employeeService.selectEmployee(id);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/edit.jsp");
+        request.setAttribute("employee", existingEmployee);
+        dispatcher.forward(request, response);
+    }
 //
 //    private void insertUser(HttpServletRequest request, HttpServletResponse response)
 //            throws SQLException, IOException, ServletException {
@@ -112,16 +120,16 @@ public class EmployeeServlet extends HttpServlet {
 //        dispatcher.forward(request, response);
 //    }
 //
-//    private void deleteUser(HttpServletRequest request, HttpServletResponse response)
-//            throws SQLException, IOException, ServletException {
-//        int id = Integer.parseInt(request.getParameter("id"));
-//        userService.deleteUser(id);
-//
-//        List<User> listUser = userService.selectAllUsers();
-//        request.setAttribute("listUser", listUser);
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
-//        dispatcher.forward(request, response);
-//    }
+    private void deleteUser(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException, ServletException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        employeeService.deleteEmployee(id);
+
+        List<Employee> listEmployee = employeeService.selectAllEmployees();
+        request.setAttribute("listEmployee", listEmployee);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/list.jsp");
+        dispatcher.forward(request, response);
+    }
 //
 //    private void showSearchForm(HttpServletRequest request, HttpServletResponse response)
 //            throws SQLException, IOException, ServletException {
