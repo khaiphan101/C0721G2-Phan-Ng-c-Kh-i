@@ -7,6 +7,10 @@ public class EducationDegree {
     public EducationDegree() {
     }
 
+    public EducationDegree(int id) {
+        this.id = id;
+    }
+
     public EducationDegree(int id, String name) {
         this.id = id;
         this.name = name;

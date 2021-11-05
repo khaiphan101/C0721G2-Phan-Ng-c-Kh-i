@@ -1,6 +1,12 @@
 package controller;
 
+import model.employee.Division;
+import model.employee.EducationDegree;
 import model.employee.Employee;
+import model.employee.Position;
+import repository.impl.employee.DivisionImpl;
+import repository.impl.employee.EducationDegreeImpl;
+import repository.impl.employee.PositionImpl;
 import service.EmployeeService;
 import service.impl.EmployeeServiceImpl;
 
@@ -25,29 +31,28 @@ public class EmployeeServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        String action = request.getParameter("actionUser");
-//        if (action == null) {
-//            action = "";
-//        }
-//        try {
-//            switch (action) {
+        String action = request.getParameter("actionUser");
+        if (action == null) {
+            action = "";
+        }
+        try {
+            switch (action) {
 //                case "create":
 //                    insertUser(request, response);
 //                    break;
-//                case "edit":
-//                    updateUser(request, response);
-//                    break;
+                case "update":
+                    update(request, response);
+                    break;
 //                case "search":
 //                    showSearchForm(request, response);
-//            }
-//        } catch (SQLException ex) {
-//            throw new ServletException(ex);
-//        }
+            }
+        } catch (SQLException ex) {
+            throw new ServletException(ex);
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("employee.jsp").forward(request,response);
         String action = request.getParameter("actionUser");
         if (action == null) {
             action = "";
@@ -58,8 +63,8 @@ public class EmployeeServlet extends HttpServlet {
                 case "create":
                     showNewForm(request, response);
                     break;
-                case "edit":
-                    showEditForm(request, response);
+                case "update":
+                    showUpdate(request, response);
                     break;
                 case "delete":
                     deleteUser(request, response);
@@ -68,8 +73,8 @@ public class EmployeeServlet extends HttpServlet {
                     showList(request, response);
                     break;
             }
-        } catch (SQLException ex) {
-            throw new ServletException(ex);
+        } catch (SQLException | IOException | ServletException ex) {
+            ex.printStackTrace();
         }
     }
 
@@ -77,25 +82,62 @@ public class EmployeeServlet extends HttpServlet {
             throws SQLException, IOException, ServletException {
         List<Employee> listEmployee = employeeService.selectAllEmployees();
         request.setAttribute("listEmployee", listEmployee);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/list.jsp");
-        dispatcher.forward(request, response);
+        request.getRequestDispatcher("employee.jsp").forward(request, response);
     }
 
     private void showNewForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/create.jsp");
-        dispatcher.forward(request, response);
+//        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/create.jsp");
+//        dispatcher.forward(request, response);
     }
-//
-    private void showEditForm(HttpServletRequest request, HttpServletResponse response)
-            throws SQLException, ServletException, IOException {
+
+    //
+    private void showUpdate(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Employee existingEmployee = employeeService.selectEmployee(id);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/edit.jsp");
-        request.setAttribute("employee", existingEmployee);
-        dispatcher.forward(request, response);
+        Employee employee = employeeService.findById(id);
+        List<Division> divisions = DivisionImpl.selectAll();
+        List<EducationDegree> educationDegrees = EducationDegreeImpl.selectAll();
+        List<Position> positions = PositionImpl.selectAll();
+
+        request.setAttribute("employee", employee);
+        request.setAttribute("divisions", divisions);
+        request.setAttribute("educationDegrees", educationDegrees);
+        request.setAttribute("positions", positions);
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("update.jsp");
+
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
     }
-//
+
+    private void update(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String birthDay = request.getParameter("birthday");
+        String idCard = request.getParameter("id_card");
+        Double salary = Double.valueOf((request.getParameter("salary")));
+        String phone = request.getParameter("number");
+        String address = request.getParameter("address");
+
+        int idDivision = Integer.parseInt(request.getParameter("id_division"));
+        Division division = new Division(idDivision);
+
+        int idEducationDegree = Integer.parseInt(request.getParameter("id_education_degree"));
+        EducationDegree educationDegree = new EducationDegree(idEducationDegree);
+
+        int idPosition = Integer.parseInt(request.getParameter("id_position"));
+        Position position = new Position(idPosition);
+        Employee employee = new Employee(id, name, birthDay, idCard, salary, phone, email,address,
+                position, educationDegree, division);
+        employeeService.update(employee);
+        showList(request, response);
+    }
+
+    //
 //    private void insertUser(HttpServletRequest request, HttpServletResponse response)
 //            throws SQLException, IOException, ServletException {
 //        String name = request.getParameter("name");
@@ -122,13 +164,13 @@ public class EmployeeServlet extends HttpServlet {
 //
     private void deleteUser(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
-        int id = Integer.parseInt(request.getParameter("id"));
-        employeeService.deleteEmployee(id);
-
-        List<Employee> listEmployee = employeeService.selectAllEmployees();
-        request.setAttribute("listEmployee", listEmployee);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/list.jsp");
-        dispatcher.forward(request, response);
+//        int id = Integer.parseInt(request.getParameter("id"));
+//        employeeService.deleteEmployee(id);
+//
+//        List<Employee> listEmployee = employeeService.selectAllEmployees();
+//        request.setAttribute("listEmployee", listEmployee);
+//        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/list.jsp");
+//        dispatcher.forward(request, response);
     }
 //
 //    private void showSearchForm(HttpServletRequest request, HttpServletResponse response)

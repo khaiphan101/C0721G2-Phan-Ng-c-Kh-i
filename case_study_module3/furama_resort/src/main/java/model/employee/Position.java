@@ -7,6 +7,10 @@ public class Position {
     public Position() {
     }
 
+    public Position(int id) {
+        this.id = id;
+    }
+
     public Position(int id, String name) {
         this.id = id;
         this.name = name;

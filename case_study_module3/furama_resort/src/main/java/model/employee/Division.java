@@ -7,6 +7,10 @@ public class Division {
     public Division() {
     }
 
+    public Division(int id) {
+        this.id = id;
+    }
+
     public Division(int id, String name) {
         this.id = id;
         this.name = name;

@@ -16,10 +16,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     }
 
-    @Override
-    public Employee selectEmployee(int id) {
-        return employeeRepo.selectEmployee(id);
-    }
+//    @Override
+//    public Employee selectEmployee(int id) {
+//        return employeeRepo.selectEmployee(id);
+//    }
 
     @Override
     public List<Employee> selectAllEmployees() {
@@ -32,12 +32,15 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public boolean updateEmployee(Employee employee) throws SQLException {
-        return employeeRepo.updateEmployee(employee);
+    public boolean update(Employee employee) throws SQLException {
+        return employeeRepo.update(employee);
     }
 
     @Override
     public List<Employee> searchEmployee(String country) throws SQLException {
         return employeeRepo.searchEmployee(country);
+    }
+    public Employee findById(int id){
+        return employeeRepo.findById(id);
     }
 }
