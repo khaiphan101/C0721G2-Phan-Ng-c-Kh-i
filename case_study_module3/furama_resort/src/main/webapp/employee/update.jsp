@@ -20,7 +20,9 @@
         <div class="container-fluid">
             <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand col-3 text-left pl-0" href="#">FURAMA RESORT</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -36,7 +38,7 @@
                             <a class="nav-link" href="/customer">Customer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"  href="/service">Service</a>
+                            <a class="nav-link" href="/service">Service</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contract">Contract</a>
@@ -69,23 +71,43 @@
                                    value="${employee.getName()}">
                         </div>
                         <div class="form-group col-12">
+                            <label class="" for="a">Birthday:</label>
+                            <input id="a" type="text" name="birthDay" class="form-control col-12  mt-2"
+                                   value="${employee.birthDay}">
+                        </div>
+                        <div class="form-group col-12">
                             <label class="col-12 float-left">Id Card:</label>
                             <input type="text" name="idCard" class="form-control col-12  mt-2"
-                                   value="${employee.getIdCard()}">
+                                   value="${employee.idCard}">
                         </div>
-
+                        <div class="form-group col-12">
+                            <label class="" for="a">Salary:</label>
+                            <input id="a" type="text" name="salary" class="form-control col-12  mt-2"
+                                   value="${employee.getSalary()}">
+                        </div>
                         <div class="form-group col-12">
                             <label class="col-12 ">Phone:</label>
                             <input type="text" name="phone" class="form-control col-12 fmt-2"
                                    value="${employee.getPhone()}">
                         </div>
                         <div class="form-group col-12">
+                            <label class="" for="a">Email:</label>
+                            <input id="a" type="text" name="email" class="form-control col-12  mt-2"
+                                   value="${employee.email}">
+                        </div>
+                        <div class="form-group col-12">
+                            <label class="" for="a">Address:</label>
+                            <input id="a" type="text" name="address" class="form-control col-12  mt-2"
+                                   value="${employee.address}">
+                        </div>
+
+                        <div class="form-group col-12">
                             <label class="col-12 float-left">Division:</label>
-                            <select class="form-control" name="id_division">
+                            <select class="form-control" name="division_type">
                                 <c:forEach var="type" items="${divisions}">
                                     <c:choose>
-                                        <c:when test="${type.id == employee.getDivision.getId()}">
-                                            <option value="${type.getName()}" selected> ${type.name}</option>
+                                        <c:when test="${type.id == employee.division.id}">
+                                            <option value="${type.id}" selected> ${type.name}</option>
                                         </c:when>
                                         <c:otherwise>
                                             <option value="${type.id}">${type.name}</option>
@@ -93,30 +115,36 @@
                                     </c:choose>
                                 </c:forEach>
                             </select>
-<%--                            <select class="form-control" name="division_type">--%>
-<%--                                <c:forEach var="type" items="${divisions}">--%>
-<%--                                    <c:choose>--%>
-<%--                                        <c:when test="${type.getName() == employee.getDivision.getName()}">--%>
-<%--                                            <option value="${type.getName()}" selected> ${type.name}</option>--%>
-<%--                                        </c:when>--%>
-<%--                                        <c:otherwise>--%>
-<%--                                            <option value="${type.getName()}">${type.name}</option>--%>
-<%--                                        </c:otherwise>--%>
-<%--                                    </c:choose>--%>
-<%--                                </c:forEach>--%>
-<%--                            </select>--%>
-<%--                            <select class="form-control" name="division_type">--%>
-<%--                                <c:forEach var="type" items="${divisions}">--%>
-<%--                                    <c:choose>--%>
-<%--                                        <c:when test="${type.getName() == employee.getDivision.getName()}">--%>
-<%--                                            <option value="${type.getName()}" selected> ${type.name}</option>--%>
-<%--                                        </c:when>--%>
-<%--                                        <c:otherwise>--%>
-<%--                                            <option value="${type.getName()}">${type.name}</option>--%>
-<%--                                        </c:otherwise>--%>
-<%--                                    </c:choose>--%>
-<%--                                </c:forEach>--%>
-<%--                            </select>--%>
+                        </div>
+                        <div class="form-group col-12">
+                            <label class="col-12 float-left">EducationDegree:</label>
+                            <select class="form-control" name="education_degrees_type">
+                                <c:forEach var="type" items="${educationDegrees}">
+                                    <c:choose>
+                                        <c:when test="${type.id == employee.educationDegree.id}">
+                                            <option value="${type.id}" selected> ${type.name}</option>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <option value="${type.id}">${type.name}</option>
+                                        </c:otherwise>
+                                    </c:choose>
+                                </c:forEach>
+                            </select>
+                        </div>
+                        <div class="form-group col-12">
+                            <label class="col-12 float-left">Position:</label>
+                            <select class="form-control" name="position_type">
+                                <c:forEach var="type" items="${positions}">
+                                    <c:choose>
+                                        <c:when test="${type.id == employee.position.id}">
+                                            <option value="${type.id}" selected> ${type.name}</option>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <option value="${type.id}">${type.name}</option>
+                                        </c:otherwise>
+                                    </c:choose>
+                                </c:forEach>
+                            </select>
                         </div>
                         <button type="submit" class="btn btn-primary float-right">Edit</button>
                     </form>

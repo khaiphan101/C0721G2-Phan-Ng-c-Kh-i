@@ -5,8 +5,6 @@
     <title>$Title$</title>
     <link rel="stylesheet" href="bootstrap413/css/bootstrap.min.css">
     <script type="text/javascript" src="bootstrap413/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css_home.css">
-    <script src="js_home.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -50,7 +48,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h2 class="text-center" style="padding-top: 60px">
-                <a href="/users?actionUser=create">Add new Employee</a>
+                <a href="/employee?actionUser=create">Add new Employee</a>
             </h2>
             <form method="">
                 <input type="text" name="findName" placeholder="Nhập tên">
@@ -118,7 +116,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <a href="/?action=delete&id=${employee.id}" role="button" class="btn-danger"> Confirm </a>
+                                    <a href="/employee?actionUser=delete&id=${employee.id}" role="button" class="btn-danger"> Confirm </a>
                                 </div>
                             </div>
                         </div>

@@ -30,9 +30,9 @@ salary varchar(45),
 email varchar(45),
 `address` varchar(45),
 primary key (id_employee),
-foreign key (id_position) references `position`(id_position),
-foreign key (id_education_degree) references education_degree(id_education_degree),
-foreign key (id_division) references division(id_division)
+foreign key (id_position) references `position`(id_position)  on delete cascade,
+foreign key (id_education_degree) references education_degree(id_education_degree)  on delete cascade,
+foreign key (id_division) references division(id_division)  on delete cascade
  );
  
  create table customer_type(
@@ -50,7 +50,7 @@ id_card varchar(45),
 email varchar(45),
 `address` varchar(45),
 primary key (id_customer),
-foreign key (id_customer_type) references customer_type(id_customer_type)
+foreign key (id_customer_type) references customer_type(id_customer_type)  on delete cascade
 );
 
  
@@ -76,8 +76,8 @@ id_rental_type int,
 id_service_type int,
 `status` varchar(45),
 primary key (id_service),
-foreign key (id_rental_type) references rental_type(id_rental_type),
-foreign key (id_service_type) references service_type(id_service_type)
+foreign key (id_rental_type) references rental_type(id_rental_type)  on delete cascade,
+foreign key (id_service_type) references service_type(id_service_type)  on delete cascade
 );
 
 create table contract(
@@ -90,9 +90,9 @@ contrac_end_day date,
 deposit int,
 toltal_cost int, 	
 primary key (id_contract),
-foreign key (id_employee) references employee(id_employee),
-foreign key (id_customer) references customer(id_customer),
-foreign key (id_service) references `service`(id_service)
+foreign key (id_employee) references employee(id_employee)  on delete cascade,
+foreign key (id_customer) references customer(id_customer)  on delete cascade,
+foreign key (id_service) references `service`(id_service)  on delete cascade
 );
 
 create table attach_service(
@@ -109,8 +109,8 @@ id_contract int,
 id_attach_service int,
 amount int,
 primary key (id_detail_contract),
-foreign key (id_contract) references contract(id_contract),
-foreign key (id_attach_service) references attach_service(id_attach_service)
+foreign key (id_contract) references contract(id_contract)  on delete cascade,
+foreign key (id_attach_service) references attach_service(id_attach_service)  on delete cascade
 );
 
 -- task 1: Thêm mới thông tin cho tất cả các bảng có trong CSDL để có thể thõa mãn các yêu cầu bên dưới.
@@ -493,17 +493,18 @@ drop procedure sp_2;
 -- task 25.	Tạo triggers có tên Tr_1 Xóa bản ghi trong bảng HopDong thì hiển thị 
 -- tổng số lượng bản ghi còn lại có trong bảng HopDong ra priceo diện console của database 
 
-DELIMITER //
-create trigger tr_1
-before delete
-on contract for each row
-begin
-	INSERT INTO contract(id_contract)
-    VALUES(OLD.id_contract);
-end //
-DELIMITER ;
-	set foreign_key_checks = 0;
-	delete from contract
-		where id_contract = 8;
-    set foreign_key_checks = 1;
-    drop trigger tr_1;
+-- DELIMITER //
+-- create trigger tr_1
+-- before delete
+-- on contract for each row
+-- begin
+-- 	INSERT INTO contract(id_contract)
+--     VALUES(OLD.id_contract);
+-- end //
+-- DELIMITER ;
+-- 	set foreign_key_checks = 0;
+-- 	delete from contract
+-- 		where id_contract = 8;
+--     set foreign_key_checks = 1;
+--     drop trigger tr_1;
+

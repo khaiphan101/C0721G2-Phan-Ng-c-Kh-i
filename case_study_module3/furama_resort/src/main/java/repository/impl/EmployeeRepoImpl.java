@@ -26,14 +26,21 @@ public class EmployeeRepoImpl implements EmployeeRepo {
     public EmployeeRepoImpl() {
     }
 
-    public void insertEmployee(Employee employee) throws SQLException {
-        System.out.println(INSERT_EMPLOYEES_SQL);
-        // try-with-resource statement will auto close the connection.
+    public void insert(Employee employee) throws SQLException {
         try (Connection connection = new ConnectionSQL().getConnection();
-                PreparedStatement preparedStatement = connection.prepareStatement(INSERT_EMPLOYEES_SQL)) {
-            ((PreparedStatement) preparedStatement).setString(1, employee.getName());
-//            preparedStatement.setString(2, employee.getEmail());
-//            preparedStatement.setString(3, employee.getCountry());
+            PreparedStatement preparedStatement = connection.prepareStatement("insert employee values " +
+                    " (?,?,?,?,?,?,?,?,?,?,?);")) {
+            preparedStatement.setInt(1, employee.getId());
+            preparedStatement.setString(2, employee.getName());
+            preparedStatement.setInt(3, employee.getPosition().getId());
+            preparedStatement.setInt(4, employee.getEducationDegree().getId());
+            preparedStatement.setInt(5, employee.getDivision().getId());
+            preparedStatement.setString(6, employee.getBirthDay());
+            preparedStatement.setString(7, employee.getIdCard());
+            preparedStatement.setDouble(8, employee.getSalary());
+            preparedStatement.setString(9, employee.getPhone());
+            preparedStatement.setString(10, employee.getEmail());
+            preparedStatement.setString(11, employee.getAddress());
             System.out.println(preparedStatement);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -79,7 +86,8 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 
              // Step 2:Create a statement using connection object
              PreparedStatement preparedStatement = connection.prepareStatement(
-                     "select id_employee, full_name, email, birthday, id_card, salary, number, address, name_position,  education_degree,  name_division " +
+                     "select id_employee, full_name, email, birthday, id_card, salary, number, address,e.id_position," +
+                             " name_position, ed.id_education_degree, education_degree,di.id_division, name_division " +
                      " from employee e join position d on e.id_position = d.id_position " +
                      " join education_degree ed on ed.id_education_degree = e.id_education_degree " +
                      " join division di on di.id_division = e.id_division;");) {
@@ -91,23 +99,26 @@ public class EmployeeRepoImpl implements EmployeeRepo {
             while (rs.next()) {
                 int id = rs.getInt("id_employee");
                 String name = rs.getString("full_name");
-                String email = rs.getString("email");
                 String birthday = rs.getString("birthday");
-                Double id_card = rs.getDouble("id_card");
-                String salary = rs.getString("salary");
+                String id_card = rs.getString("id_card");
+                Double salary = rs.getDouble("salary");
                 String number = rs.getString("number");
+                String email = rs.getString("email");
                 String address = rs.getString("address");
 
                 Position position = new Position();
+                position.setId(rs.getInt("id_position"));
                  position.setName(rs.getString("name_position"));
 
                 EducationDegree educationDegree = new EducationDegree();
+                educationDegree.setId(rs.getInt("id_education_degree"));
                 educationDegree.setName(rs.getString("education_degree"));
 
                 Division division = new Division();
+                division.setId(rs.getInt("id_division"));
                 division.setName(rs.getString("name_division"));
 
-                employees.add(new Employee(id, name, email, birthday, id_card, salary, number,address,
+                employees.add(new Employee(id, name, birthday, id_card, salary, number, email,address,
                         position, educationDegree, division));
             }
         } catch (SQLException e) {
@@ -121,7 +132,8 @@ public class EmployeeRepoImpl implements EmployeeRepo {
     public boolean deleteEmployee(int id) throws SQLException {
         boolean rowDeleted;
         try (Connection connection = new ConnectionSQL().getConnection();
-             PreparedStatement statement = connection.prepareStatement(DELETE_EMPLOYEES_SQL);) {
+             PreparedStatement statement = connection.prepareStatement(
+                     " delete from employee where id_employee = ?;");) {
             statement.setInt(1, id);
             rowDeleted = statement.executeUpdate() > 0;
         }finally {
@@ -134,10 +146,8 @@ public class EmployeeRepoImpl implements EmployeeRepo {
         boolean rowUpdated;
         try (Connection connection = new ConnectionSQL().getConnection();
              PreparedStatement statement = connection.prepareStatement(
-                     "update employee set name = ?,email= ?, birthday=?, " +
-                     "id_card=?,salary=?, number=?,address=?, position=?,educationDegree=?,division=? where id = ?;");) {
-//            Employee employee = new Employee(id, name, email, birthday, id_card, salary, number,address,
-//                    position, educationDegree, division);
+                     "update employee set full_name = ?,email= ?, birthday=?, " +
+                     "id_card=?,salary=?, number=?,address=?, id_position=?,id_education_degree=?,id_division=? where id_employee = ?;");) {
             statement.setString(1, employee.getName());
             statement.setString(2, employee.getEmail());
             statement.setString(3, employee.getBirthDay());

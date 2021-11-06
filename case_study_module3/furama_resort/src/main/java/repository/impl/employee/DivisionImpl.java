@@ -26,7 +26,7 @@ public class DivisionImpl {
             // Step 4: Process the ResultSet object.
             while (rs.next()) {
                 Division division = new Division();
-                division.setName(rs.getString("id_division"));
+                division.setId(rs.getInt("id_division"));
                 division.setName(rs.getString("name_division"));
                 divisions.add(division);
             }

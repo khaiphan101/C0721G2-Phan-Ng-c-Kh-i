@@ -5,8 +5,6 @@
     <title>$Title$</title>
     <link rel="stylesheet" href="bootstrap413/css/bootstrap.min.css">
     <script type="text/javascript" src="bootstrap413/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css_home.css">
-    <script src="js_home.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>

@@ -12,8 +12,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     private EmployeeRepo employeeRepo = new EmployeeRepoImpl();
     @Override
-    public void insertEmployee(Employee employee) throws SQLException {
-
+    public void insert(Employee employee) throws SQLException {
+        employeeRepo.insert(employee);
     }
 
 //    @Override

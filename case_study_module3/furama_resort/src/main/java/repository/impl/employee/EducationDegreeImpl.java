@@ -22,7 +22,7 @@ public class EducationDegreeImpl {
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 EducationDegree educationDegree = new EducationDegree();
-                educationDegree.setName(rs.getString("id_education_degree"));
+                educationDegree.setId(rs.getInt("id_education_degree"));
                 educationDegree.setName(rs.getString("education_degree"));
                 educationDegrees.add(educationDegree);
             }

@@ -23,7 +23,7 @@ public class PositionImpl {
 
             while (rs.next()) {
                 Position position = new Position();
-                position.setName(rs.getString("id_position"));
+                position.setId(rs.getInt("id_position"));
                 position.setName(rs.getString("name_position"));
                 positions.add(position);
             }
