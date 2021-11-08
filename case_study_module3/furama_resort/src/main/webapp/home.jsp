@@ -38,58 +38,59 @@
       </form>
     </div>
   </nav>
+<div style="background-image: url('https://icdn.dantri.com.vn/thumb_w/660/2021/06/15/1-1623720815168.jpg')">
+  <div class="sidebar row pt-5 h-100">
+    <div class="wrapper pt-2 col-3 pl-4 bg-secondary text-light">
+      <!-- Sidebar -->
+      <nav id="sidebar bg-secondary text-light">
+        <div class="sidebar-header">
+          <h3>Khải phan</h3>
+        </div>
 
-<div class="sidebar row pt-5 h-100">
-  <div class="wrapper pt-2 col-3 pl-4 bg-dark text-light">
-    <!-- Sidebar -->
-    <nav id="sidebar bg-dark text-light">
-      <div class="sidebar-header">
-        <h3>Khải phan</h3>
-      </div>
-
-      <ul class="list-unstyled components">
-        <p>Dummy Heading</p>
-        <li class="active">
-          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-          <ul class="collapse list-unstyled" id="homeSubmenu">
-            <li>
-              <a href="#">Home 1</a>
-            </li>
-            <li>
-              <a href="#">Home 2</a>
-            </li>
-            <li>
-              <a href="#">Home 3</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-          <ul class="collapse list-unstyled" id="pageSubmenu">
-            <li>
-              <a href="#">Page 1</a>
-            </li>
-            <li>
-              <a href="#">Page 2</a>
-            </li>
-            <li>
-              <a href="#">Page 3</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Portfolio</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
+        <ul class="list-unstyled components">
+          <li class="active">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li>
+                <a href="#">Home 1</a>
+              </li>
+              <li>
+                <a href="#">Home 2</a>
+              </li>
+              <li>
+                <a href="#">Home 3</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+              <li>
+                <a href="#">Page 1</a>
+              </li>
+              <li>
+                <a href="#">Page 2</a>
+              </li>
+              <li>
+                <a href="#">Page 3</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Portfolio</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </div>
+
 
   <footer class="text-center text-white fixed-bottom bg-dark">
     <div class="text-center p-3">

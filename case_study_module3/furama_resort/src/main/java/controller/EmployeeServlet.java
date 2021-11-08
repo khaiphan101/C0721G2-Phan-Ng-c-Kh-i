@@ -206,11 +206,14 @@ public class EmployeeServlet extends HttpServlet {
             showNewForm(request, response);
 
         }
-        employeeService.insert(employee);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/create.jsp");
-        request.setAttribute("message", "New employee was created");
-        dispatcher.forward(request, response);
+        else{
+            employeeService.insert(employee);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("employee/create.jsp");
+            request.setAttribute("message", "New employee was created");
+            dispatcher.forward(request, response);
+        }
+
     }
 //
 //    private void updateUser(HttpServletRequest request, HttpServletResponse response)

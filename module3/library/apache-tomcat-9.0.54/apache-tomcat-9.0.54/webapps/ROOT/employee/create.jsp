@@ -68,22 +68,22 @@
                         <div class="form-group col-12">
                             <label class="col-12 float-left " for="exampleInputId">Id:</label>
                             <input type="text" name="id" class="form-control col-12 float-left "
-                                   id="exampleInputId" placeholder="Enter id">
+                                   id="exampleInputId" placeholder="Enter id" value="${employee.id}">
                         </div>
                         <div class="form-group col-12 pt-2">
                             <label class="col-12 float-left" for="exampleInputName">name:</label>
                             <input type="text" name="name" class="form-control col-12 float-left "
-                                   id="exampleInputName" placeholder="Enter Name">
+                                   id="exampleInputName" placeholder="Enter Name" value="${employee.name}">
                         </div>
                         <div class="form-group col-12">
                             <label class="col-12 float-left" for="exampleInputBirthday">Birthday:</label>
-                            <input type="text" name="birthDay" class="form-control col-12 float-left "
-                                   id="exampleInputBirthday" placeholder="Enter birthday">
+                            <input type="date" name="birthDay" class="form-control col-12 float-left "
+                                   id="exampleInputBirthday" placeholder="Enter birthday" value="${employee.birthDay}">
                         </div>
                         <div class="form-group col-12">
                             <label class="col-12 float-left" for="exampleInputIdCard">Id card:</label>
                             <input type="text" name="idCard" class="form-control col-12 float-left "
-                                   id="exampleInputIdCard" placeholder="Enter id card">
+                                   id="exampleInputIdCard" placeholder="Enter id card" value="${employee.idCard}">
                             <c:if test='${idCardError != null}'>
                                 <p class="float-lèt text-danger">${idCardError}</p>
                             </c:if>
@@ -91,18 +91,18 @@
                         <div class="form-group col-12">
                             <label class="col-12 float-left" for="exampleInputSalary">salary:</label>
                             <input type="text" name="salary" class="form-control col-12 float-left "
-                                   id="exampleInputSalary" placeholder="Enter salary">
+                                   id="exampleInputSalary" placeholder="Enter salary" value="${employee.salary}">
                         </div>
                         <div class="form-group col-12">
                             <label class="col-12 float-left" for="exampleInputPhone">Phone:</label>
                             <input type="text" name="phone" class="form-control col-12 float-left"
-                                   id="exampleInputPhone" placeholder="Enter Phone">
+                                   id="exampleInputPhone" placeholder="Enter Phone" value="${employee.phone}">
                         </div>
                         <div class="form-group col-12">
                             <label class="col-12 float-left" for="exampleInputEmail">Email:</label>
 
                             <input type="text" name="email" class="form-control col-12 float-left"
-                                   id="exampleInputEmail" placeholder="Enter Email">
+                                   id="exampleInputEmail" placeholder="Enter Email" value="${employee.email}">
                             <c:if test='${emailError != null}'>
                                 <p class="float-lèt text-danger">${emailError}</p>
                             </c:if>
@@ -110,7 +110,7 @@
                         <div class="form-group col-12">
                             <label class="col-12 float-left" for="exampleInputAddress">Address:</label>
                             <input type="text" name="address" class="form-control col-12 float-left"
-                                   id="exampleInputAddress" placeholder="Enter Address">
+                                   id="exampleInputAddress" placeholder="Enter Address" value="${employee.address}">
                         </div>
 
                         <div class="form-group col-12">

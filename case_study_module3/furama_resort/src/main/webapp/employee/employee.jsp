@@ -150,7 +150,7 @@
     });
 </script>
 
-<footer class="text-center text-white bg-dark">
+<footer class="text-center text-white fixed-bottom bg-dark">
     <div class="text-center p-3">
         C0721G2:
         <a class="text-white" href="#">Khaiphanngoc@gmail.com</a>
