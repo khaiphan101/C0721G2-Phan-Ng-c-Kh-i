@@ -16,7 +16,7 @@ public interface EmployeeRepo {
 
     public boolean update(Employee employee) throws SQLException;
 
-    public List<Employee> searchEmployee(String country) throws SQLException;
+    public List<Employee> searchEmployee(String name, String id, String email) throws SQLException;
 
     public Employee findById(int id);
 }

@@ -9,6 +9,7 @@ import repository.impl.employee.EducationDegreeImpl;
 import repository.impl.employee.PositionImpl;
 import service.EmployeeService;
 import service.impl.EmployeeServiceImpl;
+import util.Validate;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -43,8 +44,8 @@ public class EmployeeServlet extends HttpServlet {
                 case "update":
                     update(request, response);
                     break;
-//                case "search":
-//                    showSearchForm(request, response);
+                case "search":
+                    showSearchForm(request, response);
             }
         } catch (SQLException ex) {
             throw new ServletException(ex);
@@ -69,6 +70,7 @@ public class EmployeeServlet extends HttpServlet {
                 case "delete":
                     delete(request, response);
                     break;
+
                 default:
                     showList(request, response);
                     break;
@@ -82,7 +84,7 @@ public class EmployeeServlet extends HttpServlet {
             throws SQLException, IOException, ServletException {
         List<Employee> listEmployee = employeeService.selectAllEmployees();
         request.setAttribute("listEmployee", listEmployee);
-        request.getRequestDispatcher("employee.jsp").forward(request, response);
+        request.getRequestDispatcher("employee/employee.jsp").forward(request, response);
     }
 
     private void showNewForm(HttpServletRequest request, HttpServletResponse response)
@@ -94,7 +96,7 @@ public class EmployeeServlet extends HttpServlet {
         request.setAttribute("divisions", divisions);
         request.setAttribute("educationDegrees", educationDegrees);
         request.setAttribute("positions", positions);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("create.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/create.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -111,7 +113,7 @@ public class EmployeeServlet extends HttpServlet {
         request.setAttribute("educationDegrees", educationDegrees);
         request.setAttribute("positions", positions);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("update.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/update.jsp");
 
         try {
             dispatcher.forward(request, response);
@@ -147,12 +149,37 @@ public class EmployeeServlet extends HttpServlet {
 
     private void insert(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
+        Boolean flag = false;
+        String idError = "";
+        String phoneError = "";
+        String emailError = "";
+        String birthDayError = "";
+        String idCardError = "";
+        String salaryError = "";
+
         int id = Integer.parseInt(request.getParameter("id"));
+
         String name = request.getParameter("name");
         String email = request.getParameter("email");
+        if(Validate.checkRegex(email,Validate.EMAIL_REGEX)) {
+            flag = true;
+            emailError = "Wrong format, ex: hainam123@gmail.com";
+        }
         String birthDay = request.getParameter("birthDay");
+//        if(Validate.checkRegex(birthDay,Validate.DATE_REGEX)) {
+//            flag = true;
+//            birthDayError = "Wrong format, ex: YYYY-MM-DD";
+//        }
         String idCard = request.getParameter("idCard");
+        if(Validate.checkRegex(idCard,Validate.ID_CARD_REGEX)){
+            flag=true;
+            idCardError ="Wrong format, ex: XXXXXXXXX or XXXXXXXXXXXX";
+        }
         Double salary = Double.valueOf((request.getParameter("salary")));
+//        if(salary<=0) {
+//            flag = true;
+//            salaryError = "please enter a positive number";
+//        }
         String phone = request.getParameter("phone");
         String address = request.getParameter("address");
 
@@ -168,9 +195,20 @@ public class EmployeeServlet extends HttpServlet {
         Employee employee = new Employee(id, name, birthDay, idCard, salary, phone, email,address,
                 position, educationDegree, division);
 
+        if(flag) {
+            request.setAttribute("phoneError", phoneError);
+            request.setAttribute("emailError", emailError);
+            request.setAttribute("idError", idError);
+            request.setAttribute("birthDayError", birthDayError);
+            request.setAttribute("idCardError", idCardError);
+            request.setAttribute("salaryError", salaryError);
+            request.setAttribute("employee", employee);
+            showNewForm(request, response);
+
+        }
         employeeService.insert(employee);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("create.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/create.jsp");
         request.setAttribute("message", "New employee was created");
         dispatcher.forward(request, response);
     }
@@ -194,20 +232,21 @@ public class EmployeeServlet extends HttpServlet {
         employeeService.deleteEmployee(id);
         List<Employee> listEmployee = employeeService.selectAllEmployees();
         request.setAttribute("listEmployee", listEmployee);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("employee.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/employee.jsp");
         dispatcher.forward(request, response);
     }
-//
-//    private void showSearchForm(HttpServletRequest request, HttpServletResponse response)
-//            throws SQLException, IOException, ServletException {
-//        String country = request.getParameter("country");
-//        String messenger = country + " is not found";
-//        List<User> listSearchUser = userService.searchUser(country);
-//        if(listSearchUser.isEmpty()){
-//            request.setAttribute("messenger", messenger);
-//        }
-//        request.setAttribute("listSearchUser", listSearchUser);
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("user/search.jsp");
-//        dispatcher.forward(request, response);
-//    }
+    private void showSearchForm(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException, ServletException {
+        String name = request.getParameter("findName");
+        String id = request.getParameter("findId");
+        String email = request.getParameter("findEmail");
+        String messenger = name + " is not found";
+        List<Employee> listSearch = employeeService.searchEmployee(name, id, email);
+        if(listSearch.isEmpty()){
+            request.setAttribute("messenger", messenger);
+        }
+        request.setAttribute("listEmployee", listSearch);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("employee/employee.jsp");
+        dispatcher.forward(request, response);
+    }
 }

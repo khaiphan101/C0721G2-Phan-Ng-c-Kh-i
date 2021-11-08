@@ -37,8 +37,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public List<Employee> searchEmployee(String country) throws SQLException {
-        return employeeRepo.searchEmployee(country);
+    public List<Employee> searchEmployee(String name, String id, String email) throws SQLException {
+        return employeeRepo.searchEmployee(name, id, email);
     }
     public Employee findById(int id){
         return employeeRepo.findById(id);

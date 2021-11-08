@@ -50,11 +50,11 @@
             <h2 class="text-center" style="padding-top: 60px">
                 <a href="/employee?actionUser=create">Add new Employee</a>
             </h2>
-            <form method="">
-                <input type="text" name="findName" placeholder="Nhập tên">
-                <input type="text" name="findCustomerType" placeholder="Nhập CustomerType">
-                <input type="text" name="findPhone" placeholder="Nhập phone">
-                <button type="submit">TÌm kiếm</button>
+            <form action="/employee?actionUser=search" method="post">
+                <input type="text" name="findName" placeholder="Enter name">
+                <input type="text" name="findId" placeholder="Enter id">
+                <input type="text" name="findEmail" placeholder="Enter email">
+                <button type="submit">Search</button>
             </form>
             <table id="tableStudent" class="table table-striped table-bordered" style="width:100%">
                 <thead>
@@ -150,7 +150,7 @@
     });
 </script>
 
-<footer class="text-center text-white fixed-bottom bg-dark">
+<footer class="text-center text-white bg-dark">
     <div class="text-center p-3">
         C0721G2:
         <a class="text-white" href="#">Khaiphanngoc@gmail.com</a>

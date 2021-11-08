@@ -39,7 +39,7 @@
     </div>
   </nav>
 
-<div class="sidebar row pt-5 ">
+<div class="sidebar row pt-5 h-100">
   <div class="wrapper pt-2 col-3 pl-4 bg-dark text-light">
     <!-- Sidebar -->
     <nav id="sidebar bg-dark text-light">

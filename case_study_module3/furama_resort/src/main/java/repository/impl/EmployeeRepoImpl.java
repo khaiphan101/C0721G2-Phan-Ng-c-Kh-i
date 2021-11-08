@@ -206,15 +206,54 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 //        return employees;
 //    }
 
-    public List<Employee> searchEmployee(String country ) {
-//        List<Employee> employees = selectAllEmployees();
-        List<Employee> listSearchByCountry = new ArrayList<>();
-//        for (Employee employee: employees) {
-//            if (employee.getName().toLowerCase().contains(country)){
-//                listSearchByCountry.add(employee);
-//            }
-//        }
-        return listSearchByCountry;
+    public List<Employee> searchEmployee(String nameInput, String idInput, String emailInput ) {
+        List<Employee> employees = new ArrayList<>();
+
+        try (Connection connection = new ConnectionSQL().getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement
+                     ("select id_employee, full_name, email, birthday, id_card, salary, number, \n" +
+                     " address,e.id_position,name_position, ed.id_education_degree, education_degree,di.id_division, \n" +
+                     " name_division from employee e join position d on e.id_position = d.id_position \n" +
+                     " join education_degree ed on ed.id_education_degree = e.id_education_degree\n" +
+                     " join division di on di.id_division = e.id_division\n" +
+                     " where `full_name` like concat('%',?,'%') and id_employee = ? \n" +
+                     " and email like concat('%',?,'%');")) {
+            preparedStatement.setString(1, nameInput);
+            preparedStatement.setString(2, idInput);
+            preparedStatement.setString(3, emailInput);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while (rs.next()) {
+                int id = rs.getInt("id_employee");
+                String name = rs.getString("full_name");
+                String birthday = rs.getString("birthday");
+                String id_card = rs.getString("id_card");
+                Double salary = rs.getDouble("salary");
+                String number = rs.getString("number");
+                String email = rs.getString("email");
+                String address = rs.getString("address");
+
+                Position position = new Position();
+                position.setId(rs.getInt("id_position"));
+                position.setName(rs.getString("name_position"));
+
+                EducationDegree educationDegree = new EducationDegree();
+                educationDegree.setId(rs.getInt("id_education_degree"));
+                educationDegree.setName(rs.getString("education_degree"));
+
+                Division division = new Division();
+                division.setId(rs.getInt("id_division"));
+                division.setName(rs.getString("name_division"));
+
+                employees.add(new Employee(id, name, birthday, id_card, salary, number, email,address,
+                        position, educationDegree, division));
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }finally {
+            ConnectionSQL.close();
+        }
+        return employees;
     }
 
     public Employee findById(int id) {

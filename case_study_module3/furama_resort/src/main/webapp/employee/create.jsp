@@ -55,7 +55,7 @@
             </nav>
         </div>
 
-        <div class="content " style="padding-top: 60px">
+        <div class="content pb-4" style="padding-top: 60px; padding-bottom: 60px">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 text-center">
@@ -84,6 +84,9 @@
                             <label class="col-12 float-left" for="exampleInputIdCard">Id card:</label>
                             <input type="text" name="idCard" class="form-control col-12 float-left "
                                    id="exampleInputIdCard" placeholder="Enter id card">
+                            <c:if test='${idCardError != null}'>
+                                <p class="float-lèt text-danger">${idCardError}</p>
+                            </c:if>
                         </div>
                         <div class="form-group col-12">
                             <label class="col-12 float-left" for="exampleInputSalary">salary:</label>
@@ -97,8 +100,12 @@
                         </div>
                         <div class="form-group col-12">
                             <label class="col-12 float-left" for="exampleInputEmail">Email:</label>
+
                             <input type="text" name="email" class="form-control col-12 float-left"
                                    id="exampleInputEmail" placeholder="Enter Email">
+                            <c:if test='${emailError != null}'>
+                                <p class="float-lèt text-danger">${emailError}</p>
+                            </c:if>
                         </div>
                         <div class="form-group col-12">
                             <label class="col-12 float-left" for="exampleInputAddress">Address:</label>
