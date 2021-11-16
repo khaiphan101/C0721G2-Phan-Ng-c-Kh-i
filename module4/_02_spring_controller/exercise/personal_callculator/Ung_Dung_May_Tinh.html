@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" id="number1">
+    <select id="calculate">
+        <option value="1">+</option>
+        <option value="2">-</option>
+        <option value="3">x</option>
+        <option value="4">÷</option>
+    </select>
+    <input type="number" id="number2">
+    <br>
+    <button onclick="result()">result</button>
+
+    <br>
+    <span> Result </span>
+    <span id="result"></span>
+    <script>
+        function result() {
+            let number1 = parseFloat(document.getElementById("number1").value);
+            let number2 = parseFloat(document.getElementById("number2").value);
+            let result;
+            let choice= document.getElementById("calculate").value;
+            if(choice==1){
+                result = number1 + number2;
+            }
+            else if(choice == 2){
+                result = number1 - number2;
+            }
+            else if(choice == 3){
+                result = number1 * number2;
+            }
+            else if(choice == 4) {
+                if (number2 == 0){
+                    alert('Can not divided by 0');
+                }
+                else{
+                    result = number1 / number2;
+                }
+            }
+            document.getElementById("result").innerText= result ;
+        }
+
+    </script>
+</body>
+</html>
