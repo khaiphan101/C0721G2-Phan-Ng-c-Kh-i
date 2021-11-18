@@ -12,41 +12,36 @@ import org.springframework.web.servlet.ModelAndView;
 public class MedicalFormController {
 
     @GetMapping(value = "")
-    public ModelAndView getConfigPage(Model model){
+    public ModelAndView getInfo(){
         ModelAndView modelAndView = new ModelAndView("index");
 
-//        String[] languageList = new String[]{"English","Vietnamese","Japanese","Chinese"};
-////        model.addAttribute("languageList",languageList);
-//        modelAndView.addObject("languageList",languageList);
-//
-//        Integer[] pageSizeList = new Integer[]{5, 10, 15, 25, 50, 100};
-////        model.addAttribute("pageSizeList",pageSizeList);
-//        modelAndView.addObject("pageSizeList",pageSizeList);
+        String[] genderList = new String[]{"Nam","Nữ"};
+        modelAndView.addObject("genderList",genderList);
+
+        String[] countryList = new String[]{"Việt Nam","Mỹ"};
+        modelAndView.addObject("countryList",countryList);
+
+        String[] travelInfoList = new String[]{"Tau bay","Tau thuyen", "o to", "khac(ghi ro)"};
+        modelAndView.addObject("travelInfoList",travelInfoList);
+
+        String[] provinceList = new String[]{"Quang Nam","Quang Tri", "Da Nang", "Ha Noi"};
+        modelAndView.addObject("provinceList",provinceList);
+
+        String[] districList = new String[]{"Cam Le","Hoa Vang", "Hoa Khanh"};
+        modelAndView.addObject("districList",districList);
+
+        String[] wardList = new String[]{"Hoa Phat","Hoa Tho Dong", "Khue Trung"};
+        modelAndView.addObject("wardList",wardList);
 
         modelAndView.addObject("medical_form",new MedicalDeclaration());
        return modelAndView;
     }
 
-//    @PostMapping(value = "/save")
-//    public String saveConfig(@ModelAttribute("mail")Mail mail, Model model){
-//        model.addAttribute("mail",mail);
-//        return "show";
-//    }
-//
-//    @PostMapping(value = "/edit")
-//    public ModelAndView edit(@ModelAttribute("mail")Mail mailBox, Model model){
-//        ModelAndView modelAndView = new ModelAndView("edit");
-//
-//        String[] languageList = new String[]{"English","Vietnamese","Japanese","Chinese"};
-////        model.addAttribute("languageList",languageList);
-//        modelAndView.addObject("languageList",languageList);
-//
-//        Integer[] pageSizeList = new Integer[]{5, 10, 15, 25, 50, 100};
-////        model.addAttribute("pageSizeList",pageSizeList);
-//        modelAndView.addObject("pageSizeList",pageSizeList);
-//        modelAndView.addObject("mail",mailBox);
-//        return modelAndView;
-//    }
+    @PostMapping(value = "/submit")
+    public String saveInfo(@ModelAttribute("medical_form")MedicalDeclaration medicalDeclaration, Model model){
+        model.addAttribute("medical_form",medicalDeclaration);
+        return "show";
+    }
 
 
 }

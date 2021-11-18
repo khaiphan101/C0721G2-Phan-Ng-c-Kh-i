@@ -5,29 +5,39 @@ public class MedicalDeclaration {
     String birthday;
     String gender;
     String country;
-    String idCard;
-    String transferBy;
-    String vehicleNumber;
-    String seatNumber;
-    String departAt;
-    String arriveBy;
-    String whereToGoIn14Days;
+    String travelInfo;
+    String departDay;
+    String endDay;
     String province;
     String district;
     String ward;
-    String houseNumber;
-    String phone;
-    String email;
     Boolean fever;
     Boolean cough;
-    Boolean difficultyOfBreathing;
-    Boolean soreThroat;
     Boolean vomiting;
-    Boolean diarrhea ;
-    Boolean skinHaemorrhage;
-    Boolean rash;
-    Boolean visitAny;
-    Boolean careFor;
+    Boolean diarrhea;
+    Boolean closeContact;
+
+    public MedicalDeclaration(String name, String birthday, String gender, String country, String travelInfo, String departDay, String endDay, String province, String district,
+                              String ward, Boolean fever, Boolean cough, Boolean vomiting, Boolean diarrhea, Boolean closeContact) {
+        this.name = name;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.country = country;
+        this.travelInfo = travelInfo;
+        this.departDay = departDay;
+        this.endDay = endDay;
+        this.province = province;
+        this.district = district;
+        this.ward = ward;
+        this.fever = fever;
+        this.cough = cough;
+        this.vomiting = vomiting;
+        this.diarrhea = diarrhea;
+        this.closeContact = closeContact;
+    }
+
+    public MedicalDeclaration() {
+    }
 
     public String getName() {
         return name;
@@ -61,60 +71,28 @@ public class MedicalDeclaration {
         this.country = country;
     }
 
-    public String getIdCard() {
-        return idCard;
+    public String getTravelInfo() {
+        return travelInfo;
     }
 
-    public void setIdCard(String idCard) {
-        this.idCard = idCard;
+    public void setTravelInfo(String travelInfo) {
+        this.travelInfo = travelInfo;
     }
 
-    public String getTransferBy() {
-        return transferBy;
+    public String getDepartDay() {
+        return departDay;
     }
 
-    public void setTransferBy(String transferBy) {
-        this.transferBy = transferBy;
+    public void setDepartDay(String departDay) {
+        this.departDay = departDay;
     }
 
-    public String getVehicleNumber() {
-        return vehicleNumber;
+    public String getEndDay() {
+        return endDay;
     }
 
-    public void setVehicleNumber(String vehicleNumber) {
-        this.vehicleNumber = vehicleNumber;
-    }
-
-    public String getSeatNumber() {
-        return seatNumber;
-    }
-
-    public void setSeatNumber(String seatNumber) {
-        this.seatNumber = seatNumber;
-    }
-
-    public String getDepartAt() {
-        return departAt;
-    }
-
-    public void setDepartAt(String departAt) {
-        this.departAt = departAt;
-    }
-
-    public String getArriveBy() {
-        return arriveBy;
-    }
-
-    public void setArriveBy(String arriveBy) {
-        this.arriveBy = arriveBy;
-    }
-
-    public String getWhereToGoIn14Days() {
-        return whereToGoIn14Days;
-    }
-
-    public void setWhereToGoIn14Days(String whereToGoIn14Days) {
-        this.whereToGoIn14Days = whereToGoIn14Days;
+    public void setEndDay(String endDay) {
+        this.endDay = endDay;
     }
 
     public String getProvince() {
@@ -141,30 +119,6 @@ public class MedicalDeclaration {
         this.ward = ward;
     }
 
-    public String getHouseNumber() {
-        return houseNumber;
-    }
-
-    public void setHouseNumber(String houseNumber) {
-        this.houseNumber = houseNumber;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public Boolean getFever() {
         return fever;
     }
@@ -179,22 +133,6 @@ public class MedicalDeclaration {
 
     public void setCough(Boolean cough) {
         this.cough = cough;
-    }
-
-    public Boolean getDifficultyOfBreathing() {
-        return difficultyOfBreathing;
-    }
-
-    public void setDifficultyOfBreathing(Boolean difficultyOfBreathing) {
-        this.difficultyOfBreathing = difficultyOfBreathing;
-    }
-
-    public Boolean getSoreThroat() {
-        return soreThroat;
-    }
-
-    public void setSoreThroat(Boolean soreThroat) {
-        this.soreThroat = soreThroat;
     }
 
     public Boolean getVomiting() {
@@ -213,35 +151,11 @@ public class MedicalDeclaration {
         this.diarrhea = diarrhea;
     }
 
-    public Boolean getSkinHaemorrhage() {
-        return skinHaemorrhage;
+    public Boolean getCloseContact() {
+        return closeContact;
     }
 
-    public void setSkinHaemorrhage(Boolean skinHaemorrhage) {
-        this.skinHaemorrhage = skinHaemorrhage;
-    }
-
-    public Boolean getRash() {
-        return rash;
-    }
-
-    public void setRash(Boolean rash) {
-        this.rash = rash;
-    }
-
-    public Boolean getVisitAny() {
-        return visitAny;
-    }
-
-    public void setVisitAny(Boolean visitAny) {
-        this.visitAny = visitAny;
-    }
-
-    public Boolean getCareFor() {
-        return careFor;
-    }
-
-    public void setCareFor(Boolean careFor) {
-        this.careFor = careFor;
+    public void setCloseContact(Boolean closeContact) {
+        this.closeContact = closeContact;
     }
 }
