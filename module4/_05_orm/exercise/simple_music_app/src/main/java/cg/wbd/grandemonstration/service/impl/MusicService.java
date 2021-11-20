@@ -6,6 +6,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.springframework.stereotype.Service;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import java.util.List;
 
 @Service
@@ -27,7 +28,7 @@ public class MusicService implements IMusicService {
 
     @Override
     public Music findById(Integer id) {
-        return null;
+        return entityManager.find(Music.class,id);
     }
 
     @Override
@@ -37,11 +38,18 @@ public class MusicService implements IMusicService {
 
     @Override
     public void delete(Integer id) {
-
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+        entityManager.remove(findById(id));
+        entityTransaction.commit();
     }
 
     @Override
     public void addMusic(Music music) {
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+        entityManager.persist(music);
+        entityTransaction.commit();
     }
 
 

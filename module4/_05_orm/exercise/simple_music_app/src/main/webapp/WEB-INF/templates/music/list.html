@@ -7,6 +7,9 @@
 </head>
 <body>
 <a th:href="@{/create}">Add music</a>
+<p th:if="${success}" >
+    <span th:text="${success}" style="color: green"></span>
+</p>
 <table>
   <caption>Music List</caption>
   <thead>
@@ -16,6 +19,7 @@
     <th>Singer</th>
     <th>Type</th>
     <th>url</th>
+    <th>Edit</th>
     <th>Delete</th>
   </tr>
   </thead>
@@ -31,7 +35,8 @@
     <td>
       <a th:href="@{{url}(url=${m.getUrl()})}" >go to web site</a>
     </td>
-    <td><a th:href="@{delete/{id}(id=${m.id})}">delete</a></td>
+    <td><a th:href="@{update/{m}(m=${m})}">Edit</a></td>
+    <td><a th:href="@{delete/{id}(id=${m.id})}">Delete</a></td>
   </tr>
   </tbody>
 </table>

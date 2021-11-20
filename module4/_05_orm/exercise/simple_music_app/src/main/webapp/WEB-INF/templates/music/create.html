@@ -6,9 +6,7 @@
   <title>Title</title>
 </head>
 <body>
-<span th:if="${message}">
-    <span th:text="${message}"></span>
-</span>
+
 <div id="form">
   <form th:action="@{/save}" th:object="${musicSong}"
         method="POST" novalidate="novalidate">
