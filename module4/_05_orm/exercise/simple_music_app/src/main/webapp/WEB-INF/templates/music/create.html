@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<span th:if="${message}">
+    <span th:text="${message}"></span>
+</span>
+<div id="form">
+  <form th:action="@{/save}" th:object="${musicSong}"
+        method="POST" novalidate="novalidate">
+    <div>
+      <label>Id</label>
+      <input type="text" th:field="*{id}"/>
+    </div>
+    <div>
+      <label>Name</label>
+      <input type="text" th:field="*{name}"/>
+    </div>
+    <div>
+      <label>Singer</label>
+      <input type="email" th:field="*{singer}"/>
+    </div>
+    <div>
+      <label>Type</label>
+      <input type="text" th:field="*{type}"/>
+    </div>
+    <div>
+      <label>Url</label>
+      <input type="text" th:field="*{url}"/>
+    </div>
+    <input type="submit" value="save"/>
+  </form>
+</div>
+<a th:href="@{/}">Back to list</a>
+</body>
+</html>
