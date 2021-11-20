@@ -22,7 +22,6 @@ public class MusicService implements IMusicService {
     @Override
     public List<Music> findAll() {
         List<Music> musicList = entityManager.createQuery("select s from Music s", Music.class).getResultList();
-
         return musicList;
     }
 
