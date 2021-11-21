@@ -4,11 +4,11 @@ package cg.wbd.grandemonstration.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "customers")
+//@Table(name = "customers")
 public class Customer {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String firstName;
     private String lastName;

@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 @Controller
 public class CustomerController {
 
@@ -29,6 +31,14 @@ public class CustomerController {
         ModelAndView modelAndView = new ModelAndView("/customer/create");
         modelAndView.addObject("customer", new Customer());
         modelAndView.addObject("message", "New customer created successfully");
+        return modelAndView;
+    }
+
+    @GetMapping("/customers")
+    public ModelAndView listCustomers() {
+        List<Customer> customers = customerService.findAll();
+        ModelAndView modelAndView = new ModelAndView("/customer/list");
+        modelAndView.addObject("customers", customers);
         return modelAndView;
     }
 }

@@ -77,7 +77,7 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        em.setPackagesToScan("com.codegym.cms.model.Customer");
+        em.setPackagesToScan("cg.wbd.grandemonstration.model");
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
@@ -109,13 +109,13 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
         return properties;
     }
 
-    @Bean
-    public ICustomerRepository customerRepository() {
-        return new CustomerRepository();
-    }
 
-    @Bean
-    public ICustomerService customerService() {
-        return new CustomerService();
-    }
+//    public ICustomerRepository customerRepository() {
+//        return new CustomerRepository();
+//    }
+//
+//    @Bean
+//    public ICustomerService customerService() {
+//        return new CustomerService();
+//    }
 }
