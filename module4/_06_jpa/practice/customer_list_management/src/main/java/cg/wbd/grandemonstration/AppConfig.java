@@ -1,9 +1,5 @@
 package cg.wbd.grandemonstration;
 
-import cg.wbd.grandemonstration.repository.ICustomerRepository;
-import cg.wbd.grandemonstration.repository.CustomerRepository;
-import cg.wbd.grandemonstration.service.CustomerService;
-import cg.wbd.grandemonstration.service.ICustomerService;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
@@ -17,6 +13,7 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
