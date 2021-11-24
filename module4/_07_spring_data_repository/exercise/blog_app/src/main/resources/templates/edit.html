@@ -17,15 +17,23 @@
     <table>
         <tr>
             <td>Title:</td>
-            <td><input type="text" th:field="*{name}"/></td>
+            <td><input type="text" th:field="*{topic}"/></td>
         </tr>
         <tr>
             <td>Content:</td>
-            <td><input type="text" th:field="*{content}"/></td>
+            <td><input type="text" th:field="*{author}"/></td>
         </tr>
         <tr>
-            <td>Note:</td>
-            <td><input type="text" th:field="*{note}"/></td>
+            <td>Ecommerce:</td>
+            <td>
+                <select th:field="*{eCommerce}">
+                    <th:block th:each="p : ${ecommerces}">
+                        <option th:value="${p.id}" th:text="${p.name}"></option>
+                    </th:block>
+                </select>
+
+
+            </td>
         </tr>
         <tr>
             <td></td>

@@ -14,16 +14,16 @@
     <input th:type="hidden" name="id" th:field="*{id}">
     <table>
         <tr>
-            <td>Title:</td>
-            <td th:text="${blog.name}"></td>
+            <td>topic:</td>
+            <td th:text="${blog.topic}"></td>
         </tr>
         <tr>
-            <td>Content:</td>
-            <td th:text="${blog.content}"></td>
+            <td>Author:</td>
+            <td th:text="${blog.author}"></td>
         </tr>
         <tr>
-            <td>Note:</td>
-            <td th:text="${blog.note}"></td>
+            <td>Ecommerce:</td>
+            <td th:text="${blog.eCommerce.getName()}"></td>
         </tr>
         <tr>
             <td></td>

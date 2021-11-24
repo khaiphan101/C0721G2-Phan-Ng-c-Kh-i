@@ -17,15 +17,20 @@
     <table>
         <tr>
             <td>Title of bolg:</td>
-            <td><input type="text" th:field="*{name}"/></td>
+            <td><input type="text" th:field="*{topic}"/></td>
         </tr>
         <tr>
             <td>Content:</td>
-            <td><input type="text" th:field="*{content}"/></td>
+            <td><input type="text" th:field="*{author}"/></td>
         </tr>
         <tr>
-            <td>Note:</td>
-            <td><input type="text" th:field="*{note}"/></td>
+            <td>ecomerce:</td>
+            <td><select name="ecomId" th:value="${ecomId}">
+                <option value="" disabled selected>choose something</option>
+                <th:block th:each="ecom : ${ecommerces}">
+                    <option th:value="${ecom.id}" th:text="${ecom.name}"></option>
+                </th:block>
+            </select></td>
         </tr>
         <tr>
             <td></td>

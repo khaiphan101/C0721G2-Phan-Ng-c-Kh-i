@@ -31,7 +31,8 @@
         <th>topic</th>
         <th>Author</th>
         <th>Ecommerce</th>
-<!--        <th>Delete</th>-->
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
     <th:block th:each="blog : ${blogs}">
         <tr>
@@ -39,8 +40,8 @@
             <td th:text="${blog.topic}"></td>
             <td th:text="${blog.author}"></td>
             <td th:text="${blog.eCommerce.name}"></td>
-<!--            <td><a th:href="@{/edit-blog/__${blog.id}__ }">Edit</a></td>-->
-<!--            <td><a th:href="@{/delete-blog/__${blog.id}__ }">Delete</a></td>-->
+            <td><a th:href="@{/edit-blog/__${blog.id}__ }">Edit</a></td>
+            <td><a th:href="@{/delete-blog/__${blog.id}__ }">Delete</a></td>
         </tr>
     </th:block>
 </table>

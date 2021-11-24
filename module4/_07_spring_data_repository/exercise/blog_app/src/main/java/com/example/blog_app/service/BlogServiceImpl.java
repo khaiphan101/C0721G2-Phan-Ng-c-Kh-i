@@ -2,15 +2,16 @@ package com.example.blog_app.service;
 
 import com.example.blog_app.model.Blog;
 import com.example.blog_app.repository.BlogRepository;
-import com.example.blog_app.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
-public class BlogServiceImpl implements BlogService {
+public class BlogServiceImpl implements BlogService{
     @Autowired
     BlogRepository blogRepository;
     @Override
@@ -19,9 +20,9 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public Blog findById(int id) {
+    public Optional<Blog> findById(int id) {
         //baso orelse ddeer không bị nullpointer( nếu ko null thì ko sao, nếu null sẽ bị)
-        return blogRepository.findById(id).orElse(null);
+        return blogRepository.findById(id);
     }
 
     @Override
@@ -37,5 +38,15 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public Page<Blog> findAllBlogByECommerceId(int id, Pageable pageable) {
         return blogRepository.findAllBlogByECommerceId(id, pageable);
+    }
+
+    @Override
+    public void remove(Integer id) {
+        blogRepository.deleteById(id);
+    }
+
+    @Override
+    public void save(Blog blog) {
+        blogRepository.save(blog);
     }
 }
