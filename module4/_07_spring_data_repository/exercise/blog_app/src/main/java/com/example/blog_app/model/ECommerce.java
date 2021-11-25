@@ -8,7 +8,7 @@ public class ECommerce {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-
+   
     @OneToMany(targetEntity = Blog.class, mappedBy = "eCommerce")
     List<Blog> blogs;
 

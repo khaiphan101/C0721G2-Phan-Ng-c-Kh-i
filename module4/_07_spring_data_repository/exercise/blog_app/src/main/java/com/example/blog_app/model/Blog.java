@@ -10,6 +10,7 @@ public class Blog {
     private int id;
     private String topic;
     private String author;
+
     @ManyToOne(targetEntity = ECommerce.class)
     private ECommerce eCommerce;
 

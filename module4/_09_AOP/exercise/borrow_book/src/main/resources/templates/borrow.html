@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrow Blog</title>
+</head>
+<body>
+<h1>Borrow Book</h1>
+<p>
+    <a href=""> Return to book list</a>
+</p>
+<!--<th:block th:if="${message}">-->
+<!--    <p th:text="${message}"></p>-->
+<!--</th:block>-->
+<p>book information</p>
+<form th:action="@{/borrow-book}" th:object="${book}"  method="post">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table>
+        <tr>
+            <td>name:</td>
+            <td th:text="${book.name}"></td>
+            <input type="hidden" th:field="*{name}" />
+        </tr>
+
+        <tr>
+            <td>author:</td>
+            <td th:text="${book.author}"></td>
+            <input type="hidden" th:field="*{author}"/>
+        </tr>
+
+        <tr>
+            <td>page:</td>
+            <td th:text="${book.page}"></td>
+            <input type="hidden" th:field="*{page}"/>
+        </tr>
+
+        <tr>
+            <td>amount:</td>
+            <td th:text="${book.amount}"></td>
+            <input type="hidden" th:field="*{amount}"/>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="borrow"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

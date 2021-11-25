@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/borrow-list">your borrow book list</a>
+<!--<form>-->
+<!--    <label>Search author</label>-->
+<!--    <input type="text" name="author">-->
+<!--    <input type="submit" value="search">-->
+<!--</form>-->
+
+<!--<form>-->
+<!--    <label>Filter by ecommerce</label>-->
+<!--    <select name="ecomId" th:value="${ecomId}">-->
+<!--        <option value="" disabled selected>choose something</option>-->
+<!--        <th:block th:each="ecom : ${ecommerces}">-->
+<!--            <option th:value="${ecom.id}" th:text="${ecom.name}"></option>-->
+<!--        </th:block>-->
+<!--    </select>-->
+
+<!--    <input type="submit" value="search">-->
+<!--</form>-->
+
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+
+<h1>Library</h1>
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>Author</th>
+        <th>Page</th>
+        <th>Amount</th>
+        <th>Borrow</th>
+    </tr>
+    <th:block th:each="book : ${bookList}">
+        <tr>
+            <td th:text="${book.id}"></td>
+            <td th:text="${book.name}"></td>
+            <td th:text="${book.author}"></td>
+            <td th:text="${book.page}"></td>
+            <td th:text="${book.amount}"></td>
+            <td><a th:href="@{/borrow-book/__${book.id}__ }">Borrow</a></td>
+<!--            <td><a th:href="@{/delete-blog/__${blog.id}__ }">Delete</a></td>-->
+        </tr>
+    </th:block>
+</table>
+
+<div>
+    <a th:href="@{'/'(page=${bookList.number - 1},author=${author})}" th:if="${bookList.hasPrevious()}">Previous</a>
+    <span th:text="${bookList.number+1}"></span>/<span th:text="${bookList.totalPages}"></span>
+    <a th:href="@{'/'(page=${bookList.number + 1},author=${author})}" th:if="${bookList.hasNext()}">Next</a>
+</div>
+
+</body>
+</html>
