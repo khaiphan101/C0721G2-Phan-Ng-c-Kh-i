@@ -18,6 +18,8 @@ public class ProductService implements IProductService {
 
     @Override
     public Optional<Product> findById(Long id) {
+        Optional<Product> prd = productRepository.findById(id);
+        System.out.println(prd);
         return productRepository.findById(id);
     }
 }

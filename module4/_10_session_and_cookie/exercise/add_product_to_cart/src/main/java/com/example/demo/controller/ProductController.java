@@ -22,7 +22,7 @@ public class ProductController {
 
     @GetMapping("")
     public ModelAndView showHome() {
-        ModelAndView modelAndView = new ModelAndView("/layout");
+        ModelAndView modelAndView = new ModelAndView("/home");
         return modelAndView;
     }
 
@@ -39,9 +39,9 @@ public class ProductController {
         if (!productOptional.isPresent()) {
             return "/error.404";
         }
-        if (action.equals("show")) {
+        if (action.equals("list")) {
             cart.addProduct(productOptional.get());
-            return "redirect:/shopping-cart";
+            return "redirect:/cart";
         }
         cart.addProduct(productOptional.get());
         return "redirect:/shop";
