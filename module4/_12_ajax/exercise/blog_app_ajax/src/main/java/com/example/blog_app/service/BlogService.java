@@ -23,4 +23,6 @@ public interface BlogService {
     void remove(Integer id);
 
     void save(Blog blog);
+
+    List<Blog> findAllBlogByAuthorContaining(String name);
 }

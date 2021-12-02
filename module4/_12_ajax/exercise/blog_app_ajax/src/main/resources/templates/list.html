@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <a href="/create-blog">Create new blog</a>
-<form>
+<form id="search">
     <label>Search author</label>
-    <input type="text" name="author">
-    <input type="submit" value="search">
+    <input type="text" id="author">
+    <button type="submit">Search</button>-->
 </form>
-
+<!--<form id="search">-->
+<!--    <label for="title">Search by Title</label>-->
+<!--    <input type="text" id="title" th:name="title" th:value="${title}">-->
+<!--    <button type="submit">Search</button>-->
+<!--</form>-->
 <form>
     <label>Filter by ecommerce</label>
     <select name="ecomId" th:value="${ecomId}">
@@ -25,7 +30,7 @@
 </form>
 
 <h1>Blog</h1>
-<table border="1">
+<table border="1" id="tableSearch">
     <tr>
         <th>id</th>
         <th>topic</th>
@@ -45,12 +50,28 @@
         </tr>
     </th:block>
 </table>
-
 <div>
-    <a th:href="@{'/'(page=${blogs.number - 1},author=${author})}" th:if="${blogs.hasPrevious()}">Previous</a>
+    <a th:href="@{'/'(page=${blogs.number - 1})}" th:if="${blogs.hasPrevious()}">Previous</a>
     <span th:text="${blogs.number+1}"></span>/<span th:text="${blogs.totalPages}"></span>
-    <a th:href="@{'/'(page=${blogs.number + 1},author=${author})}" th:if="${blogs.hasNext()}">Next</a>
+    <a th:href="@{'/'(page=${blogs.number + 1})}" th:if="${blogs.hasNext()}">Next</a>
 </div>
 
 </body>
+<script>
+    $(document).ready(function () {
+        $("#search").submit(function (event) {
+            let title = $("input").val();
+            $.ajax({
+                type: "GET",
+                url: "/search/" + title,
+                dataType: "HTMl",
+                success: function (data) {
+                    $("#tableSearch").html(data);
+                }
+            })
+            event.preventDefault();
+        });
+    });
+
+</script>
 </html>

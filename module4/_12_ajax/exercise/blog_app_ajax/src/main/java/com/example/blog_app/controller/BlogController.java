@@ -117,4 +117,13 @@ public class BlogController {
         return modelAndView;
     }
 
+    @GetMapping("/search/{name}")
+    public String searchBlog(@PathVariable("name") String name,
+                             Model model) {
+        List<Blog>  searchList =  blogService.findAllBlogByAuthorContaining(name);
+        System.out.println(searchList);
+        model.addAttribute("blogs", searchList);
+        model.addAttribute("name", name);
+        return "search";
+    }
 }

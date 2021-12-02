@@ -49,4 +49,9 @@ public class BlogServiceImpl implements BlogService{
     public void save(Blog blog) {
         blogRepository.save(blog);
     }
+
+    @Override
+    public List<Blog> findAllBlogByAuthorContaining(String name) {
+        return blogRepository.findAllBlogByAuthorContaining(name);
+    }
 }
