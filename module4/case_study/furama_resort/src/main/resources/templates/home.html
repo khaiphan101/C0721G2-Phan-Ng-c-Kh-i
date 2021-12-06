@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head th:replace="/layout::header">
+</head>
+<body>
+<div id="wrapper">
+    <div th:replace="/layout::nav-top">
+    </div>
+    <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+
+                <li>
+                    <a href="/" class="active-menu waves-effect waves-dark"><i class="fa fa-dashboard"></i> Home</a>
+                </li>
+                <li>
+                    <a href="/customer" class="waves-effect waves-dark"><i class="fa fa-users"></i> Customer</a>
+                </li>
+                <li>
+                    <a href="/employee" class=" waves-effect waves-dark"><i class="fa fa-users"></i> Employee</a>
+                </li>
+
+                <li>
+                    <a href="/service" class="waves-effect waves-dark"><i class="fa fa-bar-chart-o"></i> Service</a>
+                </li>
+                <li>
+                    <a href="/contract" class=" waves-effect waves-dark"><i class="fa fa-qrcode"></i> Contract</a>
+                </li>
+                <li>
+                    <a href="/" class="waves-effect waves-dark"><i class="fa fa-cog"></i> Setting</a>
+                </li>
+                <li>
+                    <a href="/" class="waves-effect waves-dark"><i class="fa fa-compress"></i> Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+</div>
+<div id="page-wrapper"
+     style="background-image: url('https://icdn.dantri.com.vn/thumb_w/660/2021/06/15/1-1623720815168.jpg');">
+</div>
+<th:block layout:replace="script">
+</th:block>
+</body>
+</html>
