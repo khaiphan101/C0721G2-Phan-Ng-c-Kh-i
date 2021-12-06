@@ -13,7 +13,7 @@ public class Customer {
     @ManyToOne(targetEntity = CustomerType.class)
     @NotNull(message = "Customer Type is not empty")
     private CustomerType customerType;
-
+    @NotNull
     private String name;
     private String birthDay;
     private Boolean gender;
@@ -21,6 +21,7 @@ public class Customer {
     private String phone;
     private String email;
     private String address;
+
     public Customer() {
     }
 

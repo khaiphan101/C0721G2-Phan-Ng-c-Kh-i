@@ -1,14 +1,15 @@
 package com.example.furama_resort.model.employee;
 
-import com.example.furama_resort.model.User;
+//import com.example.furama_resort.model.User;
+import com.example.furama_resort.model.customer.CustomerType;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int id;
 
     private String name;
@@ -18,18 +19,27 @@ public class Employee {
     private String phone;
     private String email;
     private String address;
-//    private Position position;
-//    private EducationDegree educationDegree;
-//    private Division division;
 
-    @OneToOne(targetEntity = User.class)
-    private User user;
+    @ManyToOne(targetEntity = Position.class)
+    @NotNull(message = "Customer Type is not empty")
+    private Position position;
 
-    public User getUser() {
-        return user;
-    }
+    @ManyToOne(targetEntity = EducationDegree.class)
+    @NotNull(message = "Customer Type is not empty")
+    private EducationDegree educationDegree;
 
-    public void setUser(User user) {
-        this.user = user;
-    }
+    @ManyToOne(targetEntity = Division.class)
+    @NotNull(message = "Customer Type is not empty")
+    private Division division;
+
+//    @OneToOne(targetEntity = User.class)
+//    private User user;
+//
+//    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 }

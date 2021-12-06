@@ -4,7 +4,7 @@ insert customer_type value
     (3,'Gold'),
     (4,'Sliver'),
     (5,'Member');
-insert customer(id,address,birth_day,email,gender,id_card,name,phone,customer_type_id) values
+insert customer(id,address,birthday,email,gender,id_card,name,phone,customer_type_id) values
 ('KH-0001',"Đà Nẵng",'1980-10-20','hongnguyen@gmail.com',b'1','0123456789','Nguyễn Thị Thanh Hồng','0123456789', 1),
 ('KH-0002',"Quảng Trị",'1980-10-20','haiyen@gmail.com',b'1','0123456789','Trịnh Thị Hải Yến','0123456789', 2),
 ('KH-0003',"Quảng Bình",'1980-10-20','vu@gmail.com',b'1','0123456789','Nguyễn Thanh Vũ','0123456789',3),
@@ -29,3 +29,4 @@ insert customer(id,address,birth_day,email,gender,id_card,name,phone,customer_ty
 ('KH-0022',"Vinh",'1980-10-20','loc@gmail.com',b'1','0123456789','Nguyễn Bảo Lộc','0123456789', 4),
 ('KH-0023',"Huế",'1980-10-20','diem@gmail.com',b'1','0123456789','Mai Thị Diễm','0123456789', 5),
 ('KH-0024',"Cà Mau",'1980-10-20','hoang@gmail.com',b'1','0123456789','Nguyễn Bảo Hoàng','0123456789', 1);
+

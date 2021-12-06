@@ -1,6 +1,14 @@
 package com.example.furama_resort.model.employee;
 
+import com.example.furama_resort.model.customer.Customer;
+
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
 public class Division {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
 
@@ -30,4 +38,11 @@ public class Division {
     public void setName(String name) {
         this.name = name;
     }
+
+    @OneToMany(targetEntity = Employee.class, mappedBy = "division")
+    List< Employee > employeeList;
+
+
+
+
 }

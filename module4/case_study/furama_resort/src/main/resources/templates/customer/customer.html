@@ -7,60 +7,33 @@
 <div id="wrapper">
     <div th:replace="/layout::nav-top">
     </div>
-    <nav class="navbar-default navbar-side" role="navigation" th:fragment="nav-menu-customer">
-        <div class="sidebar-collapse">
-            <ul class="nav" id="main-menu">
-
-                <li>
-                    <a href="/" class="waves-effect waves-dark"><i class="fa fa-dashboard"></i> Home</a>
-                </li>
-                <li>
-                    <a href="/customer" class="active-menu waves-effect waves-dark"><i class="fa fa-users"></i> Customer</a>
-                </li>
-                <li>
-                    <a href="/employee" class=" waves-effect waves-dark"><i class="fa fa-users"></i> Employee</a>
-                </li>
-
-                <li>
-                    <a href="/service" class="waves-effect waves-dark"><i class="fa fa-bar-chart-o"></i> Service</a>
-                </li>
-                <li>
-                    <a href="/contract" class=" waves-effect waves-dark"><i class="fa fa-qrcode"></i> Contract</a>
-                </li>
-                <li>
-                    <a href="/" class="waves-effect waves-dark"><i class="fa fa-cog"></i> Setting</a>
-                </li>
-                <li>
-                    <a href="/" class="waves-effect waves-dark"><i class="fa fa-compress"></i> Contact</a>
-                </li>
-            </ul>
-        </div>
+    <nav th:replace="/customer/layout::nav-menu-customer">
     </nav>
-
 </div>
+
 <div id="page-wrapper">
     <div class="header">
         <h1 class="page-header">
             Customer list
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Customer</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/customer">Customer</a></li>
             <li class="active">list</li>
         </ol>
-
     </div>
-
     <div id="page-inner">
-
         <div class="row">
             <div class="col-md-12">
                 <!-- Advanced Tables -->
                 <div class="card">
                     <div class="card-content">
                         <div class="table-responsive">
-                            <a th:href="@{/addEmployeeForm}" class="btn btn-primary">Add Customer</a>
+                            <a th:href="@{/customer/create}" class="btn btn-primary">Add Customer</a>
                             <br/><br/>
+                            <th:block th:if="${message}">
+                                <p th:text="${message}" class="text-success"></p>
+                            </th:block>
                             <table class="table table-striped table-bordered table-hover" id="dataTables">
                                 <thead>
                                 <tr>
@@ -92,7 +65,52 @@
                                         <a th:href="@{/showUpdateForm(id=${customer.id})}" class="btn btn-info">Update</a>
                                     </td>
                                     <td>
-                                        <a th:href="@{/customer/delete/__${customer.id}__ }" class="btn btn-danger ml-2">Delete</a>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" th:data-target= "'#target'+${customer.id}" >
+                                            delete
+                                        </button>
+                                        <!-- Modal Dialog -->
+                                        <div class="modal fade" th:id="'target'+${customer.id}" role="dialog" aria-labelledby="confirmDeleteLabel"
+                                             aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                                aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title">Delete Parmanently</h4>
+                                                    </div>
+                                                    <div class="modal-body" style="height: 75px">
+                                                        <p>Are you sure about this ?</p>
+                                                        <th:block th:text="${customer.name}">
+                                                        </th:block>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                        <button type="button" class="btn btn-danger" ><a th:href="@{customer/delete/{id}(id=${customer.id})}">delete</a>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+<!--                                        <div class="modal modal-content fade " style="background: red; height: 200px; width: 400px" th:id="'target'+${customer.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">-->
+<!--                                            <div class="modal-dialog modal-dialog-centered" style="background: #0D47A1" role="document">-->
+<!--                                                <div class="modal-content " style="background: green">-->
+<!--                                                    <div class="modal-header bg-primary">-->
+<!--                                                        <h5 class="modal-title" id="exampleModalLongTitle">Do you want to delete?</h5>-->
+<!--                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                                                            <span aria-hidden="true">&times;</span>-->
+<!--                                                        </button>-->
+<!--                                                    </div>-->
+<!--                                                    <div class="modal-body">-->
+<!--                                                        <th:block th:text="${customer.name}">-->
+<!--                                                        </th:block>-->
+<!--                                                    </div>-->
+<!--                                                    <div class="modal-footer">-->
+<!--                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--                                                        <button type="button" class="btn btn-secondary"><a th:href="@{customer/delete/{id}(id=${customer.id})}">delete</a></button>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
                                     </td>
                                 </tr>
                                 </tbody>
@@ -132,6 +150,7 @@
 <!-- DATA TABLE SCRIPTS -->
 <script src="assets/js/dataTables/jquery.dataTables.js"></script>
 <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
+
 <script>
     $(document).ready(function() {
         $("#dataTables").DataTable({
@@ -141,8 +160,6 @@
             }]
         });
     })
-
-
 </script>
 <!-- Custom Js -->
 <script src="assets/js/custom-scripts.js"></script>
