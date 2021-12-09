@@ -126,4 +126,6 @@ public class BlogController {
         model.addAttribute("name", name);
         return "search";
     }
+
+
 }

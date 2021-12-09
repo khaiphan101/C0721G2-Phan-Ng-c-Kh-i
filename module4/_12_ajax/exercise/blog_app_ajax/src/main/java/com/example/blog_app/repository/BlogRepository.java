@@ -16,4 +16,5 @@ public interface BlogRepository extends JpaRepository<Blog, Integer> {
     Page<Blog> findAllBlogByECommerceId(int id, Pageable pageable);
 
     List<Blog> findAllBlogByAuthorContaining(String name);
+
 }

@@ -53,8 +53,8 @@ public class CustomerController {
 
     @PostMapping("/create")
     public String create(@Valid @ModelAttribute("customer") Customer customer,
-                                 BindingResult bindingResult,
-                                 RedirectAttributes redirectAttributes) {
+                         BindingResult bindingResult,
+                         RedirectAttributes redirectAttributes) {
         if (bindingResult.hasErrors()) {
             return "customer/create";
         } else {
@@ -66,13 +66,13 @@ public class CustomerController {
 
     @GetMapping("/edit/{id}")
     public String showFormEdit(@PathVariable String id, Model model) {
-        Optional< Customer > customer = iCustomerService.findById(id);
-            model.addAttribute("customer", customer);
-            return "customer/edit";
+        Optional<Customer> customer = iCustomerService.findById(id);
+        model.addAttribute("customer", customer);
+        return "customer/edit";
     }
 
     @PostMapping("/edit")
-    public String editCustomer(@Valid @ModelAttribute("customer") Customer customer,BindingResult bindingResult,
+    public String editCustomer(@Valid @ModelAttribute("customer") Customer customer, BindingResult bindingResult,
                                Model model, RedirectAttributes redirectAttributes) {
         if (bindingResult.hasErrors()) {
             return "customer/edit";
@@ -83,23 +83,53 @@ public class CustomerController {
         }
     }
 
-    @PostMapping("/search")
-    //optional khong bi null pointerexception, thuong dung cho research
-    public String display(Optional<Integer> customerTypeId, Model model) {
-//        neu input author khong duoc nhap thi thuc thi if
-            if (customerTypeId.isPresent()) {
-                List<Customer> customers = iCustomerService.findAllByCustomerTypeId(customerTypeId.get());
-                model.addAttribute("customers", customers);
-                model.addAttribute("customerTypeId", customerTypeId.get());
-            }else {
-                model.addAttribute("customers", iCustomerService.findAll());
-            }
-        return "redirect:/customer";
-    }
-
-//    @GetMapping
-//    public String showList(Model model) {
-//        model.addAttribute("customers", iCustomerService.findAll());
-//        return "/customer/customer";
+    //
+//    @PostMapping("/search")
+//    //optional khong bi null pointerexception, thuong dung cho research
+//    public String display(Optional<Integer> customerTypeId, Model model) {
+////        neu input author khong duoc nhap thi thuc thi if
+//            if (customerTypeId.isPresent()) {
+//                List<Customer> customers = iCustomerService.findAllByCustomerTypeId(customerTypeId.get());
+//                model.addAttribute("customers", customers);
+//                model.addAttribute("customerTypeId", customerTypeId.get());
+//            }else {
+//                model.addAttribute("customers", iCustomerService.findAll());
+//            }
+//        return "customer/customer";
 //    }
+//    @GetMapping(value = "")
+//    public String getListPageCustomer(Model model, @RequestParam("keyword") Optional<String> keyword,
+//                                      @RequestParam("cusType") Optional<Integer> cusType) {
+//        if (!keyword.isPresent() || keyword.get().equals("")) {
+//            if (cusType.isPresent()) {
+//                model.addAttribute("customerList", iCustomerService.findAllByCustomerType(cusType.get()));
+//                model.addAttribute("cusType", cusType.get());
+//            } else {
+//                model.addAttribute("customerList", iCustomerService.findAll());
+//            }
+//        } else {
+//            model.addAttribute("customerList", iCustomerService.search(keyword.get()));
+//            model.addAttribute("keyword", keyword);
+//        }
+//        return "customer/list";
+//    }
+
+//    @GetMapping(value = "")
+//    public String getListPageCustomer(Model model,@PageableDefault(size = 5) Pageable pageable,
+//                                      @RequestParam ("keyword") Optional<String> keyword,
+//                                      @RequestParam ("cusType") Optional<Integer> cusType){
+//        if (!keyword.isPresent()||keyword.get().equals("")){
+//            if (cusType.isPresent()){
+//                model.addAttribute("customerList",iCustomerService.findAllByCustomerType(cusType.get(),pageable));
+//                model.addAttribute("cusType",cusType.get());
+//            }else {
+//                model.addAttribute("customerList",iCustomerService.findAll(pageable));
+//            }
+//        } else {
+//            model.addAttribute("customerList",iCustomerService.search(keyword.get(),pageable));
+//            model.addAttribute("keyword",keyword);
+//        }
+//        return "customer/list";
+//    }
+
 }

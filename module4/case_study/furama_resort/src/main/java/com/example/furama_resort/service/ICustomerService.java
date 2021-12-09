@@ -16,8 +16,22 @@ public interface ICustomerService {
     void deleteById(String id);
 
     void save(Customer customer);
+//
+//    List<Customer> findAllCustomerByCustomerTypeId(int id);
+//
+//    List<Customer> findAllCustomerByNameContaining(String name);
+//
+//
+//
+//    List<Customer> findAllByCustomerType(Integer integer);
 
-    List<Customer> findAllByCustomerTypeId(int id);
+//    List<Customer> search(String s);
+
+    Page<Customer> findAll(Pageable pageable);
+//    Page<Customer> findAllByNameContaining(String name, Pageable pageable);
+    Page<Customer> findAllByCustomerType(Integer id, Pageable pageable);
+    Page<Customer> search(String keyword,Pageable pageable);
+
 //    Page<Customer> findAllCustomer(Pageable pageable);
 
 }
