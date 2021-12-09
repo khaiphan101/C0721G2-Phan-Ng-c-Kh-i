@@ -33,6 +33,11 @@ public class CustomerService implements ICustomerService{
         customerRepository.save(customer);
     }
 
+    @Override
+    public List<Customer> findAllByCustomerTypeId(int id) {
+        return customerRepository.findAllByCustomerTypeId(id);
+    }
+
 //    @Override
 //    public Page<Customer> findAllCustomer(Pageable pageable) {
 //        return customerRepository.findAll(pageable);

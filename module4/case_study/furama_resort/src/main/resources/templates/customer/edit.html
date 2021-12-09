@@ -12,36 +12,29 @@
 </div>
 <div id="page-wrapper">
     <div class="header">
+
         <h1 class="page-header">
-            Create customer
+            Edit customer
         </h1>
         <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
             <li><a href="/customer">Customer</a></li>
-            <li class="active">Create</li>
+            <li class="active">Edit</li>
         </ol>
-
     </div>
 
     <div id="page-inner">
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
-<!--                    <div class="card-title">-->
-<!--                        -->
-
-<!--                    </div>-->
-
                     <div class="card-action">
                         <p>
                             <a href="/customer" class="btn btn-danger">Back</a>
                         </p>
-                        <div>
-                            Basic Form Elements
-                        </div>
+                        Basic Form Elements
                     </div>
                     <div class="card-content">
-                        <form class="m-auto" th:action="@{/customer/create}" th:object="${customer}" method="post">
+                        <form class="m-auto" th:action="@{/customer/edit}" th:object="${customer}" method="post">
                             <div class=" col s12">
                                 <label>Id:</label><span style="color: red" th:if="${#fields.hasErrors('id')}"
                                                         th:errors="*{id}"></span>
@@ -95,12 +88,13 @@
                             </div>
 
 
-                            <div class="col s2">
+                            <div class="col s12">
                                 <label>Day of birth:</label><span style="color: red"
                                                                   th:if="${#fields.hasErrors('birthDay')}"
                                                                   th:errors="*{birthDay}"></span>
                                 <input type="date" th:field="*{birthDay}"
                                        placeholder="mm/dd/yy">
+
                             </div>
 
                             <div class=" col s12">

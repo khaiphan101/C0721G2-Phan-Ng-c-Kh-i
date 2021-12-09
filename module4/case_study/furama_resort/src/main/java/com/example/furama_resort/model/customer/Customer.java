@@ -1,32 +1,54 @@
 package com.example.furama_resort.model.customer;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
 @Table(name="customer")
 public class Customer {
     @Id
+    @Pattern(regexp = "KH-[0-9]{4}", message = "Wrong format! Please input again!")
     private  String id;
 
     @ManyToOne(targetEntity = CustomerType.class)
     @NotNull(message = "Customer Type is not empty")
     private CustomerType customerType;
-    @NotNull
+    @NotBlank
     private String name;
-    private String birthDay;
-    private Boolean gender;
-    private String idCard;
-    private String phone;
-    private String email;
-    private String address;
 
+    @NotEmpty(message = "Birthday is not empty")
+    private String birthDay;
+
+    @NotNull(message = "Please select a gender")
+    private Boolean gender;
+
+    @Pattern(regexp = "[0-9]{9}|[09]{12}", message = "Wrong format! please input like the pattern!")
+    private String idCard;
+
+    @Pattern(regexp = "^(09|\\(84\\)+9)[01]\\d{7}$", message = "Wrong format! please input like the pattern!")
+    private String phone;
+
+    @Pattern(regexp = "^[a-zA-Z0-9]+@[a-z]+.[a-z]+$", message = "Wrong format! please input like the pattern!")
+    private String email;
+    @NotBlank(message = "Please input address")
+    private String address;
     public Customer() {
     }
 
-    public Customer(String id, CustomerType customerType, String name, String birthDay,
-                    Boolean gender, String idCard, String phone, String email, String address) {
+    public Customer(@Pattern(regexp = "KH-[0-9]{4}", message = "Wrong format! Please input again!") String id,
+                    @NotNull(message = "Customer Type is not empty") CustomerType customerType, @NotBlank String name,
+                    @NotEmpty(message = "Birthday is not empty") String birthDay, @NotNull(message = "Please select a gender") Boolean gender,
+                    @Pattern(regexp = "[0-9]{9}|[09]{12}", message = "Wrong format! please input like the pattern!") String idCard,
+                    @Pattern(regexp = "^(09|\\(84\\)+9)[01]\\d{7}$", message = "Wrong format! please input like the pattern!") String phone,
+                    @Pattern(regexp = "^[a-zA-Z0-9]+@[a-z]+.[a-z]+$",
+            message = "Wrong format! please input like the pattern!") String email, @NotBlank(message = "Please input address") String address) {
         this.id = id;
         this.customerType = customerType;
         this.name = name;
@@ -36,6 +58,14 @@ public class Customer {
         this.phone = phone;
         this.email = email;
         this.address = address;
+    }
+
+    public String getBirthDay() {
+        return birthDay;
+    }
+
+    public void setBirthDay(String birthDay) {
+        this.birthDay = birthDay;
     }
 
     public String getId() {
@@ -62,13 +92,7 @@ public class Customer {
         this.name = name;
     }
 
-    public String getBirthDay() {
-        return birthDay;
-    }
 
-    public void setBirthDay(String birthDay) {
-        this.birthDay = birthDay;
-    }
 
     public Boolean getGender() {
         return gender;
