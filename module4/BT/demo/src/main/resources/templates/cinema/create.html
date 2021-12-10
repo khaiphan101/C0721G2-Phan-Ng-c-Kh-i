@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/customer/layout::header-create">
+</head>
+<body>
+<div id="wrapper">
+    <div th:replace="/layout::nav-top">
+    </div>
+    <nav th:replace="/customer/layout::nav-menu-customer">
+    </nav>
+</div>
+<div id="page-wrapper">
+    <div class="header">
+        <h1 class="page-header">
+            Create show
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li><a href="/cinema">cinema</a></li>
+            <li class="active">Create</li>
+        </ol>
+
+    </div>
+
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-action">
+                        <p>
+                            <a href="/cinema" class="btn btn-danger">Back</a>
+                        </p>
+                        <div>
+                            Basic Form Elements
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <form class="m-auto" th:action="@{/cinema/create}" th:object="${showCinema}" method="post">
+                            <div class=" col s12">
+                                <label>Id:</label>
+                                <span style="color: red" th:if="${#fields.hasErrors('id')}"
+                                      th:errors="*{id}"></span>
+                                <input type="text" th:field="*{id}"
+                                       placeholder="Ex: CI-XXXX">
+                            </div>
+
+                            <div class="col s3">
+                                <label>movie:</label>
+                                <span style="color: red" th:if="${#fields.hasErrors('movie')}"
+                                      th:errors="*{movie}"></span>
+                                <select th:field="*{movie}" class="form-control">
+                                    <option value="">Choose movie</option>
+                                    <th:block th:each="movie : ${movieList}">
+                                        <option th:value="${movie.id}" th:text="${movie.name}"></option>
+
+                                    </th:block>
+                                </select>
+                            </div>
+
+                            <div class="col s3">
+                                <label>show date:</label>
+                                <span style="color: red" th:if="${#fields.hasErrors('showDate')}"
+                                      th:errors="*{showDate}"></span>
+                                <input type="date" th:field="*{showDate}"
+                                       placeholder="mm/dd/yy">
+                            </div>
+
+                            <div class=" col s12">
+                                <label>total ticket:</label>
+                                <span style="color: red" th:if="${#fields.hasErrors('totalTicket')}"
+                                      th:errors="*{totalTicket}"></span>
+                                <input type="text" th:field="*{totalTicket}"
+                                       placeholder=">0">
+                            </div>
+
+                            <!--                            <div class="col s12" >-->
+                            <!--                                <label>Gender</label>-->
+                            <!--                                <span>-->
+                            <!--                                <input th:value="1" class="with-gap" name="gender" type="radio" id="male"/>-->
+                            <!--                                <label for="male">Male</label>-->
+                            <!--                            </span>-->
+                            <!--                                <span>-->
+                            <!--                                <input th:value="0" class="with-gap" name="gender" type="radio" id="female"/>-->
+                            <!--                                <label for="female">Female</label>-->
+                            <!--                            </span>-->
+                            <!--                            </div>-->
+
+                            <!--                            <div class="col s2">-->
+                            <!--                                <label>Gender:</label>-->
+                            <!--                                <span style="color: red" th:if="${#fields.hasErrors('gender')}"-->
+                            <!--                                      th:errors="*{gender}"></span>-->
+                            <!--                                <select th:field="*{gender}" class="form-control" aria-label=".form-select-lg example">-->
+                            <!--                                    <option value="">Choose gender</option>-->
+                            <!--                                    <option th:value="1">Male</option>-->
+                            <!--                                    <option th:value="0">Female</option>-->
+                            <!--                                    <span style="color: red" th:if="${#fields.hasErrors('gender')}"-->
+                            <!--                                          th:errors="*{gender}"></span>-->
+                            <!--                                </select>-->
+                            <!--                            </div>-->
+
+
+                            <!--                            -->
+
+                            <!--                            <div class=" col s12">-->
+                            <!--                                <label>Id card:</label>-->
+                            <!--                                <span style="color: red" th:if="${#fields.hasErrors('idCard')}"-->
+                            <!--                                      th:errors="*{idCard}"></span>-->
+                            <!--                                <input type="text" th:field="*{idCard}"-->
+                            <!--                                       placeholder="123456789">-->
+                            <!--                            </div>-->
+
+                            <!--                            <div class=" col s12">-->
+                            <!--                                <label>phone:</label><span style="color: red" th:if="${#fields.hasErrors('phone')}"-->
+                            <!--                                                           th:errors="*{phone}"></span>-->
+                            <!--                                <input type="text" th:field="*{phone}"-->
+                            <!--                                       placeholder="Ex:090xxxxxxx">-->
+                            <!--                            </div>-->
+
+                            <!--                            <div class=" col s12">-->
+                            <!--                                <label>email:</label><span style="color: red" th:if="${#fields.hasErrors('email')}"-->
+                            <!--                                                           th:errors="*{email}"></span>-->
+                            <!--                                <input type="text" th:field="*{email}"-->
+                            <!--                                       placeholder="Ex:vana@gmail.com">-->
+
+                            <!--                            </div>-->
+
+                            <!--                            <div class=" col s12">-->
+                            <!--                                <label>address:</label><span style="color: red" th:if="${#fields.hasErrors('address')}"-->
+                            <!--                                                             th:errors="*{address}"></span>-->
+                            <!--                                <input type="text" th:field="*{address}"-->
+                            <!--                                       placeholder="da nang">-->
+
+                            <!--                            </div>-->
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary float-right">Save</button>
+                            </div>
+                        </form>
+
+                        <div class="clearBoth"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- /.col-lg-12 -->
+        <footer><p>All right reserved. Template by: <a href="https://webthemez.com/admin-template/">WebThemez.com</a>
+        </p></footer>
+    </div>
+    <!-- /. PAGE INNER  -->
+</div>
+<!-- /. PAGE WRAPPER  -->
+</div>
+<th:block>
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="/assets/js/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/materialize/js/materialize.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="/assets/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="/assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="/assets/js/morris/morris.js"></script>
+    <script src="/assets/js/easypiechart.js"></script>
+    <script src="/assets/js/easypiechart-data.js"></script>
+    <script src="/assets/js/Lightweight-Chart/jquery.chart.js"></script>
+    <!-- Custom Js -->
+    <script src="/assets/js/custom-scripts.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('ul.tabs').tabs();
+            $('.collapsible').collapsible({
+                    accordion: false, // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+                    onOpen: function (el) {
+                        alert('Open');
+                    }, // Callback for Collapsible open
+                    onClose: function (el) {
+                        alert('Closed');
+                    } // Callback for Collapsible close
+                }
+            );
+        });
+    </script>
+</th:block>
+</body>
+</html>
