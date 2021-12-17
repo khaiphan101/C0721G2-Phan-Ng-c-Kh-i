@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.example.exam.model;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;

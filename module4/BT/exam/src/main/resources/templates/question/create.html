@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout/layout::header-create">
+</head>
+<body>
+<div id="wrapper">
+    <div th:replace="/layout::nav-top">
+    </div>
+    <nav th:replace="/layout/layout::nav-menu-list">
+    </nav>
+</div>
+<div id="page-wrapper">
+    <div class="header">
+        <h1 class="page-header">
+            Create show
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li><a href="/question">question</a></li>
+            <li class="active">Create</li>
+        </ol>
+
+    </div>
+
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-action">
+                        <p>
+                            <a href="/question" class="btn btn-danger">Back</a>
+                        </p>
+                        <div>
+                            Basic Form Elements
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <form class="m-auto" th:action="@{/question/create}" th:object="${question}" method="post">
+
+<!--                            <div class=" col s12">-->
+<!--                                <label>STT:</label>-->
+<!--                                <span style="color: red" th:if="${#fields.hasErrors('id')}"-->
+<!--                                      th:errors="*{id}"></span>-->
+<!--                                <input type="text" th:field="*{id}"-->
+<!--                                       placeholder="Ex: CI-XXXX">-->
+<!--                            </div>-->
+
+                            <div class="col s3">
+                                <label>question type:</label>
+                                <span style="color: red" th:if="${#fields.hasErrors('questionType')}"
+                                      th:errors="*{questionType}"></span>
+                                <select th:field="*{questionType}" class="form-control">
+                                    <option value="">Choose question type</option>
+                                    <th:block th:each="questionType : ${questionTypeList}">
+                                        <option th:value="${questionType.id}" th:text="${questionType.name}"></option>
+
+                                    </th:block>
+                                </select>
+                            </div>
+
+                            <div class="col s3">
+                                <label>Date create:</label>
+                                <span style="color: red" th:if="${#fields.hasErrors('dateCreate')}"
+                                      th:errors="*{dateCreate}"></span>
+                                <input type="date" th:field="*{dateCreate}"
+                                       placeholder="mm/dd/yy">
+                            </div>
+                            <div class=" col s12">
+                                <label>Title:</label>
+                                <span style="color: red" th:if="${#fields.hasErrors('title')}"
+                                      th:errors="*{title}"></span>
+                                <input type="text" th:field="*{title}"
+                                       placeholder="">
+                            </div>
+                            <div class=" col s12">
+                                <label>Question:</label>
+                                <span style="color: red" th:if="${#fields.hasErrors('question')}"
+                                      th:errors="*{question}"></span>
+                                <input type="text" th:field="*{question}"
+                                       placeholder="">
+                            </div>
+
+                            <div class=" col s12">
+                                <label>Answer:</label>
+                                <span style="color: red" th:if="${#fields.hasErrors('answer')}"
+                                      th:errors="*{answer}"></span>
+                                <input type="text" th:field="*{answer}"
+                                       placeholder="">
+                            </div>
+
+                            <div class=" col s12">
+                                <label>Status:</label>
+                                <span style="color: red" th:if="${#fields.hasErrors('status')}"
+                                      th:errors="*{status}"></span>
+                                <input type="text" th:field="*{status}"
+                                       placeholder=">0">
+                            </div>
+
+<!--                            <div class="col s2">-->
+<!--                                <label>status:</label>-->
+<!--                                <span style="color: red" th:if="${#fields.hasErrors('status')}"-->
+<!--                                      th:errors="*{status}"></span>-->
+<!--                                <select th:field="*{status}" class="form-control" aria-label=".form-select-lg example">-->
+<!--                                    <option value="">Choose status</option>-->
+<!--                                    <option th:value="1">Đã phản hồi</option>-->
+<!--                                    <option th:value="0">Chờ phản hồi</option>-->
+<!--                                    <span style="color: red" th:if="${#fields.hasErrors('status')}"-->
+<!--                                          th:errors="*{status}"></span>-->
+<!--                                </select>-->
+<!--                            </div>-->
+                            <div class="clearBoth"></div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary float-right">Save</button>
+                            </div>
+                        </form>
+
+                        <div class="clearBoth"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- /.col-lg-12 -->
+        <footer><p>Phan Ngọc Khải C0721G2: <a
+                href="https://webthemez.com/admin-template/">Khaiphanngoc@gmail.com</a></p></footer>
+    </div>
+    <!-- /. PAGE INNER  -->
+</div>
+<!-- /. PAGE WRAPPER  -->
+</div>
+<th:block>
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="/assets/js/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/materialize/js/materialize.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="/assets/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="/assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="/assets/js/morris/morris.js"></script>
+    <script src="/assets/js/easypiechart.js"></script>
+    <script src="/assets/js/easypiechart-data.js"></script>
+    <script src="/assets/js/Lightweight-Chart/jquery.chart.js"></script>
+    <!-- Custom Js -->
+    <script src="/assets/js/custom-scripts.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('ul.tabs').tabs();
+            $('.collapsible').collapsible({
+                    accordion: false, // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+                    onOpen: function (el) {
+                        alert('Open');
+                    }, // Callback for Collapsible open
+                    onClose: function (el) {
+                        alert('Closed');
+                    } // Callback for Collapsible close
+                }
+            );
+        });
+    </script>
+</th:block>
+</body>
+</html>

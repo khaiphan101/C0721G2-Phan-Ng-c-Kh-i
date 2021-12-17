@@ -18,7 +18,7 @@
         <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
             <li><a href="/cinema">cinema</a></li>
-            <li class="active">Create</li>
+            <li class="active">Edit</li>
         </ol>
 
     </div>
@@ -36,13 +36,13 @@
                         </div>
                     </div>
                     <div class="card-content">
-                        <form class="m-auto" th:action="@{/cinema/create}" th:object="${showCinema}" method="post">
+                        <form class="m-auto" th:action="@{/cinema/edit}" th:object="${showCinema}" method="post">
                             <div class=" col s12">
                                 <label>Id:</label>
                                 <span style="color: red" th:if="${#fields.hasErrors('id')}"
                                       th:errors="*{id}"></span>
                                 <input type="text" th:field="*{id}"
-                                       placeholder="Ex: CI-XXXX">
+                                       placeholder="Ex: CI-XXXX" readonly="readonly">
                             </div>
 
                             <div class="col s3">

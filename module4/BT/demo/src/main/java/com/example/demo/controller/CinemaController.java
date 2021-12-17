@@ -83,4 +83,30 @@ public class CinemaController {
             return "redirect:/cinema";
         }
     }
+
+    @GetMapping("/edit/{id}")
+    public String showFormEdit(@PathVariable String id, Model model) {
+        Optional<ShowCinema> showCinema = iCinemaService.findById(id);
+        model.addAttribute("showCinema", showCinema);
+        return "cinema/edit";
+    }
+
+    @PostMapping("/edit")
+    public String edit(@Valid @ModelAttribute("showCinema") ShowCinema showCinema, BindingResult bindingResult,
+                               Model model, RedirectAttributes redirectAttributes) {
+        if (bindingResult.hasErrors()) {
+            return "cinema/edit";
+        } else {
+            iCinemaService.save(showCinema);
+            redirectAttributes.addFlashAttribute("message", "Edit successfully");
+            return "redirect:/cinema";
+        }
+    }
+
+    @GetMapping("/detail/{id}")
+    public String showDetail(@PathVariable String id, Model model) {
+        Optional< ShowCinema > showCinema = iCinemaService.findById(id);
+        model.addAttribute("showCinema", showCinema.get());
+        return "cinema/detail";
+    }
 }
