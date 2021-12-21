@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  display:string = '';
+  display = '';
+  title: string;
 
 
   btn(num: string) {
@@ -14,6 +15,7 @@ export class AppComponent {
   }
 
   solve() {
+    // tslint:disable-next-line:no-eval
     this.display = eval(this.display);
   }
 
