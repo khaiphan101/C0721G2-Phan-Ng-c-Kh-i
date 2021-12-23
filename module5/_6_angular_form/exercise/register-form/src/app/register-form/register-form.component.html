@@ -3,52 +3,61 @@
   <h3><i class="fa fa-angle-right"></i> Form Components</h3>
   <!-- BASIC FORM ELELEMNTS -->
   <h4 class="mb"><i class="fa fa-angle-right"></i> Form Elements</h4>
-  <form [formGroup]="forms" (ngSubmit)="onSubmit()">
+  <form [formGroup]="formCreate" (ngSubmit)="onSubmit()">
     <div class="row mb-3">
       <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
       <div class="col-sm-10">
         <input type="email" class="form-control" id="inputEmail3" formControlName="email">
-        <span *ngIf="forms.controls.email?."></span>
+        <small *ngIf="formCreate.controls.email.touched && formCreate.controls.email.errors?.required"
+               class="text-warning fst-italic">Please fill out this field!</small>
+        <small *ngIf="formCreate.controls.email.dirty && formCreate.controls.email.errors?.email"
+               class="text-warning fst-italic">Please enter a valid e-mail address!</small>
       </div>
     </div>
 
     <div class="row mb-3 ">
       <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3">
+        <input type="password" class="form-control" id="inputPassword3" formControlName="password">
       </div>
     </div>
 
-    <div class="row mb-3 ">
-
-      <label class="col-sm-2 col-form-label " for="inlineFormSelectPref">Country</label>
-
+    <div class="row mb-3">
+      <label class="col-sm-2 col-form-label " >Country</label>
       <div class="col-sm-3">
-        <select class="form-select " id="inlineFormSelectPref">
-          <option selected>Choose...</option>
-          <option value="1">Viet nam</option>
-          <option value="2">Mỹ</option>
-          <option value="3">Lào</option>
+        <select name="country" id="country" class="form-select" formControlName="country">
+          <option *ngFor="let country of countryList" ngValue="{{country}}">{{country}}</option>
         </select>
+
+        <!-- error block -->
+        <small *ngIf="(formCreate.controls.country.touched || formCreate.controls.country.dirty)
+        && formCreate.controls.country.errors?.required"
+               class="text-warning fst-italic">Please fill out this field!</small>
       </div>
     </div>
     <div class="row mb-3">
       <label for="age" class="col-sm-2 col-form-label">Age</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="age">
+        <input type="text" class="form-control" id="age" formControlName="age">
+        <small *ngIf="formCreate.controls.age.touched && formCreate.controls.age.errors?.required"
+               class="text-warning fst-italic">Please fill out this field!</small>
+        <small *ngIf="formCreate.controls.age.touched && formCreate.controls.age.errors?.min"
+               class="text-warning fst-italic">Age must greater than 18!</small>
       </div>
+
     </div>
     <fieldset class="row mb-3">
       <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
       <div class="col-sm-10">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="male" value="1" checked>
+          <input class="form-check-input" type="radio" name="gender" id="male" value="male" formControlName="gender">
           <label class="form-check-label" for="male">
             male
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="female" value="2">
+          <input class="form-check-input" type="radio" name="gender" id="female" value="female"
+                 formControlName="gender">
           <label class="form-check-label" for="female">
             female
           </label>
@@ -58,7 +67,11 @@
     <div class="row mb-3">
       <label for="phone" class="col-sm-2 col-form-label">Phone</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="phone">
+        <input type="text" class="form-control" id="phone" formControlName="phone">
+        <small *ngIf="formCreate.controls.phone.touched && formCreate.controls.phone.errors?.required"
+               class="text-warning fst-italic">Please fill out this field!</small>
+        <small *ngIf="formCreate.controls.phone.touched && formCreate.controls.phone.errors?.pattern"
+               class="text-warning fst-italic">Phone must be start with +84, and behind with 9 - 10 number!</small>
       </div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>

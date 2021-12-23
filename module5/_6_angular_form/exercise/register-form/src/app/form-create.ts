@@ -1,7 +1,7 @@
-export interface FormGroup {
+export interface FormCreate {
   email?: string;
   password?: string;
-  country?: string;
+  countryName?: string;
   age?: number;
   gender?: number;
   phone?: number;
