@@ -43,9 +43,4 @@ export class ProductService {
   saveProduct(product) {
     this.products.push(product);
   }
-
-  editProduct(product, ) {
-    this.products.push(product);
-  }
-
 }
