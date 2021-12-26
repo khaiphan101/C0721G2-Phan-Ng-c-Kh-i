@@ -1,0 +1,89 @@
+<div class="main-body">
+  <div class="page-wrapper">
+    <!-- Page-header start -->
+    <div class="page-header card">
+      <div class="row align-items-end">
+        <div class="col-lg-8">
+          <div class="page-header-title">
+            <div class="d-inline">
+              <h4>Employee list</h4>
+            </div>
+          </div>
+          <ul class="breadcrumb-title">
+            <li class="breadcrumb-item">
+              <a href="" [routerLink]="['']">
+                <i class="icofont icofont-home"></i>
+              </a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['employee-list']">Employee</a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['employee-list']">List</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <div class="page-header-breadcrumb">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page-header end -->
+
+    <!-- Page-body start -->
+    <div class="page-body">
+      <!-- Hover table card start -->
+      <div class="card">
+        <div class="card-header">
+          <div class="row justify-content-between">
+
+
+            <button class="btn btn-primary" [routerLink]="['employee-add']">Add employee</button>
+            <div class="d-flex">
+              <input type="text" class="form-control mr-3" style="width: 300px" placeholder="Search" [(ngModel)]="term">
+              <button class="btn btn-outline-success">Search</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card-block table-border-style">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th>Họ và tên</th>
+                <th>Vị trí</th>
+                <th>Trình độ</th>
+                <th>Bộ phận</th>
+                <th>Ngày sinh</th>
+                <th>Địa chỉ</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let employee of employees|filter:term | paginate: { itemsPerPage: 2, currentPage: p }">
+                <th scope="row">{{employee.id}}</th>
+                <td>{{employee.fullName}}</td>
+                <td>{{employee.position}}</td>
+                <td>{{employee.academicLevel}}</td>
+                <td>{{employee.part}}</td>
+                <td>{{employee.dateOfBirth}}</td>
+                <td>{{employee.address}}</td>
+                <td>
+                  <i class="icofont p-2 icofont-eye-alt icon-btn btn-outline-info"></i>
+                  <i class="icofont p-2 icofont-ui-edit icon-btn btn-outline-success "></i>
+                  <i class="icofont p-2 icofont-ui-delete icon-btn btn-outline-danger"></i>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+        </div>
+      </div>
+      <!-- Hover table card end -->
+    </div>
+    <!-- Page-body end -->
+  </div>
+</div>

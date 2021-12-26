@@ -1,0 +1,57 @@
+{
+  "employees": [
+    { "id": 1,
+      "fullName": "Trịnh Ngọc Tuấn",
+      "position": "Nhân viên",
+      "academicLevel": "Đại học",
+      "part": "Kinh doanh",
+      "dateOfBirth": "15/09/1994",
+      "salary": "8",
+      "email": "ngotuan@gmail.com",
+      "phoneNumber": "0983260498",
+      "address": "Thanh Khê - Đà Nẵng"
+    },
+    { "id": 3,
+      "fullName": "Phan Ngọc Khải",
+      "position": "Nhân viên",
+      "academicLevel": "Đại học",
+      "part": "Kinh doanh",
+      "dateOfBirth": "26/04/1996",
+      "salary": "8",
+      "email": "ngockhai@gmail.com",
+      "phoneNumber": "0983260498",
+      "address": "Thanh Khê - Đà Nẵng"
+    },
+    { "id": 3,
+      "fullName": "Trần Trung Trực",
+      "position": "Nhân viên",
+      "academicLevel": "Cao đẳng",
+      "part": "Kinh doanh",
+      "dateOfBirth": "25/02/1994",
+      "salary": "8",
+      "email": "trungtruc@gmail.com",
+      "phoneNumber": "0983260498",
+      "address": "Thanh Khê - Đà Nẵng"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "fullName": "Nguyễn Phương Thảo",
+      "email": "phuongthao@gmail.com",
+      "phoneNumber": "0123123123"
+    },
+    {
+      "id": 2,
+      "fullName": "Ngô Thừa Ân",
+      "email": "thuaan@gmail.com",
+      "phoneNumber": "0123123123"
+    },
+    {
+      "id": 3,
+      "fullName": "Đào Thanh Vinh",
+      "email": "thanhvinh@gmail.com",
+      "phoneNumber": "0123123123"
+    }
+  ]
+}
