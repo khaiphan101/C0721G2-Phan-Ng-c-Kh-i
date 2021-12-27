@@ -15,9 +15,9 @@
                 <i class="icofont icofont-home"></i>
               </a>
             </li>
-            <li class="breadcrumb-item"><a href="" [routerLink]="['employee-list']">Employee</a>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/employee/list']">Employee</a>
             </li>
-            <li class="breadcrumb-item"><a href="" [routerLink]="['employee-list']">List</a>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/employee/list']">List</a>
             </li>
           </ul>
         </div>
@@ -36,9 +36,7 @@
       <div class="card">
         <div class="card-header">
           <div class="row justify-content-between">
-
-
-            <button class="btn btn-primary" [routerLink]="['employee-add']">Add employee</button>
+            <a class="btn btn-primary" routerLink="/employee/add">Add employee</a>
             <div class="d-flex">
               <input type="text" class="form-control mr-3" style="width: 300px" placeholder="Search" [(ngModel)]="term">
               <button class="btn btn-outline-success">Search</button>

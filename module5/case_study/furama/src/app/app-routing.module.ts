@@ -7,12 +7,12 @@ import {EmployeeAddComponent} from "./components/employees/employee-add/employee
 
 
 
+
 const routes: Routes = [
   {path: '',component: HomeComponent},
-  {path: 'employee-list',component: EmployeeListComponent},
-  {path: '**',component: PageNotFoundComponent},
-  {path: 'employee-add',component: EmployeeAddComponent}
-
+  {path: 'employee/list',component: EmployeeListComponent},
+  {path: 'employee/add',component: EmployeeAddComponent},
+  {path: '**',component: PageNotFoundComponent}
 
 ];
 

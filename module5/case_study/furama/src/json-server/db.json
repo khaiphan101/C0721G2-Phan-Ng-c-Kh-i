@@ -1,6 +1,7 @@
 {
   "employees": [
-    { "id": 1,
+    {
+      "id": 1,
       "fullName": "Trịnh Ngọc Tuấn",
       "position": "Nhân viên",
       "academicLevel": "Đại học",
@@ -11,7 +12,8 @@
       "phoneNumber": "0983260498",
       "address": "Thanh Khê - Đà Nẵng"
     },
-    { "id": 3,
+    {
+      "id": 3,
       "fullName": "Phan Ngọc Khải",
       "position": "Nhân viên",
       "academicLevel": "Đại học",
@@ -22,7 +24,8 @@
       "phoneNumber": "0983260498",
       "address": "Thanh Khê - Đà Nẵng"
     },
-    { "id": 3,
+    {
+      "id": 3,
       "fullName": "Trần Trung Trực",
       "position": "Nhân viên",
       "academicLevel": "Cao đẳng",
@@ -32,6 +35,78 @@
       "email": "trungtruc@gmail.com",
       "phoneNumber": "0983260498",
       "address": "Thanh Khê - Đà Nẵng"
+    },
+    {
+      "fullName": "123",
+      "position": "123456",
+      "academicLevel": "",
+      "part": "123",
+      "dateOfBirth": "",
+      "salary": "123",
+      "email": "123",
+      "phoneNumber": "0901123123",
+      "address": "255 Phan Châu Trinh Phước Ninh, Hải Châu, Đà Nẵng, Việt Nam",
+      "id": 4
+    },
+    {
+      "fullName": "a",
+      "position": "1",
+      "academicLevel": "college",
+      "part": "123",
+      "dateOfBirth": "2021-12-28",
+      "salary": "123",
+      "email": "123",
+      "phoneNumber": "123",
+      "address": "123",
+      "id": 5
+    },
+    {
+      "fullName": "123",
+      "position": "123456",
+      "academicLevel": "",
+      "part": "",
+      "dateOfBirth": "",
+      "salary": "",
+      "email": "",
+      "phoneNumber": "",
+      "address": "",
+      "id": 6
+    },
+    {
+      "fullName": "",
+      "position": "123456",
+      "academicLevel": "",
+      "part": "",
+      "dateOfBirth": "",
+      "salary": "",
+      "email": "",
+      "phoneNumber": "",
+      "address": "",
+      "id": 7
+    },
+    {
+      "fullName": "a",
+      "position": "2",
+      "academicLevel": "college",
+      "part": "123",
+      "dateOfBirth": "2021-12-14",
+      "salary": "123",
+      "email": "khaiphanngoc@gmail.com",
+      "phoneNumber": "0901123123",
+      "address": "255 Phan Châu Trinh Phước Ninh, Hải Châu, Đà Nẵng, Việt Nam",
+      "id": 8
+    },
+    {
+      "fullName": "123",
+      "position": "2",
+      "academicLevel": "college",
+      "part": "123",
+      "dateOfBirth": "2021-12-29",
+      "salary": "123",
+      "email": "khaiphanngoc@gmail.com",
+      "phoneNumber": "0901123123",
+      "address": "255 Phan Châu Trinh Phước Ninh, Hải Châu, Đà Nẵng, Việt Nam",
+      "id": 9
     }
   ],
   "customers": [
@@ -52,6 +127,20 @@
       "fullName": "Đào Thanh Vinh",
       "email": "thanhvinh@gmail.com",
       "phoneNumber": "0123123123"
+    }
+  ],
+  "positions": [
+    {
+      "id": 1,
+      "name": "Quản lý"
+    },
+    {
+      "id": 2,
+      "name": "HR"
+    },
+    {
+      "id": 3,
+      "name": "Nhân viên"
     }
   ]
 }

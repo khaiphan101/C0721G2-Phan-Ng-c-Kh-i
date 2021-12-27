@@ -24,7 +24,7 @@ export class RegisterFormComponent implements OnInit {
         password: [],
         passwordConfirm: []
       }, {validator: passwordNotMatch}],
-      password: ['123456'],
+      password: [''],
       country: ['', [Validators.required]],
       age: ['', [Validators.required, Validators.min(18)]],
       gender: ['', [Validators.required]],
@@ -36,9 +36,7 @@ export class RegisterFormComponent implements OnInit {
     console.log(this.formCreate.value);
     console.log(this.formCreate.valid);
   }
-
 }
-
 function passwordNotMatch(control: AbstractControl) {
   const formControl = control.value;
   return formControl.password === formControl.passwordConfirm ? null : {passwordNotMatch: true};
