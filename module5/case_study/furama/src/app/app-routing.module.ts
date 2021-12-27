@@ -4,6 +4,8 @@ import {HomeComponent} from "./components/home/home.component";
 import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
 import {EmployeeListComponent} from "./components/employees/employee-list/employee-list.component";
 import {EmployeeAddComponent} from "./components/employees/employee-add/employee-add.component";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
 
 
 
@@ -17,7 +19,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes) ],
+  imports: [RouterModule.forRoot(routes), MatDatepickerModule,
+    MatNativeDateModule  ],
   exports: [RouterModule],
   // declarations: [HomeComponent]
 })
