@@ -1,0 +1,172 @@
+<div class="main-body">
+  <div class="page-wrapper">
+
+    <!-- Page-header start -->
+    <div class="page-header card">
+      <div class="row align-items-end">
+        <div class="col-lg-8">
+          <div class="page-header-title">
+            <div class="d-inline">
+              <h4>Add new BenhAn </h4>
+            </div>
+          </div>
+          <ul class="breadcrumb-title">
+            <li class="breadcrumb-item">
+              <a href="" [routerLink]="['']">
+                <i class="icofont icofont-home"></i>
+              </a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/customer/list']">BenhAn</a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/customer/list']">add</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <div class="page-header-breadcrumb">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page-header end -->
+
+
+    <!-- Page body start -->
+    <div class="page-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- Basic Form Inputs card start -->
+          <div class="card">
+            <div class="card-header">
+              <h5>Basic Form Inputs</h5>
+            </div>
+            <div class="card-block">
+              <form [formGroup]="formCreate" (ngSubmit)="onSubmit()">
+                <!--                <div class="form-group row">-->
+                <!--                  <label class="col-sm-2 col-form-label">Read only</label>-->
+                <!--                  <div class="col-sm-10">-->
+                <!--                    <input type="text" class="form-control"-->
+                <!--                           placeholder="You can't change me" readonly>-->
+                <!--                  </div>-->
+                <!--                </div>-->
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Full name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="fullName">
+                    <small *ngIf="formCreate.controls.fullName.touched && formCreate.controls.fullName.errors?.required"
+                           class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">customer type</label>
+                  <div class="col-sm-9">
+                    <select name="customer_type" class="form-control" formControlName="customer_type">
+                      <option value="">Select customer_type</option>
+                      <option *ngFor="let customer_type of customerTypeList" [ngValue]="customer_type">{{customer_type.name}}</option>
+                    </select>
+                    <!-- error block -->
+                    <small *ngIf="(formCreate.controls.customer_type.touched || formCreate.controls.customer_type.dirty)
+                             && formCreate.controls.customer_type.errors?.required"
+                           class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Academic level</label>
+                  <div class="col-sm-9">
+                    <div class=" col ">
+                      <input class="form-check-input" type="radio" value="college"
+                             formControlName="academicLevel">
+                      <label class="form-check-label">
+                        Cao đẳng
+                      </label>
+                    </div>
+                    <div class=" col">
+                      <input class="form-check-input" type="radio" value="university"
+                             formControlName="academicLevel">
+                      <label class="form-check-label">
+                        Đại học
+                      </label>
+                    </div>
+                  </div>
+                  <small
+                    *ngIf="formCreate.controls.academicLevel.touched && formCreate.controls.academicLevel.errors?.required"
+                    class="text-warning fst-italic">Please fill out this field!</small>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">part</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="part">
+                    <small *ngIf="formCreate.controls.part.touched && formCreate.controls.part.errors?.required"
+                           class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">dateOfBirth</label>
+                  <div class="col-sm-9">
+                    <input type="date" class="form-control" formControlName="dateOfBirth">
+                    <small
+                      *ngIf="formCreate.controls.dateOfBirth.touched && formCreate.controls.dateOfBirth.errors?.required"
+                      class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">salary</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="salary">
+                    <small *ngIf="formCreate.controls.salary.touched && formCreate.controls.salary.errors?.required"
+                           class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">email</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="email">
+                    <small *ngIf="formCreate.controls.email.touched && formCreate.controls.email.errors?.required"
+                           class="text-warning fst-italic">Please fill out this field!</small>
+                    <small *ngIf="formCreate.controls.email.touched && formCreate.controls.email.errors?.email"
+                           class="text-warning fst-italic">Nhập email không đúng định dạng</small>
+
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">phoneNumber</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="phoneNumber">
+                    <small
+                      *ngIf="formCreate.controls.phoneNumber.touched && formCreate.controls.phoneNumber.errors?.required"
+                      class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">address</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="address">
+                    <small *ngIf="formCreate.controls.address.touched && formCreate.controls.address.errors?.required"
+                           class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+                </div>
+                <!--                <div class="form-group row">-->
+                <!--                  <label class="col-sm-2 col-form-label">Password</label>-->
+                <!--                  <div class="col-sm-10">-->
+                <!--                    <input type="password" class="form-control"-->
+                <!--                           placeholder="Password input">-->
+                <!--                  </div>-->
+                <!--                </div>-->
+                <button  type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+          <!-- Basic Form Inputs card end -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

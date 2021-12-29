@@ -1,0 +1,16 @@
+
+.bg {
+  /* The image used */
+
+
+  /* Half height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.common-img-bg{
+  background-image: url("https://www.healthpartners.com/content/dam/brand-identity/photography/facility/hospital/regions/web/dji-0021-edit-2000x888.jpg");
+}

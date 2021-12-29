@@ -1,0 +1,13 @@
+
+.bg {
+  /* The image used */
+  background-image: url("http://images5.fanpop.com/image/photos/31200000/Beautiful-images-of-the-universe-astrophyiscs-and-cosmology-31264132-1280-688.jpg");
+
+  /* Half height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

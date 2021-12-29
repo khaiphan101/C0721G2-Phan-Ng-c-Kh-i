@@ -1,0 +1,85 @@
+<div class="main-body">
+  <div class="page-wrapper">
+    <!-- Page-header start -->
+    <div class="page-header card">
+      <div class="row align-items-end">
+        <div class="col-lg-8">
+          <div class="page-header-title">
+            <div class="d-inline">
+              <h4>BenhAn list</h4>
+            </div>
+          </div>
+          <ul class="breadcrumb-title">
+            <li class="breadcrumb-item">
+              <a href="" [routerLink]="['']">
+                <i class="icofont icofont-home"></i>
+              </a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/question/list']">BenhAn</a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/question/list']">List</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <div class="page-header-breadcrumb">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page-header end -->
+
+    <!-- Page-body start -->
+    <div class="page-body">
+      <!-- Hover table card start -->
+      <div class="card">
+        <div class="card-header">
+          <div class="row justify-content-between">
+            <a class="btn btn-primary" routerLink="/question/add">Add question</a>
+            <div class="d-flex">
+              <input type="text" class="form-control mr-3" style="width: 300px" placeholder="Search" [(ngModel)]="term">
+              <button class="btn btn-outline-success">Search</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card-block table-border-style">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th>STT</th>
+                <th>Tiêu đề</th>
+                <th>Loại câu hỏi</th>
+                <th>Ngày đăng</th>
+                <th>Tình trạng</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let question of questions|filter:term | paginate: { itemsPerPage: 2, currentPage: p }">
+                <th scope="row">{{question.id}}</th>
+                <td>{{question.title}}</td>
+                <td>{{question.question_type.name}}</td>
+                <td>{{question.questionSentence}}</td>
+                <td>{{question.answer}}</td>
+                <td>{{question.dateCreate}}</td>
+                <td>{{question.status}}</td>
+                <td>
+                  <i class="icofont p-2 icofont-eye-alt icon-btn btn-outline-info" [routerLink]="['/question/detail', question.id]"></i>
+                  <i class="icofont p-2 icofont-ui-edit icon-btn btn-outline-success" [routerLink]="['/question/edit', question.id]"></i>
+                  <i class="icofont p-2 icofont-ui-delete icon-btn btn-outline-danger" (click)="openDialog(question.id)"></i>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+        </div>
+      </div>
+      <!-- Hover table card end -->
+    </div>
+    <!-- Page-body end -->
+  </div>
+</div>

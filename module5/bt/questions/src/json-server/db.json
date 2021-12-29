@@ -1,0 +1,54 @@
+{
+  "questions": [
+    {
+      "title": "Module 4: Xin demo bài AOP",
+      "question_type": {
+        "id": 1,
+        "name": "Học tập"
+      },
+      "questionSentence": "Nhờ giảng viên gởi bài demo",
+      "answer": "Bạn xem demo tại link sau đây: example.com",
+      "dateCreate": "15/09/1994",
+      "status": "Đã trả lời",
+      "id": 1
+    },
+    {
+      "title": "Module 4: Xin demo bài AOP",
+      "question_type": {
+        "id": 2,
+        "name": "Giáo vụ"
+      },
+      "questionSentence": "Nhờ giảng viên gởi bài demo",
+      "answer": "Bạn xem demo tại link sau đây: example.com",
+      "dateCreate": "15/09/1994",
+      "status": "Đã trả lời",
+      "id": 2
+    },
+    {
+      "title": "Module 4: Xin demo bài AOP",
+      "question_type": {
+        "id": 2,
+        "name": "Giáo vụ"
+      },
+      "questionSentence": "Nhờ giảng viên gởi bài demo",
+      "answer": "Bạn xem demo tại link sau đây: example.com",
+      "dateCreate": "15/09/1994",
+      "status": "Đã trả lời",
+      "id": 3
+    }
+  ],
+  "questionTypes": [
+    {
+      "id": 1,
+      "name": "Học tập"
+    },
+    {
+      "id": 2,
+      "name": "Giáo vụ"
+    },
+    {
+      "id": 3,
+      "name": "Khác"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+npm i ng2-search-filter --save
+
+npm i ngx-pagination
+npm i @angular/material
+npm i @angular/cdk
+npm i json-server
+
+(nếu material và cdk bị lỗi thì sửa trong backage 13 thành 9 sau đó npm i
+
+
+đổi port 
+ng serve --port 4401  
+
+json-server --watch db.json

@@ -1,0 +1,105 @@
+{
+  "customers": [
+    {
+      "fullName": "Trịnh Ngọc Tuấn",
+      "customer_type": {
+        "id": 2,
+        "name": "Bạc"
+      },
+      "academicLevel": "university",
+      "part": "Kinh doanh",
+      "dateOfBirth": "15/09/1994",
+      "salary": "8",
+      "email": "ngotuan@gmail.com",
+      "phoneNumber": "0983260498",
+      "address": "Thanh Khê - Đà Nẵng",
+      "id": 1
+    },
+    {
+      "fullName": "Trần Trung Trực",
+      "customer_type": {
+        "id": 1,
+        "name": "Vàng"
+      },
+      "academicLevel": "college",
+      "part": "Kinh doanh",
+      "dateOfBirth": "25/02/1994",
+      "salary": "8",
+      "email": "trungtruc@gmail.com",
+      "phoneNumber": "0983260498",
+      "address": "Thanh Khê - Đà Nẵng",
+      "id": 3
+    },
+    {
+      "fullName": "a",
+      "customer_type": {
+        "id": 1,
+        "name": "Vàng"
+      },
+      "academicLevel": "college",
+      "part": "123",
+      "dateOfBirth": "2021-12-28",
+      "salary": "123",
+      "email": "123",
+      "phoneNumber": "123",
+      "address": "123",
+      "id": 5
+    },
+    {
+      "fullName": "123",
+      "customer_type": {
+        "id": 1,
+        "name": "Vàng"
+      },
+      "academicLevel": "college",
+      "part": "123",
+      "dateOfBirth": "2021-12-29",
+      "salary": "123",
+      "email": "khaiphanngoc@gmail.com",
+      "phoneNumber": "0901123123",
+      "address": "255 Phan Châu Trinh Phước Ninh, Hải Châu, Đà Nẵng, Việt Nam",
+      "id": 9
+    },
+    {
+      "fullName": "anhanhanha",
+      "customer_type": {
+        "id": 1,
+        "name": "Vàng"
+      },
+      "academicLevel": "college",
+      "part": "123",
+      "dateOfBirth": "",
+      "salary": "",
+      "email": "khaiphanngoc@gmail.com",
+      "phoneNumber": "0901123123",
+      "address": "255 Phan Châu Trinh",
+      "id": 10
+    },
+    {
+      "fullName": "",
+      "customer_type": "",
+      "academicLevel": "",
+      "part": "",
+      "dateOfBirth": "",
+      "salary": "",
+      "email": "",
+      "phoneNumber": "",
+      "address": "",
+      "id": 11
+    }
+  ],
+  "customerTypes": [
+    {
+      "id": 1,
+      "name": "Vàng"
+    },
+    {
+      "id": 2,
+      "name": "Bạc"
+    },
+    {
+      "id": 3,
+      "name": "Kim cương"
+    }
+  ]
+}

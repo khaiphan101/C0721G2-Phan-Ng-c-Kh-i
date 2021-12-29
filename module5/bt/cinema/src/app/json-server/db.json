@@ -1,0 +1,63 @@
+{
+  "showCinemas": [
+    {
+      "showDate": "2021-12-16",
+      "movie": {
+        "id": 1,
+        "name": "No way home"
+      },
+      "totalTicket": "10",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "movie": {
+        "id": 2,
+        "name": "End game"
+      },
+      "showDate": "15/09/1994",
+      "totalTicket": "8"
+    },
+    {
+      "id": 3,
+      "movie": {
+        "id": 3,
+        "name": "Suicide"
+      },
+      "showDate": "15/09/1994",
+      "totalTicket": "8"
+    },
+    {
+      "showDate": "2021-12-14",
+      "movie": {
+        "id": 2,
+        "name": "End game"
+      },
+      "totalTicket": "123",
+      "id": 5
+    },
+    {
+      "showDate": "2021-12-17",
+      "movie": {
+        "id": 3,
+        "name": "Suicide"
+      },
+      "totalTicket": "123",
+      "id": 6
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "name": "No way home"
+    },
+    {
+      "id": 2,
+      "name": "End game"
+    },
+    {
+      "id": 3,
+      "name": "Suicide"
+    }
+  ]
+}

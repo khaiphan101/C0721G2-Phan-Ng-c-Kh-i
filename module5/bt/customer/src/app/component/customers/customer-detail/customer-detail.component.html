@@ -1,0 +1,76 @@
+<div class="main-body">
+  <div class="page-wrapper">
+    <!-- Page-header start -->
+    <div class="page-header card">
+      <div class="row align-items-end">
+        <div class="col-lg-8">
+          <div class="page-header-title">
+            <div class="d-inline">
+              <h4>BenhAn list</h4>
+            </div>
+          </div>
+          <ul class="breadcrumb-title">
+            <li class="breadcrumb-item">
+              <a href="" [routerLink]="['']">
+                <i class="icofont icofont-home"></i>
+              </a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/customer/list']">customer</a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/customer/detail']">Detail</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <div class="page-header-breadcrumb">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page-header end -->
+
+    <!-- Page-body start -->
+    <div class="page-body">
+      <!-- Hover table card start -->
+      <div class="card">
+        <div class="card-header">
+          <div class="row justify-content-between">
+            <a class="btn btn-primary" routerLink="/customer/detail">ShowCinema's detail</a>
+          </div>
+
+        </div>
+        <div class="card-block table-border-style">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th>Họ và tên</th>
+                <th>Loại khách hàng</th>
+                <th>Trình độ</th>
+                <th>Bộ phận</th>
+                <th>Ngày sinh</th>
+                <th>Địa chỉ</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th scope="row">{{customer.id}}</th>
+                <td>{{customer.fullName}}</td>
+                <td>{{customer.customer_type.name}}</td>
+                <td>{{customer.academicLevel}}</td>
+                <td>{{customer.part}}</td>
+                <td>{{customer.dateOfBirth}}</td>
+                <td>{{customer.address}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Hover table card end -->
+    </div>
+    <!-- Page-body end -->
+  </div>
+</div>

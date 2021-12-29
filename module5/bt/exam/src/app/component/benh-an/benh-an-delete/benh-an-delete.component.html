@@ -1,0 +1,15 @@
+<div class="modal-dialog bg-success justify-content"  >
+  <div class="modal-content">
+    <div class="modal-header">
+      <p class="modal-title fs-4 text-center text-success">Xác nhận</p>
+    </div>
+    <div class="modal-body fs-6 fw-bold text-danger">
+      <span>Bạn có muốn xoá thông tin bệnh án </span><span class="">{{benhAn.maBenhAn}}</span>
+      hay không
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-warning" (click)=" onNoClick()">Close</button>
+      <button type="button" class="btn btn-danger" (click)="deleteBenhAn()">Delete</button>
+    </div>
+  </div>
+</div>

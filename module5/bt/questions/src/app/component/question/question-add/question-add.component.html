@@ -1,0 +1,136 @@
+<div class="main-body">
+  <div class="page-wrapper">
+
+    <!-- Page-header start -->
+    <div class="page-header card">
+      <div class="row align-items-end">
+        <div class="col-lg-8">
+          <div class="page-header-title">
+            <div class="d-inline">
+              <h4>Add new BenhAn </h4>
+            </div>
+          </div>
+          <ul class="breadcrumb-title">
+            <li class="breadcrumb-item">
+              <a href="" [routerLink]="['']">
+                <i class="icofont icofont-home"></i>
+              </a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/customer/list']">BenhAn</a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/customer/list']">add</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <div class="page-header-breadcrumb">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page-header end -->
+
+
+    <!-- Page body start -->
+    <div class="page-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- Basic Form Inputs card start -->
+          <div class="card">
+            <div class="card-header">
+              <h5>Basic Form Inputs</h5>
+            </div>
+            <div class="card-block">
+              <form [formGroup]="formCreate" (ngSubmit)="onSubmit()">
+                <!--                <div class="form-group row">-->
+                <!--                  <label class="col-sm-2 col-form-label">Read only</label>-->
+                <!--                  <div class="col-sm-10">-->
+                <!--                    <input type="text" class="form-control"-->
+                <!--                           placeholder="You can't change me" readonly>-->
+                <!--                  </div>-->
+                <!--                </div>-->
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">title</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="title">
+                    <small *ngIf="formCreate.controls.title.touched && formCreate.controls.title.errors?.required"
+                           class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">question_type</label>
+                  <div class="col-sm-9">
+                    <select name="question_type" class="form-control" formControlName="question_type">
+                      <option value="">Select question_type</option>
+                      <option *ngFor="let question_type of questionTypes"
+                              [ngValue]="question_type">{{question_type.name}}</option>
+                    </select>
+                    <!-- error block -->
+                    <small *ngIf="(formCreate.controls.question_type.touched || formCreate.controls.question_type.dirty)
+                             && formCreate.controls.question_type.errors?.required"
+                           class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+                </div>
+
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">questionSentence</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="questionSentence">
+                    <small *ngIf="formCreate.controls.questionSentence.touched && formCreate.controls.questionSentence.errors?.required"
+                           class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">dateCreate</label>
+                  <div class="col-sm-9">
+                    <input type="date" class="form-control" formControlName="dateCreate">
+                    <small
+                      *ngIf="formCreate.controls.dateCreate.touched && formCreate.controls.dateCreate.errors?.required"
+                      class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">answer</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="answer">
+                    <small *ngIf="formCreate.controls.answer.touched && formCreate.controls.answer.errors?.required"
+                           class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">status</label>
+                  <div class="col-sm-9">
+                    <div class=" col ">
+                      <input class="form-check-input" type="radio" value="đã trả lời"
+                             formControlName="status">
+                      <label class="form-check-label">
+                        Đã trả lời
+                      </label>
+                    </div>
+                    <div class=" col">
+                      <input class="form-check-input" type="radio" value="đợi trả lời"
+                             formControlName="status">
+                      <label class="form-check-label">
+                        Đợi trả lời
+                      </label>
+                    </div>
+                  </div>
+                  <small
+                    *ngIf="formCreate.controls.status.touched && formCreate.controls.status.errors?.required"
+                    class="text-warning fst-italic">Please fill out this field!</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+          <!-- Basic Form Inputs card end -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

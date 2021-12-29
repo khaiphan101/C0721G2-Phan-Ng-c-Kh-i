@@ -1,0 +1,84 @@
+{
+  "benhAns": [
+    {
+      "id": 2,
+      "maBenhAn": "BA-112",
+      "maBenhNhan": "BN-213",
+      "ngayNhapVien": "2021-12-15",
+      "ngayRaVien": "2021-01-29",
+      "lyDo": "Sốt xuất huyết",
+      "phuongPhap": "Uống thuốc giảm đau, truyền máu ",
+      "BacSiDieuTri": "Trần Văn Anh",
+      "ten": "Nguyễn Văn B"
+    },
+    {
+      "id": 3,
+      "maBenhAn": "BA-223",
+      "maBenhNhan": "BN-984",
+      "ten": "Nguyễn Văn C",
+      "ngayNhapVien": "2021-12-15",
+      "ngayRaVien": "2021-12-15",
+      "lyDo": "Suy thận mạn",
+      "phuongPhap": "Chạy thận",
+      "BacSiDieuTri": "Nguyễn Đôn"
+    },
+    {
+      "id": 4,
+      "maBenhAn": "BA-112",
+      "maBenhNhan": "BN-213",
+      "ten": "Nguyễn Văn B",
+      "ngayNhapVien": "2021-12-15",
+      "ngayRaVien": "2021-12-15",
+      "lyDo": "Sốt xuất huyết",
+      "phuongPhap": "Uống thuốc giảm đau, truyền máu ",
+      "BacSiDieuTri": "Trần Văn Anh"
+    },
+    {
+      "id": 5,
+      "maBenhAn": "BA-112",
+      "maBenhNhan": "BN-213",
+      "ten": "Nguyễn Văn B",
+      "ngayNhapVien": "2021-12-15",
+      "ngayRaVien": "2021-12-15",
+      "lyDo": "Sốt xuất huyết",
+      "phuongPhap": "Uống thuốc giảm đau, truyền máu ",
+      "BacSiDieuTri": "Trần Văn Anh"
+    },
+    {
+      "id": 6,
+      "maBenhAn": "BA-112",
+      "maBenhNhan": "BN-213",
+      "ten": "Nguyễn Văn B",
+      "ngayNhapVien": "2021-12-15",
+      "ngayRaVien": "2021-12-15",
+      "lyDo": "Sốt xuất huyết",
+      "phuongPhap": "Uống thuốc giảm đau, truyền máu ",
+      "BacSiDieuTri": "Trần Văn Anh"
+    },
+    {
+      "id": 7,
+      "maBenhAn": "BA-112",
+      "maBenhNhan": "BN-213",
+      "ten": "Nguyễn Văn B",
+      "ngayNhapVien": "2021-12-15",
+      "ngayRaVien": "2021-12-15",
+      "lyDo": "Sốt xuất huyết",
+      "phuongPhap": "Uống thuốc giảm đau, truyền máu ",
+      "BacSiDieuTri": "Trần Văn Anh"
+    }
+  ],
+  "questionTypes": [
+    {
+      "id": 1,
+      "name": "Học tập"
+    },
+    {
+      "id": 2,
+      "name": "Giáo vụ"
+    },
+    {
+      "id": 3,
+      "name": "Khác"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+<div class="main-body">
+
+  <div class="page-wrapper">
+    <!-- Page-header start -->
+    <div class="page-header card">
+      <div class="row align-items-end">
+        <div class="col-lg-8">
+          <div class="page-header-title">
+            <div class="d-inline">
+              <h4>Danh sách bệnh án</h4>
+            </div>
+          </div>
+          <ul class="breadcrumb-title">
+            <li class="breadcrumb-item">
+              <a href="" [routerLink]="['']">
+                <i class="icofont icofont-home"></i>
+              </a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/benh-an/list']">BenhAn</a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/benh-an/list']">List</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <div class="page-header-breadcrumb">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page-header end -->
+
+    <!-- Page-body start -->
+    <div class="page-body">
+      <!-- Hover table card start -->
+      <div class="card">
+        <div class="card-header">
+          <div class="row justify-content-between">
+            <a class="btn btn-primary" routerLink="/benh-an/add">Thêm mới bệnh án</a>
+            <h4 *ngIf="mess.length != 5" class="text-success fst-italic">{{mess}}</h4>
+            <div class="d-flex">
+              <input type="text" class="form-control mr-3" style="width: 300px" placeholder="Search" [(ngModel)]="term">
+              <button class="btn btn-outline-success">Search</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card-block table-border-style">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th>Mã bệnh án</th>
+                <th>Mã bệnh nhân</th>
+                <th>Tên</th>
+                <th>Ngày nhập viện</th>
+                <th>Ngày ra viện</th>
+                <th>Lý do</th>
+                <th>Phương pháp</th>
+                <th>Bác sĩ điều trị</th>
+                <th>Tính năng</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let benhAn of benhAns|filter:term | paginate: { itemsPerPage: 5, currentPage: p }">
+                <th scope="row">{{benhAn.maBenhAn}}</th>
+                <th scope="row">{{benhAn.maBenhNhan}}</th>
+                <td>{{benhAn.ten}}</td>
+                <td>{{benhAn.ngayNhapVien}}</td>
+                <td>{{benhAn.ngayRaVien}}</td>
+                <td>{{benhAn.lyDo}}</td>
+                <td>{{benhAn.phuongPhap}}</td>
+                <td>{{benhAn.BacSiDieuTri}}</td>
+                <td>
+                  <i class="icofont p-2 icofont-eye-alt icon-btn btn-outline-info" [routerLink]="['/benh-an/detail', benhAn.id]"></i>
+                  <i class="icofont p-2 icofont-ui-edit icon-btn btn-outline-success" [routerLink]="['/benh-an/edit', benhAn.id]"></i>
+                  <i class="icofont p-2 icofont-ui-delete icon-btn btn-outline-danger" (click)="openDialog(benhAn.id)"></i>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+        </div>
+      </div>
+      <!-- Hover table card end -->
+    </div>
+    <!-- Page-body end -->
+  </div>
+</div>

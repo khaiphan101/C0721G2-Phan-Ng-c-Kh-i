@@ -1,0 +1,90 @@
+<div class="main-body">
+  <div class="page-wrapper">
+
+    <!-- Page-header start -->
+    <div class="page-header card">
+      <div class="row align-items-end">
+        <div class="col-lg-8">
+          <div class="page-header-title">
+            <div class="d-inline">
+              <h4>Add new cinema </h4>
+            </div>
+          </div>
+          <ul class="breadcrumb-title">
+            <li class="breadcrumb-item">
+              <a href="" [routerLink]="['']">
+                <i class="icofont icofont-home"></i>
+              </a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/cinema/list']">cinema</a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/cinema/list']">add</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <div class="page-header-breadcrumb">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page-header end -->
+
+
+    <!-- Page body start -->
+    <div class="page-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- Basic Form Inputs card start -->
+          <div class="card">
+            <div class="card-header">
+              <h5>Basic Form Inputs</h5>
+            </div>
+            <div class="card-block">
+              <form [formGroup]="formCreate" (ngSubmit)="onSubmit()">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">movie</label>
+                  <div class="col-sm-9">
+                    <select name="movie" class="form-control" formControlName="movie">
+                      <option value="">Select movie</option>
+                      <option *ngFor="let movie of movies"
+                              [ngValue]="movie">{{movie.name}}</option>
+                    </select>
+                    <!-- error block -->
+                    <small *ngIf="(formCreate.controls.movie.touched || formCreate.controls.movie.dirty)
+                             && formCreate.controls.movie.errors?.required"
+                           class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">showDate</label>
+                  <div class="col-sm-9">
+                    <input type="date" class="form-control" formControlName="showDate">
+                    <small
+                      *ngIf="formCreate.controls.showDate.touched && formCreate.controls.showDate.errors?.required"
+                      class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">totalTicket</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="totalTicket">
+                    <small *ngIf="formCreate.controls.totalTicket.touched && formCreate.controls.totalTicket.errors?.required"
+                           class="text-warning fst-italic">Please fill out this field!</small>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" [disabled]="!formCreate.valid">Submit</button>
+              </form>
+            </div>
+          </div>
+          <!-- Basic Form Inputs card end -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

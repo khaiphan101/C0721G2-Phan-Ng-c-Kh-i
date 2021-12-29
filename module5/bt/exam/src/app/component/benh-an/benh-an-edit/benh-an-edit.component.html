@@ -1,0 +1,134 @@
+<div class="main-body">
+  <div class="page-wrapper">
+
+    <!-- Page-header start -->
+    <div class="page-header card">
+      <div class="row align-items-end">
+
+        <div class="col-lg-8">
+          <div class="page-header-title">
+            <div class="d-inline">
+              <h4>Chỉnh sửa bệnh án</h4>
+            </div>
+          </div>
+
+          <ul class="breadcrumb-title">
+            <li class="breadcrumb-item">
+              <a href="" [routerLink]="['']">
+                <i class="icofont icofont-home"></i>
+              </a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/benh-an/list']">BenhAn</a>
+            </li>
+            <li class="breadcrumb-item"><a href="" [routerLink]="['/benh/list']">Edit</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="page-header-breadcrumb">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page-header end -->
+
+
+    <!-- Page body start -->
+    <div class="page-body">
+
+      <div class="row">
+        <div class="col-sm-12">
+
+          <!-- Basic Form Inputs card start -->
+          <div class="card"></div>
+            <div class="card-header">
+              <div class="pb-3">
+              <a class="btn btn-danger" routerLink="/benh-an/list/:mess">Trở về</a>
+              </div>
+              <h4>Form thông tin bệnh án</h4>
+            </div>
+            <div class="card-block">
+              <form [formGroup]="formEdit" (ngSubmit)="onSubmit()">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Mã bệnh án</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" readonly formControlName="maBenhAn">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Mã bệnh nhân</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" readonly formControlName="maBenhNhan">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">tên</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="ten">
+                    <small *ngIf="formEdit.controls.ten.touched && formEdit.controls.ten.errors?.required"
+                           class="text-warning fst-italic">Vui lòng nhập!</small>
+                    <small *ngIf="formEdit.controls.ten.dirty && formEdit.controls.ten.errors?.pattern"
+                           class="text-warning fst-italic">Tên không được chứa ký tự số</small>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Ngày nhập viện</label>
+                  <div class="col-sm-9">
+                    <input type="date" class="form-control" formControlName="ngayNhapVien">
+                    <small
+                      *ngIf="formEdit.controls.ngayNhapVien.touched && formEdit.controls.ngayNhapVien.errors?.required"
+                      class="text-warning fst-italic">Vui lòng nhập!</small>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Ngày ra viện</label>
+                  <div class="col-sm-9">
+                    <input type="date" class="form-control" formControlName="ngayRaVien">
+                    <small
+                      *ngIf="formEdit.controls.ngayRaVien.touched && formEdit.controls.ngayRaVien.errors?.required"
+                      class="text-warning fst-italic">Vui lòng nhập!</small>
+                  </div>
+
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Lý do</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="lyDo">
+                    <small
+                      *ngIf="formEdit.controls.lyDo.touched && formEdit.controls.lyDo.errors?.required"
+                      class="text-warning fst-italic">Vui lòng nhập!</small>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Phương pháp điều trị</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="phuongPhap">
+                    <small *ngIf="formEdit.controls.phuongPhap.touched && formEdit.controls.phuongPhap.errors?.required"
+                           class="text-warning fst-italic">Vui lòng nhập!</small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Bác sĩ điều trị</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" formControlName="BacSiDieuTri">
+                    <small *ngIf="formEdit.controls.BacSiDieuTri.touched && formEdit.controls.BacSiDieuTri.errors?.required"
+                           class="text-warning fst-italic">Vui lòng nhập!</small>
+                  </div>
+                </div>
+<!--                <button type="submit" class="btn btn-primary">Submit</button>-->
+                <button type="submit" class="btn btn-primary" [disabled]="!formEdit.valid">Submit</button>
+              </form>
+            </div>
+          </div>
+          <!-- Basic Form Inputs card end -->
+        </div>
+      </div>
+    </div>
+  </div>
+
