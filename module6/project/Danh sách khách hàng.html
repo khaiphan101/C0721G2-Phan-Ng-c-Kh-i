@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Danh sách khách hàng</title>
+    <!--    <link href="adminStyle.css">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            /*margin: 0;*/
+            /*font-size: 28px;*/
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 100px;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        / / remove the gap so it doesn 't close
+        }
+
+        a:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: white;
+
+        }
+
+        a:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 0px;
+            background: #20abe1;
+            /*transition: ease .1s;*/
+            /*-webkit-transition: ease .1s;*/
+        }
+
+        a:hover {
+            color: #20abe1;
+        }
+
+        a:hover:after {
+            height: 2px;
+        }
+
+        .main-bg {
+            background-color: #ffcc33
+        }
+
+        .dropdown-menu {
+            margin-right: -800px;
+        }
+
+        .dropdown-menu li {
+            display: inline-block;
+        }
+
+        .btn-post-custom {
+            background-color: #FE9900;
+        }
+
+        .btn.btn-post-custom:hover {
+            background-color: #BBBBBB;
+        }
+    </style>
+</head>
+<body>
+
+<!--<div class="header bg-primary">-->
+<!--    <h2>Scroll Down</h2>-->
+<!--    <p>Scroll down to see the sticky effect.</p>-->
+<!--</div>-->
+<div class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fs-6 pb-3 pt-3 main-bg">
+        <div class="container-fluid">
+            <!--        <a class="navbar-brand" href="#">Logo</a>-->
+            <img class="navbar-brand" src="https://staticfile.batdongsan.com.vn/images/logo/h-logo.svg" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown ">
+                        <a class="navbar-brand " href="#" id="saleList" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Nhà đất bán
+                        </a>
+                        <ul class="dropdown-menu main-bg  " aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Bán nhà riêng</a></li>
+                            <li><a class="dropdown-item" href="#">Bán nhà biệt thự liền kề</a></li>
+                            <li><a class="dropdown-item" href="#">Bán nhà mặt phố</a></li>
+                            <li><a class="dropdown-item" href="#">Bán đất nền dự án</a></li>
+                            <li><a class="dropdown-item" href="#">Bán trang trại, khu nghỉ dưỡng</a></li>
+                            <li><a class="dropdown-item" href="#">Bán condotel</a></li>
+                            <li><a class="dropdown-item" href="#">Bán kho, nhà xưởng</a></li>
+                            <li><a class="dropdown-item" href="#">Bán loại bất động sản khác</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="navbar-brand " href="#" id="buyList" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Nhà đất cho thuê
+                        </a>
+                        <ul class="dropdown-menu main-bg" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item d-flex" href="#">Cho thuê căn hộ chung cư</a></li>
+                            <li><a class="dropdown-item d-flex" href="#">Cho thuê nhà riêng</a></li>
+                            <li><a class="dropdown-item" href="#">Cho thuê nhà biệt thự liền kề</a></li>
+                            <li><a class="dropdown-item" href="#">Cho thuê nhà mặt phố</a></li>
+                            <li><a class="dropdown-item" href="#">Cho thuê đất nền dự án</a></li>
+                            <li><a class="dropdown-item" href="#">Cho thuê trang trại, khu nghỉ dưỡng</a></li>
+                            <li><a class="dropdown-item" href="#">Cho thuê condotel</a></li>
+                            <li><a class="dropdown-item" href="#">Cho thuê kho, nhà xưởng</a></li>
+                            <li><a class="dropdown-item" href="#">Cho thuê loại bất động sản khác</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="navbar-brand " href="#" id="order" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Cần mua - Cần thuê
+                        </a>
+                        <ul class="dropdown-menu main-bg" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Nhà đất cần mua</a></li>
+                            <li><a class="dropdown-item" href="#">Nhà đất cần thuê</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <ul class="d-flex navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item d-flex">
+                        <a class="navbar-brand" href="#">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <a class="navbar-brand" href="#">Đăng ký</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class=" navbar-brand btn btn-post-custom text-white" type="submit">Đăng tin</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="content ">
+    <div class="row px-0  mx-0 mb-0 shadow ">
+        <div class="col-2 px-0 mt-2 fs-5" >
+            <div class="list-group border border-primary h-100 ">
+                <ul class="list-group">
+                    <li class="list-group-item text-center">
+                        <a href="#" class="list-group-item list-group-item-action active" [routerLink]="['']">Quản lí trang web</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="list-group-item list-group-item-action" [routerLink]="['customer-list']">Thông báo</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="list-group-item list-group-item-action" [routerLink]="['customer-list']">Quản lí nhân
+                            nhiên</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="list-group-item list-group-item-action" [routerLink]="['customer-list']">Thông tin
+                            khách hàng</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="list-group-item list-group-item-action" [routerLink]="['customer-list']">Thông tin
+                        bất động sản</a></li>
+                    <li class="list-group-item">
+                        <a href="#" class="list-group-item list-group-item-action" [routerLink]="['customer-list']">Giao
+                            dịch</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="list-group-item list-group-item-action" [routerLink]="['customer-list']">Lịch làm
+                            việc</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="list-group-item list-group-item-action" [routerLink]="['customer-list']">Hồ sơ biểu
+                            mẫu</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="list-group-item list-group-item-action" [routerLink]="['customer-list']">Thống kê</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="col-10 px-0 ps-5 ">
+            <div class="row me-2 mt-2 fs-5 ">
+                <div class="row col-1">
+                    <button class="btn btn-post-custom fw-bold">Thêm mới</button>
+                </div>
+                <div class="row col-5">
+
+                </div>
+                <div class="row col-3 bg-primary bg-opacity-50 " >
+                        <div class="ms-auto p-2 bd-highlight">
+                            <form class="d-flex ">
+                                <input class="form-control me-3" type="text" placeholder="Search by phone">
+                                <button class="btn btn-primary fw-bold" type="button">Search</button>
+                            </form>
+                        </div>
+                </div>
+            </div>
+            <div class="mt-3 me-5 table-responsive{-sm|-md|-lg|-xl|-xxl}">
+                <table class="table fs-5 table-striped table-hover table-bordered shadow">
+                    <thead class=" table-light text-center">
+                    <tr>
+                        <th>Id</th>
+                        <th>Mã Khách hàng</th>
+                        <th>Tên khách hàng</th>
+                        <th>Ngày sinh</th>
+                        <th>Địa chỉ</th>
+                        <th>Số điện thoại</th>
+                        <th>Email</th>
+                        <th>Loại khách hàng</th>
+                        <th colspan="3">Chỉnh sửa/Xóa</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>KH001</td>
+                        <td>Lê Quốc Tùng</td>
+                        <td>12/12/1998</td>
+                        <td>Đà Nẵng</td>
+                        <td>0903638332</td>
+                        <td>quoctung@gmail.com</td>
+                        <td>Người mua</td>
+                        <td>
+                            <button class="btn btn-warning text-center">Chỉnh sửa</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger text-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Xóa
+                            </button>
+                        </td>
+                    </tr>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title fs-4 fw-bold" id="staticBackdropLabel">Bạn có muốn xóa khách
+                                        hàng này không?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Lưu ý: Bạn có chắc muốn xóa khách hàng này không?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                                    </button>
+                                    <button type="button" class="btn btn-primary">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <tr>
+                        <td>2</td>
+                        <td>KH002</td>
+                        <td>Dương Minh Tuấn</td>
+                        <td>02/12/1999</td>
+                        <td>Quảng Nam</td>
+                        <td>0903638332</td>
+                        <td>minhtuan@gmail.com</td>
+                        <td>Người bán</td>
+                        <td>
+                            <button class="btn btn-warning text-center">Chỉnh sửa</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger text-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Xóa
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>KH003</td>
+                        <td>Mai Thị Bích Phương</td>
+                        <td>12/03/1990</td>
+                        <td>Huế</td>
+                        <td>0903638332</td>
+                        <td>bichphuong@gmail.com</td>
+                        <td>Người bán</td>
+                        <td>
+                            <button class="btn btn-warning text-center">Chỉnh sửa</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger text-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Xóa
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>KH004</td>
+                        <td>Nguyễn Văn Nam</td>
+                        <td>23/02/2003</td>
+                        <td>Hồ Chí Minh</td>
+                        <td>0903638332</td>
+                        <td>nam@gmail.com</td>
+                        <td>Người mua</td>
+                        <td>
+                            <button class="btn btn-warning text-center">Chỉnh sửa</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger text-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Xóa
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>KH001</td>
+                        <td>Phạm Khoa</td>
+                        <td>30/04/1992</td>
+                        <td>Hà Nội</td>
+                        <td>0903638332</td>
+                        <td>khoapham@gmail.com</td>
+                        <td>Người bán</td>
+                        <td>
+                            <button class="btn btn-warning text-center">Chỉnh sửa</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger text-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Xóa
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>KH006</td>
+                        <td>Phạm Nhật Vượng</td>
+                        <td>12/12/1998</td>
+                        <td>Cần Thơ</td>
+                        <td>0903638332</td>
+                        <td>nhatvuong@gmail.com</td>
+                        <td>Người bán</td>
+                        <td>
+                            <button class="btn btn-warning text-center">Chỉnh sửa</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger text-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Xóa
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>KH007</td>
+                        <td>Trương Thị Hà Thư</td>
+                        <td>03/12/1998</td>
+                        <td>Quảng Bình</td>
+                        <td>0903638332</td>
+                        <td>hathu@gmail.com</td>
+                        <td>Người bán</td>
+                        <td>
+                            <button class="btn btn-warning text-center">Chỉnh sửa</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger text-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Xóa
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>KH007</td>
+                        <td>Trương Thị Hà Thư</td>
+                        <td>03/12/1998</td>
+                        <td>Quảng Bình</td>
+                        <td>0903638332</td>
+                        <td>hathu@gmail.com</td>
+                        <td>Người bán</td>
+                        <td>
+                            <button class="btn btn-warning text-center">Chỉnh sửa</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger text-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Xóa
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>KH007</td>
+                        <td>Trương Thị Hà Thư</td>
+                        <td>03/12/1998</td>
+                        <td>Quảng Bình</td>
+                        <td>0903638332</td>
+                        <td>hathu@gmail.com</td>
+                        <td>Người bán</td>
+                        <td>
+                            <button class="btn btn-warning text-center">Chỉnh sửa</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger text-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Xóa
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>KH007</td>
+                        <td>Trương Thị Hà Thư</td>
+                        <td>03/12/1998</td>
+                        <td>Quảng Bình</td>
+                        <td>0903638332</td>
+                        <td>hathu@gmail.com</td>
+                        <td>Người bán</td>
+                        <td>
+                            <button class="btn btn-warning text-center">Chỉnh sửa</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger text-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Xóa
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>KH007</td>
+                        <td>Trương Thị Hà Thư</td>
+                        <td>03/12/1998</td>
+                        <td>Quảng Bình</td>
+                        <td>0903638332</td>
+                        <td>hathu@gmail.com</td>
+                        <td>Người bán</td>
+                        <td>
+                            <button class="btn btn-warning text-center">Chỉnh sửa</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger text-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Xóa
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>KH007</td>
+                        <td>Trương Thị Hà Thư</td>
+                        <td>03/12/1998</td>
+                        <td>Quảng Bình</td>
+                        <td>0903638332</td>
+                        <td>hathu@gmail.com</td>
+                        <td>Người bán</td>
+                        <td>
+                            <button class="btn btn-warning text-center">Chỉnh sửa</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger text-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Xóa
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>KH007</td>
+                        <td>Trương Thị Hà Thư</td>
+                        <td>03/12/1998</td>
+                        <td>Quảng Bình</td>
+                        <td>0903638332</td>
+                        <td>hathu@gmail.com</td>
+                        <td>Người bán</td>
+                        <td>
+                            <button class="btn btn-warning text-center">Chỉnh sửa</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger text-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Xóa
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>KH007</td>
+                        <td>Trương Thị Hà Thư</td>
+                        <td>03/12/1998</td>
+                        <td>Quảng Bình</td>
+                        <td>0903638332</td>
+                        <td>hathu@gmail.com</td>
+                        <td>Người bán</td>
+                        <td>
+                            <button class="btn btn-warning text-center">Chỉnh sửa</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger text-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Xóa
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="me-5 pe-4 ">
+                <ul class="pagination pagination-sm justify-content-end " style="margin:20px 0">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <footer class="py-5">
+        <div class="row">
+            <div class="col-2">
+                <h5>Section</h5>
+            </div>
+
+            <div class="col-2">
+                <h5>Section</h5>
+            </div>
+
+            <div class="col-2">
+                <h5>Section</h5>
+            </div>
+
+            <div class="col-4 offset-1">
+                <form>
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>Monthly digest of whats new and exciting from us.</p>
+                    <div class="d-flex w-100 gap-2">
+                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between py-4 my-4 border-top">
+            <p>&copy; 2021 Company, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+</body>
+<script>
+    window.onscroll = function () {
+        myFunction()
+    };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+<script>
+    var myModalEl = document.getElementById('myModal')
+    myModalEl.addEventListener('hidden.bs.modal', function (event) {
+        // do something...
+    })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+</html>
