@@ -12,3 +12,4 @@ npm i json-server
 ng serve --port 4401  
 
 json-server --watch db.json
+ng g c benh-an/benh-an-
