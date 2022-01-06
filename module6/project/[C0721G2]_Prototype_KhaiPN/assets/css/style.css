@@ -1548,7 +1548,9 @@ padding: 0 0 0.5em;
     padding: 0px;
 }
 .overflow{
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 .mar-l-20{
     margin-left: 20px;
