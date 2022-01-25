@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Bất động sản</title>
+    <meta charset="utf-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <!--  <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        * {
+            font-family: Arial;
+        }
+
+        .trans-nav:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: green;
+            transition: all 0.3s ease 0s;
+            -webkit-transition: all 0.3s ease 0s;
+        }
+
+        .trans-nav:hover:after {
+            width: 100%;
+        }
+
+        .main-bg {
+            background-color: white;
+        }
+
+
+        .dropdown-menu li {
+            display: inline-block;
+        }
+
+        /*.btn.btn-post-custom:hover {*/
+        /*    background-color: green;*/
+        /*}*/
+
+
+        .hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+            -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+            background-color: white;
+            color: white;
+        }
+
+        /* Sweep To Right */
+        .hvr-sweep-to-right {
+            /*display: inline-block;*/
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            position: relative;
+            -webkit-transition-property: color;
+            transition-property: color;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+
+        .hvr-sweep-to-right:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: mediumseagreen;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transform-origin: 0 50%;
+            transform-origin: 0 50%;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        .hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+            color: white;
+        }
+
+        .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+
+        .pleft0 {
+            padding-left: 0;
+        }
+
+
+        .pull-left {
+            float: left !important;
+        }
+
+        .pull-right {
+            float: right !important
+        }
+
+        /*.overflow {*/
+        /*    white-space: nowrap;*/
+        /*    overflow: hidden;*/
+        /*    text-overflow: ellipsis;*/
+        /*}*/
+
+        /*.content2line {*/
+        /*    height: 47px;*/
+        /*    display: -webkit-box;*/
+        /*    -webkit-line-clamp: 2;*/
+        /*    -webkit-box-orient: vertical;*/
+        /*    overflow: hidden;*/
+        /*    text-overflow: ellipsis;*/
+        /*}*/
+
+        .card-hover:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+        }
+
+        .slide {
+            display: block;
+            vertical-align: middle;
+            position: relative;
+
+        }
+
+        /*.carousel-caption-center {*/
+        /*    position: absolute;*/
+        /*    right: 15%;*/
+        /*    top: 30%;*/
+        /*    left: 15%;*/
+        /*    text-align: center*/
+        /*}*/
+
+        /*.slider-content {*/
+        /*    position: absolute;*/
+        /*    top: 20%;*/
+        /*    text-align: center;*/
+        /*    color: #FFF;*/
+        /*    width: 100%;*/
+        /*}*/
+        /*header {*/
+        /*    position: fixed;*/
+        /*    top: 0;*/
+        /*    width: 100%;*/
+        /*    padding: 20px;*/
+        /*    box-sizing: border-box;*/
+        /*    background: white;*/
+        /*}*/
+        /*nav {*/
+        /*    display: flex;*/
+        /*    align-items: flex-end;*/
+        /*    justify-content: space-between;*/
+        /*    transition: align-items .2s;*/
+        /*}*/
+
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light fs-6 mt-2 main-bg ">
+    <div class="container-fluid">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 " href="">
+            <img class="" width="90%"
+                 src="https://fv9-3.failiem.lv/thumb_show.php?i=gwdxyhphh&view" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown ">
+                    <a class="navbar-brand trans-nav text-success" href="#" id="saleList" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Trang chủ
+                    </a>
+                </li>
+                <li class="nav-item dropdown ">
+                    <a class="navbar-brand trans-nav text-success" href="#" id="buyList" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Giới thiệu
+                    </a>
+                </li>
+                <li class="nav-item dropdown ">
+                    <a class="navbar-brand trans-nav text-success" href="#" id="new" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Tin tức
+                    </a>
+                </li>
+                <li class="nav-item dropdown ">
+                    <a class="navbar-brand trans-nav text-success" href="#" id="know" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Kiến thức chăn nuôi
+                    </a>
+                </li>
+                <li class="nav-item dropdown ">
+                    <a class="navbar-brand trans-nav text-success " href="#" id="contact" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Liên hệ
+                    </a>
+                </li>
+            </ul>
+            <ul class="d-flex navbar-nav mb-2 mb-lg-0 fw-bold ">
+                <ng-template #right>
+                    <li class="nav-item dropdown" style="list-style: none">
+                        <a class="navbar-brand trans-nav" href="#" id="user" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <div *ngIf="this.urlImg then is"></div>
+                            <ng-template #is>
+                                <img class="rounded-circle" width="40px" height="40px"
+                                     src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-512.png">
+                            </ng-template>
+                            <span class="mx-2" style="font-size: 80%">User</span>
+                        </a>
+                        <ul class="dropdown-menu border-0 pb-0 fw-bold" aria-labelledby="navbarDropdown">
+                            <div *ngIf="this.role === 'ROLE_ADMIN' then admin else customer"></div>
+
+                            <li>
+                                <ng-template #customer>
+                                    <a class="dropdown-item"
+                                       [routerLink]="['/real-estate-new/post-history', this.idCustomer ]">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/1177/1177568.png"
+                                             height="20px">
+                                        <span style="font-size: 85%">Quản lý nhân viên</span>
+                                    </a>
+                                </ng-template>
+                                <ng-template #admin>
+                                    <a class="dropdown-item" [routerLink]="['/employee/list']">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/1178/1178215.png"
+                                             height="20px">
+                                        <span style="font-size: 85%">Quản lý đàn</span>
+                                    </a>
+                                </ng-template>
+
+                            </li>
+                            <li>
+                                <a class="dropdown-item   " [routerLink]="['/customer/edit']">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1177/1177455.png"
+                                         height="20px">
+                                    <span style="font-size: 85%">Quản lý chuồng nuôi</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item  " [routerLink]="['/customer/change-password']">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1060/1060673.png"
+                                         height="20px">
+                                    <span style="font-size: 85%">Khám chữa trị</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item  " [routerLink]="['/customer/change-password']">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1177/1177428.png"
+                                         height="20px">
+                                    <span style="font-size: 85%">Thay đổi mật khẩu</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item  " (click)="logout()">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1177/1177527.png"
+                                         height="20px">
+                                    <span style="font-size: 85%">Đăng xuất</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ng-template>
+            </ul>
+            <ul class="d-flex navbar-nav mb-lg-0 fw-bold">
+                <li class="nav-item d-flex ">
+                    <a class="navbar-brand hvr-float text-success" href="#">Đăng nhập</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<main class="container-fluid">
+    <div class="row">
+        <div class="col-md-2  " style="background-color: #009966;">
+            <div class="position-sticky ">
+                <ul class="text-decoration-none list-group mt-4 mb-4 ">
+                    <li class="list-unstyled mb-2">
+                        <a class="text-decoration-none   hvr-sweep-to-right"
+                           [routerLink]="['/real-estate-new/post-history', this.idCustomer ]">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1177/1177568.png"
+                                 height="20px">
+                            <span class="text-light">Quản lý nhân viên</span>
+                        </a>
+                    </li>
+                    <li class="list-unstyled mb-2">
+                        <a class=" text-decoration-none hvr-sweep-to-right pleft0"
+                           href="https://getbootstrap.com/docs/5.1/examples/dashboard/#">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1178/1178215.png"
+                                 height="20px">
+                            <span class="text-light">Quản lý đàn</span>
+                        </a>
+                    </li>
+
+                    <li class="list-unstyled mb-2">
+                        <a class=" text-decoration-none hvr-sweep-to-right pleft0"
+                           [routerLink]="['/employee/list']">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1177/1177455.png"
+                                 height="20px">
+                            <span class="text-light">Quản lý chuồng nuôi</span>
+                        </a>
+                    </li>
+                    <li class="list-unstyled mb-2">
+                        <a class=" text-decoration-none hvr-sweep-to-right pleft0"
+                           [routerLink]="['/customer/list']">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1060/1060673.png"
+                                 height="20px">
+                            <span class="text-light">Khám chữa trị</span>
+                        </a>
+                    </li>
+                    <li class="list-unstyled mb-2">
+                        <a class=" text-decoration-none hvr-sweep-to-right pleft0"
+                           [routerLink]="['/real-estate-new/list-post-approval']">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1060/1060702.png" height="20px">
+                            <span class="text-light">Quản lý bài đăng</span>
+                        </a>
+                    </li>
+                    <li class="list-unstyled mb-2">
+                        <a class=" text-decoration-none hvr-sweep-to-right pleft0"
+                           href="https://getbootstrap.com/docs/5.1/examples/dashboard/#">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1060/1060668.png" height="20px">
+
+                            <span class="text-light">Giao dịch</span>
+                        </a>
+                    </li>
+                    <li class="list-unstyled mb-2">
+                        <a class="text-decoration-none hvr-sweep-to-right pleft0"
+                           href="#">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1060/1060694.png" height="20px">
+                            <span class="text-light">Lịch làm việc</span>
+                        </a>
+                    </li>
+                    <li class="list-unstyled mb-2">
+                        <a class="text-decoration-none hvr-sweep-to-right pleft0"
+                           href="#">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1060/1060699.png" height="20px">
+                            <span class="text-light">Hồ sơ biểu mẫu</span>
+                        </a>
+                    </li>
+                    <li class="list-unstyled mb-2">
+                        <a class=" text-decoration-none hvr-sweep-to-right pleft0"
+                           href="#">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1060/1060674.png" height="20px">
+                            <span class="text-light">Thống kê</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--        <section>-->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-3" style="background-color: #F3F4F8">
+            <div class="container " >
+                <div class="row">
+                    <div class="col-6">
+                        <h4 style="padding-top: 0px; color: #009688" >Đăng ký mới thông tin khám chữa trị</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" style="color: #009688">
+                        <a href="#" style="color: #009688" class="text-decoration-none">Khám chữa trị</a> > <a href="#" class="text-decoration-none" style="color: #009688">Đăng ký</a></div>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header pb-0    " style="background-color: #009688">
+                                <h6  class="text-white">Form đăng ký </h6>
+                            </div>
+                            <form class="row g-3 needs-validation m-3" method="post">
+                                <div class="col-md-6 position-relative">
+                                    <label  class="form-label">Ngày đăng ký<span style="color: red">(*)</span></label>
+                                    <input type="date" class="form-control" id="registerDay" required placeholder="100 m2">
+                                    <small style="color: red">Không được để trống.</small>
+                                </div>
+                                <div class="col-md-6 position-relative">
+                                    <label class="form-label">Chọn chuồng <span
+                                            style="color: red">(*)</span></label>
+                                    <select id="lodging" class="form-select" aria-label="Default select example">
+                                        <option selected>Vui lòng lựa chọn chuồng</option>
+                                        <option value="1">C01</option>
+                                        <option value="2">C02</option>
+                                        <option value="3">C03</option>
+                                        <option value="4">C04</option>
+                                        <option value="4">C05</option>
+                                        <option value="4">C06</option>
+                                        <option value="4">C07</option>
+                                        <option value="4">C08</option>
+                                        <option value="4">C09</option>
+                                        <option value="4">C10</option>
+                                        <option value="4">C11</option>
+                                        <option value="4">C12</option>
+                                        <option value="4">C13</option>
+                                        <option value="4">C14</option>
+                                    </select>
+                                    <small style="color: red">Yêu cầu lựa chọn chuồng.</small>
+                                </div>
+                                <div class="col-md-6 position-relative">
+                                    <label class="form-label">Người khám <span style="color: red">(*)</span></label>
+                                    <input type="text" class="form-control" required placeholder="Nhập tên người khám">
+                                    <small style="color: red">Không được để trống.</small>
+                                </div>
+                                <div class="col-md-6 position-relative">
+                                    <label class="form-label">Mã lợn <span style="color: red">(*)</span></label>
+                                    <input type="text" class="form-control" required placeholder="Nhập mã lợn">
+                                    <small style="color: red">Không được để trống.</small>
+                                </div>
+                                <div class="col-md-6 position-relative">
+                                    <label class="form-label">Loại bệnh<span style="color: red">(*)</span></label>
+                                    <input type="text" class="form-control" required placeholder="Nhập loại bệnh">
+                                    <small style="color: red">Không được để trống.</small>
+                                </div>
+                                <div class="col-md-3 position-relative">
+                                    <label class="form-label">Loại Thuốc <span style="color: red">(*)</span></label>
+                                    <input type="text" class="form-control" required placeholder="Nhập loại thuốc">
+                                    <small style="color: red">Không được để trống.</small>
+                                </div>
+                                <div class="col-md-3 position-relative">
+                                    <label for="quantity" class="form-label">Nhập số lượng <span style="color: red">(*)</span></label>
+                                    <input type="number" class="form-control" id="quantity" name="quantity" min="1" placeholder="Nhập số lượng thuốc">
+                                    <small style="color: red">Không được để trống.</small>
+                                </div>
+                                <div class="col-md-12 position-relative">
+                                    <label for="note" class="form-label">Ghi chú</label>
+                                    <textarea type="text" class="form-control" id="note" required></textarea>
+                                </div>
+                                <div class="btn-toolbar mb-3 d-flex flex-row-reverse bd-highlight" role="toolbar"
+                                     aria-label="Toolbar with button groups">
+                                    <div class="btn-group me-2 float-right">
+                                        <button class="btn btn-success customBtn" type="submit" style="background-color: #009688" data-bs-toggle="modal"
+                                                data-bs-target="#save">Đăng ký</button>
+                                    </div>
+                                    <div class="btn-group me-2 float-right">
+                                        <button class="btn btn-secondary customBtn" type="submit">Hủy</button>
+                                    </div>
+                                    <!--Modal sửa-->
+                                    <div class="modal fade" id="save" data-bs-backdrop="static" data-bs-keyboard="false"
+                                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title fs-4 fw-bold" id="staticBackdropLabel1">Xác nhận bạn muốn đăng ký?</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Huỷ
+                                                    </button>
+                                                    <button type="button" class="btn btn-success ">Đồng ý</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Modal-->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+        </main>
+        <!--        </section>-->
+    </div>
+</main>
+<!--<footer>-->
+<div class="container-fluid main-bg">
+    <div class="container text-center text-md-left">
+        <div class="row">
+            <div class="col-md-12 mr-auto my-md-4 my-0 mt-4 mb-1" align="justify">
+                <hr>
+            </div>
+            <div class="col-md-5  col-sm-12 mr-auto my-md-4 my-0 mt-4 mb-1" align="justify">
+                <div class="text-success">
+                    <h5 class="fw-bolder">Logo</h5>
+                    <p>Cung cấp lợn sạch chất lượng cao - Giá cả hợp lý.</p>
+                    <p>Cung cấp lợn giống chất lượng cao.</p>
+                    <p>Tư vấn chăm sóc và qui trình nuôi khi mua lợn giống.</p>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-12 mr-auto my-md-4 my-0 mt-4" align="justify">
+                <div class="text-success">
+                    <h5 class="fw-bolder text-center">Liên hệ</h5>
+                    <p>Địa chỉ: Thôn An Ngãi Tây 3 - Hòa Sơn - Tp. Đà Nẵng.</p>
+                    <p>Email: trangtraihungthinh@gmail.com.</p>
+                    <p>Sdt: 0918456230.</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-12 mr-auto my-md-4 my-0 mt-4" align="justify">
+                <div class="text-success text-center">
+                    <h5 class="fw-bolder mb-4">Kênh</h5>
+                    <span><img src="https://cdn-icons-png.flaticon.com/512/1312/1312139.png"
+                               height="40px"></span>
+
+                    <span><img src="https://cdn-icons-png.flaticon.com/512/906/906382.png"
+                               height="40px"></span>
+                    <span><img src="https://cdn-icons-png.flaticon.com/512/185/185983.png"
+                               height="40px"></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--</footer>-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+</html>

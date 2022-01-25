@@ -17,7 +17,6 @@ public class StudentRestController_getListStudent {
 
     @Test
     public void getListStudent_5() {
-
         ResponseEntity<Page<Student>> responseEntity
                 = this.studentRestController.getListStudent(PageRequest.of(0, 2));
 
@@ -28,7 +27,6 @@ public class StudentRestController_getListStudent {
     public void getListStudent_6() {
         ResponseEntity<Page<Student>> responseEntity
                 = this.studentRestController.getListStudent(PageRequest.of(0, 2));
-
         Assertions.assertEquals(200, responseEntity.getStatusCodeValue());
         Assertions.assertEquals(3, responseEntity.getBody().getTotalPages());
         Assertions.assertEquals(6, responseEntity.getBody().getTotalElements());
